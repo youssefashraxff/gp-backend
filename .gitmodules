@@ -1,0 +1,4 @@
+[submodule "schemas"]
+	path = schemas
+	url = ../gp-schemas.git
+	branch = develop

@@ -1,0 +1,15 @@
+# Local development services.
+# Start:  docker compose up -d
+# Temporal gRPC on localhost:7233, Web UI on http://localhost:8233
+services:
+  temporal:
+    image: temporalio/temporal:latest
+    command: ["server", "start-dev", "--ip", "0.0.0.0", "--db-filename", "/data/temporal.db"]
+    ports:
+      - "7233:7233"
+      - "8233:8233"
+    volumes:
+      - temporal-data:/data
+
+volumes:
+  temporal-data:
