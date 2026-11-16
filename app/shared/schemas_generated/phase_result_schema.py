@@ -9,14 +9,14 @@ from typing import Any
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, conint
 
 
-class Phase(StrEnum):
+class PhaseName(StrEnum):
     research = 'research'
     brand_design = 'brand_design'
     visuals = 'visuals'
     investment = 'investment'
 
 
-class Status(StrEnum):
+class PhaseStatus(StrEnum):
     queued = 'queued'
     running = 'running'
     waiting_for_expert = 'waiting_for_expert'
@@ -30,7 +30,7 @@ class FieldRef(BaseModel):
     model_config = ConfigDict(
         extra='forbid',
     )
-    phase: Phase
+    phase: PhaseName
     version: conint(ge=1)
     field_path: str = Field(..., description="e.g. 'target_segments' or 'competitors.pricing'")
     content_hash: str
@@ -40,7 +40,7 @@ class FieldValue(BaseModel):
     model_config = ConfigDict(
         extra='forbid',
     )
-    value: Any = Field(..., description='Any JSON value.')
+    value: Any
     content_hash: str = Field(..., description='Hash of the canonical JSON of value.')
 
 
@@ -49,9 +49,9 @@ class PhaseResult(BaseModel):
         extra='forbid',
     )
     concept_id: str
-    phase: Phase = Field(..., title='PhaseName')
+    phase: PhaseName
     version: conint(ge=1)
-    status: Status = Field(..., title='PhaseStatus')
+    status: PhaseStatus
     built_from: list[FieldRef] = Field(
         ..., description='Every earlier field this result read, with the version and hash it saw.'
     )
