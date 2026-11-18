@@ -2,11 +2,7 @@ from temporalio import activity
 #function for running a phase and returning it's result(Worker task fills in its body)
 #for now fake data
 @activity.defn
-async def run_phase(
-    concept_id: str,
-    phase: str,
-    inputs: dict,
-): 
+async def run_phase(concept_id: str, phase: str, inputs: dict): 
     # records a message inside an activity
     activity.logger.info(f"Running phase {phase} for concept {concept_id}")
     return {
