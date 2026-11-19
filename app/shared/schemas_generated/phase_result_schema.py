@@ -6,7 +6,7 @@ from __future__ import annotations
 from enum import StrEnum
 from typing import Any
 
-from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, conint
+from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
 class PhaseName(StrEnum):
@@ -31,7 +31,7 @@ class FieldRef(BaseModel):
         extra='forbid',
     )
     phase: PhaseName
-    version: conint(ge=1)
+    version: int = Field(..., ge=1)
     field_path: str = Field(..., description="e.g. 'target_segments' or 'competitors.pricing'")
     content_hash: str
 
@@ -50,7 +50,7 @@ class PhaseResult(BaseModel):
     )
     concept_id: str
     phase: PhaseName
-    version: conint(ge=1)
+    version: int = Field(..., ge=1)
     status: PhaseStatus
     built_from: list[FieldRef] = Field(
         ..., description='Every earlier field this result read, with the version and hash it saw.'
