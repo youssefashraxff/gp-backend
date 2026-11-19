@@ -4,6 +4,8 @@
 services:
   temporal:
     image: temporalio/temporal:latest
+    # Named volumes are root-owned; the image's default "temporal" user can't write to them.
+    user: root
     command: ["server", "start-dev", "--ip", "0.0.0.0", "--db-filename", "/data/temporal.db"]
     ports:
       - "7233:7233"
