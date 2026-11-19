@@ -12,5 +12,6 @@ datamodel-codegen \
   --target-python-version 3.12 \
   --use-standard-collections \
   --use-union-operator \
+  --field-constraints \
   --disable-timestamp \
   --formatters builtin

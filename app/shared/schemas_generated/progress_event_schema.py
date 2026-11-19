@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from enum import StrEnum
 
-from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, confloat
+from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
 class PhaseName(StrEnum):
@@ -33,6 +33,6 @@ class ProgressEvent(BaseModel):
     phase: PhaseName
     status: PhaseStatus
     step: str = Field(..., description="Current step inside the phase, e.g. 'market_research'.")
-    percent: confloat(ge=0.0, le=100.0) | None = None
+    percent: float | None = Field(None, ge=0.0, le=100.0)
     message: str | None = None
     timestamp: AwareDatetime
