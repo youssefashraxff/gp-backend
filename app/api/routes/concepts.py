@@ -7,15 +7,13 @@ from temporalio.client import Client
 from temporalio.service import RPCError
 
 from app.api.deps import get_temporal_client
+from app.orchestrator.constants import TASK_QUEUE
 from app.shared.schemas_generated.concept_schema import (
     Concept,
     ConceptInput,
     ConceptStatus,
     PhaseName,
 )
-
-# change  app/orchestrator/constants.py ba3d Nour
-TASK_QUEUE = "concept-task-queue"
 
 router = APIRouter()
 
@@ -30,7 +28,7 @@ async def start_concept(
     try:
         await client.start_workflow(
             "ConceptWorkflow",
-            concept_input.model_dump(mode="json"),
+            args=[concept_id, concept_input.model_dump(mode="json")],
             id=concept_id,
             task_queue=TASK_QUEUE,
         )

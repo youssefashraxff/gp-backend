@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field, confloat
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Site(BaseModel):
@@ -11,8 +11,8 @@ class Site(BaseModel):
         extra='forbid',
     )
     name: str = Field(..., description='Human-readable site name or address.')
-    lat: confloat(ge=-90.0, le=90.0)
-    lng: confloat(ge=-180.0, le=180.0)
+    lat: float = Field(..., ge=-90.0, le=90.0)
+    lng: float = Field(..., ge=-180.0, le=180.0)
 
 
 class ConceptInput(BaseModel):
@@ -21,5 +21,5 @@ class ConceptInput(BaseModel):
     )
     site: Site = Field(..., title='SiteLocation')
     client_name: str | None = None
-    budget_egp: confloat(ge=0.0) | None = None
+    budget_egp: float | None = Field(None, ge=0.0)
     preferences: str | None = Field(None, description='Free-text preferences from the client.')

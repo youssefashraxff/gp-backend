@@ -36,4 +36,7 @@ jobs:
         run: pyright
 
       - name: Tests
+        env:
+          TEMPORAL_ADDRESS: localhost:7233
+          TEMPORAL_NAMESPACE: default
         run: pytest
