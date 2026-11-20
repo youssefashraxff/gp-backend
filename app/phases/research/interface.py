@@ -1,23 +1,23 @@
 """Phase 1 — Research. The only entry point other code may import.
 
-Inside this module (to be built): market research, then segment,
+Inside this module [the research phase will include] (to be built): market research, then segment,
 competitor/surroundings and gap analyses in parallel, site analysis,
 and a supervisor that reviews and decides reruns — as a LangGraph.
 """
 
 from typing import Any
+from .graph import ResearchState, build_research_graph
+from app.shared.phase_contract import ProgressCallback
 
-NAME = "research"
+NAME: str = "research"
 
-# Research reads only the concept input, not earlier phases.
+# Research reads only the concept input, Research depends on zero output fields from earlier phases.
 READS: tuple[str, ...] = ()
 
 
-async def run(concept_id: str, inputs: dict[str, Any]) -> dict[str, Any]:
-    """Sprint 0 stub: returns fixed output shaped like the real result."""
-    return {
-        "target_segments": [{"name": "Young families", "share": 0.4}],
-        "competitors": [],
-        "gaps": [],
-        "site_constraints": {},
-    }
+async def run(concept_id: str,inputs: dict[str, Any],on_progress: ProgressCallback | None = None,) -> dict[str, Any]:
+    """Run the Research stub and return its output."""
+    graph = build_research_graph(on_progress=on_progress)
+    initial_state = ResearchState(concept_id=concept_id, inputs=inputs)
+    result = await graph.ainvoke(initial_state)
+    return result["output"]

@@ -10,15 +10,14 @@ Each interface.py exposes:
   run()  -- runs the phase's LangGraph and returns its output fields
 """
 
-from collections.abc import Awaitable, Callable
+from collections.abc import Callable
 from typing import Any, Protocol
 
 PhaseOutput = dict[str, Any]
-RunPhase = Callable[[str, dict[str, Any]], Awaitable[PhaseOutput]]
-
+ProgressCallback = Callable[[str, int], None]
 
 class PhaseInterface(Protocol):
     NAME: str
     READS: tuple[str, ...]
 
-    async def run(self, concept_id: str, inputs: dict[str, Any]) -> PhaseOutput: ...
+    async def run(self, concept_id: str, inputs: dict[str, Any], on_progress: ProgressCallback | None = None) -> PhaseOutput: ...

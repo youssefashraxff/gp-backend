@@ -1,10 +1,9 @@
 from typing import Any, NotRequired, TypedDict
 from langgraph.graph import END, START, StateGraph
 from collections.abc import Callable
+from app.shared.phase_contract import ProgressCallback
 import asyncio
 
-# str -> step name, int -> progress percentage
-ProgressCallback = Callable[[str, int], None]
 
 class ResearchState(TypedDict):
     concept_id:str
