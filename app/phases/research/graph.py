@@ -17,7 +17,7 @@ def build_research_graph(on_progress: ProgressCallback | None = None):
         steps = ("market_research", "segments", "competitors", "gaps")
 
         for completed, step in enumerate(steps, start=1):
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(0.5) #simualte work being done
 
             if on_progress is not None:
                 percent = completed * 100 // len(steps) 
