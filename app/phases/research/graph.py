@@ -1,26 +1,29 @@
-from typing import Any, NotRequired, TypedDict
-from langgraph.graph import END, START, StateGraph
-from collections.abc import Callable
-from app.shared.phase_contract import ProgressCallback
 import asyncio
+from typing import Any, NotRequired, TypedDict
+
+from langgraph.graph import END, START, StateGraph
+
+from app.shared.phase_contract import ProgressCallback
 
 
 class ResearchState(TypedDict):
-    concept_id:str
-    inputs:dict[str,Any]
+    concept_id: str
+    inputs: dict[str, Any]
     # The research node adds this field after completing the simulated steps.
-    output: NotRequired[dict[str,Any]]
+    output: NotRequired[dict[str, Any]]
+
 
 def build_research_graph(on_progress: ProgressCallback | None = None):
     async def research_node(state: ResearchState) -> dict[str, Any]:
-        # simulating four research steps, each taking half a second, and reporting progress if a callback is provided.
+        # simulating four research steps, each taking half a second 
+        # and reporting progress if a callback is provided.
         steps = ("market_research", "segments", "competitors", "gaps")
 
         for completed, step in enumerate(steps, start=1):
-            await asyncio.sleep(0.5) #simualte work being done
+            await asyncio.sleep(0.5)  # simualte work being done
 
             if on_progress is not None:
-                percent = completed * 100 // len(steps) 
+                percent = completed * 100 // len(steps)
                 on_progress(step, percent)
 
         return {

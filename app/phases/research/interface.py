@@ -6,8 +6,10 @@ and a supervisor that reviews and decides reruns — as a LangGraph.
 """
 
 from typing import Any
-from .graph import ResearchState, build_research_graph
+
 from app.shared.phase_contract import ProgressCallback
+
+from .graph import ResearchState, build_research_graph
 
 NAME: str = "research"
 
@@ -15,7 +17,11 @@ NAME: str = "research"
 READS: tuple[str, ...] = ()
 
 
-async def run(concept_id: str,inputs: dict[str, Any],on_progress: ProgressCallback | None = None,) -> dict[str, Any]:
+async def run(
+    concept_id: str,
+    inputs: dict[str, Any],
+    on_progress: ProgressCallback | None = None,
+) -> dict[str, Any]:
     """Run the Research stub and return its output."""
     graph = build_research_graph(on_progress=on_progress)
     initial_state = ResearchState(concept_id=concept_id, inputs=inputs)

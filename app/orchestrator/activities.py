@@ -1,11 +1,19 @@
 from temporalio import activity
+
 from app.orchestrator.phase_registry import PHASE_REGISTRY
 from app.shared.hashing import content_hash
-from app.shared.schemas_generated.phase_result_schema import FieldValue, PhaseResult, PhaseName, PhaseStatus
-#function for running a phase and returning it's result(Worker task fills in its body)
-#for now fake data
+from app.shared.schemas_generated.phase_result_schema import (
+    FieldValue,
+    PhaseName,
+    PhaseResult,
+    PhaseStatus,
+)
+
+
+# function for running a phase and returning it's result(Worker task fills in its body)
+# for now fake data
 @activity.defn
-async def run_phase(concept_id: str, phase: str, inputs: dict): 
+async def run_phase(concept_id: str, phase: str, inputs: dict):
     # records a message inside an activity
     activity.logger.info(f"Running phase {phase} for concept {concept_id}")
     phase_interface = PHASE_REGISTRY[phase]
@@ -37,7 +45,8 @@ async def run_phase(concept_id: str, phase: str, inputs: dict):
 
     return result.model_dump(mode="json")
 
-#function to save result (Supabase task fills in its body)
+
+# function to save result (Supabase task fills in its body)
 @activity.defn
 async def save_phase_result(result: dict):
 

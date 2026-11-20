@@ -16,8 +16,11 @@ from typing import Any, Protocol
 PhaseOutput = dict[str, Any]
 ProgressCallback = Callable[[str, int], None]
 
+
 class PhaseInterface(Protocol):
     NAME: str
     READS: tuple[str, ...]
 
-    async def run(self, concept_id: str, inputs: dict[str, Any], on_progress: ProgressCallback | None = None) -> PhaseOutput: ...
+    async def run(
+        self, concept_id: str, inputs: dict[str, Any], on_progress: ProgressCallback | None = None
+    ) -> PhaseOutput: ...
