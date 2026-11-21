@@ -9,4 +9,5 @@ class Settings(BaseSettings):
 
     cors_origins: list[str] = ["http://localhost:4200"]
 
+
 settings = Settings()  # type: ignore[call-arg]

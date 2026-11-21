@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     yield
 
 
-app = FastAPI(title="Concept Development GP API",lifespan=lifespan) # type: ignore
+app = FastAPI(title="Concept Development GP API", lifespan=lifespan)  # type: ignore
 app.include_router(concepts_router)
 app.include_router(websocket_router)
 app.add_middleware(
@@ -42,4 +42,3 @@ app.add_middleware(
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
-

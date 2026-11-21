@@ -15,7 +15,7 @@ class ResearchState(TypedDict):
 
 def build_research_graph(on_progress: ProgressCallback | None = None):
     async def research_node(state: ResearchState) -> dict[str, Any]:
-        # simulating four research steps, each taking half a second 
+        # simulating four research steps, each taking half a second
         # and reporting progress if a callback is provided.
         steps = ("market_research", "segments", "competitors", "gaps")
 
