@@ -9,9 +9,11 @@ phase's interface.py.
 
 Phase order (a phase starts only after the previous one is done):
 """
+from datetime import timedelta  #for timeouts
+
 from temporalio import workflow
-from datetime import timedelta     #for timeouts
 from temporalio.common import RetryPolicy  #for return policy
+
 with workflow.unsafe.imports_passed_through():  #making sure no heavy imports
     from app.orchestrator.activities import run_phase, save_phase_result
 
@@ -37,17 +39,22 @@ class ConceptWorkflow:
                 self.step = "running"
                 #executing the run_phase activity
                 result = await workflow.execute_activity(run_phase,args=[concept_id, phase, inputs],
-                                                        start_to_close_timeout=timedelta(minutes=10), # 10 3shan fi ai model and research not too short and not too long
-                                                        heartbeat_timeout=timedelta(minutes=2), #ye3mel singal eno lesa sha8al
+                                 # 10 3shan fi ai model and research not too short and not too long
+                                                        start_to_close_timeout=timedelta(minutes=10), 
+                                                        #ye3mel singal eno lesa sha8al
+                                                        heartbeat_timeout=timedelta(minutes=2), 
                                                         retry_policy=RetryPolicy(
-                                                            initial_interval=timedelta(seconds=3), #yegrab kol ad eh
+                                                            #yegrab kol ad eh
+                                                            initial_interval=timedelta(seconds=3), 
                                                             maximum_interval=timedelta(seconds=15),
                                                             maximum_attempts=3,
                                                         ),
                                                         )
                 await workflow.execute_activity(save_phase_result, args=[result],
-                                                start_to_close_timeout=timedelta(minutes=2),  #waiting for confirmation
-                                                heartbeat_timeout=timedelta(minutes=1), #check after 1 min
+                                                 #waiting for confirmation
+                                                start_to_close_timeout=timedelta(minutes=2), 
+                                                #check after 1 min
+                                                heartbeat_timeout=timedelta(minutes=1), 
                                                 retry_policy=RetryPolicy(
                                                     initial_interval=timedelta(seconds=3),
                                                     maximum_interval=timedelta(seconds=15),
