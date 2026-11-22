@@ -6,18 +6,16 @@ Sprint 0 adds: POST /concepts (starts a Temporal workflow) and
 /ws/concepts/{id} (pushes progress read from Temporal).
 """
 
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
-from typing import AsyncIterator
 
-from app.shared.settings import settings
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from temporalio.client import Client
 
 from app.api.routes.concepts import router as concepts_router
 from app.api.websocket import router as websocket_router
-
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-
+from app.shared.settings import settings
 
 
 @asynccontextmanager
@@ -29,7 +27,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     yield
 
 
-app = FastAPI(title="Concept Development GP API",lifespan=lifespan) # type: ignore
+app = FastAPI(title="Concept Development GP API", lifespan=lifespan)  # type: ignore
 app.include_router(concepts_router)
 app.include_router(websocket_router)
 app.add_middleware(
@@ -44,4 +42,3 @@ app.add_middleware(
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
-
