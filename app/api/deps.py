@@ -1,6 +1,6 @@
-from fastapi import Request
+from fastapi.requests import HTTPConnection
 from temporalio.client import Client
 
 
-def get_temporal_client(request: Request) -> Client:
-    return request.app.state.temporal_client
+def get_temporal_client(connection: HTTPConnection) -> Client:
+    return connection.app.state.temporal_client
