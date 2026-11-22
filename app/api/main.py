@@ -2,8 +2,11 @@
 
 Run locally:  uvicorn app.api.main:app --reload
 
-Sprint 0 adds: POST /concepts (starts a Temporal workflow) and
-/ws/concepts/{id} (pushes progress read from Temporal).
+Routes:
+- POST /concept: validates the input and starts a ConceptWorkflow in Temporal.
+- WS /ws/concept/{concept_id}: polls the workflow's progress from Temporal
+  and pushes a ProgressEvent to the browser whenever it changes.
+- GET /health: liveness check.
 """
 
 from collections.abc import AsyncIterator
