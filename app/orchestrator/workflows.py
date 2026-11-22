@@ -25,8 +25,10 @@ PHASE_ORDER: tuple[str, ...] = ("research", "brand_design", "visuals", "investme
 @workflow.defn
 class ConceptWorkflow:
     def __init__(self):
-        self.current_phase = None
-        self.status = "starting"
+        # Start with values ProgressEvent accepts, so a query sent before the
+        # first phase begins still returns a valid event.
+        self.current_phase = PHASE_ORDER[0]
+        self.status = "queued"
         self.step = "starting"
 
     @workflow.run  # entry point for the workflow
@@ -52,6 +54,9 @@ class ConceptWorkflow:
                         maximum_attempts=3,
                     ),
                 )
+                # save_phase_result never heartbeats, so the query is the only
+                # place the API can see that we're saving.
+                self.step = "saving"
                 await workflow.execute_activity(
                     save_phase_result,
                     args=[result],
