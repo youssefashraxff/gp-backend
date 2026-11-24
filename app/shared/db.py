@@ -57,11 +57,12 @@ def create_concept(concept_id: str, concept_input: ConceptInput) -> Concept:
     response = (
         get_client()
         .table("concepts")
-        .insert({
+        .insert(
+            {
             "id": concept_id,
             "input": concept_input.model_dump(mode="json", exclude_none=True),
-        })
-        .execute()
+            }
+        ).execute()
     )
     if not response.data:
         raise RuntimeError("No data returned from concepts insert")
@@ -78,13 +79,8 @@ def update_concept_status(
     if current_phase is not None:
         changes["current_phase"] = current_phase.value
 
-    response = (
-        get_client()
-        .table("concepts")
-        .update(changes)
-        .eq("id", concept_id)
-        .execute()
-    )
+    response = get_client().table("concepts").update(changes).eq("id", concept_id).execute()
+    
     if not response.data:
         raise ConceptNotFoundError(concept_id)
     row = cast(dict[str, Any], response.data[0])
