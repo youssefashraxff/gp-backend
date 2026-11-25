@@ -106,7 +106,7 @@ list it under **Open questions** in the spec for Youssef to decide.
 - [ ] Does anything cross phases other than saved results through `interface.py`?
 - [ ] Does each phase list its `READS`, and does each new output field have a hash?
 - [ ] Is every new or changed contract named as a gp-schemas file?
-- [ ] Do the names follow Part A §6?
+- [ ] Do the names follow Part A, section 6?
 - [ ] Does each LLM call state its model tier?
 - [ ] Is every rule this spec bends listed under **Open questions**?
 
@@ -148,7 +148,7 @@ Output: a table `| Fact | Type | Produced by | Source |`.
 
 ### Step 2: Find its home
 
-Use this decision path (homes and import rules are in Part A §1–§3):
+Use this decision path (homes and import rules are in Part A sections 1–3):
 
 ```
 Is it about receiving a request or streaming to the browser?   → app/api/
@@ -244,7 +244,7 @@ Temporal retries activities, so:
 
 ### Step 8: Progress and streaming
 
-List the progress events the part sends, using the names from Part A §6:
+List the progress events the part sends, using the names from Part A, section 6:
 - the heartbeat carries `phase_step_agent` and `phase_percent`;
 - `ProgressEvent` carries `progress_phase`, `progress_status`, `progress_step` and
   `progress_percent`.
@@ -325,7 +325,7 @@ READS: ... · Read by: ... · Rerun on edit: ...
 - [ ] Every human-only fact has an escalation point, with choices and a timeout
 - [ ] No I/O in workflow code; activities are idempotent
 - [ ] Every external call has a timeout, retry rules and a user-facing failure
-- [ ] Progress names follow Part A §6
+- [ ] Progress names follow Part A, section 6
 - [ ] `READS` is listed, and what reruns on an edit is defined
 - [ ] Each intent "Done means" check maps to a test or demo step
 - [ ] Options are written down with trade-offs; decisions are left to Youssef under Open questions
