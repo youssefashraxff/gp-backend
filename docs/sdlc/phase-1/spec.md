@@ -100,7 +100,7 @@ Cut from the bottom up: Could → Should. Never cut a Must.
 | `concept_input` | Add `business_types: string[]` (optional, may be empty). |
 | `progress_event` | Rename the fields to the decided names: `progress_phase`, `progress_status`, `progress_step`, `progress_percent`. Add `progress_agent` (which agent) and an optional `escalation_id` while waiting. |
 | `evidence` **(new, proposal)** | `{ fact_type: computable \| retrieved \| expert, source: { kind: url \| api \| function \| escalation, ref, title? }, retrieved_at }`. |
-| `escalation` **(new)** | `escalation_id, concept_id, phase, agent, question, context (facts with evidence), choices[2–4], allow_free_text, scorer_score?, status: open \| answered \| timed_out, answer?, created_at, answered_at?` |
+| `escalation` **(new)** | `escalation_id, concept_id, phase, agent, question, context (facts with evidence), choices[2–4], allow_free_text, scorer_score?, status: open \| reminded \| answered \| timed_out, answer?, created_at, reminded_at?, answered_at?` |
 | `research_output` **(new)** | The six output fields in §5.7; every fact inside them embeds an `evidence` object. |
 
 The backend heartbeat also renames its fields: `phase_step_agent`, `phase_percent`.
@@ -125,7 +125,11 @@ expert's signal. The design:
 2. `run_phase` (the activity) returns `{status: waiting_for_expert, escalation}` instead of
    a result. The escalation row is saved.
 3. `ConceptWorkflow` sets `workflow_status = waiting_for_expert` and waits for the
-   `expert_answer` signal with a timeout (see Q4).
+   `expert_answer` signal. **Decided (Q4):** if there's no answer after the reminder time,
+   it sends Ali a reminder and keeps waiting. If there's still no answer after the long
+   limit, it **stops waiting**: the escalation is marked `timed_out`, the run stops with
+   that status, and the WebSocket closes. Both times are workflow timers, so they cost
+   nothing while waiting.
 4. The WebSocket shows the escalation, and the UI shows the question card.
 5. Ali answers → `POST …/answer` → the workflow receives the signal → it runs a
    `resume_phase` activity, which calls the graph with `Command(resume=answer)` on the
@@ -133,9 +137,8 @@ expert's signal. The design:
 6. The graph continues from the paused node. The answer becomes an `expert` fact, with the
    escalation id as its source.
 
-**Checkpointer (proposal):** a Postgres checkpointer on the Supabase database, so a paused
-run survives a worker restart (NFR-4). The in-memory checkpointer loses the pause whenever
-the worker restarts.
+**Checkpointer (decided, Q2):** a Postgres checkpointer on the Supabase database, so a
+paused run survives a worker restart (NFR-4).
 
 **Stored for later:** the question, context, answer and scorer features. They are retrieved
 as memory in later runs and used as training data for the scorer.
@@ -286,11 +289,17 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 |---|---|---|---|
 | Businesses within the search radius | retrieved | Google Places nearby search | Places API + query |
 | Rating, price level, opening hours | retrieved | Places details | Places API |
-| Search radius | computable | rule by area type (**value: Q7**) | function name |
+| Search radius | computable | `competitor_radius(lat, lng)`, dynamic per location (**decided, Q7**) | function name |
 | Category per business type | LLM classification over retrieved data | cheap model | the place ids |
 | Competitive summary per business type | LLM over the facts above | cheap model | cited place ids |
 
-- **Pattern:** fixed workflow (row 2): search → details → classify → summarize.
+- **Radius (decided: dynamic per location):** computed from how built-up the area around
+  the pin is. Count the places/points of interest near the pin (OSM), then map that density
+  to a radius: dense city streets get a small radius, while suburbs, new cities and desert
+  roads get a larger one. The radius and its inputs are saved as a computable fact, so the
+  user sees why it was chosen. (Proposal for the ranges, to tune with Ali: dense ≈ 0.5–1 km,
+  suburban ≈ 2–3 km, desert road/highway ≈ 5–10 km.)
+- **Pattern:** fixed workflow (row 2): radius → search → details → classify → summarize.
 - **Escalation:** zero results for a requested business type (is it truly absent, or is the
   data missing?).
 - **Model:** cheap tier throughout. Places results are cached by (lat/lng, radius, type).
@@ -321,10 +330,10 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 | # | Question | Options | Recommendation |
 |---|---|---|---|
 | Q1 | Accept the `evidence` schema in §5.2? | as is / change fields | as is: it's what AC-4 needs |
-| Q2 | Checkpointer for paused runs | Postgres on Supabase / in-memory | Postgres: an in-memory checkpointer fails NFR-4 |
+| Q2 | Checkpointer for paused runs | — | **Decided: Postgres on Supabase** |
 | Q3 | Accept the scope ranking in §4? | as is / reorder | as is |
-| Q4 | What happens when the expert doesn't answer in time | keep waiting / remind, then wait / continue with the fact marked "unconfirmed" | remind, then wait: live demos need the answer used (AC-2) |
+| Q4 | Expert doesn't answer in time | — | **Decided: remind, then stop waiting after a long limit.** Still open: the reminder time, the long limit, how Ali is reminded (in-app only, or also email/WhatsApp), and whether a stopped run can be restarted from its checkpoint |
 | Q5 | Agent owners | assign one teammate per agent in §6 | decide at the sprint meeting |
 | Q6 | Elevation data source | Open-Elevation / Google Elevation / skip terrain in v1 | Google Elevation: same key as Places |
-| Q7 | Competitor search radius | fixed (e.g. 1 km) / by area type (urban vs desert road) | by area type, with values from Ali |
+| Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, §6.5). Still open: the exact ranges, tuned with Ali |
 | Q8 | The progress rename touches gp-schemas, backend and frontend | do it in Sprint 2 first / later | first: every new event uses the new names |
