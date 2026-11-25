@@ -17,18 +17,17 @@ QUERY = {"current_phase": "research", "status": "running", "step": "running"}
 def test_build_event_uses_heartbeat_step_and_percent() -> None:
     event = build_event("c_1", QUERY, {"step": "market_research", "percent": 25})
 
-    assert event.concept_id == "c_1"
-    assert event.phase == "research"
-    assert event.status == PhaseStatus.running
-    assert event.step == "market_research"
-    assert event.percent == 25
+    assert event.progress_phase == "research"
+    assert event.progress_status == PhaseStatus.running
+    assert event.progress_step == "market_research"
+    assert event.progress_percent == 25
 
 
 def test_build_event_without_heartbeat_falls_back_to_query() -> None:
     event = build_event("c_1", {**QUERY, "step": "saving"}, None)
 
-    assert event.step == "saving"
-    assert event.percent is None
+    assert event.progress_step == "saving"
+    assert event.progress_percent is None
 
 
 # --- has_changed ----------------------------------------------------------

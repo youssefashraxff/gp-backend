@@ -162,8 +162,8 @@ def test_websocket_sends_only_changes_then_closes_when_done(
             websocket.receive_json()
 
     assert fake_client.handle_ids == ["c_test"]
-    assert first["status"] == "running"
-    assert second["status"] == "done"  # the duplicate "running" was not sent
+    assert first["progress_status"] == "running"
+    assert second["progress_status"] == "done"  # the duplicate "running" was not sent
     assert closed.value.code == 1000
     for event in (first, second):
         assert event["concept_id"] == "c_test"
@@ -184,7 +184,7 @@ def test_websocket_event_carries_heartbeat_step_and_percent(
     with client.websocket_connect("/ws/concept/c_test") as websocket:
         events = [websocket.receive_json() for _ in range(3)]
 
-    assert [(e["step"], e["percent"]) for e in events] == [
+    assert [(e["progress_step"], e["progress_percent"]) for e in events] == [
         ("market_research", 25),
         ("gaps", 100),
         ("completed", None),
@@ -202,9 +202,9 @@ def test_websocket_unknown_concept_sends_error_and_closes_4404(
             websocket.receive_json()
 
     ProgressEvent.model_validate(event)
-    assert event["status"] == "failed"
-    assert event["phase"] == "research"
-    assert event["step"] == "not_found"
+    assert event["progress_status"] == "failed"
+    assert event["progress_phase"] == "research"
+    assert event["progress_step"] == "not_found"
     assert event["message"] == "Unknown concept id"
     assert closed.value.code == 4404
 
@@ -244,7 +244,7 @@ def test_websocket_recovers_from_brief_temporal_failures(
         with pytest.raises(WebSocketDisconnect) as closed:
             websocket.receive_json()
 
-    assert (first["status"], second["status"]) == ("running", "done")
+    assert (first["progress_status"], second["progress_status"]) == ("running", "done")
     assert closed.value.code == 1000
 
 
