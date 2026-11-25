@@ -4,11 +4,11 @@ Status: **draft** (merging this PR = accepted) · Owner: Youssef · Date: 2026-1
 Reads: [`intent.md`](intent.md) · Follows: `.claude/skills/gp-system-design`
 
 How to read this file:
-- **§1–§4:** *what* we build and how we know it's done.
-- **§5:** the design of the whole phase.
-- **§6:** the design of each agent. Each agent section is a **draft for its owner to
+- **Sections 1–4:** *what* we build and how we know it's done.
+- **Section 5:** the design of the whole phase.
+- **Section 6:** the design of each agent. Each agent section is a **draft for its owner to
   review and change**: the owner decides the agent's internal pattern, model and cost.
-- **§7:** the decisions made on the open questions.
+- **Section 7:** the decisions made on the open questions.
 
 ---
 
@@ -34,7 +34,7 @@ The user can edit any result; only what depends on the edit reruns.
 | ID | Requirement |
 |---|---|
 | FR-1 | **Input:** a site pin (name + lat/lng), optional business type(s), plus the existing optional client name, budget and preferences. |
-| FR-2 | **Run:** `POST /concept` starts the run. The six agents run in the order in §1, inside one LangGraph per phase. |
+| FR-2 | **Run:** `POST /concept` starts the run. The six agents run in the order in section 1, inside one LangGraph per phase. |
 | FR-3 | **Live progress:** the WebSocket streams which agent is working and what it's doing. The user never waits more than ~5 s without a visible change. |
 | FR-4 | **Output:** findings from each agent, plus business types recommended by the research (alongside any the user entered). |
 | FR-5 | **Evidence:** every fact in the output carries its type (computable / retrieved / expert), its source and its time. No fact is estimated by an LLM. |
@@ -48,7 +48,7 @@ The user can edit any result; only what depends on the edit reruns.
 | ID | Requirement |
 |---|---|
 | NFR-1 | Follows Part A of gp-system-design (modular monolith, Temporal between phases, LangGraph inside, phase contract, schemas first, naming). |
-| NFR-2 | Every external call has a timeout, retry rules and a message the user sees when it fails (§5.6). |
+| NFR-2 | Every external call has a timeout, retry rules and a message the user sees when it fails (section 5.6). |
 | NFR-3 | Each LLM node states its model tier; strong models only where a cheap one can't do the job. |
 | NFR-4 | Survives a worker restart mid-run, including while waiting for the expert. |
 | NFR-5 | CI passes (Ruff, schema check, Pyright, pytest); no real network calls in tests. |
@@ -60,8 +60,8 @@ Tested live with Ali, on Youssef's laptop.
 | ID | Check | Proved by |
 |---|---|---|
 | AC-1 | A full run finishes on a site **Ali picks**, not one we prepared | Demo + an integration test on a fixed recorded site |
-| AC-2 | At least one agent escalates to Ali live, and his answer is used | Demo + the escalation resume test (§5.4) |
-| AC-3 | Ali edits one result and the dependent steps rerun | Demo + the edit propagation test (§5.5) |
+| AC-2 | At least one agent escalates to Ali live, and his answer is used | Demo + the escalation resume test (section 5.4) |
+| AC-3 | Ali edits one result and the dependent steps rerun | Demo + the edit propagation test (section 5.5) |
 | AC-4 | Every claim on the summary cards links to a real source | The evidence-completeness test (every output fact has evidence) + demo |
 
 ## 4. Scope ranking (proposal: what gets cut first if we fall behind)
@@ -100,7 +100,7 @@ Cut from the bottom up: Could → Should. Never cut a Must.
 | `progress_event` | Rename the fields to the decided names: `progress_phase`, `progress_status`, `progress_step`, `progress_percent`. Add `progress_agent` (which agent) and an optional `escalation_id` while waiting. |
 | `evidence` **(new)** | `{ fact_type: computable \| retrieved \| expert, source: { kind: url \| api \| function \| escalation, ref, title? }, retrieved_at }`. |
 | `escalation` **(new)** | `escalation_id, concept_id, phase, agent, question, context (facts with evidence), choices[2–4], allow_free_text, scorer_score?, status: open \| reminded \| answered \| timed_out, answer?, created_at, reminded_at?, answered_at?` |
-| `research_output` **(new)** | The six output fields in §5.7; every fact inside them embeds an `evidence` object. |
+| `research_output` **(new)** | The six output fields in section 5.7; every fact inside them embeds an `evidence` object. |
 
 The backend heartbeat also renames its fields: `phase_step_agent`, `phase_percent`.
 
@@ -206,7 +206,7 @@ their own key, so they don't collide. The keys that several nodes append to (`es
 | Competitors | `competitors` | `searching_places`, `classifying` |
 | Supervisor | `supervisor` | `reviewing`, `rerunning:<agent>`, `recommending` |
 
-Every step change heartbeats. Token streaming is a **Could** (§4).
+Every step change heartbeats. Token streaming is a **Could** (section 4).
 
 ---
 
@@ -340,11 +340,11 @@ So the spec always says how each agent actually works.
 
 | # | Question | Options | Decision |
 |---|---|---|---|
-| Q1 | Evidence schema in §5.2 | — | **Decided: as proposed** |
+| Q1 | Evidence schema in section 5.2 | — | **Decided: as proposed** |
 | Q2 | Checkpointer for paused runs | — | **Decided: Postgres on Supabase** |
-| Q3 | Scope ranking in §4 | — | **Decided: as proposed** |
+| Q3 | Scope ranking in section 4 | — | **Decided: as proposed** |
 | Q4 | Expert doesn't answer in time | — | **Decided: remind, then stop waiting.** Defaults: reminder after **30 min**, stop after **24 h**, reminder in the app only for v1 (email/WhatsApp later), and a stopped run **can be restarted** from its saved checkpoint. Tune the times after the first test with Ali |
-| Q5 | Agent owners | — | **Decided: assign at the Sprint 2 meeting**; each owner then updates their §6 section (see §6 process) |
+| Q5 | Agent owners | — | **Decided: assign at the Sprint 2 meeting**; each owner then updates their section 6 section (see section 6 process) |
 | Q6 | Elevation data source | — | **Decided: Google Elevation API** (same key as Places) |
-| Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, §6.5); start with the ranges in §6.5 and tune them with Ali |
+| Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, section 6.5); start with the ranges in section 6.5 and tune them with Ali |
 | Q8 | Progress rename | — | **Decided: first in Sprint 2.** gp-schemas done; backend and frontend follow with the submodule bump |
