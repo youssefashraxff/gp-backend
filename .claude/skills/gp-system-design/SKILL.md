@@ -1,25 +1,128 @@
 ---
 name: gp-system-design
-description: The method for designing a new backend part of the Concept Development GP (an agent, a phase, a tool or data source, an escalation point, an API route or a stored field), from intent to a reviewed design section in spec.md. Use when writing or reviewing the design part of a spec.md or plan.md, or when someone asks "how should we build X". Works together with gp-architecture, which holds the fixed rules.
+description: The Concept Development GP's backend system design in one place: the fixed architecture rules (modular monolith, Temporal between phases, LangGraph inside, phase contract, edit propagation, naming, cost, process) and the step-by-step method for designing any new part (agent, phase, tool, escalation point, API route, stored field) into the design section of a spec.md. Use when writing or reviewing a spec.md or plan.md, designing anything new in the backend, or checking that a change fits the architecture.
 ---
 
 # GP system design
 
-`gp-architecture` says **what is already decided**. This skill says **how to design
-something new** inside those rules. Run the steps in order. Each one produces a section of
-the design, and together they make the design section of `spec.md` (template at the end).
+Two parts:
+
+- **Part A: rules.** What is already decided and must not be broken.
+- **Part B: method.** How to design something new inside those rules, step by step. Its
+  output is the design section of `spec.md`.
+
+Design with Part B, then check the result against Part A.
+
+If a requirement seems to need breaking a Part A rule, do not quietly work around it:
+list it under **Open questions** in the spec for Youssef to decide.
+
+---
+
+# Part A: Rules (decided)
+
+## 1. Shape: one codebase, two processes
+
+- **Modular monolith.** Everything is in `gp-backend`, with one module per phase under
+  `app/phases/<phase>/`.
+- **Two processes:**
+  - the API (`app/api/main.py`: FastAPI routes and the WebSocket);
+  - the worker (`app/worker/main.py`: the Temporal worker that runs the agents).
+- The API never runs agents itself. It starts or signals a Temporal workflow and returns
+  straight away (`202 Accepted`).
+
+## 2. Who owns what
+
+| Concern | Owner | Where |
+|---|---|---|
+| Phase order, retries, timeouts, waiting for approval or for the expert | Temporal | `app/orchestrator/` |
+| Everything inside a phase: agents, tools, supervisor loop, checkpoints | LangGraph | `app/phases/<phase>/` |
+| Saved, versioned phase results | Supabase | `app/shared/db.py` |
+| Types shared with the frontend | JSON Schemas | `schemas/` (gp-schemas submodule) |
+
+- Phases run in this order: `research → brand_design → visuals → investment`. A phase starts
+  only after the previous one is done and saved.
+- **Mid-phase escalation:** LangGraph pauses at a checkpoint, Temporal waits for the
+  expert's signal, and the run resumes from that checkpoint. Escalation never restarts the
+  phase.
+
+## 3. The phase contract
+
+- Other code may import a phase **only through its `interface.py`**. Nothing reaches into
+  another phase's graphs, agents or helpers.
+- Each `interface.py` exposes `NAME`, `READS` and `async run(concept_id, inputs, on_progress)`
+  (see `app/shared/phase_contract.py`).
+- A phase is wired in by adding it to `PHASE_REGISTRY` (`app/orchestrator/phase_registry.py`).
+- Phases share data **only through saved phase results**, never by calling each other.
+- Code used by more than one phase goes in `app/shared/` (HITL, RAG, tools, model routing).
+
+## 4. Edit propagation
+
+- Propagation is field-level. A phase declares the fields it reads in `READS`, for example
+  `"research.target_segments"`, and its reads are also recorded at run time.
+- Every saved field carries a `content_hash()` (`app/shared/hashing.py`). A field is stale
+  only if the hash of what it was built from changed. An edit that doesn't change a value
+  reruns nothing.
+- Every rerun saves a new version. It never overwrites the old one.
+
+## 5. Contracts and types
+
+- Any data that crosses the API, the WebSocket or a saved phase result is defined as a JSON
+  Schema in **gp-schemas** first. Python and TypeScript types are generated from it
+  (`scripts/generate_types.sh`). Never hand-write a duplicate model.
+- A spec that adds or changes such data must name the schema file it changes.
+
+## 6. Naming
+
+- **Routes:** use the singular `/concept` to create or get one concept. Use `/concepts` only
+  for listing all concepts.
+- **Progress names must say which level they describe:**
+  - workflow query: `current_phase`, `workflow_status`, `workflow_action`
+  - activity heartbeat: `phase_step_agent`, `phase_percent`
+  - `ProgressEvent`: `progress_phase`, `progress_status`, `progress_step`, `progress_percent`
+  - Never use a bare `step` or `status`. Some older code still does; rename it when you touch it.
+- **Branches:** `feature/<clickup-id>-short-name`, `fix/<clickup-id>-short-name`, created
+  from `develop`.
+
+## 7. Cost
+
+- Choose models through the model routing in `app/shared/`: a cheap model for simple steps
+  and a strong model only where it is needed.
+- LangGraph has no token budgets, so budgets and caching are enforced at the model layer.
+- A spec that adds an LLM call must say which model tier it uses and why.
+
+## 8. Process
+
+- Merge into `develop` through a PR. Only Youssef merges. Done = merged into `develop`.
+- CI must pass: Ruff (lint and format), the schema check, Pyright (basic) and pytest.
+- SDLC documents live in `docs/sdlc/<feature>/` (`intent.md`, `spec.md`, `plan.md`).
+
+## Rules checklist
+
+- [ ] Does every new piece of logic have a home: API, orchestrator, a phase, or shared?
+- [ ] Does anything cross phases other than saved results through `interface.py`?
+- [ ] Does each phase list its `READS`, and does each new output field have a hash?
+- [ ] Is every new or changed contract named as a gp-schemas file?
+- [ ] Do the names follow Part A §6?
+- [ ] Does each LLM call state its model tier?
+- [ ] Is every rule this spec bends listed under **Open questions**?
+
+---
+
+# Part B: Method (designing something new)
+
+Run the steps in order. Each one produces one section of the design (template at the end).
 
 **Golden rule:** the simplest design that meets the intent wins. Every extra agent, loop or
 service has to earn its place against the intent's "Done means" checks. If two options both
 meet them, pick the one a teammate can understand in 10 minutes.
 
 **Decisions stay with Youssef.** When a step has real options, write 2–3 of them, each with
-its trade-off and a recommendation. Don't silently pick one. Any rule from gp-architecture
+its trade-off and a recommendation. Don't silently pick one. Any rule from Part A
 the design bends goes under **Open questions**.
 
 ---
 
-## Step 1: Classify every piece of information
+### Step 1: Classify every piece of information
 
 This is the project's core claim: the system **never guesses**. Before choosing any agent or
 tool, list every fact the part needs or produces and give each one exactly one type:
@@ -39,9 +142,9 @@ tool, list every fact the part needs or produces and give each one exactly one t
 
 Output: a table `| Fact | Type | Produced by | Source |`.
 
-## Step 2: Find its home
+### Step 2: Find its home
 
-Use this decision path (homes and import rules are in gp-architecture §1–§3):
+Use this decision path (homes and import rules are in Part A §1–§3):
 
 ```
 Is it about receiving a request or streaming to the browser?   → app/api/
@@ -55,7 +158,7 @@ Does data cross the API, the WebSocket or a saved result?       → a schema in 
 network calls, no `datetime.now()`, no randomness. Anything like that belongs in an
 **activity**. This is the most common way to break Temporal.
 
-## Step 3: Choose the agent pattern
+### Step 3: Choose the agent pattern
 
 Pick from this menu, **simplest first**. Move down a row only when the row above can't meet
 the intent.
@@ -78,7 +181,7 @@ chooses its pattern from this menu and writes down why.
 
 Output: the chosen pattern per node, plus *one line on why the row above wasn't enough*.
 
-## Step 4: Design the state and the contracts
+### Step 4: Design the state and the contracts
 
 - **Graph state** (`TypedDict`): only what the nodes inside this phase pass to each other.
   Keys that **parallel branches write to need a reducer**
@@ -93,7 +196,7 @@ Output: the chosen pattern per node, plus *one line on why the row above wasn't 
 - **Schemas first:** any new or changed field → a gp-schemas change → regenerated types. The
   spec names the schema file.
 
-## Step 5: Place the escalation points
+### Step 5: Place the escalation points
 
 For each **human-only** fact from Step 1, design the escalation:
 
@@ -112,7 +215,7 @@ For each **human-only** fact from Step 1, design the escalation:
    stored. Expert answers are **retrieved later as memory, not trained into a model**. The
    (context, escalated?, answer) records are also the training data for the scorer.
 
-## Step 6: Choose the model and the cost per LLM node
+### Step 6: Choose the model and the cost per LLM node
 
 For each node that calls an LLM: which tier (cheap or strong) and why, the input size
 expected, and whether its result can be **cached** (retrieval results and expensive calls
@@ -120,7 +223,7 @@ keyed by input hash). LangGraph has no token budgets, so budgets are enforced in
 layer in `app/shared/`. If a node uses the strong tier, write the one thing the cheap tier
 can't do there.
 
-## Step 7: Design for failure
+### Step 7: Design for failure
 
 Temporal retries activities, so:
 
@@ -135,9 +238,9 @@ Temporal retries activities, so:
 - **Partial success:** decide whether one failed branch fails the phase, retries just that
   branch, or escalates. Write it down; don't leave it to the default.
 
-## Step 8: Progress and streaming
+### Step 8: Progress and streaming
 
-List the progress events the part sends, using the names from gp-architecture §6:
+List the progress events the part sends, using the names from Part A §6:
 - the heartbeat carries `phase_step_agent` and `phase_percent`;
 - `ProgressEvent` carries `progress_phase`, `progress_status`, `progress_step` and
   `progress_percent`.
@@ -145,14 +248,14 @@ List the progress events the part sends, using the names from gp-architecture §
 Say which node sends which step, and whether it streams tokens. The user should never see
 more than ~5 seconds without a visible change.
 
-## Step 9: Edit propagation
+### Step 9: Edit propagation
 
 - Which earlier fields this part reads → its `READS` (also recorded at run time).
 - Which of its outputs other parts read → they become stale when it changes.
 - When a user edits one of its outputs: which nodes rerun, and which stay as they were.
   Unchanged hashes rerun nothing.
 
-## Step 10: Plan the tests and how it is evaluated
+### Step 10: Plan the tests and how it is evaluated
 
 - **Computable nodes:** plain unit tests with known answers.
 - **LLM nodes and tools:** tests with fake models and recorded tool responses. No real
@@ -208,7 +311,7 @@ READS: ... · Read by: ... · Rerun on edit: ...
 - <rule bent or decision Youssef must make>
 ```
 
-## Review checklist
+## Design checklist
 
 - [ ] Every fact has exactly one type; no LLM produces a number or fact on its own
 - [ ] The simplest pattern was chosen, and each step up the menu is justified
@@ -218,7 +321,7 @@ READS: ... · Read by: ... · Rerun on edit: ...
 - [ ] Every human-only fact has an escalation point, with choices and a timeout
 - [ ] No I/O in workflow code; activities are idempotent
 - [ ] Every external call has a timeout, retry rules and a user-facing failure
-- [ ] Progress names follow gp-architecture §6
+- [ ] Progress names follow Part A §6
 - [ ] `READS` is listed, and what reruns on an edit is defined
 - [ ] Each intent "Done means" check maps to a test or demo step
 - [ ] Options are written down with trade-offs; decisions are left to Youssef under Open questions
