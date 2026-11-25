@@ -1,10 +1,12 @@
 # Plan: Phase 1 — Research
 
-Status: **draft 4** (merging this PR = approved) · Date: 2026-11-25
+Status: **draft 5** (merging this PR = approved) · Date: 2026-11-26
 Reads: [`spec.md`](spec.md) · Follows: `.claude/skills/gp-system-design`
 
 How to read this file:
 - **Sections 1–2:** the decisions this plan is built on, and what must be ready first.
+- **Experiments:** the first sprint. Before building any agent, we find out in plain Python
+  what works for it (model, prompt, tools, pattern). The results decide its spec section.
 - **Sections 3–8:** the work, in groups. Each task says what to build, where, what it
   depends on, and what "done" means (the test that proves it).
 - **Section 9:** the risks.
@@ -22,7 +24,8 @@ everything in its "Depends on" column is done.
 | Web search | **Tavily**, for the Market and Segments agents. |
 | Map (frontend) | **Google Maps JS** (`@angular/google-maps`), with satellite view for seeing the land. |
 | Escalation scorer | Built as a separate parallel track. Until it's trained, the rule decides: missing or conflicting sources → escalate. |
-| Agent design | Before building an agent, its owner updates that agent's section 6 in spec.md (pattern, model, tools, stop rule → `Status: decided`) in a small PR. Read spec section 5.9 (shared state, the Supervisor's review loop, the three quality layers) and the "Guidance for owners" at the top of spec section 6 first. |
+| Sprint order | **First sprint: experiments** (X0–X6, plus A3 and the keys P2–P4, which the experiments need). **Then the build:** sections 3–8 with LangChain/LangGraph, memory, database, checkpoints and the frontend. Seminar 2 covers Phase 1 only. |
+| Agent design | Each owner first runs their agent's experiment (X1–X6) on the shared test sites. With the results, the owner updates that agent's section 6 in spec.md (pattern, model, tools, stop rule → `Status: decided`) in a small PR. Read spec section 5.9 (shared state, the Supervisor's review loop, the three quality layers) and the "Guidance for owners" at the top of spec section 6 first. |
 | Quality checks | Every agent runs the code checks (schema + `check_evidence`). Extra LLM checks go only into the data-gathering agents; cross-agent review is the Supervisor's job (spec section 5.9). |
 
 ## 2. Before starting
@@ -36,6 +39,28 @@ everything in its "Depends on" column is done.
 | P5 | The Supabase Postgres connection string in `.env` for the checkpointer (`.env.example` updated, real values never committed). |
 
 ---
+
+## Experiments (first sprint)
+
+Plain Python in [`experiments/`](../../../experiments/README.md), with no LangChain or
+LangGraph. Every run is kept and logged, so old and new versions can be compared. An
+experiment is done when its agent passes all test sites (every fact has evidence, the
+expected facts are found, the `must_escalate` facts escalate) and the owner has opened the
+PR that updates the agent's section 6 in spec.md to `Status: decided`, with the results.
+
+| # | Task | Where | Depends on | Done when |
+|---|---|---|---|---|
+| X0 | **Test set and scoring:** 3–5 fixed test sites (ideally from Ali's past concepts, mixing dense city, new city and desert road), each with what a good output looks like per agent and what must escalate; agent-specific checks added to `scoring.py` | `experiments/test_sites/`, `experiments/shared/scoring.py` | — | The site files are reviewed (with Ali if possible) and `--site all` runs on them |
+| X1 | **Site analysis experiment:** OSM + elevation data quality, the computed facts, the summary prompt and model | `experiments/site_analysis/` | X0, A3 | Passes all test sites; spec 6.1 PR opened with the results |
+| X2 | **Market research experiment:** Tavily queries, the 6-call limit, synthesis prompt and model; propose Q9 with the Gap owner | `experiments/market_research/` | X0, A3 | Passes all test sites; spec 6.2 PR opened with the results |
+| X3 | **Gap analysis experiment:** prompt and model over saved Site + Market outputs, no tools | `experiments/gap_analysis/` | X0, first X1 + X2 runs | Passes all test sites; spec 6.3 PR opened with the results |
+| X4 | **Segments experiment:** demographic sources, the 5-call limit, escalation instead of estimates | `experiments/segments/` | X0, A3, first X3 runs | Passes all test sites; spec 6.4 PR opened with the results |
+| X5 | **Competitors experiment:** the density radius on each kind of site, Places quality, classification model | `experiments/competitors/` | X0, A3 | Passes all test sites; spec 6.5 PR opened with the results |
+| X6 | **Supervisor experiment:** single reviewer vs critic/debate on saved outputs of the other five, including planted problems | `experiments/supervisor/` | X0, first runs of X1–X5 | Catches the planted problems; spec 6.6 PR opened with the results |
+
+**When an output is bad, change one thing at a time, in this order:** prompt → tools and
+data → model → pattern (for example, adding a critic). The reason for each change goes in
+the run's notes.
 
 ## 3. Foundations
 
@@ -58,12 +83,12 @@ Each agent replaces its stub node in A6. Its owner first updates the agent's spe
 
 | # | Agent | Depends on | Done when |
 |---|---|---|---|
-| B1 | **Site analysis** (spec section 6.1): roads and access from OSM, distances and sun path computed, elevation, and zoning always escalated | A3, A6 | Unit tests with known answers for the distance and sun-path functions; recorded Overpass data; "empty OSM → escalates" |
-| B2 | **Market research** (spec section 6.2): Tavily searches, at most 6 tool calls | A3, A4, A6 | Recorded Tavily responses; "conflicting sources → escalates"; every summary sentence cites a fact |
-| B3 | **Gap analysis** (spec section 6.3): one structured LLM step with no tools, then the evidence check. Settle Q9 (supply-side data) with the Market owner first | A4, A6 | "A gap without evidence is rejected"; a fixed input gives a stable structure |
-| B4 | **Segments** (spec section 6.4): at most 5 tool calls | A3, A4, A6 | "No demographic source → escalates"; "no share without evidence" |
-| B5 | **Competitors** (spec section 6.5): the radius computed from local density | A3, A4, A6 | Unit tests for `competitor_radius` (dense street vs desert road); recorded Places data; "zero results → escalates" |
-| B6 | **Supervisor** (spec section 6.6): reads the whole state; deterministic checks, then the LLM review (single reviewer first; debate only if tests show misses); feedback through `supervisor_feedback`; reruns the flagged agent and its dependents; at most 2 rerun rounds | A4, A6 | "A fact without evidence triggers a rerun"; "a Gap issue reruns Gap, Segments and Competitors, but not Site or Market"; "a Segments issue doesn't rerun Competitors"; the stop rule holds at 2 rounds |
+| B1 | **Site analysis** (spec section 6.1): roads and access from OSM, distances and sun path computed, elevation, and zoning always escalated | X1, A3, A6 | Unit tests with known answers for the distance and sun-path functions; recorded Overpass data; "empty OSM → escalates" |
+| B2 | **Market research** (spec section 6.2): Tavily searches, at most 6 tool calls | X2, A3, A4, A6 | Recorded Tavily responses; "conflicting sources → escalates"; every summary sentence cites a fact |
+| B3 | **Gap analysis** (spec section 6.3): one structured LLM step with no tools, then the evidence check. Settle Q9 (supply-side data) with the Market owner first | X3, A4, A6 | "A gap without evidence is rejected"; a fixed input gives a stable structure |
+| B4 | **Segments** (spec section 6.4): at most 5 tool calls | X4, A3, A4, A6 | "No demographic source → escalates"; "no share without evidence" |
+| B5 | **Competitors** (spec section 6.5): the radius computed from local density | X5, A3, A4, A6 | Unit tests for `competitor_radius` (dense street vs desert road); recorded Places data; "zero results → escalates" |
+| B6 | **Supervisor** (spec section 6.6): reads the whole state; deterministic checks, then the LLM review (single reviewer first; debate only if tests show misses); feedback through `supervisor_feedback`; reruns the flagged agent and its dependents; at most 2 rerun rounds | X6, A4, A6 | "A fact without evidence triggers a rerun"; "a Gap issue reruns Gap, Segments and Competitors, but not Site or Market"; "a Segments issue doesn't rerun Competitors"; the stop rule holds at 2 rounds |
 
 Agents B1–B6 don't depend on each other's code, so they can be built at the same time.
 
@@ -115,4 +140,6 @@ then Should. The Must items are never cut, because they are the acceptance crite
 | Temporal + LangGraph pause and resume is new to the team | C2 is harder than it looks | C2 starts as soon as C1 lands, with pairing on it |
 | External APIs change or rate-limit | Flaky runs | Recorded responses in tests; retries and throttling in A3; escalation when a source fails |
 | Gap analysis runs before Competitors (supply side) | Gaps that aren't real gaps | Q9 in spec section 7, settled before B3 starts |
+| Experiments never end | The build starts late | X0 fixes what "good" means first; each experiment ends when its agent passes the test sites, not when it's perfect. Time-boxed to the first sprint |
+| Test sites too easy or too few | The chosen design fails on Ali's live site (F2) | Mix site types in X0 (dense city, new city, desert road); include one site with known missing data |
 | The Supervisor only sees the state | A cited but misread source passes review | Careful sourcing and escalation inside the data-gathering agents (spec section 5.9, layer 2) |

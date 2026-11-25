@@ -1,0 +1,19 @@
+{
+  "site_id": "site_01",
+  "name": "Short name of the site",
+  "lat": 0.0,
+  "lng": 0.0,
+  "business_types": ["optional, as the user would enter them"],
+  "area_type": "dense_city | suburban | new_city | desert_road",
+  "from_ali_concept": "which of Ali's past concepts this site comes from, if any",
+  "expected": {
+    "site_analysis": ["facts a good output must contain, e.g. 'access from the ring road'"],
+    "market_research": [],
+    "gap_analysis": [],
+    "segments": [],
+    "competitors": [],
+    "supervisor": []
+  },
+  "must_escalate": ["facts with no reliable source that must be escalated, e.g. 'zoning'"],
+  "notes": ""
+}
