@@ -59,4 +59,4 @@ Commit the regenerated `app/shared/schemas_generated/` together with any submodu
 - `main` = production, `develop` = integration. Branch from `develop`, PR back into `develop`.
 - Branch names: `feature/<clickup-id>-short-name`, `fix/<clickup-id>-short-name`.
 - Every PR is reviewed by Youssef. Done = merged into `develop`.
-- CI on every PR: Ruff (lint + format), schema check, Pyright (basic), pytest.
+- CI on every PR: schema check, Pyright (basic), pytest. Ruff is still in the dev tools: run `ruff check --fix . && ruff format .` locally to tidy code (not enforced).
