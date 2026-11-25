@@ -213,7 +213,19 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 
 ## 6. Agent designs (drafts: each owner reviews and changes theirs)
 
-### 6.1 Site analysis · Owner: TBD
+**How an agent section gets updated:**
+1. The owner decides their agent's pattern (and model, tools, stop rule) using
+   gp-system-design Part B, Step 3.
+2. **Before writing the agent's code**, the owner opens a PR that updates *only their
+   section* here. It changes `Status: draft` → `Status: decided` and records the pattern
+   and why the simpler option wasn't enough.
+3. Youssef reviews and merges it. The section is now the agent's contract.
+4. The code PR links to the section. If the code needs a different design, update the
+   section first (in that PR or a separate one), never just the code.
+
+So the spec always says how each agent actually works.
+
+### 6.1 Site analysis · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
@@ -233,7 +245,7 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 - **Tests:** unit tests for the distance and sun-path functions with known answers; a
   recorded Overpass response; "empty OSM → escalates".
 
-### 6.2 Market research · Owner: TBD
+### 6.2 Market research · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
@@ -251,7 +263,7 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 - **Tests:** recorded search responses; "conflicting sources → escalates"; every summary
   sentence cites a fact.
 
-### 6.3 Gap analysis · Owner: TBD
+### 6.3 Gap analysis · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
@@ -266,7 +278,7 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 - **Model:** strong tier: this is the main reasoning step.
 - **Tests:** "a gap without evidence is rejected"; a fixed input gives a stable structure.
 
-### 6.4 Segments · Owner: TBD
+### 6.4 Segments · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
@@ -283,7 +295,7 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 - **Model:** cheap tier for search; strong tier for matching.
 - **Tests:** "no demographic source → escalates"; "no share without evidence".
 
-### 6.5 Competitors · Owner: TBD
+### 6.5 Competitors · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
@@ -306,7 +318,7 @@ Every step change heartbeats. Token streaming is a **Could** (§4).
 - **Tests:** recorded Places responses; classification on fixed data; "zero results →
   escalates".
 
-### 6.6 Supervisor · Owner: TBD
+### 6.6 Supervisor · Owner: TBD · Status: draft
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|

@@ -95,6 +95,10 @@ list it under **Open questions** in the spec for Youssef to decide.
 - Merge into `develop` through a PR. Only Youssef merges. Done = merged into `develop`.
 - CI must pass: Ruff (lint and format), the schema check, Pyright (basic) and pytest.
 - SDLC documents live in `docs/sdlc/<feature>/` (`intent.md`, `spec.md`, `plan.md`).
+- **The spec stays true to the code.** An agent's design section in `spec.md` is updated
+  and merged (`Status: decided`) *before* its code is written. If the code needs to differ
+  from the spec, update the spec first, in the same PR or before it. A code PR whose design
+  doesn't match its spec section is not merged.
 
 ## Rules checklist
 
