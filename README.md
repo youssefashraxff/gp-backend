@@ -23,6 +23,7 @@ app/
     investment/
   shared/         phase contract, hashing, generated schema types, (later) HITL, RAG, tools, model routing
 schemas/          git submodule -> gp-schemas
+experiments/      plain-Python agent experiments that decide each agent's design (not production code)
 ```
 
 **Module rule:** code may only import another phase through its `interface.py`.

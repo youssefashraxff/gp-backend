@@ -48,6 +48,9 @@ bash scripts/generate_types.sh       # regenerate types after a schemas submodul
 - **Agents live in `app/phases/research/agents/<agent>.py`** (`site_analysis`,
   `market_research`, `gap_analysis`, `segments`, `competitors`, `supervisor`). Stubs stay in
   `app/phases/research/stubs.py` until the real agent replaces them.
+- **Experiments come before agents.** `experiments/` holds the plain-Python experiments
+  (plan X0–X6) that decide each agent's design. Nothing under `app/` imports from it. Never
+  delete or overwrite a prompt version or a saved run there; add a new one.
 - **An agent's design is decided before its code.** Its section 6 in `spec.md` must say
   `Status: decided` first. If the code needs a different design, update the spec first.
 - **Tests:** every new piece of logic gets a test. External calls use recorded responses;

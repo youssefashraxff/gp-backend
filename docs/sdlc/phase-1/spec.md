@@ -261,10 +261,12 @@ real world has to come from the agents that touch the sources (layer 2).
 ## 6. Agent designs (drafts: each owner reviews and changes theirs)
 
 **How an agent section gets updated:**
-1. The owner decides their agent's pattern (and model, tools, stop rule) using
-   gp-system-design Part B, Step 3.
+1. The owner runs their agent's experiment first (plan X1–X6, in `experiments/`): the draft
+   below is the starting point, and the experiment on the shared test sites decides the
+   pattern, model, prompt, tools and stop rule (using gp-system-design Part B, Step 3).
 2. **Before writing the agent's code**, the owner opens a PR that updates *only their
-   section* here. It changes `Status: draft` → `Status: decided` and records the pattern
+   section* here, with the experiment's results (the chosen prompt version, model and the
+   scores from `results.csv`). It changes `Status: draft` → `Status: decided` and records the pattern
    and why the simpler option wasn't enough.
 3. Youssef reviews and merges it. The section is now the agent's contract.
 4. The code PR links to the section. If the code needs a different design, update the
