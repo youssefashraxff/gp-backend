@@ -8,8 +8,7 @@ How to read this file:
 - **§5:** the design of the whole phase.
 - **§6:** the design of each agent. Each agent section is a **draft for its owner to
   review and change**: the owner decides the agent's internal pattern, model and cost.
-- **§7:** the decisions Youssef still has to make. Anything marked **(proposal)** is not
-  decided yet.
+- **§7:** the decisions made on the open questions.
 
 ---
 
@@ -99,7 +98,7 @@ Cut from the bottom up: Could → Should. Never cut a Must.
 |---|---|
 | `concept_input` | Add `business_types: string[]` (optional, may be empty). |
 | `progress_event` | Rename the fields to the decided names: `progress_phase`, `progress_status`, `progress_step`, `progress_percent`. Add `progress_agent` (which agent) and an optional `escalation_id` while waiting. |
-| `evidence` **(new, proposal)** | `{ fact_type: computable \| retrieved \| expert, source: { kind: url \| api \| function \| escalation, ref, title? }, retrieved_at }`. |
+| `evidence` **(new)** | `{ fact_type: computable \| retrieved \| expert, source: { kind: url \| api \| function \| escalation, ref, title? }, retrieved_at }`. |
 | `escalation` **(new)** | `escalation_id, concept_id, phase, agent, question, context (facts with evidence), choices[2–4], allow_free_text, scorer_score?, status: open \| reminded \| answered \| timed_out, answer?, created_at, reminded_at?, answered_at?` |
 | `research_output` **(new)** | The six output fields in §5.7; every fact inside them embeds an `evidence` object. |
 
@@ -232,7 +231,7 @@ So the spec always says how each agent actually works.
 | Nearby roads, road types, access points | retrieved | OSM Overpass tool | Overpass query |
 | Distance to main roads and landmarks | computable | geometry function on OSM data | function name |
 | Sun path / orientation through the year | computable | sun-position function (e.g. `astral`/`pvlib`) | function name |
-| Terrain / elevation | retrieved | elevation API (**which one: Q6**) | API + query |
+| Terrain / elevation | retrieved | Google Elevation API (Q6) | API + query |
 | Zoning / building regulations | human-only | escalation | escalation id |
 | Short site summary | LLM over the facts above | cheap model | the facts it cites |
 
@@ -337,15 +336,15 @@ So the spec always says how each agent actually works.
 
 ---
 
-## 7. Open questions (Youssef decides)
+## 7. Decisions (were open questions)
 
-| # | Question | Options | Recommendation |
+| # | Question | Options | Decision |
 |---|---|---|---|
-| Q1 | Accept the `evidence` schema in §5.2? | as is / change fields | as is: it's what AC-4 needs |
+| Q1 | Evidence schema in §5.2 | — | **Decided: as proposed** |
 | Q2 | Checkpointer for paused runs | — | **Decided: Postgres on Supabase** |
-| Q3 | Accept the scope ranking in §4? | as is / reorder | as is |
-| Q4 | Expert doesn't answer in time | — | **Decided: remind, then stop waiting after a long limit.** Still open: the reminder time, the long limit, how Ali is reminded (in-app only, or also email/WhatsApp), and whether a stopped run can be restarted from its checkpoint |
-| Q5 | Agent owners | assign one teammate per agent in §6 | decide at the sprint meeting |
-| Q6 | Elevation data source | Open-Elevation / Google Elevation / skip terrain in v1 | Google Elevation: same key as Places |
-| Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, §6.5). Still open: the exact ranges, tuned with Ali |
-| Q8 | The progress rename touches gp-schemas, backend and frontend | do it in Sprint 2 first / later | first: every new event uses the new names |
+| Q3 | Scope ranking in §4 | — | **Decided: as proposed** |
+| Q4 | Expert doesn't answer in time | — | **Decided: remind, then stop waiting.** Defaults: reminder after **30 min**, stop after **24 h**, reminder in the app only for v1 (email/WhatsApp later), and a stopped run **can be restarted** from its saved checkpoint. Tune the times after the first test with Ali |
+| Q5 | Agent owners | — | **Decided: assign at the Sprint 2 meeting**; each owner then updates their §6 section (see §6 process) |
+| Q6 | Elevation data source | — | **Decided: Google Elevation API** (same key as Places) |
+| Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, §6.5); start with the ranges in §6.5 and tune them with Ali |
+| Q8 | Progress rename | — | **Decided: first in Sprint 2.** gp-schemas done; backend and frontend follow with the submodule bump |
