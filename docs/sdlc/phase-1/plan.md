@@ -1,6 +1,6 @@
 # Plan: Phase 1 — Research
 
-Status: **draft 3** (merging this PR = approved) · Date: 2026-11-25
+Status: **draft 4** (merging this PR = approved) · Date: 2026-11-25
 Reads: [`spec.md`](spec.md) · Follows: `.claude/skills/gp-system-design`
 
 How to read this file:
@@ -22,7 +22,8 @@ everything in its "Depends on" column is done.
 | Web search | **Tavily**, for the Market and Segments agents. |
 | Map (frontend) | **Google Maps JS** (`@angular/google-maps`), with satellite view for seeing the land. |
 | Escalation scorer | Built as a separate parallel track. Until it's trained, the rule decides: missing or conflicting sources → escalate. |
-| Agent design | Before building an agent, its owner updates that agent's section 6 in spec.md (pattern, model, tools, stop rule → `Status: decided`) in a small PR. |
+| Agent design | Before building an agent, its owner updates that agent's section 6 in spec.md (pattern, model, tools, stop rule → `Status: decided`) in a small PR. Read spec section 5.9 (shared state, the Supervisor's review loop, the three quality layers) and the "Guidance for owners" at the top of spec section 6 first. |
+| Quality checks | Every agent runs the code checks (schema + `check_evidence`). Extra LLM checks go only into the data-gathering agents; cross-agent review is the Supervisor's job (spec section 5.9). |
 
 ## 2. Before starting
 
@@ -59,10 +60,10 @@ Each agent replaces its stub node in A6. Its owner first updates the agent's spe
 |---|---|---|---|
 | B1 | **Site analysis** (spec section 6.1): roads and access from OSM, distances and sun path computed, elevation, and zoning always escalated | A3, A6 | Unit tests with known answers for the distance and sun-path functions; recorded Overpass data; "empty OSM → escalates" |
 | B2 | **Market research** (spec section 6.2): Tavily searches, at most 6 tool calls | A3, A4, A6 | Recorded Tavily responses; "conflicting sources → escalates"; every summary sentence cites a fact |
-| B3 | **Gap analysis** (spec section 6.3): one structured LLM step, then the evidence check | A4, A6 | "A gap without evidence is rejected"; a fixed input gives a stable structure |
+| B3 | **Gap analysis** (spec section 6.3): one structured LLM step with no tools, then the evidence check. Settle Q9 (supply-side data) with the Market owner first | A4, A6 | "A gap without evidence is rejected"; a fixed input gives a stable structure |
 | B4 | **Segments** (spec section 6.4): at most 5 tool calls | A3, A4, A6 | "No demographic source → escalates"; "no share without evidence" |
 | B5 | **Competitors** (spec section 6.5): the radius computed from local density | A3, A4, A6 | Unit tests for `competitor_radius` (dense street vs desert road); recorded Places data; "zero results → escalates" |
-| B6 | **Supervisor** (spec section 6.6): deterministic checks, then the LLM review; at most 2 rerun rounds | A4, A6 | "A fact without evidence triggers a rerun"; the stop rule holds at 2 rounds |
+| B6 | **Supervisor** (spec section 6.6): reads the whole state; deterministic checks, then the LLM review (single reviewer first; debate only if tests show misses); feedback through `supervisor_feedback`; reruns the flagged agent and its dependents; at most 2 rerun rounds | A4, A6 | "A fact without evidence triggers a rerun"; "a Gap issue reruns Gap, Segments and Competitors, but not Site or Market"; "a Segments issue doesn't rerun Competitors"; the stop rule holds at 2 rounds |
 
 Agents B1–B6 don't depend on each other's code, so they can be built at the same time.
 
@@ -113,3 +114,5 @@ then Should. The Must items are never cut, because they are the acceptance crite
 | Two versions of the research output schema | Agents built against different shapes | All agents build against `research_output` from gp-schemas; any refinement goes through a gp-schemas PR first |
 | Temporal + LangGraph pause and resume is new to the team | C2 is harder than it looks | C2 starts as soon as C1 lands, with pairing on it |
 | External APIs change or rate-limit | Flaky runs | Recorded responses in tests; retries and throttling in A3; escalation when a source fails |
+| Gap analysis runs before Competitors (supply side) | Gaps that aren't real gaps | Q9 in spec section 7, settled before B3 starts |
+| The Supervisor only sees the state | A cited but misread source passes review | Careful sourcing and escalation inside the data-gathering agents (spec section 5.9, layer 2) |

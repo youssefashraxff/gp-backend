@@ -5,7 +5,8 @@ Reads: [`intent.md`](intent.md) · Follows: `.claude/skills/gp-system-design`
 
 How to read this file:
 - **Sections 1–4:** *what* we build and how we know it's done.
-- **Section 5:** the design of the whole phase.
+- **Section 5:** the design of the whole phase. **Read 5.9 first** if you own an agent: it
+  says how the agents share state and how the Supervisor's review loop works.
 - **Section 6:** the design of each agent. Each agent section is a **draft for its owner to
   review and change**: the owner decides the agent's internal pattern, model and cost.
 - **Section 7:** the decisions made on the open questions.
@@ -208,6 +209,53 @@ their own key, so they don't collide. The keys that several nodes append to (`es
 
 Every step change heartbeats. Token streaming is a **Could** (section 4).
 
+### 5.9 How the agents work together
+
+**Shared state, not hand-offs.** Agents don't pass their output to the next agent like a
+relay. Each agent reads the state keys it needs and returns **only its own key** (e.g. Gap
+analysis returns `{"gaps": ...}`); LangGraph merges it into the shared state. The arrows in
+section 1 show **order**, not who can see what. So the Supervisor reads the whole state:
+`site_analysis`, `market`, `gaps`, `segments` and `competitors`, not just the last two agents.
+
+**The Supervisor reviews once, at the end.** It doesn't review after each agent, because:
+- the most important problems are **contradictions between agents** (e.g. Gap says "no cafés
+  nearby" but Competitors found 6), and those only show once every agent is done;
+- each agent already runs its own code checks (below), so a per-agent LLM review would
+  mostly find nothing and only add cost and waiting time.
+
+**The review loop:**
+1. The Supervisor writes its findings into `supervisor_feedback` as
+   `{agent, issue, facts_involved}` items (list reducer, section 5.7).
+2. It routes back to the flagged agent(s). Each agent reads the feedback addressed to it.
+3. The flagged agent **and everything that depends on it** rerun, using the table in
+   section 5.5. A parallel sibling whose inputs didn't change does **not** rerun (fixing
+   Segments doesn't rerun Competitors; fixing Gaps reruns both).
+4. The Supervisor reviews again. Stop rule: at most 2 rounds (section 6.6).
+
+**Where the state lives.** The state is a normal Python `TypedDict` in memory. We don't
+design SQL tables for it:
+- the **Postgres checkpointer** (Q2) saves a snapshot after every node automatically. This
+  is what lets a run pause for the expert and survive a restart;
+- when the phase finishes, the final state is saved **once** as the versioned research
+  result (section 5.6, idempotent saves). Edit and rerun (section 5.5) works on that.
+
+**Where quality is checked (three layers):**
+
+| Layer | Who | Checks | LLM cost |
+|---|---|---|---|
+| 1. Code checks | **every** agent, including Gap | output matches the schema; `check_evidence` (every fact has evidence) | none |
+| 2. Careful sourcing | the data-gathering agents: Site, Market, Segments, Competitors | right tool use, stop rules, escalate when sources are missing or conflict | per agent design |
+| 3. Cross-agent review | Supervisor | coverage, contradictions between agents, recommendations | strong model |
+
+Site and Market need the most care inside the agent: everything else is built on them, and an
+error caught only by the Supervisor means rerunning almost the whole chain. The reasoning
+agent (Gap) skips extra LLM self-checks and relies on layer 1 plus the Supervisor.
+
+**What the Supervisor can't catch:** it only sees the state, so it catches *inconsistency*
+(agents disagree, a fact has no source). It can't tell whether a well-sourced fact is *true
+in the real world*, e.g. a source that was read wrong but still cited. Accuracy against the
+real world has to come from the agents that touch the sources (layer 2).
+
 ---
 
 ## 6. Agent designs (drafts: each owner reviews and changes theirs)
@@ -223,6 +271,20 @@ Every step change heartbeats. Token streaming is a **Could** (section 4).
    section first (in that PR or a separate one), never just the code.
 
 So the spec always says how each agent actually works.
+
+**Guidance for owners (the drafts below follow it; your section can change it):**
+- **Use a fixed workflow when you already know the steps.** It's cheaper, faster and easier
+  to test. Use a tool-calling (ReAct) loop only when the next search depends on what the
+  last one returned. Add a planning step only for long, open-ended tasks (in Phase 1, Market
+  research comes closest).
+- **Not every agent needs ReAct.** Site analysis and Competitors are fixed workflows; Gap
+  analysis is one structured LLM call.
+- **Every agent keeps the layer-1 code checks** (section 5.9) whatever pattern it uses.
+- **Write down for your agent:** pattern (and why the simpler row wasn't enough), tools and
+  the max number of tool calls, when it escalates, model tier, the exact state key it writes
+  (its output schema), and the main tests.
+- Output schemas come first (plan A1/A6): every agent and the Supervisor build against them,
+  so once they're fixed, all owners can build in parallel.
 
 ### 6.1 Site analysis · Owner: TBD · Status: draft
 
@@ -272,6 +334,14 @@ So the spec always says how each agent actually works.
 - **Pattern:** fixed workflow with one structured-output LLM node, then a deterministic
   check that every gap cites evidence (row 2). Not a critic loop, because the Supervisor
   already reviews.
+- **Input and tools:** reads only `site_analysis` + `market` from the state; **no tools**.
+  The research is already done, and this step is pure reasoning over checked facts. If it
+  could search, it would bring in new facts that nobody checked, and the job split would
+  blur. If the inputs aren't enough, that means an earlier agent missed something: it flags
+  it in its output (the Supervisor routes it back) or escalates. It doesn't search itself.
+- **Supply-side data (open, Q9):** a gap means *demand that nobody is serving*, but
+  Competitors (the supply side) runs after Gap. Market research must bring enough supply
+  information, or Gap would be guessing what's missing.
 - **Escalation:** a gap with no supporting fact is dropped, or escalated if it's the only gap
   for a business type the user asked for.
 - **Model:** strong tier: this is the main reasoning step.
@@ -333,6 +403,17 @@ So the spec always says how each agent actually works.
 - **Model:** strong tier, because it judges the other agents' work.
 - **Tests:** "a fact without evidence triggers a rerun"; the stop rule at 2 rounds; recorded
   model outputs.
+- **Option for the owner: debate for the judgment calls.** Inside the LLM review, a
+  multi-agent debate (one agent argues for a conclusion, one attacks it, a judge decides,
+  1–2 rounds) can catch weak reasoning a single reviewer misses.
+
+  | Option | Trade-off | Recommendation |
+  |---|---|---|
+  | Single LLM reviewer | 1 strong call per round; stable outputs; easy to test | **Start here** |
+  | Debate (proposer + critic + judge) | ~6 strong calls per round; outputs vary more; harder to test; agreement doesn't fix a missing source | Add **only** for contradictions and `recommended_business_types`, and only if test cases show the single reviewer missing things |
+
+  The deterministic checks never go through debate. Comparing the two options on the same
+  test cases is also a useful result for the report.
 
 ---
 
@@ -348,3 +429,4 @@ So the spec always says how each agent actually works.
 | Q6 | Elevation data source | — | **Decided: Google Elevation API** (same key as Places) |
 | Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, section 6.5); start with the ranges in section 6.5 and tune them with Ali |
 | Q8 | Progress rename | — | **Decided: first in Sprint 2.** gp-schemas done; backend and frontend follow with the submodule bump |
+| Q9 | Supply-side data for Gap analysis (section 6.3) | (a) Market research collects basic supply info (what already exists in the area); (b) move a light Places count before Gap; (c) leave Gap demand-only and let the Supervisor check gaps against Competitors | **Open:** the Market and Gap owners propose one in their section PRs |
