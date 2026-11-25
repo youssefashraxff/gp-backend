@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from enum import StrEnum
 
-from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
+from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, RootModel
 
 
 class PhaseName(StrEnum):
@@ -27,9 +27,13 @@ class SiteLocation(BaseModel):
     model_config = ConfigDict(
         extra='forbid',
     )
-    name: str = Field(..., description='Human-readable site name or address.')
+    name: str | None = Field(None, description='Human-readable site name or address.')
     lat: float = Field(..., ge=-90.0, le=90.0)
     lng: float = Field(..., ge=-180.0, le=180.0)
+
+
+class BusinessType(RootModel[str]):
+    root: str = Field(..., min_length=1)
 
 
 class ConceptInput(BaseModel):
@@ -38,6 +42,10 @@ class ConceptInput(BaseModel):
     )
     site: SiteLocation
     client_name: str | None = None
+    business_types: list[BusinessType] | None = Field(
+        None,
+        description='Business types the client is considering. Optional; the research also recommends its own.',
+    )
     budget_egp: float | None = Field(None, ge=0.0)
     preferences: str | None = Field(None, description='Free-text preferences from the client.')
 
