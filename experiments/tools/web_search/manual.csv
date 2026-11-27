@@ -263,3 +263,15 @@ run_file,tool,settings,query_id,run,relevant,notes
 20261127T221335894280__serper__v4__qv1+v2__obour_q4__run1.json,serper,v4,obour_q4,1,,serper v4
 20261127T221345731380__serper__v4__qv1+v2__obour_q5__run1.json,serper,v4,obour_q5,1,,serper v4
 20261127T221358465105__serper__v4__qv1+v2__obour_q6__run1.json,serper,v4,obour_q6,1,,serper v4
+20261127T222059194691__serper__v5__qv1+v2__sokhna_q1__run1.json,serper,v5,sokhna_q1,1,,serper v5: v3 + tbs per group
+20261127T222106088675__serper__v5__qv1+v2__sokhna_q2__run1.json,serper,v5,sokhna_q2,1,,serper v5: v3 + tbs per group
+20261127T222113503478__serper__v5__qv1+v2__sokhna_q3__run1.json,serper,v5,sokhna_q3,1,,serper v5: v3 + tbs per group
+20261127T222125223980__serper__v5__qv1+v2__sokhna_q4__run1.json,serper,v5,sokhna_q4,1,,serper v5: v3 + tbs per group
+20261127T222132392128__serper__v5__qv1+v2__sokhna_q5__run1.json,serper,v5,sokhna_q5,1,,serper v5: v3 + tbs per group
+20261127T222139644329__serper__v5__qv1+v2__sokhna_q6__run1.json,serper,v5,sokhna_q6,1,,serper v5: v3 + tbs per group
+20261127T222147216584__serper__v5__qv1+v2__obour_q1__run1.json,serper,v5,obour_q1,1,,serper v5: v3 + tbs per group
+20261127T222154815915__serper__v5__qv1+v2__obour_q2__run1.json,serper,v5,obour_q2,1,,serper v5: v3 + tbs per group
+20261127T222203928179__serper__v5__qv1+v2__obour_q3__run1.json,serper,v5,obour_q3,1,,serper v5: v3 + tbs per group
+20261127T222211530302__serper__v5__qv1+v2__obour_q4__run1.json,serper,v5,obour_q4,1,,serper v5: v3 + tbs per group
+20261127T222219201004__serper__v5__qv1+v2__obour_q5__run1.json,serper,v5,obour_q5,1,,serper v5: v3 + tbs per group
+20261127T222226328068__serper__v5__qv1+v2__obour_q6__run1.json,serper,v5,obour_q6,1,,serper v5: v3 + tbs per group
