@@ -14,6 +14,10 @@ It is two steps:
 
 Collecting costs credits; scoring is free. So when a source list changes, just rescore.
 
+**Result so far:** Serper with 3 searches per question (`settings/serper_v5.json`). See
+[`reports/2026-11-28_web_search_decision.md`](reports/2026-11-28_web_search_decision.md) for the
+summary, and the other files in `reports/` for each run.
+
 ## Run
 
 Put `TAVILY_API_KEY=...` and `SERPER_API_KEY=...` in `.env` (never commit them), then:
