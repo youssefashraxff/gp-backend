@@ -1,0 +1,141 @@
+{
+  "strategy": "mixed",
+  "description": "serper_v3 + Google date filter on ar_sites and en_sites only: tbs custom range 24 months before 2026-11-28 to 2026-11-28. en_open unfiltered.",
+  "base": {
+    "gl": "eg",
+    "num": 10
+  },
+  "site_lists": {
+    "news_ar": [
+      "youm7.com",
+      "almasryalyoum.com",
+      "elwatannews.com",
+      "masrawy.com",
+      "ahram.org.eg",
+      "almalnews.com",
+      "alborsaanews.com",
+      "amwalalghad.com",
+      "aqarmap.com.eg",
+      "sis.gov.eg"
+    ],
+    "news_en": [
+      "egypttoday.com",
+      "dailynewsegypt.com",
+      "egyptindependent.com",
+      "enterpriseam.com",
+      "zawya.com",
+      "propertyfinder.eg",
+      "savills.com.eg",
+      "jll.com",
+      "knightfrank.com",
+      "mped.gov.eg"
+    ],
+    "prices_ar": [
+      "aqarmap.com.eg",
+      "bayut.eg",
+      "dubizzle.com.eg",
+      "aleqaria.com.eg",
+      "youm7.com",
+      "masrawy.com",
+      "almasryalyoum.com",
+      "elwatannews.com",
+      "almalnews.com",
+      "alborsaanews.com"
+    ],
+    "prices_en": [
+      "propertyfinder.eg",
+      "nawy.com",
+      "realestate.eg",
+      "bayut.eg",
+      "dubizzle.com.eg",
+      "savills.com.eg",
+      "jll.com",
+      "knightfrank.com",
+      "egypttoday.com",
+      "enterpriseam.com"
+    ],
+    "supply_ar": [
+      "youm7.com",
+      "almasryalyoum.com",
+      "masrawy.com",
+      "ahram.org.eg",
+      "almalnews.com",
+      "alborsaanews.com",
+      "tripadvisor.com.eg",
+      "aqarmap.com.eg",
+      "sis.gov.eg",
+      "elwatannews.com"
+    ],
+    "supply_en": [
+      "booking.com",
+      "tripadvisor.com",
+      "hoteliermiddleeast.com",
+      "str.com",
+      "jll.com",
+      "egypttoday.com",
+      "dailynewsegypt.com",
+      "zawya.com",
+      "enterpriseam.com",
+      "propertyfinder.eg"
+    ],
+    "strategy_ar": [
+      "sis.gov.eg",
+      "mhuc.gov.eg",
+      "newcities.gov.eg",
+      "idsc.gov.eg",
+      "capmas.gov.eg",
+      "gafi.gov.eg",
+      "ahram.org.eg",
+      "youm7.com",
+      "almasryalyoum.com",
+      "masrawy.com"
+    ],
+    "strategy_en": [
+      "mped.gov.eg",
+      "tda.gov.eg",
+      "sczone.eg",
+      "investinegypt.gov.eg",
+      "sis.gov.eg",
+      "egypttoday.com",
+      "dailynewsegypt.com",
+      "enterpriseam.com",
+      "zawya.com",
+      "untourism.int"
+    ]
+  },
+  "searches": [
+    {
+      "name": "en_open",
+      "queries": "v1",
+      "hl": "en"
+    },
+    {
+      "name": "ar_sites",
+      "queries": "v2",
+      "hl": "ar",
+      "sites_by_group": {
+        "market_division": "news_ar",
+        "area_projects": "news_ar",
+        "demand_seasonality": "news_ar",
+        "prices": "prices_ar",
+        "supply": "supply_ar",
+        "strategy_fit": "strategy_ar"
+      },
+      "tbs": "cdr:1,cd_min:11/28/2024,cd_max:11/28/2026"
+    },
+    {
+      "name": "en_sites",
+      "queries": "v1",
+      "hl": "en",
+      "sites_by_group": {
+        "market_division": "news_en",
+        "area_projects": "news_en",
+        "demand_seasonality": "news_en",
+        "prices": "prices_en",
+        "supply": "supply_en",
+        "strategy_fit": "strategy_en"
+      },
+      "tbs": "cdr:1,cd_min:11/28/2024,cd_max:11/28/2026"
+    }
+  ]
+}

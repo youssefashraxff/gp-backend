@@ -138,6 +138,8 @@ to the next, so the standard stays the same.
 | `tavily_v4` | v3 with shorter restricted lists, regenerated after the CSVs dropped `both`: `ar_restricted` 30 domains (`language` `ar`), `en_restricted` 74 (`language` `en`) |
 | `serper_v1` | **Strategy `mixed`**, 2 open searches: `en_open` (v1 English, `gl=eg`, `hl=en`, `num=10`) and `ar_open` (v2 Arabic, `gl=eg`, `hl=ar`, `num=10`). No `site:` operators, no domain filtering |
 | `serper_v2` | **Strategy `mixed`**, the `tavily_v3` design on Google: `en_open` (as in serper_v1), `ar_sites` (v2 Arabic, `hl=ar`, `site:` 10 Arabic news/business/listing/official sites), `en_sites` (v1 English, `hl=en`, `site:` 10 English news/report/listing/official sites). `gl=eg`, `num=10` |
+| `serper_v3` | serper_v2 with `ar_sites`/`en_sites` lists chosen per question group (`news`, `prices`, `supply`, `strategy` in `site_lists`) |
+| `serper_v4` | serper_v3 + `tbs` date range 2024-11-28 to 2026-11-28 on `ar_sites` and `en_sites` only |
 
 Add `settings/<tool>_v5.json` and run with `--settings v5`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
@@ -230,6 +232,26 @@ has to follow the redirect.
 ```bash
 python -m experiments.tools.web_search.compare --tool serper --settings v1 --runs 2
 ```
+
+## Relevance and freshness (code-based)
+
+`relevance.json` lists place keywords per site and topic keywords per question group.
+`relevance.py` lowercases title + snippet + URL (URL `-`/`_` read as spaces) and normalises
+Arabic (أ/إ/آ→ا, ة→ه, ى→ي, no diacritics). A result is **relevant** when it has a place AND
+a topic keyword. Dates (`Mar 3, 2026`, `11/11/2026` day/month/year with Arabic digits and RTL
+marks, `3 days ago`, `قبل ٣ أيام`, ISO) are **fresh** if within `fresh_months` (24) of the run,
+else **old**; missing or unparseable = **undated**. New columns: `n_relevant`,
+`n_relevant_citable`, `n_fresh`, `n_old`, `n_undated` (and their `avg_` in summary.csv).
+
+**Google redirects** (`google.com/goto?url=…`) are resolved by `resolve.py` (one GET per
+link; Google answers 302 with the page URL) into `redirects.json`, which the Serper
+normaliser and `score.py` read. `compare.py` resolves new links after each Serper run;
+`python -m experiments.tools.web_search.resolve` retries failed ones.
+
+**Site lists per question group** (`serper_v3`, `serper_v4`): a search can use
+`sites_by_group` (question group → a name in the settings' `site_lists`) instead of `sites`.
+**Date filter** (`serper_v4`): a search can set `tbs` (Google custom range
+`cdr:1,cd_min:M/D/YYYY,cd_max:M/D/YYYY`), sent to Serper as-is.
 
 ## Add a tool
 
