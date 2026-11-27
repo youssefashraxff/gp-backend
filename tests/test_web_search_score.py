@@ -207,3 +207,87 @@ def test_query_versions_are_scored_separately(base_dir: Path):
     score.score_all(base_dir)
     assert [r["query_version"] for r in _read(base_dir / "scores.csv")] == ["v1", "v2"]
     assert [r["query_version"] for r in _read(base_dir / "summary.csv")] == ["v1", "v2"]
+
+
+def _result(url: str, found_by: list[str] | None = None) -> dict[str, Any]:
+    r: dict[str, Any] = {"url": url, "title": "", "snippet": "", "published_date": None}
+    if found_by is not None:
+        r["found_by"] = found_by
+    return r
+
+
+def _write_strategy_run(base_dir: Path, name: str, searches: list[dict[str, Any]]) -> None:
+    merged: dict[str, dict[str, Any]] = {}
+    for s in searches:
+        for r in s["normalized"]:
+            merged.setdefault(r["url"], _result(r["url"], []))["found_by"].append(s["name"])
+    run = {
+        "timestamp": "2026-11-27T20:00:00+00:00",
+        "tool": "tavily",
+        "settings_version": "v3",
+        "strategy": "mixed",
+        "query_version": "v1+v2",
+        "query": {"id": "sokhna_q1", "site": "ain_sokhna", "group": "prices"},
+        "run": 1,
+        "status": "ok",
+        "seconds": 3.0,
+        "error": None,
+        "searches": searches,
+        "normalized": list(merged.values()),
+    }
+    (base_dir / "runs" / name).write_text(json.dumps(run))
+
+
+def _search(name: str, status: str, urls: list[str]) -> dict[str, Any]:
+    return {"name": name, "status": status, "normalized": [_result(u) for u in urls]}
+
+
+def test_strategy_run_scores_merged_set_and_each_search(base_dir: Path):
+    # A plain run too, to check its strategy cells stay empty.
+    _write_run(base_dir, "20261127T100000000000__tavily__v1__qv1__sokhna_q1__run1.json", [])
+    _write_strategy_run(
+        base_dir,
+        "20261127T200000000000__tavily__v3__qv1+v2__sokhna_q1__run1.json",
+        [
+            _search(
+                "ar_restricted", "ok", ["https://english.ahram.org.eg/a", "https://capmas.gov.eg/b"]
+            ),
+            _search("en_restricted", "empty", []),
+            _search(
+                "open",
+                "ok",
+                [
+                    "https://capmas.gov.eg/b",  # also found by ar_restricted: not unique
+                    "https://ouda-developments.com/c",  # developer: not citable
+                    "https://tavily.com/x",  # ignore: dropped everywhere
+                ],
+            ),
+        ],
+    )
+    score.score_all(base_dir)
+    plain, mixed = _read(base_dir / "scores.csv")
+
+    # Merged set: the usual counts (tavily.com dropped).
+    assert (mixed["n_results"], mixed["n_news"], mixed["n_official"], mixed["n_developer"]) == (
+        "3",
+        "1",
+        "1",
+        "1",
+    )
+    # Per search.
+    assert (mixed["ar_restricted_status"], mixed["ar_restricted_n_results"]) == ("ok", "2")
+    assert mixed["ar_restricted_n_citable"] == "2"
+    assert (mixed["en_restricted_status"], mixed["en_restricted_n_results"]) == ("empty", "0")
+    assert (mixed["open_n_results"], mixed["open_n_citable"]) == ("2", "1")
+    # Only-this-search counts: ahram only from ar; ouda only from open; capmas from both.
+    assert mixed["unique_from_ar_restricted"] == "1"
+    assert mixed["unique_from_en_restricted"] == "0"
+    assert mixed["unique_from_open"] == "1"
+    assert plain["ar_restricted_status"] == "" and plain["unique_from_open"] == ""
+
+    rows = _read(base_dir / "summary.csv")
+    v3 = next(r for r in rows if r["settings"] == "v3")
+    assert (v3["ar_restricted_ok"], v3["en_restricted_empty"], v3["open_errors"]) == ("1", "1", "0")
+    assert v3["avg_ar_restricted_n_citable"] == "2.0"
+    assert v3["avg_unique_from_open"] == "1.0"
+    assert next(r for r in rows if r["settings"] == "v1")["avg_unique_from_open"] == ""

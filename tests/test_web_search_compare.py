@@ -130,3 +130,125 @@ def test_default_query_version_is_v1_and_unknown_is_refused(base_dir: Path):
     (base_dir / "queries_v3.json").write_text('{"version": "v2", "queries": []}')
     with pytest.raises(ValueError):
         compare.load_queries("v3", base_dir)
+
+
+# --- strategy ("mixed": several searches per question, one run file) ----------------------
+
+STRATEGY = {
+    "strategy": "mixed",
+    "base": {"max_results": 10},
+    "searches": [
+        {
+            "name": "ar_restricted",
+            "queries": "v2",
+            "include_domains_mode": "restrict",
+            "include_domains": ["youm7.com"],
+        },
+        {
+            "name": "en_restricted",
+            "queries": "v1",
+            "include_domains_mode": "restrict",
+            "include_domains": ["reuters.com"],
+        },
+        {"name": "open", "queries": "v1"},
+    ],
+}
+
+
+def _strategy_tool(answers: dict[str, list[Result] | Exception], calls: list[tuple[str, dict]]):
+    """A fake tool that answers by search: Arabic text -> ar, restrict -> en, else open."""
+
+    def tool(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        calls.append((query, settings))
+        if settings.get("include_domains_mode") != "restrict":
+            name = "open"
+        elif "العين" in query:
+            name = "ar_restricted"
+        else:
+            name = "en_restricted"
+        answer = answers[name]
+        if isinstance(answer, Exception):
+            raise answer
+        return {"from": name}, answer
+
+    return tool
+
+
+def _run_strategy(base_dir: Path, monkeypatch, answers) -> tuple[dict, list]:
+    calls: list[tuple[str, dict]] = []
+    monkeypatch.setitem(compare.TOOLS, "fake", _strategy_tool(answers, calls))
+    (base_dir / "settings" / "fake_v3.json").write_text(json.dumps(STRATEGY))
+    [path] = compare.compare("fake", "v3", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0)
+    assert path.parent == base_dir / "runs" / "fake" / "v3" / "queries_v1+v2"
+    return json.loads(path.read_text(encoding="utf-8")), calls
+
+
+def test_strategy_saves_one_file_with_every_search_and_merged_results(base_dir, monkeypatch):
+    answers = {
+        "ar_restricted": [Result("https://youm7.com/a", "t", "s", None, 0.5)],
+        "en_restricted": [],  # restricted and empty: normal, no retry
+        "open": [
+            Result("https://youm7.com/a/", "t", "s", "2026-01-01", 0.9),  # same URL as ar
+            Result("https://nawy.com/b", "t", "s", None, 0.7),
+        ],
+    }
+    saved, calls = _run_strategy(base_dir, monkeypatch, answers)
+
+    assert len(calls) == 3  # one call per search, no retry for the empty restricted one
+    ar_call, en_call, open_call = calls
+    assert ar_call[0] == "حجم سوق الفنادق والمطاعم في العين السخنة 2026"
+    assert ar_call[1] == {
+        "max_results": 10,
+        "include_domains_mode": "restrict",
+        "include_domains": ["youm7.com"],
+    }
+    assert en_call[0] == open_call[0] == "Ain Sokhna hospitality F&B market size 2026"
+    assert open_call[1] == {"max_results": 10}
+
+    assert saved["strategy"] == "mixed" and saved["query_version"] == "v1+v2"
+    assert saved["query"] == {"id": "sokhna_q1", "site": "ain_sokhna", "group": "market_division"}
+    by_name = {s["name"]: s for s in saved["searches"]}
+    assert list(by_name) == ["ar_restricted", "en_restricted", "open"]
+    assert by_name["ar_restricted"]["raw_response"] == {"from": "ar_restricted"}
+    assert by_name["en_restricted"]["status"] == "empty"
+    assert by_name["en_restricted"]["attempts"] == 1
+    assert by_name["open"]["status"] == "ok"
+
+    # Merged: deduplicated by URL (trailing slash ignored), best score first, found_by kept.
+    merged = saved["normalized"]
+    assert [r["url"] for r in merged] == ["https://youm7.com/a", "https://nawy.com/b"]
+    assert merged[0]["found_by"] == ["ar_restricted", "open"]
+    assert merged[0]["score"] == 0.9 and merged[0]["published_date"] == "2026-01-01"
+    assert merged[1]["found_by"] == ["open"]
+    assert saved["status"] == "ok" and saved["error"] is None
+
+
+def test_strategy_open_search_retries_when_empty(base_dir, monkeypatch):
+    answers = {"ar_restricted": [], "en_restricted": [], "open": []}
+    saved, calls = _run_strategy(base_dir, monkeypatch, answers)
+    assert len(calls) == 4  # only the open search is retried
+    assert [s["attempts"] for s in saved["searches"]] == [1, 1, 2]
+    assert saved["status"] == "empty" and saved["normalized"] == []
+
+
+def test_strategy_records_a_failing_search_and_keeps_the_others(base_dir, monkeypatch):
+    answers = {
+        "ar_restricted": TimeoutError("slow"),
+        "en_restricted": [Result("https://reuters.com/x", "t", "s")],
+        "open": [Result("https://nawy.com/b", "t", "s")],
+    }
+    saved, _ = _run_strategy(base_dir, monkeypatch, answers)
+    assert saved["searches"][0]["status"] == "error"
+    assert saved["status"] == "ok" and len(saved["normalized"]) == 2
+    assert saved["error"] == "ar_restricted: TimeoutError: slow"
+
+
+def test_real_v3_settings_are_within_tavily_limits():
+    v3 = compare.load_settings("tavily", "v3")
+    names = [s["name"] for s in v3["searches"]]
+    assert names == ["ar_restricted", "en_restricted", "open"]
+    for search in v3["searches"][:2]:
+        assert search["include_domains_mode"] == "restrict"
+        assert 0 < len(search["include_domains"]) <= 300
+    assert "include_domains" not in v3["searches"][2]
+    assert v3["base"] == compare.load_settings("tavily", "v1")

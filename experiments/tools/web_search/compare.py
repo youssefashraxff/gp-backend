@@ -217,6 +217,184 @@ def run_once(
     )
 
 
+# ---------------------------------------------------------------------------------------
+# Strategies: several searches per question, saved together in one run file
+# ---------------------------------------------------------------------------------------
+#
+# A strategy settings file looks like:
+#   {"strategy": "mixed",
+#    "base": {...tool settings shared by every search...},
+#    "searches": [{"name": "ar_restricted", "queries": "v2", ...extra tool settings...}, ...]}
+# Each search uses the text of the same question id from its own query version.
+
+
+def _search_params(settings: dict[str, Any], search: dict[str, Any]) -> dict[str, Any]:
+    extra = {k: v for k, v in search.items() if k not in ("name", "queries")}
+    return {**settings.get("base", {}), **extra}
+
+
+def _url_key(url: str) -> str:
+    return url.strip().rstrip("/").lower()
+
+
+def merge_results(searches: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Deduplicate by URL across searches, keeping which searches found each URL.
+    Ordered by the best score any search gave the URL (no score last), then first seen."""
+    merged: dict[str, dict[str, Any]] = {}
+    for search in searches:
+        for result in search["normalized"]:
+            key = _url_key(result["url"])
+            if key not in merged:
+                merged[key] = {**result, "found_by": [search["name"]]}
+                continue
+            entry = merged[key]
+            if search["name"] not in entry["found_by"]:
+                entry["found_by"].append(search["name"])
+            if result.get("score") is not None and (
+                entry.get("score") is None or result["score"] > entry["score"]
+            ):
+                entry["score"] = result["score"]
+            if not entry.get("published_date") and result.get("published_date"):
+                entry["published_date"] = result["published_date"]
+    order = {key: i for i, key in enumerate(merged)}
+    return sorted(
+        merged.values(),
+        key=lambda r: (r.get("score") is None, -(r.get("score") or 0), order[_url_key(r["url"])]),
+    )
+
+
+def run_strategy_once(
+    tool: str,
+    settings_version: str,
+    settings: dict[str, Any],
+    query_version: str,
+    question: dict[str, Any],
+    run: int,
+    notes: str = "",
+    base_dir: Path = BASE_DIR,
+    pause: float = PAUSE_SECONDS,
+) -> Path:
+    """Make every search of the strategy for one question and save ONE run file with each
+    search's raw response (labelled by name) and the merged results.
+
+    A restricted search (include_domains_mode "restrict") that finds nothing is normal, so it
+    is saved as `empty` without a retry; an open search that comes back empty is retried once.
+    """
+    now = datetime.now(UTC)
+    searches = []
+    for i, search in enumerate(settings["searches"]):
+        if i:
+            time.sleep(pause)
+        params = _search_params(settings, search)
+        text = question["queries"][search["name"]]
+        attempts = [_call(tool, text, params)]
+        restricted = params.get("include_domains_mode") == "restrict"
+        if not restricted and not attempts[0]["error"] and not attempts[0]["results"]:
+            time.sleep(pause)
+            attempts.append(_call(tool, text, params))
+        final = attempts[-1]
+        status = STATUS_ERROR if final["error"] else STATUS_OK if final["results"] else STATUS_EMPTY
+        searches.append(
+            {
+                "name": search["name"],
+                "query_version": search["queries"],
+                "query": text,
+                "status": status,
+                "attempts": len(attempts),
+                "seconds": final["seconds"],
+                "error": final["error"] or None,
+                "normalized": [asdict(r) for r in final["results"]],
+                "raw_response": final["raw"],
+            }
+        )
+
+    merged = merge_results(searches)
+    errors = [f"{s['name']}: {s['error']}" for s in searches if s["error"]]
+    if len(errors) == len(searches):
+        status = STATUS_ERROR
+    else:
+        status = STATUS_OK if merged else STATUS_EMPTY
+
+    stamp = now.strftime("%Y%m%dT%H%M%S%f")
+    name = f"{stamp}__{tool}__{settings_version}__q{query_version}__{question['id']}__run{run}.json"
+    return save_run(
+        runs_dir(base_dir, tool, settings_version, query_version),
+        name,
+        {
+            "timestamp": now.isoformat(),
+            "tool": tool,
+            "settings_version": settings_version,
+            "settings": settings,
+            "strategy": settings["strategy"],
+            "query_version": query_version,
+            "query": {k: question[k] for k in ("id", "site", "group")},
+            "run": run,
+            "status": status,
+            "seconds": round(sum(s["seconds"] for s in searches), 3),
+            "error": "; ".join(errors) or None,
+            "notes": notes,
+            "searches": searches,
+            "normalized": merged,
+        },
+    )
+
+
+def load_strategy_questions(
+    settings: dict[str, Any], base_dir: Path = BASE_DIR
+) -> tuple[str, list[dict[str, Any]]]:
+    """(query_version label, questions). Each question has id, site, group and the text
+    every search will send ({search name: query text})."""
+    versions = sorted({s["queries"] for s in settings["searches"]})
+    files = {v: load_queries(v, base_dir) for v in versions}
+    by_id = {v: {q["id"]: q for q in f["queries"]} for v, f in files.items()}
+    first = settings["searches"][0]["queries"]
+    ids = [q["id"] for q in files[first]["queries"]]
+    for v in versions:
+        if set(by_id[v]) != set(ids):
+            raise ValueError(f"Query versions {first} and {v} don't have the same ids")
+    questions = [
+        {
+            **{k: by_id[first][qid][k] for k in ("id", "site", "group")},
+            "queries": {s["name"]: by_id[s["queries"]][qid]["query"] for s in settings["searches"]},
+        }
+        for qid in ids
+    ]
+    return "+".join(versions), questions
+
+
+def compare_strategy(
+    tool: str,
+    settings_version: str,
+    settings: dict[str, Any],
+    runs: int,
+    query: str,
+    notes: str,
+    base_dir: Path,
+    pause: float,
+) -> list[Path]:
+    query_version, questions = load_strategy_questions(settings, base_dir)
+    selected = [q for q in questions if query in ("all", q["id"])]
+    if not selected:
+        raise SystemExit(f"Unknown query '{query}'")
+    paths = []
+    for q in selected:
+        for run in range(1, runs + 1):
+            path = run_strategy_once(
+                tool, settings_version, settings, query_version, q, run, notes, base_dir, pause
+            )
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            parts = ", ".join(
+                f"{s['name']} {s['status']} {len(s['normalized'])}" for s in saved["searches"]
+            )
+            print(
+                f"{q['id']} run{run}: {saved['status']}, merged {len(saved['normalized'])} "
+                f"({parts}) ({saved['seconds']}s)"
+            )
+            paths.append(path)
+            time.sleep(pause)
+    return paths
+
+
 def compare(
     tool: str,
     settings_version: str,
@@ -227,9 +405,15 @@ def compare(
     pause: float = PAUSE_SECONDS,
     query_version: str = DEFAULT_QUERIES,
 ) -> list[Path]:
+    """Run plain searches, or a strategy if the settings file defines one (then the
+    strategy picks the query versions and `query_version` is ignored)."""
     if tool not in TOOLS:
         raise SystemExit(f"Unknown tool '{tool}'. Known: {', '.join(TOOLS)}")
     settings = load_settings(tool, settings_version, base_dir)
+    if settings.get("strategy"):
+        return compare_strategy(
+            tool, settings_version, settings, runs, query, notes, base_dir, pause
+        )
     queries = load_queries(query_version, base_dir)
     selected = [q for q in queries["queries"] if query in ("all", q["id"])]
     if not selected:

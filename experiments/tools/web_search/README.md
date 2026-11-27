@@ -95,6 +95,16 @@ To add a source, add a row to one of the two CSVs and rerun `score.py`.
 | `top3_urls` | The first three URLs, joined by ` \| ` |
 | `seconds`, `error` | How long the call took; the error if it failed |
 
+For a **strategy** run (see below) the counts above are of the merged results, and each
+search adds four columns at the end (empty for plain runs):
+
+| Column | Meaning |
+|---|---|
+| `<search>_status` | `ok`, `empty` or `error` for that one call |
+| `<search>_n_results` | Results of that call (type `ignore` dropped) |
+| `<search>_n_citable` | Of those, how many are citable (types listed under Strategies) |
+| `unique_from_<search>` | Merged results that **only** this search found: whether the call earns its credit |
+
 Types without their own column (`lifestyle`, `academic`, `tourism_travel`, `maps_reviews`)
 still count in `n_results`, and in `n_egyptian` when Egyptian.
 
@@ -102,7 +112,10 @@ still count in `n_results`, and in `n_egyptian` when Egyptian.
 
 `runs`, `ok`, `empty`, `errors`, then `avg_<column>` for each count above (averaged over
 the runs that didn't error), `same_top3` (how many `ok` runs share the most common top-3
-set; order doesn't matter) and `avg_seconds`.
+set; order doesn't matter) and `avg_seconds`. For strategy runs, each search also gets
+`<search>_ok`, `<search>_empty`, `<search>_errors`, `avg_<search>_n_results` and
+`avg_<search>_n_citable` (over the runs where that search didn't error) and
+`avg_unique_from_<search>`.
 
 ## manual.csv: filling in `relevant` and `notes`
 
@@ -121,9 +134,51 @@ to the next, so the standard stays the same.
 |---|---|
 | `tavily_v1` | `general`, `basic`, `country=egypt`, 10 results |
 | `tavily_v2` | v1 + `include_domains` (105 domains of type official, news, report and listing types, copied from the two CSVs on 2026-11-27) with `include_domains_mode: prefer` |
+| `tavily_v3` | **Strategy `mixed`** (Market research only): 3 searches per question, see below |
 
-Add `settings/<tool>_v3.json` and run with `--settings v3`. Never edit a version that has
+Add `settings/<tool>_v4.json` and run with `--settings v4`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
+
+## Strategies (several searches per question)
+
+A settings file with a `"strategy"` key runs several searches for each question and saves
+them in **one** run file. This is for the Market research agent only; the other agents use
+plain single searches.
+
+```json
+{"strategy": "mixed",
+ "base": {"topic": "general", "search_depth": "basic", "country": "egypt", "max_results": 10},
+ "searches": [
+   {"name": "ar_restricted", "queries": "v2", "include_domains_mode": "restrict", "include_domains": ["..."]},
+   {"name": "en_restricted", "queries": "v1", "include_domains_mode": "restrict", "include_domains": ["..."]},
+   {"name": "open",          "queries": "v1"}]}
+```
+
+Each search sends `base` + its own settings, with the text of the same question id from its
+query version (`v2` Arabic, `v1` English). `--queries` is ignored: the strategy picks them.
+Run files go to `runs/<tool>/<settings>/queries_v1+v2/`.
+
+`tavily_v3` (`mixed`):
+
+| Search | Query | Domains |
+|---|---|---|
+| `ar_restricted` | Arabic (v2) | `restrict` to the 64 citable domains with `language` `ar` or `both` |
+| `en_restricted` | English (v1) | `restrict` to the 90 citable domains with `language` `en` or `both` |
+| `open` | English (v1) | none, same as `tavily_v1`, to catch good sources not in our lists yet |
+
+Citable = `source_type` in `official`, `intl_official`, `news`, `business_news`,
+`intl_news`, `consultancy_report`, `data_aggregator`, `listing_portal`, `travel_booking`,
+`str_data`. The domain lists are written out in `tavily_v3.json` (generated once from the
+CSVs on 2026-11-27, well under Tavily's 300 limit), so v3 stays the same when the CSVs change.
+
+The run file holds each search under `searches` (name, query, status, seconds, error,
+results and the raw response) and the merged results under `normalized`: deduplicated by
+URL (case and trailing `/` ignored), ordered by the best score any search gave, each with
+`found_by` (which searches returned it).
+
+A restricted search that finds nothing is saved as `empty` **without a retry** (our sites
+may have nothing); the `open` search is retried once when empty, like a plain run. The run is
+`error` only if every search failed. Cost: one credit per search, so 3 per question per run.
 
 ## Add a tool
 

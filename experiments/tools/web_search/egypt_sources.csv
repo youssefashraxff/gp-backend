@@ -1,95 +1,95 @@
-domain,name,source_type,egyptian,where_from
-capmas.gov.eg,CAPMAS (official statistics),official,yes,research
-idsc.gov.eg,IDSC - Cabinet Information and Decision Support Center,official,yes,research
-eip.gov.eg,Egypt's Information Portal (IDSC),official,yes,research
-sis.gov.eg,State Information Service,official,yes,research+runs
-mped.gov.eg,Ministry of Planning (Vision 2030),official,yes,research+runs
-moic.gov.eg,Ministry of Planning and International Cooperation,official,yes,research
-investinegypt.gov.eg,GAFI - Invest in Egypt,official,yes,research
-gafi.gov.eg,GAFI,official,yes,research
-nuca.gov.eg,New Urban Communities Authority,official,yes,research
-realestate.gov.eg,Government real estate portal,official,yes,runs
-egypt.gov.eg,Egypt Government Portal,official,yes,research
-digital.gov.eg,Digital Egypt,official,yes,research
-cairo.gov.eg,Cairo Governorate,official,yes,research
-mota.gov.eg,Ministry of Tourism and Antiquities,official,yes,research
-egypt.travel,Experience Egypt (Ministry of Tourism),official,yes,research
-sczone.eg,Suez Canal Economic Zone,official,yes,research
-cbe.org.eg,Central Bank of Egypt,official,yes,research
-egx.com.eg,Egyptian Exchange,official,yes,research
-youm7.com,Youm7,news,yes,research
-almasryalyoum.com,Al-Masry Al-Youm,news,yes,research
-elwatannews.com,El Watan,news,yes,research
-masrawy.com,Masrawy,news,yes,research+runs
-dostor.org,Al Dostor,news,yes,research
-ahram.org.eg,Al-Ahram (incl. english.ahram.org.eg and gate.ahram.org.eg),news,yes,research
-elbalad.news,Sada El Balad,news,yes,research
-shorouknews.com,Al Shorouk,news,yes,research
-akhbarelyom.com,Akhbar El Yom,news,yes,research
-albawabhnews.com,Al Bawaba News,news,yes,research
-vetogate.com,Veto,news,yes,research
-cairo24.com,Cairo 24,news,yes,research
-egyptindependent.com,Egypt Independent (Al-Masry Al-Youm English),news,yes,research
-egypttoday.com,Egypt Today,news,yes,research
-dailynewsegypt.com,Daily News Egypt,news,yes,research
-egyptianstreets.com,Egyptian Streets,news,yes,research+runs
-madamasr.com,Mada Masr,news,yes,research
-enterprise.news,Enterprise,business_news,yes,research
-enterpriseam.com,EnterpriseAM,business_news,yes,research
-ent.news,Enterprise (files and short links),business_news,yes,research+runs
-amwalalghad.com,Amwal Al Ghad (incl. en.amwalalghad.com),business_news,yes,research
-almalnews.com,Al Mal News,business_news,yes,research
-alborsaanews.com,Al Borsa News,business_news,yes,research
-arabfinance.com,Arab Finance,business_news,yes,research
-invest-gate.me,Invest-Gate (real estate and investment),business_news,yes,research+runs
-realty-eg.net,Realty Egypt,business_news,yes,runs
-efghermesone.com,EFG Hermes ONE,business_news,yes,research
-savills.com.eg,Savills Egypt,consultancy_report,yes,research+runs
-aqarmap.com.eg,Aqarmap,listing_portal,yes,research
-propertyfinder.eg,Property Finder Egypt,listing_portal,yes,research+runs
-nawy.com,Nawy,listing_portal,yes,research
-bayut.eg,Bayut Egypt,listing_portal,yes,research+runs
-dubizzle.com.eg,dubizzle Egypt,listing_portal,yes,research+runs
-realestate.eg,RealEstate.eg,listing_portal,yes,research+runs
-yellowpages.com.eg,Yellow Pages Egypt,listing_portal,yes,research
-elmenus.com,elmenus (restaurants),listing_portal,yes,research
-cairoscene.com,CairoScene,lifestyle,yes,research
-cairo360.com,Cairo 360,lifestyle,yes,research
-journals.ekb.eg,Egyptian Knowledge Bank journals,academic,yes,runs
-aqarland.net,Aqarland,developer_broker,yes,runs
-aqarsky.com,Aqarsky,developer_broker,yes,runs
-egyprop.com,Egyprop,developer_broker,yes,runs
-compoundgate.com,Compound Gate,developer_broker,yes,runs
-subul-realestate.com,Subul Real Estate,developer_broker,yes,runs
-realestate-capsule.com,Real Estate Capsule,developer_broker,yes,runs
-newcairocompounds.com,New Cairo Compounds,developer_broker,yes,runs
-homelocator.net,Home Locator,developer_broker,yes,runs
-ureeg.com,URE,developer_broker,yes,runs
-newaqar.net,New Aqar,developer_broker,yes,runs
-aswaq-egypt.com,Aswaq Egypt,developer_broker,yes,runs
-redww.com,KW RED,developer_broker,yes,runs
-redexpoeg.com,RED Expo,developer_broker,yes,runs
-mrc-is.net,MRC-IS,developer_broker,yes,runs
-gprproperty.com,GPR Property,developer_broker,yes,runs
-grandeur-spaces.com,Grandeur Spaces,developer_broker,yes,runs
-pioneerproperty.net,Pioneer Property,developer_broker,yes,runs
-bemarker.net,Bemarker,developer_broker,yes,runs
-developers-eg.com,Developers EG,developer_broker,yes,runs
-ouda-developments.com,Ouda Developments,developer_broker,yes,runs
-valerodevelopments.com,Valero Developments,developer_broker,yes,runs
-urbixdevelopment.com,Urbix Development,developer_broker,yes,runs
-alashraaf.com,Al Ashraaf Developments,developer_broker,yes,runs
-ebdaa-developments.com,Ebdaa Developments,developer_broker,yes,runs
-viewsinvestments.com,Views Investments,developer_broker,yes,runs
-newcairo-developments.com,New Cairo Developments,developer_broker,yes,runs
-unitedfordevelopment.com,United for Development,developer_broker,yes,runs
-ain-sokhna-developments.com,Ain Sokhna Developments,developer_broker,yes,runs
-kayandev.com,Kayan Developments,developer_broker,yes,runs
-jre-eg.com,JRE,developer_broker,yes,runs
-architopiahub.com,Architopia,developer_broker,yes,runs
-newobour.city,New Obour City portal,developer_broker,yes,runs
-egyptra.pro,Egyptra,tourism_travel,yes,runs
-egypttoursportal.com,Egypt Tours Portal,tourism_travel,yes,runs
-ain-sokhna.com,Ain Sokhna guide,tourism_travel,yes,runs
-blackpyramidstours.com,Black Pyramids Tours,tourism_travel,yes,runs
-travco.com,Travco,tourism_travel,yes,runs
+domain,name,source_type,egyptian,where_from,language
+capmas.gov.eg,CAPMAS (official statistics),official,yes,research,both
+idsc.gov.eg,IDSC - Cabinet Information and Decision Support Center,official,yes,research,both
+eip.gov.eg,Egypt's Information Portal (IDSC),official,yes,research,both
+sis.gov.eg,State Information Service,official,yes,research+runs,both
+mped.gov.eg,Ministry of Planning (Vision 2030),official,yes,research+runs,both
+moic.gov.eg,Ministry of Planning and International Cooperation,official,yes,research,both
+investinegypt.gov.eg,GAFI - Invest in Egypt,official,yes,research,both
+gafi.gov.eg,GAFI,official,yes,research,both
+nuca.gov.eg,New Urban Communities Authority,official,yes,research,both
+realestate.gov.eg,Government real estate portal,official,yes,runs,both
+egypt.gov.eg,Egypt Government Portal,official,yes,research,both
+digital.gov.eg,Digital Egypt,official,yes,research,both
+cairo.gov.eg,Cairo Governorate,official,yes,research,ar
+mota.gov.eg,Ministry of Tourism and Antiquities,official,yes,research,both
+egypt.travel,Experience Egypt (Ministry of Tourism),official,yes,research,en
+sczone.eg,Suez Canal Economic Zone,official,yes,research,both
+cbe.org.eg,Central Bank of Egypt,official,yes,research,both
+egx.com.eg,Egyptian Exchange,official,yes,research,both
+youm7.com,Youm7,news,yes,research,ar
+almasryalyoum.com,Al-Masry Al-Youm,news,yes,research,ar
+elwatannews.com,El Watan,news,yes,research,ar
+masrawy.com,Masrawy,news,yes,research+runs,ar
+dostor.org,Al Dostor,news,yes,research,ar
+ahram.org.eg,Al-Ahram (incl. english.ahram.org.eg and gate.ahram.org.eg),news,yes,research,both
+elbalad.news,Sada El Balad,news,yes,research,ar
+shorouknews.com,Al Shorouk,news,yes,research,ar
+akhbarelyom.com,Akhbar El Yom,news,yes,research,ar
+albawabhnews.com,Al Bawaba News,news,yes,research,ar
+vetogate.com,Veto,news,yes,research,ar
+cairo24.com,Cairo 24,news,yes,research,ar
+egyptindependent.com,Egypt Independent (Al-Masry Al-Youm English),news,yes,research,en
+egypttoday.com,Egypt Today,news,yes,research,en
+dailynewsegypt.com,Daily News Egypt,news,yes,research,en
+egyptianstreets.com,Egyptian Streets,news,yes,research+runs,en
+madamasr.com,Mada Masr,news,yes,research,both
+enterprise.news,Enterprise,business_news,yes,research,both
+enterpriseam.com,EnterpriseAM,business_news,yes,research,both
+ent.news,Enterprise (files and short links),business_news,yes,research+runs,both
+amwalalghad.com,Amwal Al Ghad (incl. en.amwalalghad.com),business_news,yes,research,both
+almalnews.com,Al Mal News,business_news,yes,research,ar
+alborsaanews.com,Al Borsa News,business_news,yes,research,ar
+arabfinance.com,Arab Finance,business_news,yes,research,both
+invest-gate.me,Invest-Gate (real estate and investment),business_news,yes,research+runs,both
+realty-eg.net,Realty Egypt,business_news,yes,runs,en
+efghermesone.com,EFG Hermes ONE,business_news,yes,research,both
+savills.com.eg,Savills Egypt,consultancy_report,yes,research+runs,en
+aqarmap.com.eg,Aqarmap,listing_portal,yes,research,both
+propertyfinder.eg,Property Finder Egypt,listing_portal,yes,research+runs,both
+nawy.com,Nawy,listing_portal,yes,research,both
+bayut.eg,Bayut Egypt,listing_portal,yes,research+runs,both
+dubizzle.com.eg,dubizzle Egypt,listing_portal,yes,research+runs,both
+realestate.eg,RealEstate.eg,listing_portal,yes,research+runs,both
+yellowpages.com.eg,Yellow Pages Egypt,listing_portal,yes,research,both
+elmenus.com,elmenus (restaurants),listing_portal,yes,research,both
+cairoscene.com,CairoScene,lifestyle,yes,research,en
+cairo360.com,Cairo 360,lifestyle,yes,research,en
+journals.ekb.eg,Egyptian Knowledge Bank journals,academic,yes,runs,both
+aqarland.net,Aqarland,developer_broker,yes,runs,both
+aqarsky.com,Aqarsky,developer_broker,yes,runs,both
+egyprop.com,Egyprop,developer_broker,yes,runs,both
+compoundgate.com,Compound Gate,developer_broker,yes,runs,both
+subul-realestate.com,Subul Real Estate,developer_broker,yes,runs,both
+realestate-capsule.com,Real Estate Capsule,developer_broker,yes,runs,both
+newcairocompounds.com,New Cairo Compounds,developer_broker,yes,runs,both
+homelocator.net,Home Locator,developer_broker,yes,runs,both
+ureeg.com,URE,developer_broker,yes,runs,both
+newaqar.net,New Aqar,developer_broker,yes,runs,ar
+aswaq-egypt.com,Aswaq Egypt,developer_broker,yes,runs,both
+redww.com,KW RED,developer_broker,yes,runs,both
+redexpoeg.com,RED Expo,developer_broker,yes,runs,both
+mrc-is.net,MRC-IS,developer_broker,yes,runs,both
+gprproperty.com,GPR Property,developer_broker,yes,runs,both
+grandeur-spaces.com,Grandeur Spaces,developer_broker,yes,runs,both
+pioneerproperty.net,Pioneer Property,developer_broker,yes,runs,both
+bemarker.net,Bemarker,developer_broker,yes,runs,both
+developers-eg.com,Developers EG,developer_broker,yes,runs,both
+ouda-developments.com,Ouda Developments,developer_broker,yes,runs,both
+valerodevelopments.com,Valero Developments,developer_broker,yes,runs,both
+urbixdevelopment.com,Urbix Development,developer_broker,yes,runs,both
+alashraaf.com,Al Ashraaf Developments,developer_broker,yes,runs,both
+ebdaa-developments.com,Ebdaa Developments,developer_broker,yes,runs,both
+viewsinvestments.com,Views Investments,developer_broker,yes,runs,both
+newcairo-developments.com,New Cairo Developments,developer_broker,yes,runs,both
+unitedfordevelopment.com,United for Development,developer_broker,yes,runs,both
+ain-sokhna-developments.com,Ain Sokhna Developments,developer_broker,yes,runs,both
+kayandev.com,Kayan Developments,developer_broker,yes,runs,both
+jre-eg.com,JRE,developer_broker,yes,runs,both
+architopiahub.com,Architopia,developer_broker,yes,runs,both
+newobour.city,New Obour City portal,developer_broker,yes,runs,both
+egyptra.pro,Egyptra,tourism_travel,yes,runs,en
+egypttoursportal.com,Egypt Tours Portal,tourism_travel,yes,runs,en
+ain-sokhna.com,Ain Sokhna guide,tourism_travel,yes,runs,en
+blackpyramidstours.com,Black Pyramids Tours,tourism_travel,yes,runs,en
+travco.com,Travco,tourism_travel,yes,runs,en

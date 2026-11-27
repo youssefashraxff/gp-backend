@@ -23,6 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent
 SOURCE_FILES = ("egypt_sources.csv", "international_sources.csv")
 
 IGNORE = "ignore"  # e.g. tavily.com: dropped from every count
+# Types an agent could cite as evidence (n_citable per strategy search).
+CITABLE = {
+    "official",
+    "intl_official",
+    "news",
+    "business_news",
+    "intl_news",
+    "consultancy_report",
+    "data_aggregator",
+    "listing_portal",
+    "travel_booking",
+    "str_data",
+}
 UNLISTED_EG = "unlisted_eg"  # not in either list, but the domain ends in .eg
 
 # scores.csv column -> the source_type values it counts
@@ -139,11 +152,14 @@ def _status(run: dict[str, Any]) -> str:
     return "ok" if run.get("normalized") else "empty"
 
 
-def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
+def _count(
+    results: list[dict[str, Any]], sources: dict[str, Source]
+) -> tuple[dict[str, int], set[str], list[dict[str, Any]]]:
+    """(counts, unlisted domains, results kept after dropping type `ignore`)."""
     counts = dict.fromkeys(COUNT_COLUMNS, 0)
     unlisted: set[str] = set()
     kept: list[dict[str, Any]] = []
-    for result in run.get("normalized") or []:
+    for result in results:
         domain, source = classify(result.get("url", ""), sources)
         if source is not None and source.source_type == IGNORE:
             continue
@@ -159,7 +175,41 @@ def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) ->
         for column, types in TYPE_GROUPS.items():
             if source.source_type in types:
                 counts[column] += 1
+    return counts, unlisted, kept
 
+
+def _n_citable(results: list[dict[str, Any]], sources: dict[str, Source]) -> int:
+    return sum(
+        (source := classify(r.get("url", ""), sources)[1]) is not None
+        and source.source_type in CITABLE
+        for r in results
+    )
+
+
+def search_columns(name: str) -> list[str]:
+    """scores.csv columns for one search of a strategy run."""
+    return [f"{name}_status", f"{name}_n_results", f"{name}_n_citable", f"unique_from_{name}"]
+
+
+def score_searches(run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
+    """Per-search columns of a strategy run: status, n_results and n_citable of each search,
+    and unique_from_<search>: merged results that only that search found."""
+    row: dict[str, Any] = {}
+    _, _, merged = _count(run.get("normalized") or [], sources)
+    for search in run.get("searches") or []:
+        name = search["name"]
+        _, _, kept = _count(search.get("normalized") or [], sources)
+        row[f"{name}_status"] = search["status"]
+        row[f"{name}_n_results"] = len(kept)
+        row[f"{name}_n_citable"] = _n_citable(kept, sources)
+        row[f"unique_from_{name}"] = sum(r.get("found_by") == [name] for r in merged)
+    return row
+
+
+def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
+    """One scores.csv row. For a strategy run the counts are of the merged results, plus
+    the per-search columns."""
+    counts, unlisted, kept = _count(run.get("normalized") or [], sources)
     q = run["query"]
     return {
         "run_file": run_file,
@@ -177,6 +227,7 @@ def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) ->
         "top3_urls": " | ".join(r.get("url", "") for r in kept[:3]),
         "seconds": run.get("seconds", ""),
         "error": run.get("error") or "",
+        **score_searches(run, sources),
     }
 
 
@@ -210,8 +261,41 @@ def summarize(scores: list[dict[str, Any]]) -> list[dict[str, Any]]:
             row[f"avg_{c}"] = _avg([r[c] for r in answered])
         row["same_top3"] = top3.most_common(1)[0][1] if top3 else 0
         row["avg_seconds"] = _avg([float(r["seconds"]) for r in answered if r["seconds"] != ""])
+        for name in search_names(runs):
+            statuses = [r.get(f"{name}_status") for r in runs]
+            # A search's counts are averaged over the runs where that search didn't error.
+            searched = [r for r in runs if r.get(f"{name}_status") in ("ok", "empty")]
+            row[f"{name}_ok"] = statuses.count("ok")
+            row[f"{name}_empty"] = statuses.count("empty")
+            row[f"{name}_errors"] = statuses.count("error")
+            row[f"avg_{name}_n_results"] = _avg([r[f"{name}_n_results"] for r in searched])
+            row[f"avg_{name}_n_citable"] = _avg([r[f"{name}_n_citable"] for r in searched])
+            row[f"avg_unique_from_{name}"] = _avg([r[f"unique_from_{name}"] for r in answered])
         rows.append(row)
     return rows
+
+
+def search_names(scores: list[dict[str, Any]]) -> list[str]:
+    """Names of the strategy searches found in these rows, in order of first appearance."""
+    names: list[str] = []
+    for s in scores:
+        for key in s:
+            if key.endswith("_status") and key != "status":
+                name = key.removesuffix("_status")
+                if name not in names:
+                    names.append(name)
+    return names
+
+
+def summary_search_columns(name: str) -> list[str]:
+    return [
+        f"{name}_ok",
+        f"{name}_empty",
+        f"{name}_errors",
+        f"avg_{name}_n_results",
+        f"avg_{name}_n_citable",
+        f"avg_unique_from_{name}",
+    ]
 
 
 def _avg(values: list[float]) -> float | str:
@@ -271,8 +355,12 @@ def score_all(base_dir: Path = BASE_DIR) -> list[dict[str, Any]]:
     paths = sorted((base_dir / "runs").rglob("*.json"), key=lambda p: p.name)
     runs = {p.name: json.loads(p.read_text(encoding="utf-8")) for p in paths}
     scores = [score_run(name, run, sources) for name, run in runs.items()]
-    _write_csv(base_dir / "scores.csv", SCORES_COLUMNS, scores)
-    _write_csv(base_dir / "summary.csv", SUMMARY_COLUMNS, summarize(scores))
+    # Strategy searches add columns at the end; rows without them leave those cells empty.
+    names = search_names(scores)
+    scores_columns = SCORES_COLUMNS + [c for n in names for c in search_columns(n)]
+    summary_columns = SUMMARY_COLUMNS + [c for n in names for c in summary_search_columns(n)]
+    _write_csv(base_dir / "scores.csv", scores_columns, scores)
+    _write_csv(base_dir / "summary.csv", summary_columns, summarize(scores))
     added = sync_manual(base_dir / "manual.csv", scores, runs)
     print(f"Scored {len(scores)} run files -> scores.csv, summary.csv")
     print(f"manual.csv: {added} new rows (existing rows untouched)")
