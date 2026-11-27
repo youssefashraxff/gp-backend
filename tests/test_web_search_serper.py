@@ -274,3 +274,14 @@ def test_resolved_redirect_replaces_the_link(monkeypatch, base_dir):
     assert resolve.load_redirects(base_dir) == {GOTO + "x": "https://www.youm7.com/story/9"}
     [r] = compare.serper_results(body, resolve.load_redirects(base_dir))
     assert r.url == "https://www.youm7.com/story/9" and r.source_domain is None
+
+
+def test_tbs_by_group(monkeypatch, base_dir):
+    calls = _fake_post(monkeypatch, [(200, ORGANIC)] * 6)
+    for query in ("obour_q3", "obour_q5"):  # prices (filter on), supply (filter off)
+        compare.compare("serper", "v5", runs=1, query=query, base_dir=base_dir, pause=0)
+    prices, supply = [c["json"] for c in calls[:3]], [c["json"] for c in calls[3:]]
+    assert "tbs" not in prices[0] and prices[1]["tbs"] == prices[2]["tbs"] == (
+        "cdr:1,cd_min:11/28/2024,cd_max:11/28/2026"
+    )
+    assert all("tbs" not in c for c in supply)

@@ -304,7 +304,7 @@ def run_once(
 
 
 # Keys of a strategy search that describe the search itself; they are not sent to the tool.
-SEARCH_KEYS = ("name", "queries", "sites", "sites_by_group")
+SEARCH_KEYS = ("name", "queries", "sites", "sites_by_group", "tbs_by_group")
 
 
 def site_filter(sites: list[str]) -> str:
@@ -360,6 +360,9 @@ def run_strategy_once(
         if i:
             time.sleep(pause)
         params = _search_params(settings, search)
+        if "tbs_by_group" in search:  # per question group: a tbs string, or null = no filter
+            tbs = search["tbs_by_group"].get(question["group"])
+            params = {k: v for k, v in params.items() if k != "tbs"} | ({"tbs": tbs} if tbs else {})
         text = search_query(question, search, settings)  # saved below as the search's `query`
         attempts = [_call(tool, text, params)]
         # Restricted to our sites (Tavily include_domains or Google site:): an empty answer

@@ -140,6 +140,7 @@ to the next, so the standard stays the same.
 | `serper_v2` | **Strategy `mixed`**, the `tavily_v3` design on Google: `en_open` (as in serper_v1), `ar_sites` (v2 Arabic, `hl=ar`, `site:` 10 Arabic news/business/listing/official sites), `en_sites` (v1 English, `hl=en`, `site:` 10 English news/report/listing/official sites). `gl=eg`, `num=10` |
 | `serper_v3` | serper_v2 with `ar_sites`/`en_sites` lists chosen per question group (`news`, `prices`, `supply`, `strategy` in `site_lists`) |
 | `serper_v4` | serper_v3 + `tbs` date range 2024-11-28 to 2026-11-28 on `ar_sites` and `en_sites` only |
+| `serper_v5` | serper_v3 + v4's `tbs` range per question group (`tbs_by_group`): on for market_division, area_projects, prices, demand_seasonality; off (`null`) for supply, strategy_fit |
 
 Add `settings/<tool>_v5.json` and run with `--settings v5`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
@@ -251,7 +252,8 @@ normaliser and `score.py` read. `compare.py` resolves new links after each Serpe
 **Site lists per question group** (`serper_v3`, `serper_v4`): a search can use
 `sites_by_group` (question group → a name in the settings' `site_lists`) instead of `sites`.
 **Date filter** (`serper_v4`): a search can set `tbs` (Google custom range
-`cdr:1,cd_min:M/D/YYYY,cd_max:M/D/YYYY`), sent to Serper as-is.
+`cdr:1,cd_min:M/D/YYYY,cd_max:M/D/YYYY`), sent to Serper as-is, or `tbs_by_group`
+(question group → a `tbs` string, or `null` for no filter; `serper_v5`).
 
 ## Add a tool
 
