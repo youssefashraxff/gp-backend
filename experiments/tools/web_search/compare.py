@@ -26,6 +26,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+import httpx
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -49,7 +50,8 @@ class Result:
     title: str
     snippet: str
     published_date: str | None = None
-    score: float | None = None
+    score: float | None = None  # higher is better (Tavily's relevance; Serper 1/position)
+    position: int | None = None  # rank in the tool's own list, when the tool gives one
 
 
 # A tool: takes the query text and the settings dict, returns (raw_response, results).
@@ -62,6 +64,7 @@ class _Keys(BaseSettings):
     model_config = SettingsConfigDict(env_file=BASE_DIR.parents[2] / ".env", extra="ignore")
 
     tavily_api_key: SecretStr | None = None
+    serper_api_key: SecretStr | None = None
 
 
 def _require(key: SecretStr | None, name: str) -> str:
@@ -93,7 +96,41 @@ def search_tavily(query: str, settings: dict[str, Any]) -> tuple[Any, list[Resul
     return raw, results
 
 
-TOOLS: dict[str, ToolFn] = {"tavily": search_tavily}
+SERPER_URL = "https://google.serper.dev/search"
+
+
+def search_serper(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+    """Google results through Serper. Sends exactly q, gl, hl and num. Timeouts and HTTP
+    errors (429, 5xx, ...) raise, so `_call` records them as the run's error."""
+    key = _require(_Keys().serper_api_key, "SERPER_API_KEY")
+    body = {"q": query, "gl": settings["gl"], "hl": settings["hl"], "num": settings["num"]}
+    response = httpx.post(
+        SERPER_URL,
+        headers={"X-API-KEY": key, "Content-Type": "application/json"},
+        json=body,
+        timeout=TIMEOUT_SECONDS,
+    )
+    if response.is_error:  # the message names the status, never the key
+        raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
+    raw = response.json()  # full response: organic, answerBox, knowledgeGraph, peopleAlsoAsk...
+    results = []
+    for item in raw.get("organic") or []:
+        position = item.get("position")
+        results.append(
+            Result(
+                url=item.get("link", ""),
+                title=item.get("title", ""),
+                snippet=item.get("snippet", ""),
+                published_date=item.get("date") or None,  # as Google shows it, e.g. "3 days ago"
+                # Score must be "higher is better" for merging, so rank 1 -> 1.0, 2 -> 0.5...
+                score=round(1 / position, 4) if position else None,
+                position=position,
+            )
+        )
+    return raw, results
+
+
+TOOLS: dict[str, ToolFn] = {"tavily": search_tavily, "serper": search_serper}
 
 
 # ---------------------------------------------------------------------------------------
