@@ -25,6 +25,7 @@ from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 import httpx
 from pydantic import SecretStr
@@ -52,6 +53,9 @@ class Result:
     published_date: str | None = None
     score: float | None = None  # higher is better (Tavily's relevance; Serper 1/position)
     position: int | None = None  # rank in the tool's own list, when the tool gives one
+    # Domain of the page the link leads to, when `url` is a redirect we can't resolve
+    # (Google `google.com/goto?url=<token>` links). Scoring classifies by this instead.
+    source_domain: str | None = None
 
 
 # A tool: takes the query text and the settings dict, returns (raw_response, results).
@@ -113,21 +117,52 @@ def search_serper(query: str, settings: dict[str, Any]) -> tuple[Any, list[Resul
     if response.is_error:  # the message names the status, never the key
         raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
     raw = response.json()  # full response: organic, answerBox, knowledgeGraph, peopleAlsoAsk...
+    return raw, serper_results(raw)
+
+
+def _is_google_redirect(url: str) -> bool:
+    parts = urlsplit(url)
+    host = (parts.hostname or "").lower().removeprefix("www.")
+    return host == "google.com" and parts.path == "/goto"
+
+
+def _displayed_domain(displayed_link: str) -> str | None:
+    """`https://alborsaanews.com › العقارات` -> `alborsaanews.com`."""
+    first = displayed_link.strip().split(" ")[0] if displayed_link.strip() else ""
+    if not first:
+        return None
+    host = urlsplit(first if "://" in first else f"https://{first}").hostname
+    return host.lower().removeprefix("www.") if host else None
+
+
+def serper_results(raw: dict[str, Any]) -> list[Result]:
+    """Normalise Serper's `organic` items. score.py also calls this on saved raw responses,
+    so a change here applies to old runs when rescoring.
+
+    With `site:` operators Google often returns `google.com/goto?url=<token>` links; the
+    token can't be decoded, so `url` stays the link and `source_domain` comes from
+    `displayedLink`."""
     results = []
     for item in raw.get("organic") or []:
         position = item.get("position")
+        link = item.get("link", "")
         results.append(
             Result(
-                url=item.get("link", ""),
+                url=link,
                 title=item.get("title", ""),
                 snippet=item.get("snippet", ""),
                 published_date=item.get("date") or None,  # as Google shows it, e.g. "3 days ago"
                 # Score must be "higher is better" for merging, so rank 1 -> 1.0, 2 -> 0.5...
                 score=round(1 / position, 4) if position else None,
                 position=position,
+                source_domain=(
+                    _displayed_domain(item.get("displayedLink", ""))
+                    if _is_google_redirect(link)
+                    else None
+                ),
             )
         )
-    return raw, results
+    return results
 
 
 TOOLS: dict[str, ToolFn] = {"tavily": search_tavily, "serper": search_serper}
@@ -267,8 +302,24 @@ def run_once(
 # Each search uses the text of the same question id from its own query version.
 
 
+# Keys of a strategy search that describe the search itself; they are not sent to the tool.
+SEARCH_KEYS = ("name", "queries", "sites")
+
+
+def site_filter(sites: list[str]) -> str:
+    """Google `site:` operators for a list of domains, appended to the query text:
+    ["a.com", "b.eg"] -> " (site:a.com OR site:b.eg)"."""
+    return " (" + " OR ".join(f"site:{d}" for d in sites) + ")" if sites else ""
+
+
+def search_query(question: dict[str, Any], search: dict[str, Any]) -> str:
+    """The exact text sent for this search: the question in the search's query version,
+    plus its `sites` as `site:` operators (if any)."""
+    return question["queries"][search["name"]] + site_filter(search.get("sites") or [])
+
+
 def _search_params(settings: dict[str, Any], search: dict[str, Any]) -> dict[str, Any]:
-    extra = {k: v for k, v in search.items() if k not in ("name", "queries")}
+    extra = {k: v for k, v in search.items() if k not in SEARCH_KEYS}
     return {**settings.get("base", {}), **extra}
 
 
@@ -295,9 +346,11 @@ def run_strategy_once(
         if i:
             time.sleep(pause)
         params = _search_params(settings, search)
-        text = question["queries"][search["name"]]
+        text = search_query(question, search)  # saved below as the search's `query`
         attempts = [_call(tool, text, params)]
-        restricted = params.get("include_domains_mode") == "restrict"
+        # Restricted to our sites (Tavily include_domains or Google site:): an empty answer
+        # is a real answer, so no retry.
+        restricted = params.get("include_domains_mode") == "restrict" or bool(search.get("sites"))
         if not restricted and not attempts[0]["error"] and not attempts[0]["results"]:
             time.sleep(pause)
             attempts.append(_call(tool, text, params))

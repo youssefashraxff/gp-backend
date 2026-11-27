@@ -1,0 +1,23 @@
+{
+  "strategy": "mixed",
+  "description": "Serper (Google). The tavily_v3 design on Serper: 3 searches per question, merged and deduplicated. Instead of include_domains, ar_sites and en_sites append Google site: operators built from their `sites` list: query + \" (site:a OR site:b ...)\". en_open is the same as serper_v1.",
+  "base": {"gl": "eg", "num": 10},
+  "searches": [
+    {"name": "en_open", "queries": "v1", "hl": "en"},
+    {
+      "name": "ar_sites",
+      "queries": "v2",
+      "hl": "ar",
+      "sites": ["youm7.com", "almasryalyoum.com", "elwatannews.com", "masrawy.com", "ahram.org.eg",
+                "almalnews.com", "alborsaanews.com", "amwalalghad.com", "aqarmap.com.eg", "sis.gov.eg"]
+    },
+    {
+      "name": "en_sites",
+      "queries": "v1",
+      "hl": "en",
+      "sites": ["egypttoday.com", "dailynewsegypt.com", "egyptindependent.com", "enterpriseam.com",
+                "zawya.com", "propertyfinder.eg", "savills.com.eg", "jll.com", "knightfrank.com",
+                "mped.gov.eg"]
+    }
+  ]
+}

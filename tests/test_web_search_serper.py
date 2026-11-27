@@ -163,3 +163,90 @@ def test_real_serper_v1_settings():
         {"name": "en_open", "queries": "v1", "gl": "eg", "hl": "en", "num": 10},
         {"name": "ar_open", "queries": "v2", "gl": "eg", "hl": "ar", "num": 10},
     ]
+
+
+def test_site_filter_and_search_query():
+    assert compare.site_filter([]) == ""
+    assert compare.site_filter(["a.com", "b.eg"]) == " (site:a.com OR site:b.eg)"
+    question = {"queries": {"ar_sites": "سؤال"}}
+    search = {"name": "ar_sites", "sites": ["youm7.com"]}
+    assert compare.search_query(question, search) == "سؤال (site:youm7.com)"
+
+
+def test_serper_v2_sends_site_operators_and_saves_the_exact_query(monkeypatch, base_dir):
+    empty = (200, {"organic": []})
+    responses = [(200, ORGANIC), empty, (200, ORGANIC)]  # en_open, ar_sites (empty), en_sites
+    calls = _fake_post(monkeypatch, responses)
+    [path] = compare.compare("serper", "v2", runs=1, query="obour_q3", base_dir=base_dir, pause=0)
+    saved = json.loads(path.read_text(encoding="utf-8"))
+
+    assert len(calls) == 3  # the empty site search is not retried
+    en_open, ar_sites, en_sites = saved["searches"]
+    assert en_open["query"] == "New Obour City shop prices per square meter 2026"
+    assert ar_sites["query"] == calls[1]["json"]["q"]
+    assert ar_sites["query"].startswith("سعر متر المحلات التجارية في مدينة العبور الجديدة 2026 (")
+    assert ar_sites["query"].endswith("OR site:aqarmap.com.eg OR site:sis.gov.eg)")
+    assert en_sites["query"].endswith("OR site:knightfrank.com OR site:mped.gov.eg)")
+    assert (ar_sites["status"], ar_sites["attempts"]) == ("empty", 1)
+    assert calls[1]["json"] == {"q": ar_sites["query"], "gl": "eg", "hl": "ar", "num": 10}
+    assert "sites" not in calls[2]["json"]  # the site list is part of q, not a parameter
+
+
+def test_real_serper_v2_settings():
+    v2 = compare.load_settings("serper", "v2")
+    assert [s["name"] for s in v2["searches"]] == ["en_open", "ar_sites", "en_sites"]
+    assert v2["base"] == {"gl": "eg", "num": 10}
+    en_open, ar_sites, en_sites = v2["searches"]
+    assert "sites" not in en_open and len(ar_sites["sites"]) == len(en_sites["sites"]) == 10
+    v1 = compare.load_settings("serper", "v1")  # unchanged
+    assert v1["searches"][0] == {
+        "name": "en_open",
+        "queries": "v1",
+        "gl": "eg",
+        "hl": "en",
+        "num": 10,
+    }
+
+
+GOTO = "https://www.google.com/goto?url=CAESZwHEIkXXCnNyNIL5"
+
+
+def test_google_redirect_links_keep_their_real_site():
+    raw = {
+        "organic": [
+            {"title": "T", "link": GOTO + "aaa", "displayedLink": "https://alborsaanews.com › x"},
+            {"title": "U", "link": "https://youm7.com/s", "displayedLink": "https://youm7.com › y"},
+            {"title": "V", "link": GOTO + "bbb", "displayedLink": "www.Zawya.com › z"},
+        ]
+    }
+    first, second, third = compare.serper_results(raw)
+    assert first.url == GOTO + "aaa" and first.source_domain == "alborsaanews.com"
+    assert second.source_domain is None  # a normal link needs no source_domain
+    assert third.source_domain == "zawya.com"
+
+
+def test_redirects_are_scored_by_their_real_site_and_not_collapsed(monkeypatch, base_dir):
+    ar_body = {
+        "organic": [
+            {"title": "Same story", "link": GOTO + "1", "displayedLink": "https://youm7.com › a"},
+            {"title": "Other story", "link": GOTO + "2", "displayedLink": "https://sis.gov.eg › b"},
+        ]
+    }
+    en_body = {
+        "organic": [
+            # Same site and title as ar's first redirect, different token: the same result.
+            {"title": "Same story", "link": GOTO + "3", "displayedLink": "https://youm7.com › a"},
+            {"title": "Third", "link": GOTO + "4", "displayedLink": "https://zawya.com › c"},
+        ]
+    }
+    _fake_post(monkeypatch, [(200, ORGANIC), (200, ar_body), (200, en_body)])
+    compare.compare("serper", "v2", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0)
+    score.score_all(base_dir)
+    with (base_dir / "scores.csv").open(encoding="utf-8") as f:
+        [row] = list(csv.DictReader(f))
+
+    # 2 from en_open + 4 redirects, one shared = 5; google.com never counted.
+    assert row["n_results"] == "5"
+    assert "google.com" not in row["unlisted_domains"]
+    assert row["ar_sites_n_citable"] == "2" and row["en_sites_n_citable"] == "2"
+    assert row["unique_from_ar_sites"] == "1" and row["unique_from_en_sites"] == "1"
