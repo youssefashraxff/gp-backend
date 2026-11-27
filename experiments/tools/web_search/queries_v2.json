@@ -1,0 +1,18 @@
+{
+  "version": "v2",
+  "language": "ar",
+  "queries": [
+    {"id": "sokhna_q1", "site": "ain_sokhna", "group": "market_division", "query": "حجم سوق الفنادق والمطاعم في العين السخنة 2026"},
+    {"id": "sokhna_q2", "site": "ain_sokhna", "group": "area_projects", "query": "مشروعات جديدة في العين السخنة 2026"},
+    {"id": "sokhna_q3", "site": "ain_sokhna", "group": "prices", "query": "أسعار متر الشاليهات في العين السخنة 2026"},
+    {"id": "sokhna_q4", "site": "ain_sokhna", "group": "demand_seasonality", "query": "إقبال الزوار على العين السخنة في الصيف والإجازات"},
+    {"id": "sokhna_q5", "site": "ain_sokhna", "group": "supply", "query": "عدد الفنادق والغرف الفندقية في العين السخنة"},
+    {"id": "sokhna_q6", "site": "ain_sokhna", "group": "strategy_fit", "query": "العين السخنة رؤية مصر 2030 التنمية السياحية"},
+    {"id": "obour_q1", "site": "new_obour", "group": "market_division", "query": "السوق التجاري في مدينة العبور الجديدة 2026"},
+    {"id": "obour_q2", "site": "new_obour", "group": "area_projects", "query": "مشروعات جديدة وطرق في مدينة العبور الجديدة 2026"},
+    {"id": "obour_q3", "site": "new_obour", "group": "prices", "query": "سعر متر المحلات التجارية في مدينة العبور الجديدة 2026"},
+    {"id": "obour_q4", "site": "new_obour", "group": "demand_seasonality", "query": "احتياجات سكان مدينة العبور الجديدة من الخدمات"},
+    {"id": "obour_q5", "site": "new_obour", "group": "supply", "query": "المولات والمراكز التجارية في مدينة العبور الجديدة"},
+    {"id": "obour_q6", "site": "new_obour", "group": "strategy_fit", "query": "مدينة العبور الجديدة رؤية مصر 2030 التنمية"}
+  ]
+}

@@ -1,7 +1,6 @@
-"""Tests for the web search comparison (experiments/tools/web_search). No network: the tool
-function is replaced by a fake, and all files go to a temporary folder."""
+"""Tests for experiments/tools/web_search/compare.py. No network: the tool function is
+replaced by a fake, and all files go to a temporary folder."""
 
-import csv
 import json
 import shutil
 from pathlib import Path
@@ -17,92 +16,117 @@ REAL_DIR = Path(compare.__file__).resolve().parent
 
 @pytest.fixture
 def base_dir(tmp_path: Path) -> Path:
-    """A copy of the real inputs (queries, domains, settings) with empty runs/ and CSV."""
-    for name in ("queries.json", "egypt_domains.txt"):
+    """A copy of the real inputs (queries, settings) with an empty runs/ folder."""
+    for name in ("queries.json", "queries_v2.json"):
         shutil.copy(REAL_DIR / name, tmp_path / name)
     shutil.copytree(REAL_DIR / "settings", tmp_path / "settings")
     return tmp_path
 
 
-def _fake_results() -> list[Result]:
-    return [
-        Result("https://www.youm7.com/story/1", "a", "...", "2026-03-01", 0.9),  # listed, dated
-        Result("https://gafi.gov.eg/page", "b", "...", None, 0.8),  # ends in .eg
-        Result("https://news.example.com/x", "c", "...", None, 0.7),
-        Result("https://example.com/y", "d", "...", None, None),
-    ]
+def _register(monkeypatch, base_dir: Path, name: str, fn) -> None:
+    monkeypatch.setitem(compare.TOOLS, name, fn)
+    (base_dir / "settings" / f"{name}_v1.json").write_text("{}")
+
+
+def _saved(base_dir: Path) -> list[dict[str, Any]]:
+    return [json.loads(p.read_text()) for p in sorted((base_dir / "runs").rglob("*.json"))]
 
 
 def _fake_tool(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
-    return {"query": query, "results": ["raw"]}, _fake_results()
+    return {"query": query, "results": ["raw"]}, [Result("https://youm7.com/a", "t", "s")]
 
 
-def _failing_tool(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
-    raise TimeoutError("took too long")
-
-
-def _rows(base_dir: Path) -> list[dict[str, str]]:
-    with (base_dir / "results.csv").open(encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+def test_default_runs_is_two(base_dir: Path, monkeypatch):
+    _register(monkeypatch, base_dir, "fake", _fake_tool)
+    compare.compare("fake", "v1", query="sokhna_q1", base_dir=base_dir, pause=0)
+    assert [s["run"] for s in _saved(base_dir)] == [1, 2]
 
 
 def test_run_file_saved_and_never_overwritten(base_dir: Path, monkeypatch):
-    monkeypatch.setitem(compare.TOOLS, "fake", _fake_tool)
-    (base_dir / "settings" / "fake_v1.json").write_text("{}")
+    _register(monkeypatch, base_dir, "fake", _fake_tool)
+    paths = compare.compare(
+        "fake", "v1", runs=1, query="sokhna_q1", notes="n", base_dir=base_dir, pause=0
+    )
 
-    compare.compare("fake", "v1", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0)
-
-    files = list((base_dir / "runs").glob("*.json"))
-    assert len(files) == 1
-    assert files[0].name.endswith("__fake__v1__sokhna_q1__run1.json")
-    saved = json.loads(files[0].read_text())
-    assert saved["query"]["id"] == "sokhna_q1"
+    assert len(paths) == 1 and paths[0].name.endswith("__fake__v1__qv1__sokhna_q1__run1.json")
+    assert paths[0].parent == base_dir / "runs" / "fake" / "v1" / "queries_v1"
+    saved = json.loads(paths[0].read_text())
+    assert saved["status"] == "ok" and saved["attempts"] == 1 and saved["notes"] == "n"
     assert saved["raw_response"] == {"query": saved["query"]["query"], "results": ["raw"]}
-    assert saved["run"] == 1 and saved["settings_version"] == "v1"
+    assert saved["normalized"][0]["url"] == "https://youm7.com/a"
+    assert "n_egyptian" not in saved  # compare.py no longer scores
 
     with pytest.raises(FileExistsError):
-        compare.save_run(base_dir / "runs", files[0].name, {"other": True})
-    assert json.loads(files[0].read_text()) == saved
+        compare.save_run(paths[0].parent, paths[0].name, {"other": True})
+    assert json.loads(paths[0].read_text()) == saved
 
 
-def test_row_counts_for_fake_response(base_dir: Path, monkeypatch):
-    monkeypatch.setitem(compare.TOOLS, "fake", _fake_tool)
-    (base_dir / "settings" / "fake_v1.json").write_text("{}")
+def test_error_is_saved_not_raised(base_dir: Path, monkeypatch):
+    def broken(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        raise TimeoutError("took too long")
 
-    compare.compare("fake", "v1", runs=2, query="obour_q3", notes="n", base_dir=base_dir, pause=0)
+    _register(monkeypatch, base_dir, "broken", broken)
+    compare.compare("broken", "v1", runs=2, query="sokhna_q2", base_dir=base_dir, pause=0)
 
-    rows = _rows(base_dir)
-    assert len(rows) == 2
-    row = rows[0]
-    assert row["n_results"] == "4"
-    assert row["n_egyptian"] == "2"
-    assert row["n_with_date"] == "1"
-    assert row["n_unique_domains"] == "4"
-    assert row["top3_urls"].count(" | ") == 2
-    assert row["site"] == "new_obour" and row["group"] == "prices"
-    assert row["error"] == "" and row["relevant"] == "" and row["notes"] == "n"
-    assert [r["run"] for r in rows] == ["1", "2"]
+    saved = _saved(base_dir)
+    assert len(saved) == 2
+    assert saved[0]["status"] == "error" and saved[0]["error"] == "TimeoutError: took too long"
+    assert saved[0]["attempts"] == 1  # errors are not retried
 
 
-def test_error_is_recorded_not_raised(base_dir: Path, monkeypatch):
-    monkeypatch.setitem(compare.TOOLS, "broken", _failing_tool)
-    (base_dir / "settings" / "broken_v1.json").write_text("{}")
+def test_empty_is_retried_once_then_saved_as_empty(base_dir: Path, monkeypatch):
+    calls = []
 
-    rows = compare.compare("broken", "v1", runs=2, query="sokhna_q2", base_dir=base_dir, pause=0)
+    def empty(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        calls.append(query)
+        return {"results": []}, []
 
-    csv_rows = _rows(base_dir)
-    assert len(csv_rows) == 2
-    assert csv_rows[0]["error"] == "TimeoutError: took too long"
-    assert csv_rows[0]["n_results"] == "0"
-    assert len(list((base_dir / "runs").glob("*.json"))) == 2
-    assert compare.summarize(rows) == ["sokhna_q2: all 2 runs failed"]
+    _register(monkeypatch, base_dir, "empty", empty)
+    compare.compare("empty", "v1", runs=1, query="obour_q1", base_dir=base_dir, pause=0)
+
+    assert len(calls) == 2
+    [saved] = _saved(base_dir)
+    assert saved["status"] == "empty" and saved["attempts"] == 2
 
 
-def test_summary_top3_stability_ignores_order():
-    base = {"error": "", "n_results": 3, "n_egyptian": 1}
-    rows = [
-        {**base, "query_id": "q", "top3_urls": "a | b | c"},
-        {**base, "query_id": "q", "top3_urls": "c | a | b"},
-        {**base, "query_id": "q", "top3_urls": "a | b | d"},
-    ]
-    assert compare.summarize(rows) == ["q: avg results 3.0, avg Egyptian 1.0, top-3 stable 2/3"]
+def test_empty_then_results_on_retry_is_ok(base_dir: Path, monkeypatch):
+    answers = [[], [Result("https://nawy.com/x", "t", "s")]]
+
+    def flaky(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        return {}, answers.pop(0)
+
+    _register(monkeypatch, base_dir, "flaky", flaky)
+    compare.compare("flaky", "v1", runs=1, query="obour_q1", base_dir=base_dir, pause=0)
+
+    [saved] = _saved(base_dir)
+    assert saved["status"] == "ok" and saved["attempts"] == 2 and len(saved["normalized"]) == 1
+
+
+def test_arabic_query_version(base_dir: Path, monkeypatch):
+    seen = []
+
+    def fake(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        seen.append(query)
+        return {}, [Result("https://youm7.com/a", "t", "s")]
+
+    _register(monkeypatch, base_dir, "fake", fake)
+    [path] = compare.compare(
+        "fake", "v1", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0, query_version="v2"
+    )
+
+    assert seen == ["حجم سوق الفنادق والمطاعم في العين السخنة 2026"]
+    assert path.parent == base_dir / "runs" / "fake" / "v1" / "queries_v2"
+    assert "__qv2__sokhna_q1__" in path.name
+    text = path.read_text(encoding="utf-8")
+    assert "العين السخنة" in text  # saved as UTF-8, not \u escapes
+    saved = json.loads(text)
+    assert saved["query_version"] == "v2" and saved["query_language"] == "ar"
+
+
+def test_default_query_version_is_v1_and_unknown_is_refused(base_dir: Path):
+    assert compare.load_queries(base_dir=base_dir)["version"] == "v1"
+    with pytest.raises(FileNotFoundError):
+        compare.load_queries("v9", base_dir)
+    (base_dir / "queries_v3.json").write_text('{"version": "v2", "queries": []}')
+    with pytest.raises(ValueError):
+        compare.load_queries("v3", base_dir)
