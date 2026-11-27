@@ -291,3 +291,27 @@ def test_strategy_run_scores_merged_set_and_each_search(base_dir: Path):
     assert v3["avg_ar_restricted_n_citable"] == "2.0"
     assert v3["avg_unique_from_open"] == "1.0"
     assert next(r for r in rows if r["settings"] == "v1")["avg_unique_from_open"] == ""
+
+
+def test_unique_from_counts_a_shared_url_for_neither_search(base_dir: Path):
+    # The saved `normalized` would say nothing is shared (old, stricter URL key);
+    # score.py re-merges from the searches, so www/trailing slash/query don't matter.
+    name = "20261127T200000000000__tavily__v3__qv1+v2__sokhna_q1__run1.json"
+    _write_strategy_run(
+        base_dir,
+        name,
+        [
+            _search(
+                "ar_restricted", "ok", ["https://www.youm7.com/story/1/", "https://capmas.gov.eg/b"]
+            ),
+            _search("en_restricted", "empty", []),
+            _search("open", "ok", ["https://youm7.com/story/1?utm=x", "https://nawy.com/c"]),
+        ],
+    )
+    score.score_all(base_dir)
+    [row] = _read(base_dir / "scores.csv")
+    assert row["n_results"] == "3"  # 4 results, one URL shared
+    assert row["ar_restricted_n_results"] == "2" and row["open_n_results"] == "2"
+    assert row["unique_from_ar_restricted"] == "1"  # capmas only
+    assert row["unique_from_open"] == "1"  # nawy only
+    assert row["unique_from_en_restricted"] == "0"

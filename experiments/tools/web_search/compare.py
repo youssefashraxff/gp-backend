@@ -29,6 +29,8 @@ from typing import Any
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from experiments.tools.web_search.merge import merge_results
+
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_RUNS = 2
 PAUSE_SECONDS = 0.5
@@ -231,36 +233,6 @@ def run_once(
 def _search_params(settings: dict[str, Any], search: dict[str, Any]) -> dict[str, Any]:
     extra = {k: v for k, v in search.items() if k not in ("name", "queries")}
     return {**settings.get("base", {}), **extra}
-
-
-def _url_key(url: str) -> str:
-    return url.strip().rstrip("/").lower()
-
-
-def merge_results(searches: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Deduplicate by URL across searches, keeping which searches found each URL.
-    Ordered by the best score any search gave the URL (no score last), then first seen."""
-    merged: dict[str, dict[str, Any]] = {}
-    for search in searches:
-        for result in search["normalized"]:
-            key = _url_key(result["url"])
-            if key not in merged:
-                merged[key] = {**result, "found_by": [search["name"]]}
-                continue
-            entry = merged[key]
-            if search["name"] not in entry["found_by"]:
-                entry["found_by"].append(search["name"])
-            if result.get("score") is not None and (
-                entry.get("score") is None or result["score"] > entry["score"]
-            ):
-                entry["score"] = result["score"]
-            if not entry.get("published_date") and result.get("published_date"):
-                entry["published_date"] = result["published_date"]
-    order = {key: i for i, key in enumerate(merged)}
-    return sorted(
-        merged.values(),
-        key=lambda r: (r.get("score") is None, -(r.get("score") or 0), order[_url_key(r["url"])]),
-    )
 
 
 def run_strategy_once(

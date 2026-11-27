@@ -1,13 +1,13 @@
 domain,name,source_type,egyptian,where_from,use_for,language
-booking.com,Booking.com,travel_booking,no,runs,hotel supply and prices per area; guest reviews,both
-tripadvisor.com,Tripadvisor,travel_booking,no,runs,hotels and restaurants per area; reviews and rankings,both
-agoda.com,Agoda,travel_booking,no,runs,hotel supply and prices,both
-expedia.com,Expedia,travel_booking,no,runs,hotel supply and prices,both
-hotels.com,Hotels.com,travel_booking,no,research,hotel supply and prices,both
-trivago.com,trivago,travel_booking,no,runs,hotel price comparison,both
-trip.com,Trip.com,travel_booking,no,research,hotel supply; Asian source markets,both
+booking.com,Booking.com,travel_booking,no,runs,hotel supply and prices per area; guest reviews,en
+tripadvisor.com,Tripadvisor,travel_booking,no,runs,hotels and restaurants per area; reviews and rankings,en
+agoda.com,Agoda,travel_booking,no,runs,hotel supply and prices,en
+expedia.com,Expedia,travel_booking,no,runs,hotel supply and prices,en
+hotels.com,Hotels.com,travel_booking,no,research,hotel supply and prices,en
+trivago.com,trivago,travel_booking,no,runs,hotel price comparison,en
+trip.com,Trip.com,travel_booking,no,research,hotel supply; Asian source markets,en
 kayak.com,Kayak,travel_booking,no,research,hotel and flight prices,en
-airbnb.com,Airbnb,travel_booking,no,research,short-stay supply (chalets and apartments),both
+airbnb.com,Airbnb,travel_booking,no,research,short-stay supply (chalets and apartments),en
 holidaycheck.de,HolidayCheck,travel_booking,no,research,German visitors' reviews (major Red Sea source market),de
 airdna.co,AirDNA,str_data,no,research,short-term rental occupancy and rates,en
 airroi.com,AirROI,str_data,no,runs,short-term rental occupancy and revenue,en
@@ -21,15 +21,15 @@ cbre.com,CBRE,consultancy_report,no,research,commercial real estate reports,en
 cushmanwakefield.com,Cushman & Wakefield,consultancy_report,no,research,commercial real estate reports,en
 hvs.com,HVS,consultancy_report,no,research,hotel valuation and market studies,en
 savills.com,Savills (global),consultancy_report,no,research,Savills Egypt reports are often hosted here,en
-untourism.int,UN Tourism,intl_official,no,research,"tourist arrivals, source markets, seasonality, rooms",both
-unwto.org,UN Tourism (old domain),intl_official,no,research,same as untourism.int,both
+untourism.int,UN Tourism,intl_official,no,research,"tourist arrivals, source markets, seasonality, rooms",en
+unwto.org,UN Tourism (old domain),intl_official,no,research,same as untourism.int,en
 wttc.org,World Travel & Tourism Council,intl_official,no,research,tourism economic impact per country,en
 worldbank.org,World Bank (incl. data.worldbank.org),intl_official,no,research,"population, income and economic indicators",en
 imf.org,IMF,intl_official,no,research,macro indicators and forecasts,en
 afdb.org,African Development Bank,intl_official,no,research,Egypt economic outlook,en
 ebrd.com,EBRD,intl_official,no,research,Egypt investment and sector reports,en
 ifc.org,IFC,intl_official,no,research,private sector and tourism investment,en
-undp.org,UNDP,intl_official,no,research,Egypt human development data,both
+undp.org,UNDP,intl_official,no,research,Egypt human development data,en
 unhabitat.org,UN-Habitat,intl_official,no,research,urban development and new cities,en
 tradingeconomics.com,Trading Economics,data_aggregator,no,research,indicator time series (cites official sources),en
 ceicdata.com,CEIC,data_aggregator,no,research,time series from official Egyptian sources,en
@@ -46,12 +46,12 @@ marketresearch.com,MarketResearch.com,paid_report,no,runs,report landing pages; 
 reuters.com,Reuters,intl_news,no,research,Egypt economy and business news,en
 bloomberg.com,Bloomberg,intl_news,no,research,Egypt economy and business news,en
 thenationalnews.com,The National,intl_news,no,research,Gulf investment in Egypt,en
-arabianbusiness.com,Arabian Business,intl_news,no,research,regional real estate and hospitality,both
+arabianbusiness.com,Arabian Business,intl_news,no,research,regional real estate and hospitality,en
 agbi.com,Arabian Gulf Business Insight,intl_news,no,research,Gulf investment in Egypt,en
-aawsat.com,Asharq Al-Awsat,intl_news,no,research,regional news (Arabic and English),both
-al-monitor.com,Al-Monitor,intl_news,no,research,regional analysis,both
-zawya.com,Zawya,intl_news,no,research,regional business news and press releases,both
-mubasher.info,Mubasher,intl_news,no,research,regional business and market news,both
+aawsat.com,Asharq Al-Awsat,intl_news,no,research,regional news (Arabic and English),ar
+al-monitor.com,Al-Monitor,intl_news,no,research,regional analysis,en
+zawya.com,Zawya,intl_news,no,research,regional business news and press releases,en
+mubasher.info,Mubasher,intl_news,no,research,regional business and market news,ar
 hoteliermiddleeast.com,Hotelier Middle East,intl_news,no,research,hotel openings and pipeline in the region,en
 hospitalitynet.org,Hospitality Net,intl_news,no,research,hotel industry news and studies,en
 skift.com,Skift,intl_news,no,research,travel industry trends,en
@@ -62,7 +62,7 @@ sciencedirect.com,ScienceDirect,academic,no,research,academic papers,en
 mdpi.com,MDPI,academic,no,research,open-access academic papers,en
 google.com,Google (Maps and other pages),maps_reviews,no,research,places and reviews (use the Places API instead),both
 foursquare.com,Foursquare,maps_reviews,no,research,places and check-ins,both
-talabat.com,talabat,listing_portal,no,research,restaurant supply and categories per area,both
+talabat.com,talabat,listing_portal,no,research,restaurant supply and categories per area,en
 facebook.com,Facebook,social,no,runs,public pages and groups: demand signals,both
 instagram.com,Instagram,social,no,runs,local brands and venues: demand signals,both
 x.com,X,social,no,research,public posts: demand signals,both

@@ -252,3 +252,14 @@ def test_real_v3_settings_are_within_tavily_limits():
         assert 0 < len(search["include_domains"]) <= 300
     assert "include_domains" not in v3["searches"][2]
     assert v3["base"] == compare.load_settings("tavily", "v1")
+
+
+def test_real_v4_settings_differ_from_v3_only_in_the_domain_lists():
+    v3, v4 = compare.load_settings("tavily", "v3"), compare.load_settings("tavily", "v4")
+    assert v4["strategy"] == v3["strategy"] and v4["base"] == v3["base"]
+    for a, b in zip(v3["searches"], v4["searches"], strict=True):
+        assert {k: v for k, v in a.items() if k != "include_domains"} == {
+            k: v for k, v in b.items() if k != "include_domains"
+        }
+    ar, en, _ = (set(s.get("include_domains", [])) for s in v4["searches"])
+    assert 0 < len(ar) < len(v3["searches"][0]["include_domains"]) and not ar & en

@@ -135,8 +135,9 @@ to the next, so the standard stays the same.
 | `tavily_v1` | `general`, `basic`, `country=egypt`, 10 results |
 | `tavily_v2` | v1 + `include_domains` (105 domains of type official, news, report and listing types, copied from the two CSVs on 2026-11-27) with `include_domains_mode: prefer` |
 | `tavily_v3` | **Strategy `mixed`** (Market research only): 3 searches per question, see below |
+| `tavily_v4` | v3 with shorter restricted lists, regenerated after the CSVs dropped `both`: `ar_restricted` 30 domains (`language` `ar`), `en_restricted` 74 (`language` `en`) |
 
-Add `settings/<tool>_v4.json` and run with `--settings v4`. Never edit a version that has
+Add `settings/<tool>_v5.json` and run with `--settings v5`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
 
 ## Strategies (several searches per question)
@@ -172,9 +173,17 @@ Citable = `source_type` in `official`, `intl_official`, `news`, `business_news`,
 CSVs on 2026-11-27, well under Tavily's 300 limit), so v3 stays the same when the CSVs change.
 
 The run file holds each search under `searches` (name, query, status, seconds, error,
-results and the raw response) and the merged results under `normalized`: deduplicated by
-URL (case and trailing `/` ignored), ordered by the best score any search gave, each with
-`found_by` (which searches returned it).
+results and the raw response) and the merged results under `normalized`, ordered by the best
+score any search gave, each with `found_by` (which searches returned it).
+
+**Same URL** is decided by `merge.normalize_url` (in `merge.py`, used by both scripts): the
+host is lowercased without `www.`, the trailing `/` is dropped, and the scheme, query string
+and fragment are ignored, so `https://WWW.Youm7.com/story/1/?utm=x#top` and
+`http://youm7.com/story/1` are one result. `score.py` merges each strategy run again from
+its `searches` with this rule (it doesn't trust the saved `normalized`), so changing the
+rule and rescoring applies it to old runs too. Because whole query strings are ignored,
+pages told apart only by their query (e.g. `View.aspx?ID=21739` and `?ID=21741`) count as
+one, and a search can then have fewer unique results than `<search>_n_results`.
 
 A restricted search that finds nothing is saved as `empty` **without a retry** (our sites
 may have nothing); the `open` search is retried once when empty, like a plain run. The run is

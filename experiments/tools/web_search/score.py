@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+from experiments.tools.web_search.merge import merge_results
+
 BASE_DIR = Path(__file__).resolve().parent
 SOURCE_FILES = ("egypt_sources.csv", "international_sources.csv")
 
@@ -186,6 +188,15 @@ def _n_citable(results: list[dict[str, Any]], sources: dict[str, Source]) -> int
     )
 
 
+def merged_results(run: dict[str, Any]) -> list[dict[str, Any]]:
+    """The results to count. For a strategy run they are merged again from each search's
+    results with merge.normalize_url, so a change to that rule applies to old run files
+    too (the saved `normalized` is not trusted). A plain run's results are used as saved."""
+    if run.get("searches"):
+        return merge_results(run["searches"])
+    return run.get("normalized") or []
+
+
 def search_columns(name: str) -> list[str]:
     """scores.csv columns for one search of a strategy run."""
     return [f"{name}_status", f"{name}_n_results", f"{name}_n_citable", f"unique_from_{name}"]
@@ -195,7 +206,7 @@ def score_searches(run: dict[str, Any], sources: dict[str, Source]) -> dict[str,
     """Per-search columns of a strategy run: status, n_results and n_citable of each search,
     and unique_from_<search>: merged results that only that search found."""
     row: dict[str, Any] = {}
-    _, _, merged = _count(run.get("normalized") or [], sources)
+    _, _, merged = _count(merged_results(run), sources)
     for search in run.get("searches") or []:
         name = search["name"]
         _, _, kept = _count(search.get("normalized") or [], sources)
@@ -209,7 +220,7 @@ def score_searches(run: dict[str, Any], sources: dict[str, Source]) -> dict[str,
 def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
     """One scores.csv row. For a strategy run the counts are of the merged results, plus
     the per-search columns."""
-    counts, unlisted, kept = _count(run.get("normalized") or [], sources)
+    counts, unlisted, kept = _count(merged_results(run), sources)
     q = run["query"]
     return {
         "run_file": run_file,

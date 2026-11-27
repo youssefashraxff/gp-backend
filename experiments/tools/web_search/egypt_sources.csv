@@ -1,28 +1,28 @@
 domain,name,source_type,egyptian,where_from,language
-capmas.gov.eg,CAPMAS (official statistics),official,yes,research,both
-idsc.gov.eg,IDSC - Cabinet Information and Decision Support Center,official,yes,research,both
-eip.gov.eg,Egypt's Information Portal (IDSC),official,yes,research,both
-sis.gov.eg,State Information Service,official,yes,research+runs,both
-mped.gov.eg,Ministry of Planning (Vision 2030),official,yes,research+runs,both
-moic.gov.eg,Ministry of Planning and International Cooperation,official,yes,research,both
-investinegypt.gov.eg,GAFI - Invest in Egypt,official,yes,research,both
-gafi.gov.eg,GAFI,official,yes,research,both
-nuca.gov.eg,New Urban Communities Authority,official,yes,research,both
-realestate.gov.eg,Government real estate portal,official,yes,runs,both
-egypt.gov.eg,Egypt Government Portal,official,yes,research,both
-digital.gov.eg,Digital Egypt,official,yes,research,both
+capmas.gov.eg,CAPMAS (official statistics),official,yes,research,ar
+idsc.gov.eg,IDSC - Cabinet Information and Decision Support Center,official,yes,research,ar
+eip.gov.eg,Egypt's Information Portal (IDSC),official,yes,research,ar
+sis.gov.eg,State Information Service,official,yes,research+runs,ar
+mped.gov.eg,Ministry of Planning (Vision 2030),official,yes,research+runs,en
+moic.gov.eg,Ministry of Planning and International Cooperation,official,yes,research,en
+investinegypt.gov.eg,GAFI - Invest in Egypt,official,yes,research,en
+gafi.gov.eg,GAFI,official,yes,research,ar
+nuca.gov.eg,New Urban Communities Authority,official,yes,research,ar
+realestate.gov.eg,Government real estate portal,official,yes,runs,en
+egypt.gov.eg,Egypt Government Portal,official,yes,research,ar
+digital.gov.eg,Digital Egypt,official,yes,research,ar
 cairo.gov.eg,Cairo Governorate,official,yes,research,ar
-mota.gov.eg,Ministry of Tourism and Antiquities,official,yes,research,both
+mota.gov.eg,Ministry of Tourism and Antiquities,official,yes,research,ar
 egypt.travel,Experience Egypt (Ministry of Tourism),official,yes,research,en
-sczone.eg,Suez Canal Economic Zone,official,yes,research,both
-cbe.org.eg,Central Bank of Egypt,official,yes,research,both
-egx.com.eg,Egyptian Exchange,official,yes,research,both
+sczone.eg,Suez Canal Economic Zone,official,yes,research,en
+cbe.org.eg,Central Bank of Egypt,official,yes,research,en
+egx.com.eg,Egyptian Exchange,official,yes,research,en
 youm7.com,Youm7,news,yes,research,ar
 almasryalyoum.com,Al-Masry Al-Youm,news,yes,research,ar
 elwatannews.com,El Watan,news,yes,research,ar
 masrawy.com,Masrawy,news,yes,research+runs,ar
 dostor.org,Al Dostor,news,yes,research,ar
-ahram.org.eg,Al-Ahram (incl. english.ahram.org.eg and gate.ahram.org.eg),news,yes,research,both
+ahram.org.eg,Al-Ahram (incl. english.ahram.org.eg and gate.ahram.org.eg),news,yes,research,ar
 elbalad.news,Sada El Balad,news,yes,research,ar
 shorouknews.com,Al Shorouk,news,yes,research,ar
 akhbarelyom.com,Akhbar El Yom,news,yes,research,ar
@@ -33,26 +33,26 @@ egyptindependent.com,Egypt Independent (Al-Masry Al-Youm English),news,yes,resea
 egypttoday.com,Egypt Today,news,yes,research,en
 dailynewsegypt.com,Daily News Egypt,news,yes,research,en
 egyptianstreets.com,Egyptian Streets,news,yes,research+runs,en
-madamasr.com,Mada Masr,news,yes,research,both
-enterprise.news,Enterprise,business_news,yes,research,both
-enterpriseam.com,EnterpriseAM,business_news,yes,research,both
-ent.news,Enterprise (files and short links),business_news,yes,research+runs,both
-amwalalghad.com,Amwal Al Ghad (incl. en.amwalalghad.com),business_news,yes,research,both
+madamasr.com,Mada Masr,news,yes,research,en
+enterprise.news,Enterprise,business_news,yes,research,en
+enterpriseam.com,EnterpriseAM,business_news,yes,research,en
+ent.news,Enterprise (files and short links),business_news,yes,research+runs,en
+amwalalghad.com,Amwal Al Ghad (incl. en.amwalalghad.com),business_news,yes,research,ar
 almalnews.com,Al Mal News,business_news,yes,research,ar
 alborsaanews.com,Al Borsa News,business_news,yes,research,ar
-arabfinance.com,Arab Finance,business_news,yes,research,both
-invest-gate.me,Invest-Gate (real estate and investment),business_news,yes,research+runs,both
+arabfinance.com,Arab Finance,business_news,yes,research,en
+invest-gate.me,Invest-Gate (real estate and investment),business_news,yes,research+runs,en
 realty-eg.net,Realty Egypt,business_news,yes,runs,en
-efghermesone.com,EFG Hermes ONE,business_news,yes,research,both
+efghermesone.com,EFG Hermes ONE,business_news,yes,research,en
 savills.com.eg,Savills Egypt,consultancy_report,yes,research+runs,en
-aqarmap.com.eg,Aqarmap,listing_portal,yes,research,both
-propertyfinder.eg,Property Finder Egypt,listing_portal,yes,research+runs,both
-nawy.com,Nawy,listing_portal,yes,research,both
-bayut.eg,Bayut Egypt,listing_portal,yes,research+runs,both
-dubizzle.com.eg,dubizzle Egypt,listing_portal,yes,research+runs,both
-realestate.eg,RealEstate.eg,listing_portal,yes,research+runs,both
-yellowpages.com.eg,Yellow Pages Egypt,listing_portal,yes,research,both
-elmenus.com,elmenus (restaurants),listing_portal,yes,research,both
+aqarmap.com.eg,Aqarmap,listing_portal,yes,research,ar
+propertyfinder.eg,Property Finder Egypt,listing_portal,yes,research+runs,en
+nawy.com,Nawy,listing_portal,yes,research,en
+bayut.eg,Bayut Egypt,listing_portal,yes,research+runs,ar
+dubizzle.com.eg,dubizzle Egypt,listing_portal,yes,research+runs,ar
+realestate.eg,RealEstate.eg,listing_portal,yes,research+runs,en
+yellowpages.com.eg,Yellow Pages Egypt,listing_portal,yes,research,en
+elmenus.com,elmenus (restaurants),listing_portal,yes,research,en
 cairoscene.com,CairoScene,lifestyle,yes,research,en
 cairo360.com,Cairo 360,lifestyle,yes,research,en
 journals.ekb.eg,Egyptian Knowledge Bank journals,academic,yes,runs,both
