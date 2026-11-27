@@ -9,7 +9,7 @@ It is two steps:
 
 | Step | Script | Calls an API? | Writes |
 |---|---|---|---|
-| 1. Collect | `compare.py` | yes | one new file per call in `runs/` (never overwritten) |
+| 1. Collect | `compare.py` | yes | one new file per call in `runs/<tool>/<settings>/` (never overwritten) |
 | 2. Score | `score.py` | no | `scores.csv`, `summary.csv` (regenerated), `manual.csv` (rows only added) |
 
 Collecting costs credits; scoring is free. So when a source list changes, just rescore.
@@ -25,9 +25,13 @@ python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
 python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
     --query sokhna_q1 --runs 1        # one query, one call
 
-# 2. score everything in runs/
+# 2. score every run file under runs/ (all tools and settings)
 python -m experiments.tools.web_search.score
 ```
+
+Run files go in one folder per tool and settings version, e.g. `runs/tavily/v1/` and
+`runs/tavily/v2/`, so rounds never mix. `manual.csv` is keyed by file name (which starts
+with a unique time), so moving files between folders doesn't lose what you wrote.
 
 `compare.py` saves the full raw response, the cleaned-up results, the query, settings, run
 number, time, `status` and `--notes`. If a call returns 0 results without an error it
@@ -92,9 +96,14 @@ result only if it is about the right place and gives usable information (a price
 project, a number, a source we could cite). Judge one query across all tools before moving
 to the next, so the standard stays the same.
 
-## Add a settings version
+## Settings versions
 
-Add `settings/<tool>_v2.json` and run with `--settings v2`. Never edit a version that has
+| Version | What changed |
+|---|---|
+| `tavily_v1` | `general`, `basic`, `country=egypt`, 10 results |
+| `tavily_v2` | v1 + `include_domains` (105 domains of type official, news, report and listing types, copied from the two CSVs on 2026-11-27) with `include_domains_mode: prefer` |
+
+Add `settings/<tool>_v3.json` and run with `--settings v3`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
 
 ## Add a tool

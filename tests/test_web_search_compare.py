@@ -28,7 +28,7 @@ def _register(monkeypatch, base_dir: Path, name: str, fn) -> None:
 
 
 def _saved(base_dir: Path) -> list[dict[str, Any]]:
-    return [json.loads(p.read_text()) for p in sorted((base_dir / "runs").glob("*.json"))]
+    return [json.loads(p.read_text()) for p in sorted((base_dir / "runs").rglob("*.json"))]
 
 
 def _fake_tool(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
@@ -48,6 +48,7 @@ def test_run_file_saved_and_never_overwritten(base_dir: Path, monkeypatch):
     )
 
     assert len(paths) == 1 and paths[0].name.endswith("__fake__v1__sokhna_q1__run1.json")
+    assert paths[0].parent == base_dir / "runs" / "fake" / "v1"
     saved = json.loads(paths[0].read_text())
     assert saved["status"] == "ok" and saved["attempts"] == 1 and saved["notes"] == "n"
     assert saved["raw_response"] == {"query": saved["query"]["query"], "results": ["raw"]}
@@ -55,7 +56,7 @@ def test_run_file_saved_and_never_overwritten(base_dir: Path, monkeypatch):
     assert "n_egyptian" not in saved  # compare.py no longer scores
 
     with pytest.raises(FileExistsError):
-        compare.save_run(base_dir / "runs", paths[0].name, {"other": True})
+        compare.save_run(paths[0].parent, paths[0].name, {"other": True})
     assert json.loads(paths[0].read_text()) == saved
 
 

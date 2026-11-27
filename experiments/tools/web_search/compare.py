@@ -114,10 +114,15 @@ def load_settings(tool: str, version: str, base_dir: Path = BASE_DIR) -> dict[st
 # ---------------------------------------------------------------------------------------
 
 
-def save_run(runs_dir: Path, name: str, payload: dict[str, Any]) -> Path:
+def runs_dir(base_dir: Path, tool: str, settings_version: str) -> Path:
+    """One folder per tool and settings version: runs/<tool>/<settings>/."""
+    return base_dir / "runs" / tool / settings_version
+
+
+def save_run(folder: Path, name: str, payload: dict[str, Any]) -> Path:
     """Write a new run file. Mode "x" refuses to overwrite an existing file."""
-    runs_dir.mkdir(parents=True, exist_ok=True)
-    path = runs_dir / name
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / name
     with path.open("x", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False, default=str)
     return path
@@ -171,7 +176,7 @@ def run_once(
     stamp = now.strftime("%Y%m%dT%H%M%S%f")
     name = f"{stamp}__{tool}__{settings_version}__{q['id']}__run{run}.json"
     return save_run(
-        base_dir / "runs",
+        runs_dir(base_dir, tool, settings_version),
         name,
         {
             "timestamp": now.isoformat(),

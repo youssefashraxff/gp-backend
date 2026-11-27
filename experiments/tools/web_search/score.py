@@ -1,6 +1,6 @@
 """Score the saved web search runs. Reads only files, never calls a tool.
 
-Inputs:  runs/*.json, egypt_sources.csv, international_sources.csv
+Inputs:  runs/<tool>/<settings>/*.json, egypt_sources.csv, international_sources.csv
 Outputs: scores.csv   one row per run file           (regenerated every time)
          summary.csv  one row per tool+settings+query (regenerated every time)
          manual.csv   `relevant` and `notes`, filled by hand, keyed by run file name.
@@ -266,10 +266,10 @@ def sync_manual(path: Path, scores: list[dict[str, Any]], runs: dict[str, dict])
 
 def score_all(base_dir: Path = BASE_DIR) -> list[dict[str, Any]]:
     sources = load_sources(base_dir)
-    runs = {
-        p.name: json.loads(p.read_text(encoding="utf-8"))
-        for p in sorted((base_dir / "runs").glob("*.json"))
-    }
+    # runs/<tool>/<settings>/*.json; keyed by file name (it starts with a unique time), so
+    # manual.csv still matches if files move between folders. Sorted by name = by time.
+    paths = sorted((base_dir / "runs").rglob("*.json"), key=lambda p: p.name)
+    runs = {p.name: json.loads(p.read_text(encoding="utf-8")) for p in paths}
     scores = [score_run(name, run, sources) for name, run in runs.items()]
     _write_csv(base_dir / "scores.csv", SCORES_COLUMNS, scores)
     _write_csv(base_dir / "summary.csv", SUMMARY_COLUMNS, summarize(scores))

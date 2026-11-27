@@ -186,3 +186,15 @@ def test_regenerating_keeps_manual_entries(base_dir: Path):
     assert [r["run_file"] for r in rows] == [first, second]
     assert (rows[0]["relevant"], rows[0]["notes"]) == ("1", "checked by hand")
     assert len(_read(base_dir / "scores.csv")) == 2  # regenerated, not appended
+
+
+def test_finds_runs_in_tool_and_settings_folders(base_dir: Path):
+    for version, stamp in (("v1", "000001"), ("v2", "000002")):
+        folder = base_dir / "runs" / "tavily" / version
+        folder.mkdir(parents=True)
+        name = f"20261127T{stamp}000000__tavily__{version}__sokhna_q1__run1.json"
+        _write_run(base_dir, name, ["https://nawy.com/a"], settings_version=version)
+        (base_dir / "runs" / name).rename(folder / name)
+    score.score_all(base_dir)
+    assert [r["settings"] for r in _read(base_dir / "scores.csv")] == ["v1", "v2"]
+    assert [r["settings"] for r in _read(base_dir / "summary.csv")] == ["v1", "v2"]
