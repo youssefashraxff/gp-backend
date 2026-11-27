@@ -72,3 +72,13 @@ tiktok.com,TikTok,social,no,research,venue and area popularity,both
 youtube.com,YouTube,social,no,research,area and project videos,both
 linkedin.com,LinkedIn,social,no,research,company and project announcements,both
 tavily.com,Tavily's own pages (not a real source),ignore,no,runs,ignore,en
+tripadvisor.com.eg,Tripadvisor Egypt,travel_booking,no,serper/tavily runs,hotel and restaurant listings and reviews,both
+almosafer.com,Almosafer,travel_booking,no,serper/tavily runs,hotel supply and prices,both
+wego.com,Wego,travel_booking,no,serper/tavily runs,hotel supply and prices,both
+trivago.ae,trivago UAE,travel_booking,no,serper/tavily runs,hotel price comparison,en
+opensooq.com,OpenSooq,listing_portal,no,serper/tavily runs,classifieds incl. property,both
+unescwa.org,UN ESCWA,intl_official,no,serper/tavily runs,regional economic and policy reports,both
+kanebridgenewsme.com,Kanebridge News Middle East,intl_news,no,serper/tavily runs,regional real estate news,en
+meetings-conventions.com,Meetings & Conventions,travel_booking,no,serper/tavily runs,event venue directory,en
+search.mandumah.com,Mandumah (Arab academic database),academic,no,serper/tavily runs,academic papers,ar
+ijcua.com,IJCUA journal,academic,no,serper/tavily runs,academic papers,en

@@ -137,6 +137,7 @@ to the next, so the standard stays the same.
 | `tavily_v3` | **Strategy `mixed`** (Market research only): 3 searches per question, see below |
 | `tavily_v4` | v3 with shorter restricted lists, regenerated after the CSVs dropped `both`: `ar_restricted` 30 domains (`language` `ar`), `en_restricted` 74 (`language` `en`) |
 | `serper_v1` | **Strategy `mixed`**, 2 open searches: `en_open` (v1 English, `gl=eg`, `hl=en`, `num=10`) and `ar_open` (v2 Arabic, `gl=eg`, `hl=ar`, `num=10`). No `site:` operators, no domain filtering |
+| `serper_v2` | **Strategy `mixed`**, the `tavily_v3` design on Google: `en_open` (as in serper_v1), `ar_sites` (v2 Arabic, `hl=ar`, `site:` 10 Arabic news/business/listing/official sites), `en_sites` (v1 English, `hl=en`, `site:` 10 English news/report/listing/official sites). `gl=eg`, `num=10` |
 
 Add `settings/<tool>_v5.json` and run with `--settings v5`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
@@ -159,6 +160,12 @@ plain single searches.
 Each search sends `base` + its own settings, with the text of the same question id from its
 query version (`v2` Arabic, `v1` English). `--queries` is ignored: the strategy picks them.
 Run files go to `runs/<tool>/<settings>/queries_v1+v2/`.
+
+A search can also have `sites`: a list of domains turned into Google `site:` operators and
+appended to the query, `query + " (site:a.com OR site:b.eg)"` (used by `serper_v2`). The
+list lives in the settings file; the exact final query string is saved as the search's
+`query` in the run file, and `sites` is not sent to the tool as a parameter. Like a Tavily
+`restrict` search, a `sites` search that comes back empty is not retried.
 
 `tavily_v3` (`mixed`):
 
@@ -209,6 +216,16 @@ an empty `organic` is retried once (open search), then saved as `empty`.
 Serper's `date` is the text Google shows, not a date: `3 days ago`, `Nov 16, 2026`, or in
 Arabic results `قبل ٣ أيام` and `٠٧‏/١٢‏/٢٠٢٥`. `n_with_date` counts results that have one;
 an agent would need to parse it before using it as a fact.
+
+**Google redirect links.** With `site:` operators Google often returns
+`https://www.google.com/goto?url=<token>` instead of the page URL (in serper_v2, 274 of 456
+site-search results). The token can't be decoded, so `url` stays the link and the real site,
+taken from `displayedLink` (`https://alborsaanews.com › العقارات`), goes in `source_domain`.
+Scoring classifies by `source_domain`, and merging treats two redirects as the same result
+when domain and title match (their URL key would otherwise be the same `google.com/goto`).
+`score.py` rebuilds Serper results from the saved raw responses with `serper_results`, so
+this applies to runs saved before the fix. An agent would need the page URL to cite it: it
+has to follow the redirect.
 
 ```bash
 python -m experiments.tools.web_search.compare --tool serper --settings v1 --runs 2

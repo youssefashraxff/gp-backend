@@ -14,7 +14,7 @@ from __future__ import annotations
 import csv
 import json
 from collections import Counter
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -162,7 +162,7 @@ def _count(
     unlisted: set[str] = set()
     kept: list[dict[str, Any]] = []
     for result in results:
-        domain, source = classify(result.get("url", ""), sources)
+        domain, source = classify(_where(result), sources)
         if source is not None and source.source_type == IGNORE:
             continue
         kept.append(result)
@@ -182,19 +182,47 @@ def _count(
 
 def _n_citable(results: list[dict[str, Any]], sources: dict[str, Source]) -> int:
     return sum(
-        (source := classify(r.get("url", ""), sources)[1]) is not None
-        and source.source_type in CITABLE
+        (source := classify(_where(r), sources)[1]) is not None and source.source_type in CITABLE
         for r in results
     )
 
 
+def _where(result: dict[str, Any]) -> str:
+    """What to classify a result by: the real site of a redirect link, else its URL."""
+    return result.get("source_domain") or result.get("url", "")
+
+
+def _renormalize(tool: str, raw: Any, saved: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Serper results are rebuilt from the saved raw response with the current
+    `serper_results`, so normalisation fixes (e.g. Google redirect links) apply to old runs.
+    Other tools use the results as saved."""
+    if tool == "serper" and isinstance(raw, dict):
+        from experiments.tools.web_search.compare import serper_results
+
+        return [asdict(r) for r in serper_results(raw)]
+    return saved
+
+
+def searches_of(run: dict[str, Any]) -> list[dict[str, Any]]:
+    """A strategy run's searches, with each search's results renormalised (see above)."""
+    return [
+        {
+            **s,
+            "normalized": _renormalize(
+                run["tool"], s.get("raw_response"), s.get("normalized") or []
+            ),
+        }
+        for s in run.get("searches") or []
+    ]
+
+
 def merged_results(run: dict[str, Any]) -> list[dict[str, Any]]:
-    """The results to count. For a strategy run they are merged again from each search's
-    results with merge.normalize_url, so a change to that rule applies to old run files
-    too (the saved `normalized` is not trusted). A plain run's results are used as saved."""
+    """The results to count. A strategy run is merged again from its searches with
+    merge.result_key, and Serper results are rebuilt from their raw responses, so changes to
+    either rule apply to old run files too (the saved `normalized` is not trusted)."""
     if run.get("searches"):
-        return merge_results(run["searches"])
-    return run.get("normalized") or []
+        return merge_results(searches_of(run))
+    return _renormalize(run["tool"], run.get("raw_response"), run.get("normalized") or [])
 
 
 def search_columns(name: str) -> list[str]:
@@ -207,7 +235,7 @@ def score_searches(run: dict[str, Any], sources: dict[str, Source]) -> dict[str,
     and unique_from_<search>: merged results that only that search found."""
     row: dict[str, Any] = {}
     _, _, merged = _count(merged_results(run), sources)
-    for search in run.get("searches") or []:
+    for search in searches_of(run):
         name = search["name"]
         _, _, kept = _count(search.get("normalized") or [], sources)
         row[f"{name}_status"] = search["status"]

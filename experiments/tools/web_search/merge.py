@@ -20,14 +20,23 @@ def normalize_url(url: str) -> str:
     return host + parts.path.rstrip("/")
 
 
+def result_key(result: dict[str, Any]) -> str:
+    """The merge key of one result. Normally `normalize_url(url)`. A redirect link with a
+    `source_domain` (Google `goto?url=<token>`) has no usable URL, and dropping its query
+    would make every redirect the same result, so it is keyed by domain + title instead."""
+    if result.get("source_domain"):
+        return f"{result['source_domain']}#{result.get('title', '').strip().lower()}"
+    return normalize_url(result.get("url", ""))
+
+
 def merge_results(searches: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Deduplicate the `normalized` results of every search by `normalize_url`, keeping which
+    """Deduplicate the `normalized` results of every search by `result_key`, keeping which
     searches found each URL (`found_by`). The first URL seen is kept as written. Ordered by
     the best score any search gave the URL (no score last), then by first seen."""
     merged: dict[str, dict[str, Any]] = {}
     for search in searches:
         for result in search.get("normalized") or []:
-            key = normalize_url(result.get("url", ""))
+            key = result_key(result)
             if key not in merged:
                 merged[key] = {**result, "found_by": [search["name"]]}
                 continue
@@ -46,6 +55,6 @@ def merge_results(searches: list[dict[str, Any]]) -> list[dict[str, Any]]:
         key=lambda r: (
             r.get("score") is None,
             -(r.get("score") or 0),
-            order[normalize_url(r.get("url", ""))],
+            order[result_key(r)],
         ),
     )
