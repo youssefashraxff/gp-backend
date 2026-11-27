@@ -1,0 +1,9 @@
+{
+  "strategy": "mixed",
+  "description": "Serper (Google). 2 open searches per question, merged and deduplicated like tavily_v3. No site: operators, no domain filtering.",
+  "base": {},
+  "searches": [
+    {"name": "en_open", "queries": "v1", "gl": "eg", "hl": "en", "num": 10},
+    {"name": "ar_open", "queries": "v2", "gl": "eg", "hl": "ar", "num": 10}
+  ]
+}

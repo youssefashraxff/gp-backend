@@ -16,7 +16,7 @@ Collecting costs credits; scoring is free. So when a source list changes, just r
 
 ## Run
 
-Put `TAVILY_API_KEY=...` in `.env` (never commit it), then:
+Put `TAVILY_API_KEY=...` and `SERPER_API_KEY=...` in `.env` (never commit them), then:
 
 ```bash
 # 1. collect: 12 queries x 2 runs (the default) = 24 calls
@@ -136,6 +136,7 @@ to the next, so the standard stays the same.
 | `tavily_v2` | v1 + `include_domains` (105 domains of type official, news, report and listing types, copied from the two CSVs on 2026-11-27) with `include_domains_mode: prefer` |
 | `tavily_v3` | **Strategy `mixed`** (Market research only): 3 searches per question, see below |
 | `tavily_v4` | v3 with shorter restricted lists, regenerated after the CSVs dropped `both`: `ar_restricted` 30 domains (`language` `ar`), `en_restricted` 74 (`language` `en`) |
+| `serper_v1` | **Strategy `mixed`**, 2 open searches: `en_open` (v1 English, `gl=eg`, `hl=en`, `num=10`) and `ar_open` (v2 Arabic, `gl=eg`, `hl=ar`, `num=10`). No `site:` operators, no domain filtering |
 
 Add `settings/<tool>_v5.json` and run with `--settings v5`. Never edit a version that has
 been run; old and new must stay comparable. Say what changed in `--notes`.
@@ -188,6 +189,30 @@ one, and a search can then have fewer unique results than `<search>_n_results`.
 A restricted search that finds nothing is saved as `empty` **without a retry** (our sites
 may have nothing); the `open` search is retried once when empty, like a plain run. The run is
 `error` only if every search failed. Cost: one credit per search, so 3 per question per run.
+
+## Tools
+
+| Tool | Key in `.env` | Function | API |
+|---|---|---|---|
+| `tavily` | `TAVILY_API_KEY` | `search_tavily` | official `tavily-python` SDK |
+| `serper` | `SERPER_API_KEY` | `search_serper` | `POST https://google.serper.dev/search` with `httpx` (Google results) |
+
+**Serper** sends exactly `{"q", "gl", "hl", "num"}` from the settings, with the key in the
+`X-API-KEY` header (never saved or printed). Each item of `organic` becomes a result:
+`link` → `url`, `title`, `snippet`, `date` → `published_date` (None if missing), and
+`position` is kept as `position`. `score` is `1/position` (rank 1 → 1.0, rank 2 → 0.5), because
+merging orders by score with higher = better, as Tavily's relevance score is. The full raw
+response is saved (including `answerBox`, `knowledgeGraph`, `peopleAlsoAsk` when Google
+returns them). A timeout or an HTTP error (429, 5xx, ...) is recorded as the search's error;
+an empty `organic` is retried once (open search), then saved as `empty`.
+
+Serper's `date` is the text Google shows, not a date: `3 days ago`, `Nov 16, 2026`, or in
+Arabic results `قبل ٣ أيام` and `٠٧‏/١٢‏/٢٠٢٥`. `n_with_date` counts results that have one;
+an agent would need to parse it before using it as a fact.
+
+```bash
+python -m experiments.tools.web_search.compare --tool serper --settings v1 --runs 2
+```
 
 ## Add a tool
 
