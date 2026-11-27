@@ -23,3 +23,15 @@ tavily,v2,v1,obour_q3,new_obour,prices,2,2,0,0,9.0,6.0,0.0,0.0,0.0,1.0,4.0,2.0,0
 tavily,v2,v1,obour_q4,new_obour,demand_seasonality,2,2,0,0,10.0,10.0,0.0,1.0,0.0,1.0,8.0,0.0,0.0,0.0,0.0,2,1.13
 tavily,v2,v1,obour_q5,new_obour,supply,2,2,0,0,8.5,5.0,0.5,0.0,0.5,1.5,3.5,0.5,0.0,2.0,0.0,1,2.97
 tavily,v2,v1,obour_q6,new_obour,strategy_fit,2,2,0,0,7.0,5.0,1.0,0.5,0.0,0.0,3.0,1.0,0.0,1.5,0.0,1,2.53
+tavily,v1,v2,sokhna_q1,ain_sokhna,market_division,2,2,0,0,9.0,3.0,0.0,3.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,2,1.85
+tavily,v1,v2,sokhna_q2,ain_sokhna,area_projects,2,2,0,0,8.5,2.0,0.0,0.0,0.0,0.0,1.5,1.5,0.0,5.5,0.0,1,1.69
+tavily,v1,v2,sokhna_q3,ain_sokhna,prices,2,2,0,0,10.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,5.0,0.0,2,1.15
+tavily,v1,v2,sokhna_q4,ain_sokhna,demand_seasonality,2,2,0,0,6.0,2.0,0.0,1.0,0.0,1.0,0.0,2.0,0.0,2.0,0.0,1,3.05
+tavily,v1,v2,sokhna_q5,ain_sokhna,supply,2,2,0,0,10.0,2.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,7.0,0.0,2,1.27
+tavily,v1,v2,sokhna_q6,ain_sokhna,strategy_fit,2,2,0,0,8.0,6.0,3.0,1.0,0.0,0.0,0.0,1.0,0.0,2.0,0.0,2,1.55
+tavily,v1,v2,obour_q1,new_obour,market_division,2,2,0,0,7.0,4.0,0.0,1.0,0.0,2.0,1.0,3.0,0.0,0.0,0.0,2,2.09
+tavily,v1,v2,obour_q2,new_obour,area_projects,2,2,0,0,6.5,1.5,0.0,0.0,0.0,0.0,1.0,2.5,0.0,3.0,0.0,1,2.23
+tavily,v1,v2,obour_q3,new_obour,prices,2,2,0,0,8.5,6.5,0.0,0.5,0.0,3.5,2.0,1.0,0.0,1.5,0.0,1,1.76
+tavily,v1,v2,obour_q4,new_obour,demand_seasonality,2,2,0,0,6.0,3.0,0.0,0.0,0.0,1.0,0.5,3.0,0.0,1.5,0.0,1,2.36
+tavily,v1,v2,obour_q5,new_obour,supply,2,2,0,0,8.0,4.0,0.0,0.0,0.0,1.0,2.0,1.0,0.0,4.0,0.0,2,1.68
+tavily,v1,v2,obour_q6,new_obour,strategy_fit,2,2,0,0,7.0,2.0,1.0,0.0,0.0,0.0,0.0,2.0,0.0,4.0,0.0,2,1.88

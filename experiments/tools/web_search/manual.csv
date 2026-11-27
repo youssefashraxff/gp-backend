@@ -119,3 +119,27 @@ run_file,tool,settings,query_id,run,relevant,notes
 20261127T201801305746__tavily__v2__obour_q5__run2.json,tavily,v2,obour_q5,2,,"v2: v1 + include_domains (105 trusted domains), mode prefer"
 20261127T201804790781__tavily__v2__obour_q6__run1.json,tavily,v2,obour_q6,1,,"v2: v1 + include_domains (105 trusted domains), mode prefer"
 20261127T201806900607__tavily__v2__obour_q6__run2.json,tavily,v2,obour_q6,2,,"v2: v1 + include_domains (105 trusted domains), mode prefer"
+20261127T203838891180__tavily__v1__qv2__sokhna_q1__run1.json,tavily,v1,sokhna_q1,1,,queries v2: Arabic versions of the v1 queries
+20261127T203841264486__tavily__v1__qv2__sokhna_q1__run2.json,tavily,v1,sokhna_q1,2,,queries v2: Arabic versions of the v1 queries
+20261127T203843607713__tavily__v1__qv2__sokhna_q2__run1.json,tavily,v1,sokhna_q2,1,,queries v2: Arabic versions of the v1 queries
+20261127T203845969250__tavily__v1__qv2__sokhna_q2__run2.json,tavily,v1,sokhna_q2,2,,queries v2: Arabic versions of the v1 queries
+20261127T203848000692__tavily__v1__qv2__sokhna_q3__run1.json,tavily,v1,sokhna_q3,1,,queries v2: Arabic versions of the v1 queries
+20261127T203850288399__tavily__v1__qv2__sokhna_q3__run2.json,tavily,v1,sokhna_q3,2,,queries v2: Arabic versions of the v1 queries
+20261127T203851315085__tavily__v1__qv2__sokhna_q4__run1.json,tavily,v1,sokhna_q4,1,,queries v2: Arabic versions of the v1 queries
+20261127T203854385795__tavily__v1__qv2__sokhna_q4__run2.json,tavily,v1,sokhna_q4,2,,queries v2: Arabic versions of the v1 queries
+20261127T203858449615__tavily__v1__qv2__sokhna_q5__run1.json,tavily,v1,sokhna_q5,1,,queries v2: Arabic versions of the v1 queries
+20261127T203900707508__tavily__v1__qv2__sokhna_q5__run2.json,tavily,v1,sokhna_q5,2,,queries v2: Arabic versions of the v1 queries
+20261127T203902002304__tavily__v1__qv2__sokhna_q6__run1.json,tavily,v1,sokhna_q6,1,,queries v2: Arabic versions of the v1 queries
+20261127T203904154953__tavily__v1__qv2__sokhna_q6__run2.json,tavily,v1,sokhna_q6,2,,queries v2: Arabic versions of the v1 queries
+20261127T203906118950__tavily__v1__qv2__obour_q1__run1.json,tavily,v1,obour_q1,1,,queries v2: Arabic versions of the v1 queries
+20261127T203909183026__tavily__v1__qv2__obour_q1__run2.json,tavily,v1,obour_q1,2,,queries v2: Arabic versions of the v1 queries
+20261127T203911319657__tavily__v1__qv2__obour_q2__run1.json,tavily,v1,obour_q2,1,,queries v2: Arabic versions of the v1 queries
+20261127T203914732999__tavily__v1__qv2__obour_q2__run2.json,tavily,v1,obour_q2,2,,queries v2: Arabic versions of the v1 queries
+20261127T203916788281__tavily__v1__qv2__obour_q3__run1.json,tavily,v1,obour_q3,1,,queries v2: Arabic versions of the v1 queries
+20261127T203918995958__tavily__v1__qv2__obour_q3__run2.json,tavily,v1,obour_q3,2,,queries v2: Arabic versions of the v1 queries
+20261127T203921332247__tavily__v1__qv2__obour_q4__run1.json,tavily,v1,obour_q4,1,,queries v2: Arabic versions of the v1 queries
+20261127T203927606891__tavily__v1__qv2__obour_q4__run2.json,tavily,v1,obour_q4,2,,queries v2: Arabic versions of the v1 queries
+20261127T203931102597__tavily__v1__qv2__obour_q5__run1.json,tavily,v1,obour_q5,1,,queries v2: Arabic versions of the v1 queries
+20261127T203933301140__tavily__v1__qv2__obour_q5__run2.json,tavily,v1,obour_q5,2,,queries v2: Arabic versions of the v1 queries
+20261127T203935488260__tavily__v1__qv2__obour_q6__run1.json,tavily,v1,obour_q6,1,,queries v2: Arabic versions of the v1 queries
+20261127T203938039197__tavily__v1__qv2__obour_q6__run2.json,tavily,v1,obour_q6,2,,queries v2: Arabic versions of the v1 queries

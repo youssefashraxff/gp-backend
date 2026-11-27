@@ -2,14 +2,14 @@
 
 Before the Market research and Segments agents pick a web search tool, we compare the tools
 **directly, with no LLM involved**. An LLM in the loop would mix two questions, "is the tool
-good?" and "did the model use it well?", so here the same 12 fixed queries (`queries.json`,
-6 per test site) go straight to each tool, and we save and measure the raw results.
+good?" and "did the model use it well?", so here the same 12 fixed queries (6 per test site) go straight to each tool, and we save
+and measure the raw results.
 
 It is two steps:
 
 | Step | Script | Calls an API? | Writes |
 |---|---|---|---|
-| 1. Collect | `compare.py` | yes | one new file per call in `runs/<tool>/<settings>/` (never overwritten) |
+| 1. Collect | `compare.py` | yes | one new file per call in `runs/<tool>/<settings>/queries_<version>/` (never overwritten) |
 | 2. Score | `score.py` | no | `scores.csv`, `summary.csv` (regenerated), `manual.csv` (rows only added) |
 
 Collecting costs credits; scoring is free. So when a source list changes, just rescore.
@@ -24,13 +24,18 @@ python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
     --query all --notes "tavily v1 baseline"
 python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
     --query sokhna_q1 --runs 1        # one query, one call
+python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
+    --queries v2 --notes "Arabic queries"   # the Arabic query version
 
 # 2. score every run file under runs/ (all tools and settings)
 python -m experiments.tools.web_search.score
 ```
 
-Run files go in one folder per tool and settings version, e.g. `runs/tavily/v1/` and
-`runs/tavily/v2/`, so rounds never mix. `manual.csv` is keyed by file name (which starts
+Run files go in one folder per tool, settings version and query version, e.g.
+`runs/tavily/v1/queries_v1/` (English) and `runs/tavily/v1/queries_v2/` (Arabic), so rounds
+never mix. New file names also carry the query version (`…__tavily__v1__qv2__sokhna_q1__run1.json`).
+Files from before query versions existed don't have the `q<version>` part; their
+`query_version` is inside the file. `manual.csv` is keyed by file name (which starts
 with a unique time), so moving files between folders doesn't lose what you wrote.
 
 `compare.py` saves the full raw response, the cleaned-up results, the query, settings, run
@@ -39,6 +44,20 @@ retries once; if still empty the run is saved with status `empty`. A failed call
 with status `error` and the run goes on.
 
 `score.py` prints the share of all results per type at the end, for a quick overview.
+
+## Query versions
+
+Pick one with `--queries` (default `v1`). Every version has the same 12 ids, sites and
+groups, so a query can be compared across versions; `query_version` is saved in each run
+file and is a column in `scores.csv` and `summary.csv`.
+
+| Version | File | Language | What it is |
+|---|---|---|---|
+| `v1` | `queries.json` | English | the original 12 queries |
+| `v2` | `queries_v2.json` | Arabic (`"language": "ar"`) | the same 12 queries in Arabic |
+
+Never edit a version that has been run; add `queries_v3.json` with `"version": "v3"`
+instead. Run files are saved as UTF-8, so Arabic stays readable in them.
 
 ## How a result is classified
 
@@ -79,7 +98,7 @@ To add a source, add a row to one of the two CSVs and rerun `score.py`.
 Types without their own column (`lifestyle`, `academic`, `tourism_travel`, `maps_reviews`)
 still count in `n_results`, and in `n_egyptian` when Egyptian.
 
-## summary.csv (one row per tool + settings + query)
+## summary.csv (one row per tool + settings + query version + query)
 
 `runs`, `ok`, `empty`, `errors`, then `avg_<column>` for each count above (averaged over
 the runs that didn't error), `same_top3` (how many `ok` runs share the most common top-3

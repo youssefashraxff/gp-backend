@@ -198,3 +198,12 @@ def test_finds_runs_in_tool_and_settings_folders(base_dir: Path):
     score.score_all(base_dir)
     assert [r["settings"] for r in _read(base_dir / "scores.csv")] == ["v1", "v2"]
     assert [r["settings"] for r in _read(base_dir / "summary.csv")] == ["v1", "v2"]
+
+
+def test_query_versions_are_scored_separately(base_dir: Path):
+    for version, stamp in (("v1", "000001"), ("v2", "000002")):
+        name = f"20261127T{stamp}000000__tavily__v1__q{version}__sokhna_q1__run1.json"
+        _write_run(base_dir, name, ["https://nawy.com/a"], query_version=version)
+    score.score_all(base_dir)
+    assert [r["query_version"] for r in _read(base_dir / "scores.csv")] == ["v1", "v2"]
+    assert [r["query_version"] for r in _read(base_dir / "summary.csv")] == ["v1", "v2"]

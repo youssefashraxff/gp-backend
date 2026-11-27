@@ -17,7 +17,8 @@ REAL_DIR = Path(compare.__file__).resolve().parent
 @pytest.fixture
 def base_dir(tmp_path: Path) -> Path:
     """A copy of the real inputs (queries, settings) with an empty runs/ folder."""
-    shutil.copy(REAL_DIR / "queries.json", tmp_path / "queries.json")
+    for name in ("queries.json", "queries_v2.json"):
+        shutil.copy(REAL_DIR / name, tmp_path / name)
     shutil.copytree(REAL_DIR / "settings", tmp_path / "settings")
     return tmp_path
 
@@ -47,8 +48,8 @@ def test_run_file_saved_and_never_overwritten(base_dir: Path, monkeypatch):
         "fake", "v1", runs=1, query="sokhna_q1", notes="n", base_dir=base_dir, pause=0
     )
 
-    assert len(paths) == 1 and paths[0].name.endswith("__fake__v1__sokhna_q1__run1.json")
-    assert paths[0].parent == base_dir / "runs" / "fake" / "v1"
+    assert len(paths) == 1 and paths[0].name.endswith("__fake__v1__qv1__sokhna_q1__run1.json")
+    assert paths[0].parent == base_dir / "runs" / "fake" / "v1" / "queries_v1"
     saved = json.loads(paths[0].read_text())
     assert saved["status"] == "ok" and saved["attempts"] == 1 and saved["notes"] == "n"
     assert saved["raw_response"] == {"query": saved["query"]["query"], "results": ["raw"]}
@@ -99,3 +100,33 @@ def test_empty_then_results_on_retry_is_ok(base_dir: Path, monkeypatch):
 
     [saved] = _saved(base_dir)
     assert saved["status"] == "ok" and saved["attempts"] == 2 and len(saved["normalized"]) == 1
+
+
+def test_arabic_query_version(base_dir: Path, monkeypatch):
+    seen = []
+
+    def fake(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+        seen.append(query)
+        return {}, [Result("https://youm7.com/a", "t", "s")]
+
+    _register(monkeypatch, base_dir, "fake", fake)
+    [path] = compare.compare(
+        "fake", "v1", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0, query_version="v2"
+    )
+
+    assert seen == ["حجم سوق الفنادق والمطاعم في العين السخنة 2026"]
+    assert path.parent == base_dir / "runs" / "fake" / "v1" / "queries_v2"
+    assert "__qv2__sokhna_q1__" in path.name
+    text = path.read_text(encoding="utf-8")
+    assert "العين السخنة" in text  # saved as UTF-8, not \u escapes
+    saved = json.loads(text)
+    assert saved["query_version"] == "v2" and saved["query_language"] == "ar"
+
+
+def test_default_query_version_is_v1_and_unknown_is_refused(base_dir: Path):
+    assert compare.load_queries(base_dir=base_dir)["version"] == "v1"
+    with pytest.raises(FileNotFoundError):
+        compare.load_queries("v9", base_dir)
+    (base_dir / "queries_v3.json").write_text('{"version": "v2", "queries": []}')
+    with pytest.raises(ValueError):
+        compare.load_queries("v3", base_dir)

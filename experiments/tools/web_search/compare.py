@@ -1,6 +1,7 @@
 """Call web search tools on fixed queries and save the raw responses. No LLM, no scoring.
 
-The same fixed queries (`queries.json`) go to a tool several times. Every response is saved
+The same fixed queries (`queries.json` = v1 English, `queries_v2.json` = v2 Arabic; pick
+with `--queries`) go to a tool several times. Every response is saved
 to `runs/` (one new file per call, never overwritten). Counting and comparing happens
 afterwards in `score.py`, which reads only these files, so changing a source list and
 rescoring never needs another API call.
@@ -98,8 +99,24 @@ TOOLS: dict[str, ToolFn] = {"tavily": search_tavily}
 # ---------------------------------------------------------------------------------------
 
 
-def load_queries(base_dir: Path = BASE_DIR) -> dict[str, Any]:
-    return json.loads((base_dir / "queries.json").read_text(encoding="utf-8"))
+DEFAULT_QUERIES = "v1"
+
+
+def queries_path(version: str, base_dir: Path = BASE_DIR) -> Path:
+    """v1 is `queries.json` (the original file, kept as it is); later versions are
+    `queries_<version>.json`."""
+    name = "queries.json" if version == "v1" else f"queries_{version}.json"
+    return base_dir / name
+
+
+def load_queries(version: str = DEFAULT_QUERIES, base_dir: Path = BASE_DIR) -> dict[str, Any]:
+    path = queries_path(version, base_dir)
+    if not path.exists():
+        raise FileNotFoundError(f"No queries '{version}' at {path}")
+    queries = json.loads(path.read_text(encoding="utf-8"))
+    if queries.get("version") != version:
+        raise ValueError(f"{path.name} says version {queries.get('version')!r}, not {version!r}")
+    return queries
 
 
 def load_settings(tool: str, version: str, base_dir: Path = BASE_DIR) -> dict[str, Any]:
@@ -114,9 +131,10 @@ def load_settings(tool: str, version: str, base_dir: Path = BASE_DIR) -> dict[st
 # ---------------------------------------------------------------------------------------
 
 
-def runs_dir(base_dir: Path, tool: str, settings_version: str) -> Path:
-    """One folder per tool and settings version: runs/<tool>/<settings>/."""
-    return base_dir / "runs" / tool / settings_version
+def runs_dir(base_dir: Path, tool: str, settings_version: str, query_version: str) -> Path:
+    """One folder per tool, settings version and query version:
+    runs/<tool>/<settings>/queries_<version>/."""
+    return base_dir / "runs" / tool / settings_version / f"queries_{query_version}"
 
 
 def save_run(folder: Path, name: str, payload: dict[str, Any]) -> Path:
@@ -156,6 +174,7 @@ def run_once(
     notes: str = "",
     base_dir: Path = BASE_DIR,
     pause: float = PAUSE_SECONDS,
+    query_language: str | None = None,
 ) -> Path:
     """Call the tool (retrying once if it returns 0 results without an error) and save the
     response to a new run file. Returns the file's path."""
@@ -174,9 +193,9 @@ def run_once(
 
     # Time first, so sorting by name is sorting by time.
     stamp = now.strftime("%Y%m%dT%H%M%S%f")
-    name = f"{stamp}__{tool}__{settings_version}__{q['id']}__run{run}.json"
+    name = f"{stamp}__{tool}__{settings_version}__q{query_version}__{q['id']}__run{run}.json"
     return save_run(
-        runs_dir(base_dir, tool, settings_version),
+        runs_dir(base_dir, tool, settings_version, query_version),
         name,
         {
             "timestamp": now.isoformat(),
@@ -184,6 +203,7 @@ def run_once(
             "settings_version": settings_version,
             "settings": settings,
             "query_version": query_version,
+            "query_language": query_language,
             "query": q,
             "run": run,
             "status": status,
@@ -205,11 +225,12 @@ def compare(
     notes: str = "",
     base_dir: Path = BASE_DIR,
     pause: float = PAUSE_SECONDS,
+    query_version: str = DEFAULT_QUERIES,
 ) -> list[Path]:
     if tool not in TOOLS:
         raise SystemExit(f"Unknown tool '{tool}'. Known: {', '.join(TOOLS)}")
     settings = load_settings(tool, settings_version, base_dir)
-    queries = load_queries(base_dir)
+    queries = load_queries(query_version, base_dir)
     selected = [q for q in queries["queries"] if query in ("all", q["id"])]
     if not selected:
         raise SystemExit(f"Unknown query '{query}'")
@@ -227,6 +248,7 @@ def compare(
                 notes,
                 base_dir,
                 pause,
+                queries.get("language"),
             )
             saved = json.loads(path.read_text(encoding="utf-8"))
             detail = saved["error"] or f"{len(saved['normalized'])} results"
@@ -241,11 +263,18 @@ def main() -> None:
     parser.add_argument("--tool", required=True, choices=sorted(TOOLS))
     parser.add_argument("--settings", required=True, help="settings version, e.g. v1")
     parser.add_argument("--runs", type=int, default=DEFAULT_RUNS)
+    parser.add_argument(
+        "--queries",
+        default=DEFAULT_QUERIES,
+        help="query version: v1 = queries.json (English), v2 = queries_v2.json (Arabic)",
+    )
     parser.add_argument("--query", default="all", help="'all' or one query id, e.g. sokhna_q1")
     parser.add_argument("--notes", default="", help="what this run tries; saved in each file")
     args = parser.parse_args()
 
-    paths = compare(args.tool, args.settings, args.runs, args.query, args.notes)
+    paths = compare(
+        args.tool, args.settings, args.runs, args.query, args.notes, query_version=args.queries
+    )
     print(f"\nSaved {len(paths)} run files. Score them with:")
     print("  python -m experiments.tools.web_search.score")
 
