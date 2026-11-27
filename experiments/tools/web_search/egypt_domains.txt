@@ -1,0 +1,20 @@
+# Egyptian sites whose domain does NOT end in .eg (anything ending in .eg already counts).
+# One domain per line; subdomains match too (e.g. www.youm7.com). This list can grow:
+# add a domain when you see an Egyptian source in the results that isn't counted.
+nawy.com
+aqarmap.com
+youm7.com
+masrawy.com
+egypttoday.com
+dailynewsegypt.com
+egypt-independent.com
+enterprise.press
+almasryalyoum.com
+elwatannews.com
+shorouknews.com
+cairo24.com
+alborsaanews.com
+amwalalghad.com
+madamasr.com
+egyptindependent.com
+cairoscene.com
