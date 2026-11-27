@@ -10,7 +10,7 @@ from typing import Any
 import httpx
 import pytest
 
-from experiments.tools.web_search import compare, score
+from experiments.tools.web_search import compare, resolve, score
 
 REAL_DIR = Path(compare.__file__).resolve().parent
 FAKE_KEY = "test-serper-key-do-not-print"
@@ -44,6 +44,8 @@ def base_dir(tmp_path: Path, monkeypatch) -> Path:
         shutil.copy(REAL_DIR / name, tmp_path / name)
     shutil.copytree(REAL_DIR / "settings", tmp_path / "settings")
     monkeypatch.setenv("SERPER_API_KEY", FAKE_KEY)
+    # No network: Google redirects stay unresolved unless a test says otherwise.
+    monkeypatch.setattr(resolve, "resolve_one", lambda link: None)
     return tmp_path
 
 
@@ -250,3 +252,25 @@ def test_redirects_are_scored_by_their_real_site_and_not_collapsed(monkeypatch, 
     assert "google.com" not in row["unlisted_domains"]
     assert row["ar_sites_n_citable"] == "2" and row["en_sites_n_citable"] == "2"
     assert row["unique_from_ar_sites"] == "1" and row["unique_from_en_sites"] == "1"
+
+
+def test_sites_by_group_and_tbs(monkeypatch, base_dir):
+    calls = _fake_post(monkeypatch, [(200, ORGANIC)] * 3)
+    compare.compare("serper", "v4", runs=1, query="obour_q3", base_dir=base_dir, pause=0)
+    en_open, ar_sites, en_sites = (c["json"] for c in calls)
+    assert "tbs" not in en_open and "site:" not in en_open["q"]
+    assert ar_sites["tbs"] == en_sites["tbs"] == "cdr:1,cd_min:11/28/2024,cd_max:11/28/2026"
+    assert "site:aleqaria.com.eg" in ar_sites["q"]  # obour_q3 is a prices question
+    assert "site:nawy.com" in en_sites["q"] and "site:zawya.com" not in en_sites["q"]
+
+
+def test_resolved_redirect_replaces_the_link(monkeypatch, base_dir):
+    monkeypatch.setattr(resolve, "resolve_one", lambda link: "https://www.youm7.com/story/9")
+    body = {
+        "organic": [{"title": "T", "link": GOTO + "x", "displayedLink": "https://youm7.com › a"}]
+    }
+    _fake_post(monkeypatch, [(200, ORGANIC), (200, body), (200, ORGANIC)])
+    compare.compare("serper", "v2", runs=1, query="sokhna_q1", base_dir=base_dir, pause=0)
+    assert resolve.load_redirects(base_dir) == {GOTO + "x": "https://www.youm7.com/story/9"}
+    [r] = compare.serper_results(body, resolve.load_redirects(base_dir))
+    assert r.url == "https://www.youm7.com/story/9" and r.source_domain is None

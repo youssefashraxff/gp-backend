@@ -20,6 +20,8 @@ from typing import Any
 from urllib.parse import urlparse
 
 from experiments.tools.web_search.merge import merge_results
+from experiments.tools.web_search.relevance import Relevance, load_relevance
+from experiments.tools.web_search.resolve import load_redirects
 
 BASE_DIR = Path(__file__).resolve().parent
 SOURCE_FILES = ("egypt_sources.csv", "international_sources.csv")
@@ -56,6 +58,11 @@ COUNT_COLUMNS = [
     *TYPE_GROUPS,
     "n_unlisted",
     "n_with_date",
+    "n_relevant",
+    "n_relevant_citable",
+    "n_fresh",
+    "n_old",
+    "n_undated",
 ]
 SCORES_COLUMNS = [
     "run_file",
@@ -192,37 +199,45 @@ def _where(result: dict[str, Any]) -> str:
     return result.get("source_domain") or result.get("url", "")
 
 
-def _renormalize(tool: str, raw: Any, saved: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _renormalize(
+    tool: str, raw: Any, saved: list[dict[str, Any]], redirects: dict[str, str | None]
+) -> list[dict[str, Any]]:
     """Serper results are rebuilt from the saved raw response with the current
-    `serper_results`, so normalisation fixes (e.g. Google redirect links) apply to old runs.
-    Other tools use the results as saved."""
+    `serper_results` and redirects.json, so normalisation fixes (e.g. Google redirect links)
+    apply to old runs. Other tools use the results as saved."""
     if tool == "serper" and isinstance(raw, dict):
         from experiments.tools.web_search.compare import serper_results
 
-        return [asdict(r) for r in serper_results(raw)]
+        return [asdict(r) for r in serper_results(raw, redirects)]
     return saved
 
 
-def searches_of(run: dict[str, Any]) -> list[dict[str, Any]]:
+def searches_of(
+    run: dict[str, Any], redirects: dict[str, str | None] | None = None
+) -> list[dict[str, Any]]:
     """A strategy run's searches, with each search's results renormalised (see above)."""
     return [
         {
             **s,
             "normalized": _renormalize(
-                run["tool"], s.get("raw_response"), s.get("normalized") or []
+                run["tool"], s.get("raw_response"), s.get("normalized") or [], redirects or {}
             ),
         }
         for s in run.get("searches") or []
     ]
 
 
-def merged_results(run: dict[str, Any]) -> list[dict[str, Any]]:
+def merged_results(
+    run: dict[str, Any], redirects: dict[str, str | None] | None = None
+) -> list[dict[str, Any]]:
     """The results to count. A strategy run is merged again from its searches with
     merge.result_key, and Serper results are rebuilt from their raw responses, so changes to
     either rule apply to old run files too (the saved `normalized` is not trusted)."""
     if run.get("searches"):
-        return merge_results(searches_of(run))
-    return _renormalize(run["tool"], run.get("raw_response"), run.get("normalized") or [])
+        return merge_results(searches_of(run, redirects))
+    return _renormalize(
+        run["tool"], run.get("raw_response"), run.get("normalized") or [], redirects or {}
+    )
 
 
 def search_columns(name: str) -> list[str]:
@@ -230,25 +245,60 @@ def search_columns(name: str) -> list[str]:
     return [f"{name}_status", f"{name}_n_results", f"{name}_n_citable", f"unique_from_{name}"]
 
 
-def score_searches(run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
+@dataclass
+class Context:
+    """Everything scoring reads besides the run itself."""
+
+    sources: dict[str, Source]
+    redirects: dict[str, str | None]
+    relevance: Relevance | None = None
+
+
+def score_searches(run: dict[str, Any], ctx: Context) -> dict[str, Any]:
     """Per-search columns of a strategy run: status, n_results and n_citable of each search,
     and unique_from_<search>: merged results that only that search found."""
     row: dict[str, Any] = {}
-    _, _, merged = _count(merged_results(run), sources)
-    for search in searches_of(run):
+    _, _, merged = _count(merged_results(run, ctx.redirects), ctx.sources)
+    for search in searches_of(run, ctx.redirects):
         name = search["name"]
-        _, _, kept = _count(search.get("normalized") or [], sources)
+        _, _, kept = _count(search.get("normalized") or [], ctx.sources)
         row[f"{name}_status"] = search["status"]
         row[f"{name}_n_results"] = len(kept)
-        row[f"{name}_n_citable"] = _n_citable(kept, sources)
+        row[f"{name}_n_citable"] = _n_citable(kept, ctx.sources)
         row[f"unique_from_{name}"] = sum(r.get("found_by") == [name] for r in merged)
     return row
 
 
-def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) -> dict[str, Any]:
+def relevance_counts(
+    kept: list[dict[str, Any]], run: dict[str, Any], ctx: Context
+) -> dict[str, int]:
+    """n_relevant (place AND topic keyword), n_relevant_citable, and n_fresh / n_old /
+    n_undated (published within `fresh_months` of the run, older, or no parseable date)."""
+    counts: dict[str, int] = {
+        k: 0 for k in ("n_relevant", "n_relevant_citable", "n_fresh", "n_old", "n_undated")
+    }
+
+    if ctx.relevance is None:
+        return counts
+    q = run["query"]
+    for r in kept:
+        if ctx.relevance.is_relevant(r, q["site"], q["group"]):
+            counts["n_relevant"] += 1
+            counts["n_relevant_citable"] += _n_citable([r], ctx.sources)
+        age = ctx.relevance.freshness(r.get("published_date"), run["timestamp"])
+        counts[f"n_{age}"] += 1
+    return counts
+
+
+def score_run(
+    run_file: str, run: dict[str, Any], ctx: Context | dict[str, Source]
+) -> dict[str, Any]:
     """One scores.csv row. For a strategy run the counts are of the merged results, plus
     the per-search columns."""
-    counts, unlisted, kept = _count(merged_results(run), sources)
+    if not isinstance(ctx, Context):
+        ctx = Context(sources=ctx, redirects={})
+    counts, unlisted, kept = _count(merged_results(run, ctx.redirects), ctx.sources)
+    counts.update(relevance_counts(kept, run, ctx))
     q = run["query"]
     return {
         "run_file": run_file,
@@ -266,7 +316,7 @@ def score_run(run_file: str, run: dict[str, Any], sources: dict[str, Source]) ->
         "top3_urls": " | ".join(r.get("url", "") for r in kept[:3]),
         "seconds": run.get("seconds", ""),
         "error": run.get("error") or "",
-        **score_searches(run, sources),
+        **score_searches(run, ctx),
     }
 
 
@@ -388,12 +438,16 @@ def sync_manual(path: Path, scores: list[dict[str, Any]], runs: dict[str, dict])
 
 
 def score_all(base_dir: Path = BASE_DIR) -> list[dict[str, Any]]:
-    sources = load_sources(base_dir)
+    ctx = Context(
+        sources=load_sources(base_dir),
+        redirects=load_redirects(base_dir),
+        relevance=load_relevance(base_dir),
+    )
     # runs/<tool>/<settings>/*.json; keyed by file name (it starts with a unique time), so
     # manual.csv still matches if files move between folders. Sorted by name = by time.
     paths = sorted((base_dir / "runs").rglob("*.json"), key=lambda p: p.name)
     runs = {p.name: json.loads(p.read_text(encoding="utf-8")) for p in paths}
-    scores = [score_run(name, run, sources) for name, run in runs.items()]
+    scores = [score_run(name, run, ctx) for name, run in runs.items()]
     # Strategy searches add columns at the end; rows without them leave those cells empty.
     names = search_names(scores)
     scores_columns = SCORES_COLUMNS + [c for n in names for c in search_columns(n)]

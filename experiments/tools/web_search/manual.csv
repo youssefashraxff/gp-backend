@@ -239,3 +239,27 @@ run_file,tool,settings,query_id,run,relevant,notes
 20261127T215203783977__serper__v2__qv1+v2__obour_q5__run2.json,serper,v2,obour_q5,2,,"serper v2: en_open + ar_sites + en_sites (site: operators), merged"
 20261127T215209966052__serper__v2__qv1+v2__obour_q6__run1.json,serper,v2,obour_q6,1,,"serper v2: en_open + ar_sites + en_sites (site: operators), merged"
 20261127T215216712392__serper__v2__qv1+v2__obour_q6__run2.json,serper,v2,obour_q6,2,,"serper v2: en_open + ar_sites + en_sites (site: operators), merged"
+20261127T220905288623__serper__v3__qv1+v2__sokhna_q1__run1.json,serper,v3,sokhna_q1,1,,serper v3
+20261127T220913987429__serper__v3__qv1+v2__sokhna_q2__run1.json,serper,v3,sokhna_q2,1,,serper v3
+20261127T220922049616__serper__v3__qv1+v2__sokhna_q3__run1.json,serper,v3,sokhna_q3,1,,serper v3
+20261127T220928787083__serper__v3__qv1+v2__sokhna_q4__run1.json,serper,v3,sokhna_q4,1,,serper v3
+20261127T220936518420__serper__v3__qv1+v2__sokhna_q5__run1.json,serper,v3,sokhna_q5,1,,serper v3
+20261127T220944398298__serper__v3__qv1+v2__sokhna_q6__run1.json,serper,v3,sokhna_q6,1,,serper v3
+20261127T220952074230__serper__v3__qv1+v2__obour_q1__run1.json,serper,v3,obour_q1,1,,serper v3
+20261127T221000017555__serper__v3__qv1+v2__obour_q2__run1.json,serper,v3,obour_q2,1,,serper v3
+20261127T221008843857__serper__v3__qv1+v2__obour_q3__run1.json,serper,v3,obour_q3,1,,serper v3
+20261127T221016379013__serper__v3__qv1+v2__obour_q4__run1.json,serper,v3,obour_q4,1,,serper v3
+20261127T221025828455__serper__v3__qv1+v2__obour_q5__run1.json,serper,v3,obour_q5,1,,serper v3
+20261127T221033826793__serper__v3__qv1+v2__obour_q6__run1.json,serper,v3,obour_q6,1,,serper v3
+20261127T221215926748__serper__v4__qv1+v2__sokhna_q1__run1.json,serper,v4,sokhna_q1,1,,serper v4
+20261127T221223637617__serper__v4__qv1+v2__sokhna_q2__run1.json,serper,v4,sokhna_q2,1,,serper v4
+20261127T221234248565__serper__v4__qv1+v2__sokhna_q3__run1.json,serper,v4,sokhna_q3,1,,serper v4
+20261127T221241985041__serper__v4__qv1+v2__sokhna_q4__run1.json,serper,v4,sokhna_q4,1,,serper v4
+20261127T221251647066__serper__v4__qv1+v2__sokhna_q5__run1.json,serper,v4,sokhna_q5,1,,serper v4
+20261127T221303629343__serper__v4__qv1+v2__sokhna_q6__run1.json,serper,v4,sokhna_q6,1,,serper v4
+20261127T221312765713__serper__v4__qv1+v2__obour_q1__run1.json,serper,v4,obour_q1,1,,serper v4
+20261127T221319898609__serper__v4__qv1+v2__obour_q2__run1.json,serper,v4,obour_q2,1,,serper v4
+20261127T221328504300__serper__v4__qv1+v2__obour_q3__run1.json,serper,v4,obour_q3,1,,serper v4
+20261127T221335894280__serper__v4__qv1+v2__obour_q4__run1.json,serper,v4,obour_q4,1,,serper v4
+20261127T221345731380__serper__v4__qv1+v2__obour_q5__run1.json,serper,v4,obour_q5,1,,serper v4
+20261127T221358465105__serper__v4__qv1+v2__obour_q6__run1.json,serper,v4,obour_q6,1,,serper v4

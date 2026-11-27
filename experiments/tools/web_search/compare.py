@@ -32,6 +32,7 @@ from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from experiments.tools.web_search.merge import merge_results
+from experiments.tools.web_search.resolve import is_google_redirect, load_redirects, resolve_all
 
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_RUNS = 2
@@ -108,6 +109,8 @@ def search_serper(query: str, settings: dict[str, Any]) -> tuple[Any, list[Resul
     errors (429, 5xx, ...) raise, so `_call` records them as the run's error."""
     key = _require(_Keys().serper_api_key, "SERPER_API_KEY")
     body = {"q": query, "gl": settings["gl"], "hl": settings["hl"], "num": settings["num"]}
+    if settings.get("tbs"):  # Google date filter, e.g. "cdr:1,cd_min:M/D/YYYY,cd_max:M/D/YYYY"
+        body["tbs"] = settings["tbs"]
     response = httpx.post(
         SERPER_URL,
         headers={"X-API-KEY": key, "Content-Type": "application/json"},
@@ -117,13 +120,7 @@ def search_serper(query: str, settings: dict[str, Any]) -> tuple[Any, list[Resul
     if response.is_error:  # the message names the status, never the key
         raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
     raw = response.json()  # full response: organic, answerBox, knowledgeGraph, peopleAlsoAsk...
-    return raw, serper_results(raw)
-
-
-def _is_google_redirect(url: str) -> bool:
-    parts = urlsplit(url)
-    host = (parts.hostname or "").lower().removeprefix("www.")
-    return host == "google.com" and parts.path == "/goto"
+    return raw, serper_results(raw, load_redirects())
 
 
 def _displayed_domain(displayed_link: str) -> str | None:
@@ -135,17 +132,23 @@ def _displayed_domain(displayed_link: str) -> str | None:
     return host.lower().removeprefix("www.") if host else None
 
 
-def serper_results(raw: dict[str, Any]) -> list[Result]:
+def serper_results(
+    raw: dict[str, Any], redirects: dict[str, str | None] | None = None
+) -> list[Result]:
     """Normalise Serper's `organic` items. score.py also calls this on saved raw responses,
     so a change here applies to old runs when rescoring.
 
-    With `site:` operators Google often returns `google.com/goto?url=<token>` links; the
-    token can't be decoded, so `url` stays the link and `source_domain` comes from
-    `displayedLink`."""
+    With `site:` operators Google often returns `google.com/goto?url=<token>` links. They
+    are replaced by the real URL from `redirects` (redirects.json, filled by resolve.py);
+    an unresolved one keeps the link as `url` and gets `source_domain` from `displayedLink`."""
+    redirects = redirects or {}
     results = []
     for item in raw.get("organic") or []:
         position = item.get("position")
         link = item.get("link", "")
+        unresolved = is_google_redirect(link) and not redirects.get(link)
+        if is_google_redirect(link) and redirects.get(link):
+            link = redirects[link] or link
         results.append(
             Result(
                 url=link,
@@ -156,9 +159,7 @@ def serper_results(raw: dict[str, Any]) -> list[Result]:
                 score=round(1 / position, 4) if position else None,
                 position=position,
                 source_domain=(
-                    _displayed_domain(item.get("displayedLink", ""))
-                    if _is_google_redirect(link)
-                    else None
+                    _displayed_domain(item.get("displayedLink", "")) if unresolved else None
                 ),
             )
         )
@@ -303,7 +304,7 @@ def run_once(
 
 
 # Keys of a strategy search that describe the search itself; they are not sent to the tool.
-SEARCH_KEYS = ("name", "queries", "sites")
+SEARCH_KEYS = ("name", "queries", "sites", "sites_by_group")
 
 
 def site_filter(sites: list[str]) -> str:
@@ -312,10 +313,23 @@ def site_filter(sites: list[str]) -> str:
     return " (" + " OR ".join(f"site:{d}" for d in sites) + ")" if sites else ""
 
 
-def search_query(question: dict[str, Any], search: dict[str, Any]) -> str:
+def search_sites(
+    settings: dict[str, Any], search: dict[str, Any], question: dict[str, Any]
+) -> list[str]:
+    """The search's `sites`, or with `sites_by_group` the list named for the question's
+    group: settings["site_lists"][search["sites_by_group"][group]]."""
+    if search.get("sites_by_group"):
+        return settings["site_lists"][search["sites_by_group"][question["group"]]]
+    return search.get("sites") or []
+
+
+def search_query(
+    question: dict[str, Any], search: dict[str, Any], settings: dict[str, Any] | None = None
+) -> str:
     """The exact text sent for this search: the question in the search's query version,
-    plus its `sites` as `site:` operators (if any)."""
-    return question["queries"][search["name"]] + site_filter(search.get("sites") or [])
+    plus its sites as `site:` operators (if any)."""
+    sites = search_sites(settings or {}, search, question)
+    return question["queries"][search["name"]] + site_filter(sites)
 
 
 def _search_params(settings: dict[str, Any], search: dict[str, Any]) -> dict[str, Any]:
@@ -346,11 +360,13 @@ def run_strategy_once(
         if i:
             time.sleep(pause)
         params = _search_params(settings, search)
-        text = search_query(question, search)  # saved below as the search's `query`
+        text = search_query(question, search, settings)  # saved below as the search's `query`
         attempts = [_call(tool, text, params)]
         # Restricted to our sites (Tavily include_domains or Google site:): an empty answer
         # is a real answer, so no retry.
-        restricted = params.get("include_domains_mode") == "restrict" or bool(search.get("sites"))
+        restricted = params.get("include_domains_mode") == "restrict" or bool(
+            search_sites(settings, search, question)
+        )
         if not restricted and not attempts[0]["error"] and not attempts[0]["results"]:
             time.sleep(pause)
             attempts.append(_call(tool, text, params))
@@ -473,9 +489,13 @@ def compare(
         raise SystemExit(f"Unknown tool '{tool}'. Known: {', '.join(TOOLS)}")
     settings = load_settings(tool, settings_version, base_dir)
     if settings.get("strategy"):
-        return compare_strategy(
+        paths = compare_strategy(
             tool, settings_version, settings, runs, query, notes, base_dir, pause
         )
+        if tool == "serper":
+            resolved, failed = resolve_all(base_dir)
+            print(f"Google redirects: {resolved} newly resolved, {failed} unresolved")
+        return paths
     queries = load_queries(query_version, base_dir)
     selected = [q for q in queries["queries"] if query in ("all", q["id"])]
     if not selected:
