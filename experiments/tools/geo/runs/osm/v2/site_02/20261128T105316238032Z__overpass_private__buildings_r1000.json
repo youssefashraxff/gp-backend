@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_private",
+  "case": "buildings_r1000",
+  "params": {
+    "kind": "buildings",
+    "radius": 1000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];way(around:1000,30.1938258,31.4601618)[building];out count;"
+  },
+  "meta": {
+    "kind": "buildings",
+    "radius": 1000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "ReadTimeout: The read operation timed out",
+  "seconds": 90.331,
+  "raw": null,
+  "site_id": "site_02",
+  "case_version": "v2",
+  "notes": "osm v2 control site",
+  "timestamp": "2026-11-28T10:53:16.237144+00:00"
+}

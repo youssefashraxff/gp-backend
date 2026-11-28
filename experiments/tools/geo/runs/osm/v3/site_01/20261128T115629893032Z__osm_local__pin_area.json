@@ -1,0 +1,52 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "pin_area",
+  "params": {
+    "kind": "pin_area",
+    "radius": 0,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];is_in(30.32376,31.5566816)->.a;area.a;out tags;"
+  },
+  "meta": {
+    "kind": "pin_area",
+    "radius": 0
+  },
+  "status": "ok",
+  "n_items": 2,
+  "error": "",
+  "seconds": 1.637,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "area",
+        "id": "r4103407",
+        "tags": {
+          "boundary": "administrative",
+          "admin_level": "4",
+          "name": "الشرقية",
+          "name:en": "Al Sharqia Governorate"
+        }
+      },
+      {
+        "type": "area",
+        "id": "r1473947",
+        "tags": {
+          "boundary": "administrative",
+          "admin_level": "2",
+          "name": "مصر",
+          "name:en": "Egypt"
+        }
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v3",
+  "notes": "osm v3 local",
+  "timestamp": "2026-11-28T11:56:29.891878+00:00"
+}

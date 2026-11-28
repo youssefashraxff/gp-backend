@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "landuse_r1000",
+  "params": {
+    "kind": "landuse",
+    "radius": 1000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];(way(around:1000,30.32376,31.5566816)[landuse];relation(around:1000,30.32376,31.5566816)[landuse];);out meta center;"
+  },
+  "meta": {
+    "kind": "landuse",
+    "radius": 1000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://overpass-api.de/api/interpreter'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",
+  "seconds": 0.368,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v2",
+  "notes": "osm v2 headers",
+  "timestamp": "2026-11-28T10:16:47.893031+00:00"
+}

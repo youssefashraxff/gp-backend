@@ -1,0 +1,552 @@
+"""Call web search tools on fixed queries and save the raw responses. No LLM, no scoring.
+
+The same fixed queries (`queries.json` = v1 English, `queries_v2.json` = v2 Arabic; pick
+with `--queries`) go to a tool several times. Every response is saved
+to `runs/` (one new file per call, never overwritten). Counting and comparing happens
+afterwards in `score.py`, which reads only these files, so changing a source list and
+rescoring never needs another API call.
+
+Run:
+    python -m experiments.tools.web_search.compare --tool tavily --settings v1 \
+        --query all --notes "first baseline"
+    python -m experiments.tools.web_search.score
+
+Add a tool: write one `search_<tool>(query, settings)` function, register it in `TOOLS`,
+and add `settings/<tool>_v1.json`.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import time
+from collections.abc import Callable
+from dataclasses import asdict, dataclass
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlsplit
+
+import httpx
+from pydantic import SecretStr
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+from experiments.tools.web_search.merge import merge_results
+from experiments.tools.web_search.resolve import is_google_redirect, load_redirects, resolve_all
+
+BASE_DIR = Path(__file__).resolve().parent
+DEFAULT_RUNS = 2
+PAUSE_SECONDS = 0.5
+TIMEOUT_SECONDS = 30
+
+STATUS_OK = "ok"
+STATUS_EMPTY = "empty"  # no error, but 0 results even after one retry
+STATUS_ERROR = "error"
+
+
+@dataclass
+class Result:
+    """One search result in the same shape for every tool."""
+
+    url: str
+    title: str
+    snippet: str
+    published_date: str | None = None
+    score: float | None = None  # higher is better (Tavily's relevance; Serper 1/position)
+    position: int | None = None  # rank in the tool's own list, when the tool gives one
+    # Domain of the page the link leads to, when `url` is a redirect we can't resolve
+    # (Google `google.com/goto?url=<token>` links). Scoring classifies by this instead.
+    source_domain: str | None = None
+
+
+# A tool: takes the query text and the settings dict, returns (raw_response, results).
+ToolFn = Callable[[str, dict[str, Any]], tuple[Any, list[Result]]]
+
+
+class _Keys(BaseSettings):
+    """API keys from the environment or `.env`. SecretStr keeps them out of prints and logs."""
+
+    model_config = SettingsConfigDict(env_file=BASE_DIR.parents[2] / ".env", extra="ignore")
+
+    tavily_api_key: SecretStr | None = None
+    serper_api_key: SecretStr | None = None
+
+
+def _require(key: SecretStr | None, name: str) -> str:
+    if key is None or not key.get_secret_value():
+        raise RuntimeError(f"{name} is not set; add it to .env")
+    return key.get_secret_value()
+
+
+# ---------------------------------------------------------------------------------------
+# Tools: one function each.
+# ---------------------------------------------------------------------------------------
+
+
+def search_tavily(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+    from tavily import TavilyClient  # imported here so tests and other tools don't need it
+
+    client = TavilyClient(api_key=_require(_Keys().tavily_api_key, "TAVILY_API_KEY"))
+    raw = client.search(query, timeout=TIMEOUT_SECONDS, **settings)
+    results = [
+        Result(
+            url=r.get("url", ""),
+            title=r.get("title", ""),
+            snippet=r.get("content", ""),
+            published_date=r.get("published_date") or None,
+            score=r.get("score"),
+        )
+        for r in raw.get("results", [])
+    ]
+    return raw, results
+
+
+SERPER_URL = "https://google.serper.dev/search"
+
+
+def search_serper(query: str, settings: dict[str, Any]) -> tuple[Any, list[Result]]:
+    """Google results through Serper. Sends exactly q, gl, hl and num. Timeouts and HTTP
+    errors (429, 5xx, ...) raise, so `_call` records them as the run's error."""
+    key = _require(_Keys().serper_api_key, "SERPER_API_KEY")
+    body = {"q": query, "gl": settings["gl"], "hl": settings["hl"], "num": settings["num"]}
+    if settings.get("tbs"):  # Google date filter, e.g. "cdr:1,cd_min:M/D/YYYY,cd_max:M/D/YYYY"
+        body["tbs"] = settings["tbs"]
+    response = httpx.post(
+        SERPER_URL,
+        headers={"X-API-KEY": key, "Content-Type": "application/json"},
+        json=body,
+        timeout=TIMEOUT_SECONDS,
+    )
+    if response.is_error:  # the message names the status, never the key
+        raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
+    raw = response.json()  # full response: organic, answerBox, knowledgeGraph, peopleAlsoAsk...
+    return raw, serper_results(raw, load_redirects())
+
+
+def _displayed_domain(displayed_link: str) -> str | None:
+    """`https://alborsaanews.com › العقارات` -> `alborsaanews.com`."""
+    first = displayed_link.strip().split(" ")[0] if displayed_link.strip() else ""
+    if not first:
+        return None
+    host = urlsplit(first if "://" in first else f"https://{first}").hostname
+    return host.lower().removeprefix("www.") if host else None
+
+
+def serper_results(
+    raw: dict[str, Any], redirects: dict[str, str | None] | None = None
+) -> list[Result]:
+    """Normalise Serper's `organic` items. score.py also calls this on saved raw responses,
+    so a change here applies to old runs when rescoring.
+
+    With `site:` operators Google often returns `google.com/goto?url=<token>` links. They
+    are replaced by the real URL from `redirects` (redirects.json, filled by resolve.py);
+    an unresolved one keeps the link as `url` and gets `source_domain` from `displayedLink`."""
+    redirects = redirects or {}
+    results = []
+    for item in raw.get("organic") or []:
+        position = item.get("position")
+        link = item.get("link", "")
+        unresolved = is_google_redirect(link) and not redirects.get(link)
+        if is_google_redirect(link) and redirects.get(link):
+            link = redirects[link] or link
+        results.append(
+            Result(
+                url=link,
+                title=item.get("title", ""),
+                snippet=item.get("snippet", ""),
+                published_date=item.get("date") or None,  # as Google shows it, e.g. "3 days ago"
+                # Score must be "higher is better" for merging, so rank 1 -> 1.0, 2 -> 0.5...
+                score=round(1 / position, 4) if position else None,
+                position=position,
+                source_domain=(
+                    _displayed_domain(item.get("displayedLink", "")) if unresolved else None
+                ),
+            )
+        )
+    return results
+
+
+TOOLS: dict[str, ToolFn] = {"tavily": search_tavily, "serper": search_serper}
+
+
+# ---------------------------------------------------------------------------------------
+# Inputs
+# ---------------------------------------------------------------------------------------
+
+
+DEFAULT_QUERIES = "v1"
+
+
+def queries_path(version: str, base_dir: Path = BASE_DIR) -> Path:
+    """v1 is `queries.json` (the original file, kept as it is); later versions are
+    `queries_<version>.json`."""
+    name = "queries.json" if version == "v1" else f"queries_{version}.json"
+    return base_dir / name
+
+
+def load_queries(version: str = DEFAULT_QUERIES, base_dir: Path = BASE_DIR) -> dict[str, Any]:
+    path = queries_path(version, base_dir)
+    if not path.exists():
+        raise FileNotFoundError(f"No queries '{version}' at {path}")
+    queries = json.loads(path.read_text(encoding="utf-8"))
+    if queries.get("version") != version:
+        raise ValueError(f"{path.name} says version {queries.get('version')!r}, not {version!r}")
+    return queries
+
+
+def load_settings(tool: str, version: str, base_dir: Path = BASE_DIR) -> dict[str, Any]:
+    path = base_dir / "settings" / f"{tool}_{version}.json"
+    if not path.exists():
+        raise FileNotFoundError(f"No settings '{version}' for {tool} at {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+# ---------------------------------------------------------------------------------------
+# Calling and saving
+# ---------------------------------------------------------------------------------------
+
+
+def runs_dir(base_dir: Path, tool: str, settings_version: str, query_version: str) -> Path:
+    """One folder per tool, settings version and query version:
+    runs/<tool>/<settings>/queries_<version>/."""
+    return base_dir / "runs" / tool / settings_version / f"queries_{query_version}"
+
+
+def save_run(folder: Path, name: str, payload: dict[str, Any]) -> Path:
+    """Write a new run file. Mode "x" refuses to overwrite an existing file."""
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / name
+    with path.open("x", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False, default=str)
+    return path
+
+
+def _call(tool: str, query: str, settings: dict[str, Any]) -> dict[str, Any]:
+    """One call. Never raises: a failure is returned as `error`."""
+    start = time.perf_counter()
+    raw: Any = None
+    results: list[Result] = []
+    error = ""
+    try:
+        raw, results = TOOLS[tool](query, dict(settings))
+    except Exception as exc:  # noqa: BLE001 (any failure is a result to record, not a crash)
+        error = f"{type(exc).__name__}: {exc}"
+    return {
+        "raw": raw,
+        "results": results,
+        "error": error,
+        "seconds": round(time.perf_counter() - start, 3),
+    }
+
+
+def run_once(
+    tool: str,
+    settings_version: str,
+    settings: dict[str, Any],
+    query_version: str,
+    q: dict[str, str],
+    run: int,
+    notes: str = "",
+    base_dir: Path = BASE_DIR,
+    pause: float = PAUSE_SECONDS,
+    query_language: str | None = None,
+) -> Path:
+    """Call the tool (retrying once if it returns 0 results without an error) and save the
+    response to a new run file. Returns the file's path."""
+    now = datetime.now(UTC)
+    attempts = [_call(tool, q["query"], settings)]
+    if not attempts[0]["error"] and not attempts[0]["results"]:
+        time.sleep(pause)
+        attempts.append(_call(tool, q["query"], settings))
+    final = attempts[-1]
+    if final["error"]:
+        status = STATUS_ERROR
+    elif not final["results"]:
+        status = STATUS_EMPTY
+    else:
+        status = STATUS_OK
+
+    # Time first, so sorting by name is sorting by time.
+    stamp = now.strftime("%Y%m%dT%H%M%S%f")
+    name = f"{stamp}__{tool}__{settings_version}__q{query_version}__{q['id']}__run{run}.json"
+    return save_run(
+        runs_dir(base_dir, tool, settings_version, query_version),
+        name,
+        {
+            "timestamp": now.isoformat(),
+            "tool": tool,
+            "settings_version": settings_version,
+            "settings": settings,
+            "query_version": query_version,
+            "query_language": query_language,
+            "query": q,
+            "run": run,
+            "status": status,
+            "attempts": len(attempts),
+            "seconds": final["seconds"],
+            "error": final["error"] or None,
+            "notes": notes,
+            "normalized": [asdict(r) for r in final["results"]],
+            "raw_response": final["raw"],
+        },
+    )
+
+
+# ---------------------------------------------------------------------------------------
+# Strategies: several searches per question, saved together in one run file
+# ---------------------------------------------------------------------------------------
+#
+# A strategy settings file looks like:
+#   {"strategy": "mixed",
+#    "base": {...tool settings shared by every search...},
+#    "searches": [{"name": "ar_restricted", "queries": "v2", ...extra tool settings...}, ...]}
+# Each search uses the text of the same question id from its own query version.
+
+
+# Keys of a strategy search that describe the search itself; they are not sent to the tool.
+SEARCH_KEYS = ("name", "queries", "sites", "sites_by_group", "tbs_by_group")
+
+
+def site_filter(sites: list[str]) -> str:
+    """Google `site:` operators for a list of domains, appended to the query text:
+    ["a.com", "b.eg"] -> " (site:a.com OR site:b.eg)"."""
+    return " (" + " OR ".join(f"site:{d}" for d in sites) + ")" if sites else ""
+
+
+def search_sites(
+    settings: dict[str, Any], search: dict[str, Any], question: dict[str, Any]
+) -> list[str]:
+    """The search's `sites`, or with `sites_by_group` the list named for the question's
+    group: settings["site_lists"][search["sites_by_group"][group]]."""
+    if search.get("sites_by_group"):
+        return settings["site_lists"][search["sites_by_group"][question["group"]]]
+    return search.get("sites") or []
+
+
+def search_query(
+    question: dict[str, Any], search: dict[str, Any], settings: dict[str, Any] | None = None
+) -> str:
+    """The exact text sent for this search: the question in the search's query version,
+    plus its sites as `site:` operators (if any)."""
+    sites = search_sites(settings or {}, search, question)
+    return question["queries"][search["name"]] + site_filter(sites)
+
+
+def _search_params(settings: dict[str, Any], search: dict[str, Any]) -> dict[str, Any]:
+    extra = {k: v for k, v in search.items() if k not in SEARCH_KEYS}
+    return {**settings.get("base", {}), **extra}
+
+
+def run_strategy_once(
+    tool: str,
+    settings_version: str,
+    settings: dict[str, Any],
+    query_version: str,
+    question: dict[str, Any],
+    run: int,
+    notes: str = "",
+    base_dir: Path = BASE_DIR,
+    pause: float = PAUSE_SECONDS,
+) -> Path:
+    """Make every search of the strategy for one question and save ONE run file with each
+    search's raw response (labelled by name) and the merged results.
+
+    A restricted search (include_domains_mode "restrict") that finds nothing is normal, so it
+    is saved as `empty` without a retry; an open search that comes back empty is retried once.
+    """
+    now = datetime.now(UTC)
+    searches = []
+    for i, search in enumerate(settings["searches"]):
+        if i:
+            time.sleep(pause)
+        params = _search_params(settings, search)
+        if "tbs_by_group" in search:  # per question group: a tbs string, or null = no filter
+            tbs = search["tbs_by_group"].get(question["group"])
+            params = {k: v for k, v in params.items() if k != "tbs"} | ({"tbs": tbs} if tbs else {})
+        text = search_query(question, search, settings)  # saved below as the search's `query`
+        attempts = [_call(tool, text, params)]
+        # Restricted to our sites (Tavily include_domains or Google site:): an empty answer
+        # is a real answer, so no retry.
+        restricted = params.get("include_domains_mode") == "restrict" or bool(
+            search_sites(settings, search, question)
+        )
+        if not restricted and not attempts[0]["error"] and not attempts[0]["results"]:
+            time.sleep(pause)
+            attempts.append(_call(tool, text, params))
+        final = attempts[-1]
+        status = STATUS_ERROR if final["error"] else STATUS_OK if final["results"] else STATUS_EMPTY
+        searches.append(
+            {
+                "name": search["name"],
+                "query_version": search["queries"],
+                "query": text,
+                "status": status,
+                "attempts": len(attempts),
+                "seconds": final["seconds"],
+                "error": final["error"] or None,
+                "normalized": [asdict(r) for r in final["results"]],
+                "raw_response": final["raw"],
+            }
+        )
+
+    merged = merge_results(searches)
+    errors = [f"{s['name']}: {s['error']}" for s in searches if s["error"]]
+    if len(errors) == len(searches):
+        status = STATUS_ERROR
+    else:
+        status = STATUS_OK if merged else STATUS_EMPTY
+
+    stamp = now.strftime("%Y%m%dT%H%M%S%f")
+    name = f"{stamp}__{tool}__{settings_version}__q{query_version}__{question['id']}__run{run}.json"
+    return save_run(
+        runs_dir(base_dir, tool, settings_version, query_version),
+        name,
+        {
+            "timestamp": now.isoformat(),
+            "tool": tool,
+            "settings_version": settings_version,
+            "settings": settings,
+            "strategy": settings["strategy"],
+            "query_version": query_version,
+            "query": {k: question[k] for k in ("id", "site", "group")},
+            "run": run,
+            "status": status,
+            "seconds": round(sum(s["seconds"] for s in searches), 3),
+            "error": "; ".join(errors) or None,
+            "notes": notes,
+            "searches": searches,
+            "normalized": merged,
+        },
+    )
+
+
+def load_strategy_questions(
+    settings: dict[str, Any], base_dir: Path = BASE_DIR
+) -> tuple[str, list[dict[str, Any]]]:
+    """(query_version label, questions). Each question has id, site, group and the text
+    every search will send ({search name: query text})."""
+    versions = sorted({s["queries"] for s in settings["searches"]})
+    files = {v: load_queries(v, base_dir) for v in versions}
+    by_id = {v: {q["id"]: q for q in f["queries"]} for v, f in files.items()}
+    first = settings["searches"][0]["queries"]
+    ids = [q["id"] for q in files[first]["queries"]]
+    for v in versions:
+        if set(by_id[v]) != set(ids):
+            raise ValueError(f"Query versions {first} and {v} don't have the same ids")
+    questions = [
+        {
+            **{k: by_id[first][qid][k] for k in ("id", "site", "group")},
+            "queries": {s["name"]: by_id[s["queries"]][qid]["query"] for s in settings["searches"]},
+        }
+        for qid in ids
+    ]
+    return "+".join(versions), questions
+
+
+def compare_strategy(
+    tool: str,
+    settings_version: str,
+    settings: dict[str, Any],
+    runs: int,
+    query: str,
+    notes: str,
+    base_dir: Path,
+    pause: float,
+) -> list[Path]:
+    query_version, questions = load_strategy_questions(settings, base_dir)
+    selected = [q for q in questions if query in ("all", q["id"])]
+    if not selected:
+        raise SystemExit(f"Unknown query '{query}'")
+    paths = []
+    for q in selected:
+        for run in range(1, runs + 1):
+            path = run_strategy_once(
+                tool, settings_version, settings, query_version, q, run, notes, base_dir, pause
+            )
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            parts = ", ".join(
+                f"{s['name']} {s['status']} {len(s['normalized'])}" for s in saved["searches"]
+            )
+            print(
+                f"{q['id']} run{run}: {saved['status']}, merged {len(saved['normalized'])} "
+                f"({parts}) ({saved['seconds']}s)"
+            )
+            paths.append(path)
+            time.sleep(pause)
+    return paths
+
+
+def compare(
+    tool: str,
+    settings_version: str,
+    runs: int = DEFAULT_RUNS,
+    query: str = "all",
+    notes: str = "",
+    base_dir: Path = BASE_DIR,
+    pause: float = PAUSE_SECONDS,
+    query_version: str = DEFAULT_QUERIES,
+) -> list[Path]:
+    """Run plain searches, or a strategy if the settings file defines one (then the
+    strategy picks the query versions and `query_version` is ignored)."""
+    if tool not in TOOLS:
+        raise SystemExit(f"Unknown tool '{tool}'. Known: {', '.join(TOOLS)}")
+    settings = load_settings(tool, settings_version, base_dir)
+    if settings.get("strategy"):
+        paths = compare_strategy(
+            tool, settings_version, settings, runs, query, notes, base_dir, pause
+        )
+        if tool == "serper":
+            resolved, failed = resolve_all(base_dir)
+            print(f"Google redirects: {resolved} newly resolved, {failed} unresolved")
+        return paths
+    queries = load_queries(query_version, base_dir)
+    selected = [q for q in queries["queries"] if query in ("all", q["id"])]
+    if not selected:
+        raise SystemExit(f"Unknown query '{query}'")
+
+    paths = []
+    for q in selected:
+        for run in range(1, runs + 1):
+            path = run_once(
+                tool,
+                settings_version,
+                settings,
+                queries["version"],
+                q,
+                run,
+                notes,
+                base_dir,
+                pause,
+                queries.get("language"),
+            )
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            detail = saved["error"] or f"{len(saved['normalized'])} results"
+            print(f"{q['id']} run{run}: {saved['status']}, {detail} ({saved['seconds']}s)")
+            paths.append(path)
+            time.sleep(pause)
+    return paths
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Call a web search tool and save raw runs")
+    parser.add_argument("--tool", required=True, choices=sorted(TOOLS))
+    parser.add_argument("--settings", required=True, help="settings version, e.g. v1")
+    parser.add_argument("--runs", type=int, default=DEFAULT_RUNS)
+    parser.add_argument(
+        "--queries",
+        default=DEFAULT_QUERIES,
+        help="query version: v1 = queries.json (English), v2 = queries_v2.json (Arabic)",
+    )
+    parser.add_argument("--query", default="all", help="'all' or one query id, e.g. sokhna_q1")
+    parser.add_argument("--notes", default="", help="what this run tries; saved in each file")
+    args = parser.parse_args()
+
+    paths = compare(
+        args.tool, args.settings, args.runs, args.query, args.notes, query_version=args.queries
+    )
+    print(f"\nSaved {len(paths)} run files. Score them with:")
+    print("  python -m experiments.tools.web_search.score")
+
+
+if __name__ == "__main__":
+    main()

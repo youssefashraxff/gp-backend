@@ -1,0 +1,159 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "pois_r1000",
+  "params": {
+    "kind": "pois",
+    "radius": 1000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];(node(around:1000,30.1938258,31.4601618)[amenity];node(around:1000,30.1938258,31.4601618)[shop];node(around:1000,30.1938258,31.4601618)[leisure];way(around:1000,30.1938258,31.4601618)[amenity];way(around:1000,30.1938258,31.4601618)[shop];way(around:1000,30.1938258,31.4601618)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 11,
+  "error": "",
+  "seconds": 0.001,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": "n4901469923",
+        "tags": {
+          "amenity": "waste_disposal"
+        },
+        "lat": 30.187094,
+        "lon": 31.456026,
+        "timestamp": "2017-06-07T08:46:42+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702085",
+        "tags": {
+          "shop": "supermarket",
+          "name": "اسواق نور"
+        },
+        "lat": 30.200698,
+        "lon": 31.466813,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702086",
+        "tags": {
+          "shop": "supermarket",
+          "name": "حور"
+        },
+        "lat": 30.200308,
+        "lon": 31.466209,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702285",
+        "tags": {
+          "shop": "supermarket",
+          "name": "الحسيني"
+        },
+        "lat": 30.200693,
+        "lon": 31.466545,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n10214911651",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "دانكن دونتس",
+          "name:en": "Dunkin' Donuts",
+          "cuisine": "donut;coffee_shop",
+          "brand": "دانكن"
+        },
+        "lat": 30.195657,
+        "lon": 31.459545,
+        "timestamp": "2025-04-30T08:25:24+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n10214983372",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Domino's",
+          "cuisine": "pizza",
+          "brand": "Domino's"
+        },
+        "lat": 30.194938,
+        "lon": 31.460178,
+        "timestamp": "2022-11-24T15:33:26+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13688898402",
+        "tags": {
+          "amenity": "school",
+          "name": "ريفلكت"
+        },
+        "lat": 30.198331,
+        "lon": 31.464498,
+        "timestamp": "2026-03-29T15:51:51+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14133439601",
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد العزيز"
+        },
+        "lat": 30.195681,
+        "lon": 31.465038,
+        "timestamp": "2026-08-29T15:20:39+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w773688361",
+        "tags": {
+          "leisure": "sports_centre",
+          "name": "AutoVroom"
+        },
+        "lat": 30.201584,
+        "lon": 31.455319,
+        "timestamp": "2020-02-21T06:12:48+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1116913396",
+        "tags": {
+          "amenity": "fuel",
+          "name": "Master",
+          "brand": "Master"
+        },
+        "lat": 30.195283,
+        "lon": 31.459694,
+        "timestamp": "2022-11-24T15:19:18+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1116916498",
+        "tags": {
+          "amenity": "fuel",
+          "name": "Total",
+          "brand": "Total"
+        },
+        "lat": 30.193473,
+        "lon": 31.461668,
+        "timestamp": "2022-11-24T15:28:16+00:00"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v3",
+  "notes": "osm v3 local control",
+  "timestamp": "2026-11-28T11:56:36.468382+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "malls_ar_instagram",
+  "params": {
+    "q": "مول العبور الجديدة (site:instagram.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "malls_ar",
+    "variant": "instagram",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.656,
+  "raw": {
+    "searchParameters": {
+      "q": "مول العبور الجديدة (site:instagram.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "\"\"بازار مول\" وجهة جديدة تجمع بين الرؤية المعمارية العصرية ...",
+        "link": "https://www.instagram.com/reel/Df1lOsJgf_A/",
+        "displayedLink": "أكثر من 30 معجب  ·  قبل أسبوع واحد",
+        "snippet": "اليوم نبدأ خطوة جديدة على أرض الواقع. انطلاق أعمال الإنشاءات في ORIN Mall – العبور الجديدة بتاريخ 28 سبتمبر 2026، في بداية مرحلة جديدة نحو وجهة ...",
+        "position": 1
+      },
+      {
+        "title": "أكبر مول وأكبر ممشى سياحي وترفيهي في العبور الجديدة ...",
+        "link": "https://www.instagram.com/reel/DfZmpUjNB6T/",
+        "displayedLink": "قبل 3 أسابيع",
+        "snippet": "الأسعار والمساحات: المساحات تبدأ من 34 متر. التجاري يبدأ من 230,000 جنيه للمتر. الطبي يبدأ من 85,000 جنيه للمتر. الإداري يبدأ من 68,000 جنيه ...",
+        "position": 2
+      },
+      {
+        "title": "أسواق للتطوير العقاري تطلق مشروع verto mall في مدينة ...",
+        "link": "https://www.instagram.com/reel/Dc1ALt7DPlN/",
+        "displayedLink": "معجب واحد  ·  قبل شهرين",
+        "snippet": "مرتقي بطرحها الجديد في اكبر مول ترفيهي: مساحات تجارية تبدأ من 30 متر أسعار متوقعة تبدأ من 250,000 جنيه للمتر للدور الأول، و300 ...",
+        "position": 3
+      },
+      {
+        "title": "بيئة عملك هي أول خطوة في نجاحك.. في Icon Mall ببيئة عمل ...",
+        "link": "https://www.google.com/goto?url=CAESZgHEIkXXdmXH4qQMGqAc7DJ9qqa7XkWjzxyLZhM9t71s3VIpg4k4U5V6MEkzuFTONR7FDkkwopucOVU9FEdpu06xBgokGD1N8byveWQwU9gEOdXftB4RS5x7EN31efhGO6eFKc9_1Q&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "6 نقرة على الزر أعجبني  ·  قبل 5 أشهر",
+        "snippet": "... Mall ببيئة عمل ذكية ومرافق عالمية.. مكاتب وعيادات بمواصفات تليق بيك في قلب العبور الجديدة. مقدم يبدأ من 20%، ومدة تقسيط تصل لـ 5 سنوات ...",
+        "position": 4
+      },
+      {
+        "title": "تعرّف على مول خطوة العبور الجديدة Khatwa Mall New Obour ...",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXtSEf1tle1Ibf1ZcMTuJ4udYtbOgrbq7s3hY0pg9xCs9lrMmXKbVwVMLINquuivsaH9zzKgQHx9XFqVuSpfRXkgQJxTvmOv3KOU9vn3V3vV1kyizPHIIqprRKCb-rCw&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "قبل 5 أيام",
+        "snippet": "مول متعدد الاستخدامات بيجمع بين الأنشطة التجارية والطبية والإدارية، في موقع مميز بالقرب من شارعي 70 و90 بمدينة العبور الجديدة. أهم تفاصيل ...",
+        "position": 5
+      },
+      {
+        "title": "مول حكاية… مشروع بيكبر على أرض الواقع! 🏢 مش مجرد فرصة ...",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXzL7PU2nxU6tIvd8sxbU_45AnqL8ZX17muzWyAL5g6VtvinyUTAa_gfFVE9ragaZ2ASMtIS1hcmtAjRIcZRO0bjB3HSZOYIz0MB5Ta2bnzXElmkey6xnQURqXEDao3A&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "معجب واحد  ·  قبل أسبوعين",
+        "snippet": "✨ ORIN MALL – أورين مول وجهة استثمارية متكاملة في قلب حي الفيروز بالعبور الجديدة، بتجمع بين 3 أنشطة في مشروع واحد: وحدات تجارية وحدات ...",
+        "position": 6
+      },
+      {
+        "title": "مول خطوه العبور الجديدة | khatwa Mall New Obour",
+        "link": "https://www.google.com/goto?url=CAESZgHEIkXXXCfBjM2EEgKZWaAsMEGD8AGbU2H-W4Y-V56sXL96WkiALfRPCJD_IO9xVxLmcuJ0LANxnOch9rqUiL0HXL3tMXgeBSJfN_OH90PkvK-UTK6zykeP3ChAIaPjGRrmoJMLZw&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "قبل 4 أيام",
+        "snippet": "مول متعدد الاستخدامات بيجمع بين الأنشطة التجارية والطبية والإدارية، في موقع مميز بالقرب من شارعي 70 و90 بمدينة العبور الجديدة. أهم تفاصيل ...",
+        "position": 7
+      },
+      {
+        "title": "خصم يصل لـ25% على وحدتك الاستثمارية في العبور الجديدة! ...",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXezxcFPak1UEPjwsa9xt7KNpvNuNNgdUqVG6YnX2aCORMbjCUbnNuttJCTKv7LygjxgfSZR-AQHEcuj271G13k-2L4t1Rz9iWQ58xZe_zYVKyoM6UH4T_Y4D3ka3gbg&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "قبل 4 أيام",
+        "snippet": "المول على محور الـ70 مباشرة، في موقع حيوي بالقرب من وحدة المرور والتراخيص، وعلى بُعد دقيقة تقريبًا من الطريق الدائري الأوسطي، وسط مناطق سكنية ...",
+        "position": 8
+      },
+      {
+        "title": "بعد حكاية مول، كان لازم نبقى قد ثقتكم .. خطوة أقوى من برايت هوم ...",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXCDdTm6H5MOaDbZgOkmhfhLHeCNhxkfimPRV1OoEUTSLfKvKh4nOnz0XCdLj27ZA3J9NJDAIDbNf429gNHRkh4GT5Sf8sia_Lcg00uv6btBbQpUKEWAPi0cVvNj9jfg&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "https://www.instagram.com › DfaOOxKlUV_",
+        "snippet": "مول وصل لأعلى نسبة إنشاءات في العبور الجديدة حكاية مول – في قلب حي الحرية منتصف الشارع التجاري الفاصل بين حي الحرية و حي المجد مدينة العبور الجديدة عاين ...",
+        "position": 9
+      },
+      {
+        "title": "مول الدهب.. الصاغة الجديدة في العبور ✨ مول متخصص في تجارة ...",
+        "link": "https://www.google.com/goto?url=CAESZgHEIkXXtXoFE1UTtoMXCpGaWtllcTYQP5wzqTOg9bHQfSGcRAOQS3G4kKhewIQ6hIpJBJDkO3xwfJJkl-U2D17axd8B1h13MSbE5jTWLyIpVKiXCkLieF_cgU35409tk6AsTlaR0Q&gsessionid=A-qvYwVP9WgszTiFvbrTDZLAth0owsQgJ7WjyQAehlk47-TQWFw0XA",
+        "displayedLink": "4 نقرة على الزر أعجبني  ·  قبل شهرين",
+        "snippet": "3 أدوار للذهب والمجوهرات، Food Court، Parking، وغرف فندقية، في موقع قريب من كارفور العبور وطريق مصر–الإسماعيلية. والمساحات بتبدأ من 20 متر، مع ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:28.152276+00:00"
+}

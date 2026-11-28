@@ -1,0 +1,200 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "airport_to_site",
+  "params": {
+    "origin": {
+      "lat": 30.122794199999998,
+      "lng": 31.402342899999997
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    }
+  },
+  "meta": {
+    "landmark": "airport",
+    "direction": "to_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.36,
+  "raw": {
+    "bbox": [
+      31.367431,
+      30.110991,
+      31.558139,
+      30.358612
+    ],
+    "metadata": {
+      "query": {
+        "coordinates": [
+          [
+            31.402342899999997,
+            30.122794199999998
+          ],
+          [
+            31.5566816,
+            30.32376
+          ]
+        ],
+        "format": "json",
+        "profile": "driving-car",
+        "profileName": "driving-car"
+      },
+      "attribution": "openrouteservice.org | OpenStreetMap contributors",
+      "engine": {
+        "build_date": "2026-11-18T10:33:03Z",
+        "graph_date": "2026-11-24T04:57:00Z",
+        "osm_date": "2026-11-22T00:00:00Z",
+        "version": "10.1.1"
+      },
+      "service": "routing",
+      "system_message": "Please note that the URL api.openrouteservice.org has been deprecated. All information available at ask.openrouteservice.org",
+      "timestamp": 1795860905286
+    },
+    "routes": [
+      {
+        "bbox": [
+          31.367431,
+          30.110991,
+          31.558139,
+          30.358612
+        ],
+        "geometry": "ojzvDsgt~DBw@iBEu@KYOYWQIQE[?O?WH]XMXIXS`AQ`AeApG@RJVtAh@NJVf@Pp@B\\Cp@@fAD\\f@`CdA|C~AbEZ~@f@dAhElLb\\rz@fMb\\hGdPvGdP~@xBzB`GZnAZlBLnA@XEl@GVeCdCkFhFo@h@_Aj@wAj@k@Jm@B{AI}C?_DIm@Iw@S_A]{@m@c@c@iCeDeGcIul@iy@uKaOcJ}L}]mi@mAmBgBoD{@qBkIoTWk@sAkDeEmLMYSWSSWOYKYGaDKs@I]OWQSWQa@IYqA_Hc@wBIg@Ga@WqACSeFgXkGy\\q@aEUmAc@sByAyHgCmO_Gk[_AiFcA}GwBsLc@oBAw@Bw@Hw@Nu@z@cCd@mBFi@@i@CUIk@o@{CO]SYWU_@QoAWy@BqBJoBToB`@wJhCoKvCwBv@aC`AeFhC_EpCwEfD_MrJkA`AwBnB{F`Gq@l@}@h@q@^mA`@oAXc@Du@F}@@aBGsAS_@Ko@SqAi@sAo@}@_@eBy@sEeCcAi@eDiBSKwFwCuBqAk@]yGiDgAe@gA_@uBc@]EqAIc@C{@?{@D{@Hy@Jy@R{GvB}p@vTsBt@kEvA{^pLuElAyA`@iBr@q@X{D`BmGvB_EnAkB`@u@HiADu@?i@CwCYuBg@gJeCgVmGu]kJUGoi@oNol@mKqT}DeAQ}RuDmGgAwE}@{Aa@wAi@uAs@sAw@qA}@mAaAgAkAkDcEsXe]kAyA_p@{x@m@o@sReVgFoG_FkGqL{N]e@o[s`@qAaBoG}HqH{IcB_CcD_E}CoD{@eAkGgIuA_B}AwAwBwA}Ay@q@YmGoB}EcBmJaDwBs@oIkCaMeEoDiA_L_E}MkEiFqB{A{@eBkA}AsAmBkBsEgFgAgAgA_A{B}AaH{DcE_CuJwFeC_BqAeA_A{@u@w@aAkA}FmI{C{EsHiLyb@ip@q_@uk@kTs\\_GmI{BuCwCaEg@{@}OeTsImLe^af@aBaCkCkDeC}CeCoCiCeCiHiGuCaC{O}LwWmScHoFgW}RkLeJqJoIe@a@aEkC{DsCeHqFSe@{@iA_@q@Qa@G]Ei@?gA\\oBF_A?qBB[R}@b@aA\\e@r@g@zAo@pC]nAIbDErBBtBD`CPtANtAXrAXfh@lMl@XnAX~Dl@hBPpBJfBBlEInEY`BQjEo@bEy@~Bm@|Bw@zB_Aj@WdHaDtAk@pNkFbNcFnBg@jAUnAObEItBMf@If@KxAi@tAe@`A[HE",
+        "segments": [
+          {
+            "distance": 44856.0,
+            "duration": 2064.8,
+            "steps": [
+              {
+                "distance": 26.4,
+                "duration": 1.7,
+                "instruction": "Head east",
+                "name": "-",
+                "type": 11,
+                "way_points": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "distance": 546.1,
+                "duration": 41.7,
+                "instruction": "Turn left onto شارع العروبه",
+                "name": "شارع العروبه",
+                "type": 0,
+                "way_points": [
+                  1,
+                  21
+                ]
+              },
+              {
+                "distance": 180.9,
+                "duration": 14.5,
+                "instruction": "Keep right onto شارع العروبه",
+                "name": "شارع العروبه",
+                "type": 13,
+                "way_points": [
+                  21,
+                  27
+                ]
+              },
+              {
+                "distance": 2750.4,
+                "duration": 152.3,
+                "instruction": "Keep left onto طريق المطار",
+                "name": "طريق المطار",
+                "type": 12,
+                "way_points": [
+                  27,
+                  37
+                ]
+              },
+              {
+                "distance": 142.3,
+                "duration": 10.2,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  37,
+                  38
+                ]
+              },
+              {
+                "distance": 8106.1,
+                "duration": 374.6,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  38,
+                  103
+                ]
+              },
+              {
+                "distance": 28760.9,
+                "duration": 1309.8,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  103,
+                  286
+                ]
+              },
+              {
+                "distance": 1864.0,
+                "duration": 78.5,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  286,
+                  312
+                ]
+              },
+              {
+                "distance": 2478.9,
+                "duration": 81.6,
+                "instruction": "Keep right onto الطريق الدائري الإقليمي, 515",
+                "name": "الطريق الدائري الإقليمي, 515",
+                "type": 13,
+                "way_points": [
+                  312,
+                  342
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "instruction": "Arrive at الطريق الدائري الإقليمي, 515, on the right",
+                "name": "-",
+                "type": 10,
+                "way_points": [
+                  342,
+                  342
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 44856.0,
+          "duration": 2064.8
+        },
+        "way_points": [
+          0,
+          342
+        ]
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "ORS new URL",
+  "timestamp": "2026-11-28T10:15:05.324910+00:00"
+}

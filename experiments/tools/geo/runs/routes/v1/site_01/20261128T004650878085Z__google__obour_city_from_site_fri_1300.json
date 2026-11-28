@@ -1,0 +1,54 @@
+{
+  "tool": "routes",
+  "provider": "google",
+  "case": "obour_city_from_site_fri_1300",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "address": "El Obour City, Qalyubia Governorate, Egypt"
+    },
+    "departure_utc": "2026-12-04T11:00:00Z"
+  },
+  "meta": {
+    "landmark": "obour_city",
+    "direction": "from_site",
+    "slot": "fri_1300",
+    "local": "2026-12-04T13:00:00+02:00"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.312,
+  "raw": {
+    "routes": [
+      {
+        "legs": [
+          {
+            "startLocation": {
+              "latLng": {
+                "latitude": 30.3243069,
+                "longitude": 31.558225800000002
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 30.1938258,
+                "longitude": 31.460161799999998
+              }
+            }
+          }
+        ],
+        "distanceMeters": 25492,
+        "duration": "1607s",
+        "staticDuration": "1728s"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:46:50.878038+00:00"
+}

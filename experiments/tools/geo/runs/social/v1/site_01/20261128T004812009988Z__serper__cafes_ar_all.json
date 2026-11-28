@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_ar_all",
+  "params": {
+    "q": "كافيهات العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_ar",
+    "variant": "all",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 4.01,
+  "raw": {
+    "searchParameters": {
+      "q": "كافيهات العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "جربنا بعض الكافيهات في العبور💜قولنا انت كمان جربت ...",
+        "link": "https://www.facebook.com/Obour360/posts/%D8%AC%D8%B1%D8%A8%D9%86%D8%A7-%D8%A8%D8%B9%D8%B6-%D8%A7%D9%84%D9%83%D8%A7%D9%81%D9%8A%D9%87%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D9%82%D9%88%D9%84%D9%86%D8%A7-%D8%A7%D9%86%D8%AA-%D9%83%D9%85%D8%A7%D9%86-%D8%AC%D8%B1%D8%A8%D8%AA-%D9%83%D8%A7%D9%81%D9%8A%D9%87-%D8%A7%D9%8A-%D9%88%D8%B9%D8%AC%D8%A8%D9%83-%D9%88%D9%85%D8%A7%D8%AA%D9%86%D8%B3%D9%88%D8%B4-%D8%AA%D8%AD%D9%85%D9%84%D9%88%D8%A7/1074785294850921/",
+        "displayedLink": "أكثر من 400 تفاعل  ·  قبل سنة واحدة",
+        "snippet": "العنوان : العبور، الحي الأول، مول ابو الدهب، الدور الأرضي للتواصل :- 01098029380 لوكيشن: https://maps.app.goo. gl/ixJQWTcW62TGEfku5?g_st=ic.",
+        "position": 1
+      },
+      {
+        "title": "عايزة اماكن كافيهات تكون نضيفة وشيك ف العبور نقعد فيها",
+        "link": "https://www.facebook.com/groups/obour360community/posts/2885910948257776/",
+        "displayedLink": "أكثر من 10 تعليق  ·  قبل سنة واحدة",
+        "snippet": "AśMà ZéDàn. Rivo Café جميل جدا وقعدته مريحه · جراند رويال. Grand Royal Cafe · Adham ELshraawy. كافيه زين دياب مول أصول دار مصر أمام بوابه واحد دار ...",
+        "position": 2
+      },
+      {
+        "title": "Sky Café & Restaurant اول كافية علي الروف في مدينة العبور ...",
+        "link": "https://www.facebook.com/alobourwelnas/videos/sky-caf%C3%A9-restaurant-%D8%A7%D9%88%D9%84-%D9%83%D8%A7%D9%81%D9%8A%D8%A9-%D8%B9%D9%84%D9%8A-%D8%A7%D9%84%D8%B1%D9%88%D9%81-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D9%87%D8%AA%D9%84%D8%A7%D9%82%D9%88%D8%A7-%D8%AC%D9%85%D9%8A%D8%B9-%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA-%D8%B3/1221296963378921/",
+        "displayedLink": "أكثر من 410 تفاعل  ·  قبل سنة واحدة",
+        "snippet": "Sky Café & Restaurant اول كافية علي الروف في مدينة العبور هتلاقوا جميع المشروبات سخن وساقع بجودة عالية ولو عندك مناسبة المكان بينظمهالك بافضل ...",
+        "position": 3
+      },
+      {
+        "title": "من افضل الكافيهات اللي موجوده في العبور كافية The Tree في ...",
+        "link": "https://www.google.com/goto?url=CAEShAEBxCJF146nIRk7t4WNcwkt2_Ced5dBSZ30hBj4ytWqr3dIjL7bcDh_NbvWzOi8UJLnU89qLm1pr9Jli36uChf72ICpQ1joVlr-o9yP_Ohj5Oi1Cywvu5BNPZcIIDSPfLfCckyW4-XTJiH9Zm5GXnRGIdQrkIaNf_F6KNLKNEBBdqldDf4&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 20 تعليق  ·  قبل 7 أشهر",
+        "snippet": "من افضل الكافيهات اللي موجوده في العبور كافية The Tree في افينيو مول المكان جميل جدا والديكورات بتاعته ممتازه موجود جميع انواع المشروبات ...",
+        "position": 4
+      },
+      {
+        "title": "جربنا بعض الكافيهات في العبور💜 قولنا انت كمان جربت ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXqRAeuRULEbmX1Sh-J86cgdl-Ao0KQA8HqSoFpX4eWjNmqrYkOD2Y2CdfH6XJrjZh_Hs2IMpgc2MIr0rlZO04YJwrG6hqbdxvw55LRThDU78LGpEqpY___TvsZK8cha6TJ2Q&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 650 معجب  ·  قبل سنة واحدة",
+        "snippet": "رد على التليفون.. قهوة بويو بترن عليك! ☕ ابتداءً من 8:00 الصبح، بويو بيقدملك تشكيلة مشروبات سخنة وباردة هتدمنها من أول مرة! قولولنا ...",
+        "position": 5
+      },
+      {
+        "title": "افتتاح الفرع الثاني لكافيه أثينا – العبور 🔥 ☕ قهوة ببلاش ...",
+        "link": "https://www.google.com/goto?url=CAESoQQBxCJF1-nIIouQMsKJ8gX1xglcGRRYhWjeCIcntWlb7q6z-0nUgngahFpuOimJgE4HIwmweR63E3tuRxmPEALQxf_VS_dZLq8I7UZbGJXr0Whx-SP_0vI8WXZNxjp7ja895ToVcWgxqKbiyg7jQsr4PwnOVEj49-ZfzHAEXdZVO4f_BaZOtt4KVI7nmhwovCrCY5vdnwJh17w9v35tCNUwcWv6mziL8bdecUTaiWPf4dVqfyY9i9pXeW7t8YqUc_0CBJutqq6-O4jlAcgUibV0Oz5S5IW9T9PHLYeOOGQ9QiSWXjBpBwl7ku4lZKxFsm0BKBbZ5CgCv5gMoPSDkVSb1JwPwUO2p9F7UVoGj1BoMpyzRfliOgYVvV_ww2zSwi-Mmt60-Wk-JCO73gB6GAaXw5gFe-uHY0hD1k5WGlcmzj-NvrgVunyGr5BuWkuXbdez2Y_z3zo9lyLyABh0NGXPZ0KHrzdvIuTXaClDmRTQqLZr5ET6VgUuXj6eBNAHln7ocgwL0cs4rP4bq_4nud2KxgBClfUM-iR5eCgb1cBGuoG-AQDGgOEbK-alMkmTZWRbWqkTLZvoIBVZi6ipBiWW5iwhma5VS5W1P2_yOvx1UCk1AYMtaw9R5HrzdK4nTDDKWajadwaBDQJBmAlvv4sCiLaxAAlEtRXd9ZIsGv1nPTpJYo3rbLoVg81pmQem7lwhDwf2zzhWaPjD5zRvGUEQLg&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل 11 شهرًا",
+        "snippet": "والأجواء نار عناوين الفروع: الفرع الأول: مدينة العبور – شارع الشباب – أول السبعين – بجوار بندر العبور لوكيشن:- https://maps.app.goo. gl ...",
+        "position": 6
+      },
+      {
+        "title": "عايز افضل كافيهات ف مدينه العبور",
+        "link": "https://www.google.com/goto?url=CAEShAEBxCJF1zaJCv9vtDE1or3B2s3HflU06fHaUFZD0S5FP2JCD1I7GczkGaet76d32g8zE-JcycySWmwOebQzTEqpTV2jx_A2B_CXSvSjM2gIc82NtSQTprQStj7FoXrCZws-QxLW50LhYOstH4V_ZKdVdHGOhQ9miO8jnXkU2cFrfDGusqc&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 10 تعليق  ·  قبل سنة واحدة",
+        "snippet": "افينو مول في خدمات كتير وفي اكل غير الكافيهات و في العاب للكبار والصغيرن في بلياردو|Owls cafe يوني مول مكان لذيذ هو كافيه و work space مكان ...",
+        "position": 7
+      },
+      {
+        "title": "كافيه في العبور: باستا وسيزر سلاد وقهوة في مكان مميز",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXX856MccVvSClnVGlmb_7RRF34-1h5h9E3dk-orEklAMi9xHV7pGkOqaK0JrwabbQIREsl-n9DqsxC07EoJp1gtLj736XhYlWXhWOWBRMaXgEKcEkipCs3G4IopTEAndIsNukPuOSL37TGA4KFhJzzK-USLK0&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 136.1 ألف مشاهدة  ·  قبل سنتين",
+        "snippet": "إذا كنت تبحث عن كافيه في العبور يقدم باستا، سيزر سلاد، قهوة، وفرابيه في مكان مميز، فهذا الكافيه من الأماكن التي تستحق الزيارة عند البحث عن أماكن ...",
+        "position": 8
+      },
+      {
+        "title": "اكتر اماكن فيها تجمع كافيهات في العبور فين احنا شله صحاب ...",
+        "link": "https://www.google.com/goto?url=CAESgwEBxCJF14sNpvyfeszrjVs2BdfSuBLzIUSASK2CqmkKEcAi8NzMyaAfXtupqoUJEncf0Oa-CChzgEIorVDcHMBJOAOcDMC1jl7233Dyfd4mvcoVL5NoV6ISjt_SIh7SLOIfCQi7J-rYzqOJ7-yt_DTnxldti5TeEWb2G78mY27lNHucqw&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "‫7 تعليق  ·  قبل شهرين",
+        "snippet": "اكتر اماكن فيها تجمع كافيهات في العبور فين احنا شله صحاب عايزين نقعد في كافيه ... الجديدة: * على خط 10 والجولدن سكوير * بجوار جهاز مدينة العبور ...",
+        "position": 9
+      },
+      {
+        "title": "جديد ف العبور 💜✨️ كافيه SKOVA Café مكان يستحق الخروج. ...",
+        "link": "https://www.google.com/goto?url=CAES7QMBxCJF183lQykaKjQDzINhhD8bbn1jWN95-3MvdwT5gnkNK_jI-XL9Kwv1gkVZcbemJXa13T79YG43MDyCMZwfZUCTXAqz8LhH9OhFODZwu8gapxubWM1DmMIsdz1Wm0i1KjZVk_8VfDmMtaiu7TEXMhy68DDT4pUiZMWBK2uRYNwNwH1lPVP-3ty8WxTHXsEl2Qkfl2MtsFMcxsuDEj_h3bdPgkW1LPoJbw69zhpbdmxBrOy6Gv9cjodKKLpiV1qBFpBwYbLeq-VZ3-Uoo7vfqK4AUNMepvVcggUWuzybFv304aaGSqM8p3eUPXIkaclGiW369LDZMknJlU1SJ0Y2Hd0ryfM6-WfIedl7Z0UrWI_NC9LtxT_e_rdnXifUU6TIcfu_rfH5hrzcyreaQRCm2IUbFVsAKRD8LlS6yMXLUCbZfTTgeZNVF2-LrCL1KUCjbAS0elhIwhFcpkdkMiQDCBCvDcDXywS5qOQtZ9awi1mnI4rGoOl-ja7ok3OKLWgIk7h5HbEoNHHKyVEzG8hp_ykyEMzg7l7DDL4QdksS4q7aO-moBai-SdYrxb49FL7WRQ9G2TX3-B9gs5SmWLF3L6ntbm1YeoB5QjQR6Gc9xuL1d8mLNejTtRicfyZSmGBfuDnZuFt113R_0ns7&gsessionid=OSa6n-2lX7TKqlB3hvlg0yWBq8deD-yC4gawU0WT37cIV65CfiBd_Q",
+        "displayedLink": "أكثر من 190 تفاعل  ·  قبل سنتين",
+        "snippet": "جديد ف العبور ✨️ كافيه SKOVA Café مكان يستحق الخروج. ✨ الافتتاح اليوم عاملين عروض جامده وده لانهم عندهم كل حاجه مميزه، مكان رايق تستجم فيه ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:12.009355+00:00"
+}

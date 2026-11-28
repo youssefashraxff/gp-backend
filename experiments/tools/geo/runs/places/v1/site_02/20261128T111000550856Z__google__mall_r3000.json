@@ -1,0 +1,567 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "mall_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "types": [
+      "shopping_mall"
+    ]
+  },
+  "meta": {
+    "category": "mall",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.29,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJUUfoCwAbWBQR3lB6eGGc64o",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "N9ne mall",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJQbIaFQAFWBQRH5ftw_qFyfo",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "حي الكرامة - العبور الجديدة, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 5,
+        "displayName": {
+          "text": "Omran Mall",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJ4cqPphobWBQRF9OCthoqFo8",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "المنطقة الصناعية الأولي ( أ ) خلف السوق سنتر غلاء الدين خلف بنزينة توتال، Obour, Al-Qalyubia Governorate 6360082, Egypt",
+        "location": {
+          "latitude": 30.1910295,
+          "longitude": 31.4594652
+        },
+        "rating": 4.5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 5:00 PM",
+            "Tuesday: 9:00 AM – 5:00 PM",
+            "Wednesday: 9:00 AM – 5:00 PM",
+            "Thursday: 9:00 AM – 5:00 PM",
+            "Friday: Closed",
+            "Saturday: 9:00 AM – 5:00 PM",
+            "Sunday: 9:00 AM – 5:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 4,
+        "displayName": {
+          "text": "المجد أويل سيل",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJi1OPkmVHWBQR0b7ivKh5a7I",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.1938504,
+          "longitude": 31.456702000000003
+        },
+        "rating": 3,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Closed",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "الموسسه المتحدة",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJ51ZvdgAbWBQR_Kx0BKf_LUg",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW4+GPH, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.196602499999997,
+          "longitude": 31.4576437
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 3,
+        "displayName": {
+          "text": "Velvet textile mall سوق القماش مدينة العبور",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJ6yq7FGkbWBQRTPMGDmmokyU",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "شارع ١١٠ متفرع من شارع ١٠٠ على محور العبور, العبور، محافظة القاهرة‬ 6360134, Egypt",
+        "location": {
+          "latitude": 30.1964399,
+          "longitude": 31.4570526
+        },
+        "rating": 4.6,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 10,
+        "displayName": {
+          "text": "فابريكس مول",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJGRa6K54bWBQRxRucyDXx5kg",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW8+22Q, Obour, Cairo Governorate 11822, Egypt",
+        "location": {
+          "latitude": 30.195087099999995,
+          "longitude": 31.4651073
+        },
+        "rating": 4.4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:00 AM – 11:00 PM",
+            "Tuesday: 8:00 AM – 11:00 PM",
+            "Wednesday: 8:00 AM – 11:00 PM",
+            "Thursday: 8:00 AM – 11:00 PM",
+            "Friday: 8:00 AM – 11:00 PM",
+            "Saturday: 8:00 – 11:00 AM",
+            "Sunday: 8:00 AM – 11:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 11,
+        "displayName": {
+          "text": "U Plaza Mall",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJR1DsBegVWBQRfSs7bZfh9W8",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "مدينة العبور الحي السابع فيلا 16 ش اللواء فؤاد أبو ذكري, العبور، محافظة القاهرة‬ 11311, Egypt",
+        "location": {
+          "latitude": 30.192860900000003,
+          "longitude": 31.4653458
+        },
+        "rating": 4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 10:00 AM – 6:00 PM",
+            "Tuesday: 10:00 AM – 6:00 PM",
+            "Wednesday: 10:00 AM – 6:00 PM",
+            "Thursday: 10:00 AM – 6:00 PM",
+            "Friday: Closed",
+            "Saturday: 10:00 AM – 6:00 PM",
+            "Sunday: 10:00 AM – 6:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 52,
+        "displayName": {
+          "text": "اكسسوارات حريمي جملة coccinelle",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJaycl0nYbWBQR7YLDPo2TnAg",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "شارع ١١٠، محافظة القاهرة‬، Obour, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.196022799999994,
+          "longitude": 31.454946099999997
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 5:00 PM",
+            "Tuesday: 9:00 AM – 5:00 PM",
+            "Wednesday: 9:00 AM – 5:00 PM",
+            "Thursday: 9:00 AM – 5:00 PM",
+            "Friday: Closed",
+            "Saturday: 9:00 AM – 5:00 PM",
+            "Sunday: 9:00 AM – 5:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 21,
+        "displayName": {
+          "text": "شركة بروتك لتجارة وتوريدات الادوات الكهربائية ( بروتك للتوريدات الكهربائية )",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJawRtiqkbWBQRx0934zWy2Ak",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW4+F2C, Street 110, Obour, Cairo Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.196182900000004,
+          "longitude": 31.455000299999995
+        },
+        "rating": 4.6,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:00 AM – 8:00 PM",
+            "Tuesday: 8:00 AM – 8:00 PM",
+            "Wednesday: 8:00 AM – 8:00 PM",
+            "Thursday: 8:00 AM – 8:00 PM",
+            "Friday: Closed",
+            "Saturday: 8:00 AM – 8:00 PM",
+            "Sunday: 8:00 AM – 8:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 10,
+        "displayName": {
+          "text": "Cairo Mall El Obour",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJeQIhFQAbWBQRyFkueykA2_Q",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW3+CXW, Street 110, Obour, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.196114200000004,
+          "longitude": 31.454942900000002
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "شركة بروتك لتجارة وتوريدات الادوات الكهربائية",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJqUiVLwAbWBQR-THyoh0-x7w",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW3+CXV, Street 110, Obour, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.1961138,
+          "longitude": 31.454934599999994
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 4,
+        "displayName": {
+          "text": "بروتك للتوريدات الكهربائيه",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJa8sCXwAbWBQR6SgpAY8eiCQ",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW3+CXV، شارع ١١٠، Obour, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.196113600000004,
+          "longitude": 31.4549288
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "شركة بروتك لتجارة وتوريدات الادوات الكهربائيه",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJe1SKWwAbWBQR5LySor0RKhA",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FW3+CXV, Street 110, Obour, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.196112999999997,
+          "longitude": 31.454913899999994
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "شركة بروتك لتجارة وتوريدات الادوات الكهربائية",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJoQntWZoaWBQRd94njMcI710",
+        "types": [
+          "shopping_mall",
+          "supplier",
+          "manufacturer",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "5FW4+H2, Al Salam First, Al-Qalyubia Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.1963532,
+          "longitude": 31.4549125
+        },
+        "rating": 4.2,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:30 AM – 4:00 PM",
+            "Tuesday: 8:30 AM – 4:00 PM",
+            "Wednesday: 8:30 AM – 4:00 PM",
+            "Thursday: 8:30 AM – 4:00 PM",
+            "Friday: Closed",
+            "Saturday: 9:00 AM – 4:00 PM",
+            "Sunday: 8:30 AM – 4:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 12,
+        "displayName": {
+          "text": "Capital Safety",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJE8lwfUEbWBQRC_vZP4Iu-pQ",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Near, Al Salam First, Al-Qalyubia Governorate 6360130, Egypt",
+        "location": {
+          "latitude": 30.195679700000003,
+          "longitude": 31.453483599999995
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 10:00 AM – 8:00 AM",
+            "Tuesday: 10:00 AM – 8:00 AM",
+            "Wednesday: 10:00 AM – 8:00 PM",
+            "Thursday: 10:00 AM – 8:00 AM",
+            "Friday: 10:00 AM – 8:00 PM",
+            "Saturday: 10:00 AM – 8:00 PM",
+            "Sunday: 10:00 AM – 8:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 6,
+        "displayName": {
+          "text": "Khoyout Mall",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJuXuLbgAbWBQRQtly6cQrSvc",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FX7+7VW، عبد المنعم رياض، Obour, Al-Qalyubia Governorate 6361102, Egypt",
+        "location": {
+          "latitude": 30.1982751,
+          "longitude": 31.4653021
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "LEVER MALL",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJWX0HfgAbWBQRHt3jvvbilCI",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FX4+P8V, Street 100, Obour, Cairo Governorate 6360135, Egypt",
+        "location": {
+          "latitude": 30.199296500000003,
+          "longitude": 31.4556857
+        },
+        "rating": 4.3,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 11:00 AM – 11:00 PM",
+            "Tuesday: 11:00 AM – 11:00 PM",
+            "Wednesday: 11:00 AM – 11:00 PM",
+            "Thursday: 11:00 AM – 11:00 PM",
+            "Friday: 11:00 AM – 11:00 PM",
+            "Saturday: 11:00 AM – 11:00 PM",
+            "Sunday: 11:00 AM – 11:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 143,
+        "displayName": {
+          "text": "التوحيد والنور (فرع العبور)",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJgeK5NY4bWBQRzp5uxMMM74c",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Unnamed Road, العبور، محافظة القاهرة‬،، 5FP4+VR2, Obour, Al-Qalyubia Governorate 6360043, Egypt",
+        "location": {
+          "latitude": 30.187138599999997,
+          "longitude": 31.4570034
+        },
+        "rating": 4.3,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 25,
+        "displayName": {
+          "text": "شركه نات باك",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      },
+      {
+        "id": "ChIJDWuQZJUaWBQRrLQAN0bBQ9w",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "شارع رابعة العدوية، Obour, Al-Qalyubia Governorate 6361121, Egypt",
+        "location": {
+          "latitude": 30.1999662,
+          "longitude": 31.464812899999995
+        },
+        "rating": 3.6,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 7:00 AM – 11:00 PM",
+            "Tuesday: 7:00 AM – 11:00 PM",
+            "Wednesday: 7:00 AM – 11:00 PM",
+            "Thursday: 7:00 AM – 11:00 PM",
+            "Friday: 7:00 AM – 11:00 PM",
+            "Saturday: 7:00 AM – 11:00 PM",
+            "Sunday: 7:00 AM – 11:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 257,
+        "displayName": {
+          "text": "مول روضة العبور",
+          "languageCode": "ar"
+        },
+        "primaryType": "shopping_mall"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:10:00.550771+00:00"
+}

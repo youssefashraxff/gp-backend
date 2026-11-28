@@ -1,0 +1,256 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "madinaty_to_site",
+  "params": {
+    "origin": {
+      "lat": 30.095758500000002,
+      "lng": 31.634766300000003
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    }
+  },
+  "meta": {
+    "landmark": "madinaty",
+    "direction": "to_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.266,
+  "raw": {
+    "bbox": [
+      31.479174,
+      30.093596,
+      31.634796,
+      30.358612
+    ],
+    "metadata": {
+      "query": {
+        "coordinates": [
+          [
+            31.634766300000003,
+            30.095758500000002
+          ],
+          [
+            31.5566816,
+            30.32376
+          ]
+        ],
+        "format": "json",
+        "profile": "driving-car",
+        "profileName": "driving-car"
+      },
+      "attribution": "openrouteservice.org | OpenStreetMap contributors",
+      "engine": {
+        "build_date": "2026-11-18T10:33:03Z",
+        "graph_date": "2026-11-24T04:57:00Z",
+        "osm_date": "2026-11-22T00:00:00Z",
+        "version": "10.1.1"
+      },
+      "service": "routing",
+      "system_message": "Please note that the URL api.openrouteservice.org has been deprecated. All information available at ask.openrouteservice.org",
+      "timestamp": 1795860913114
+    },
+    "routes": [
+      {
+        "bbox": [
+          31.479174,
+          30.093596,
+          31.634796,
+          30.358612
+        ],
+        "extras": {
+          "roadaccessrestrictions": {
+            "summary": [
+              {
+                "value": 0.0,
+                "distance": 42880.8,
+                "amount": 94.81
+              },
+              {
+                "value": 32.0,
+                "distance": 2346.7,
+                "amount": 5.19
+              }
+            ],
+            "values": [
+              [
+                0,
+                39,
+                32
+              ],
+              [
+                39,
+                319,
+                0
+              ]
+            ]
+          }
+        },
+        "geometry": "eauvDota`EBHNTZ^\\v@Xz@T|@~@fDdAnE`@fB\\jB\\xBR|AV~CJhBFnCBxEA|AKhDSbDY~CU~Ai@fDy@|D]tA}@xCaBbEo@vAq@rAaBpCeA~AeAzAeBvBi@n@}AdBgAvAc@f@mAhAgBrAy@n@}DpCeAt@iBrAq@Vs@PeAJa@Ha@NaAf@o@`@_@XiAx@o@h@QR{C|DiB~B_BpB}@~@k@f@q@b@_Aj@gAf@}Ah@o@NeFt@eAF{JtAwARkIjAo@HsOzBeANwc@hG}B\\wOxBcAN}o@bJ}PbCwJrAw@JmSrCiBVeWnD{@Lqs@|JmANui@vHu@JsNnB}HjA_NjBeK|AcKnCcLfBqEr@aLdBsCZuAXuA\\aExAeAh@oAt@eAx@oBlBkBzBeH~H}QrTeAhAqNnPoCdDmF~GyDdG^b@w@jAy@hAyHnKkKlO{GnJwItKqEbFwKhLeF`FoCtBuDpCsEjCuDfBcDpAsC|@aEfAmDr@qDh@qD\\kjAlJ__ArHgY|Bw`@hDkI|@{R|CwEl@}CXuCVeCNiDLoGN_LR}ERmGd@gGn@qDf@oDn@sCh@mIrBwKjD}F|BuFhCyAt@}DxB}GhEiD`CsCxBiB|AsEdEuEvE}ChDmDpE}ChEaD|EqDhGkClFoHbP}CzHiBdFiAdD{CpKcB~GaBzHiAlGoB~Ma@lD}@zJ]dF[~Fs@~TAtEH`Lz@rSd@xGj@fGj@tF~@zG|BfOj@jEb@~Df@lFp@dMM|GTdIF~JGjZSrB[|@S\\SVk@d@SJm@RqAXc@VOLy@lAc@b@_@Xk@VSFi@Fc@AqCe@iFqB{A{@eBkA}AsAmBkBsEgFgAgAgA_A{B}AaH{DcE_CuJwFeC_BqAeA_A{@u@w@aAkA}FmI{C{EsHiLyb@ip@q_@uk@kTs\\_GmI{BuCwCaEg@{@}OeTsImLe^af@aBaCkCkDeC}CeCoCiCeCiHiGuCaC{O}LwWmScHoFgW}RkLeJqJoIe@a@aEkC{DsCeHqFSe@{@iA_@q@Qa@G]Ei@?gA\\oBF_A?qBB[R}@b@aA\\e@r@g@zAo@pC]nAIbDErBBtBD`CPtANtAXrAXfh@lMl@XnAX~Dl@hBPpBJfBBlEInEY`BQjEo@bEy@~Bm@|Bw@zB_Aj@WdHaDtAk@pNkFbNcFnBg@jAUnAObEItBMf@If@KxAi@tAe@`A[HE",
+        "segments": [
+          {
+            "distance": 45227.5,
+            "duration": 1948.5,
+            "steps": [
+              {
+                "distance": 19.0,
+                "duration": 3.4,
+                "instruction": "Head southwest on طريق مدينتى",
+                "name": "طريق مدينتى",
+                "type": 11,
+                "way_points": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "distance": 2454.6,
+                "duration": 152.9,
+                "instruction": "Continue straight onto طريق مدينتى",
+                "name": "طريق مدينتى",
+                "type": 6,
+                "way_points": [
+                  2,
+                  40
+                ]
+              },
+              {
+                "distance": 7533.7,
+                "duration": 407.5,
+                "instruction": "Continue straight onto طريق مدينتى",
+                "name": "طريق مدينتى",
+                "type": 6,
+                "way_points": [
+                  40,
+                  88
+                ]
+              },
+              {
+                "distance": 673.8,
+                "duration": 34.6,
+                "instruction": "Continue straight onto طريق الشهداء",
+                "name": "طريق الشهداء",
+                "type": 6,
+                "way_points": [
+                  88,
+                  91
+                ]
+              },
+              {
+                "distance": 3034.9,
+                "duration": 137.1,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  91,
+                  111
+                ]
+              },
+              {
+                "distance": 25.0,
+                "duration": 4.5,
+                "instruction": "Turn left",
+                "name": "-",
+                "type": 0,
+                "way_points": [
+                  111,
+                  112
+                ]
+              },
+              {
+                "distance": 15505.7,
+                "duration": 507.6,
+                "instruction": "Turn right onto الطريق الدائري الأوسطى",
+                "name": "الطريق الدائري الأوسطى",
+                "type": 1,
+                "way_points": [
+                  112,
+                  194
+                ]
+              },
+              {
+                "distance": 899.6,
+                "duration": 46.5,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  194,
+                  198
+                ]
+              },
+              {
+                "distance": 10738.3,
+                "duration": 494.3,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  198,
+                  263
+                ]
+              },
+              {
+                "distance": 1864.0,
+                "duration": 78.5,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  263,
+                  289
+                ]
+              },
+              {
+                "distance": 2478.9,
+                "duration": 81.6,
+                "instruction": "Keep right onto الطريق الدائري الإقليمي, 515",
+                "name": "الطريق الدائري الإقليمي, 515",
+                "type": 13,
+                "way_points": [
+                  289,
+                  319
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "instruction": "Arrive at الطريق الدائري الإقليمي, 515, on the right",
+                "name": "-",
+                "type": 10,
+                "way_points": [
+                  319,
+                  319
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 45227.5,
+          "duration": 1948.5
+        },
+        "warnings": [
+          {
+            "code": 1,
+            "message": "There may be restrictions on some roads"
+          }
+        ],
+        "way_points": [
+          0,
+          319
+        ]
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "ORS new URL",
+  "timestamp": "2026-11-28T10:15:13.151983+00:00"
+}

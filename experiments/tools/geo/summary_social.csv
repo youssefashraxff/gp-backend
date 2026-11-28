@@ -1,0 +1,7 @@
+site_id,case_version,query_id,all_n,all_mentions_place,per_platform_union_n,missed_by_all_call,facebook_n,facebook_mentions_place,facebook_last_12_months,instagram_n,instagram_mentions_place,instagram_last_12_months,tiktok_n,tiktok_mentions_place,tiktok_last_12_months,x_n,x_mentions_place,x_last_12_months
+site_01,v1,cafes_ar,9,10,38,31,10,10,0,10,10,0,10,10,0,10,1,0
+site_01,v1,cafes_en,9,10,36,28,10,10,9,10,7,9,10,10,10,7,1,3
+site_01,v1,malls_ar,10,9,40,30,10,10,0,10,9,0,10,10,0,10,7,0
+site_01,v1,padel_ar,10,10,36,26,10,9,0,10,7,0,10,10,0,10,6,0
+site_01,v1,padel_en,10,5,30,23,10,7,2,10,9,3,10,6,1,0,0,0
+site_01,v1,residents_ar,10,10,40,34,10,10,0,10,9,0,10,10,0,10,3,0

@@ -1,0 +1,33 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "pois_r3000",
+  "params": {
+    "kind": "pois",
+    "radius": 3000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];(node(around:3000,30.32376,31.5566816)[amenity];node(around:3000,30.32376,31.5566816)[shop];node(around:3000,30.32376,31.5566816)[leisure];way(around:3000,30.32376,31.5566816)[amenity];way(around:3000,30.32376,31.5566816)[shop];way(around:3000,30.32376,31.5566816)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 3000
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 35.132,
+  "raw": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-28T10:16:32Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": []
+  },
+  "site_id": "site_01",
+  "case_version": "v2",
+  "notes": "osm v2 headers",
+  "timestamp": "2026-11-28T10:17:44.220084+00:00"
+}

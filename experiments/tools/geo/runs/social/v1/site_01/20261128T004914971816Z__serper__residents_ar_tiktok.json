@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "residents_ar_tiktok",
+  "params": {
+    "q": "جروب سكان العبور الجديدة (site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "residents_ar",
+    "variant": "tiktok",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.213,
+  "raw": {
+    "searchParameters": {
+      "q": "جروب سكان العبور الجديدة (site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "العبور الجديدة آمنة أم خطرة؟ رد سكان المنطقة وتحذير كابتن أوبر",
+        "link": "https://www.tiktok.com/@captainmedhat1/video/7594035329431063826",
+        "displayedLink": "https://www.tiktok.com › video",
+        "snippet": "التحذير يشير إلى «تثبيت» حصل قبل عشرة أيام وأن هناك حالات جديدة مثل الإصابات بمفتاح شقة. من ناحية أخرى، يردّ صاحب الفيديو الثاني — وهو من سكان العبور الجديدة — ...",
+        "position": 1
+      },
+      {
+        "title": "جولة في حي الفيروز بالعبور الجديدة | تعرف على الخدمات ...",
+        "link": "https://www.tiktok.com/@user5225565614140/video/7565630671440366866",
+        "displayedLink": "أكثر من 10 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "جولة شاملة في حي الفيروز بمدينة العبور الجديدة تقدم قناة \"مشرف الواقع وخبرة السنين\" جولة ميدانية حصرية من قلب حي الفيروز، الواقع في المنطقة ...",
+        "position": 2
+      },
+      {
+        "title": "شقق للبيع بالعبور الجديدة 90 متر حي المجد – اسكان اجتماعي",
+        "link": "https://www.tiktok.com/@bola.amer0/video/7345470752340135174",
+        "displayedLink": "أكثر من 246.9 ألف مشاهدة  ·  قبل سنتين",
+        "snippet": "شقة للبيع في العبور الجديدة بحي المجد بمساحة 90 متر، ضمن مشروع اسكان اجتماعي. الشقة متشطه بالكامل وتتميز بواجهة بحري ف شرقي، مع مطبخ مجهز ...",
+        "position": 3
+      },
+      {
+        "title": "شقة أحلامك في العبور الجديدة بسعر 550 ألف وتسليم فوري",
+        "link": "https://www.google.com/goto?url=CAESfAHEIkXXRYU7tw8fLohm6dFZStxZdT2FkLQClG-ZbUPpGApMmB1uP3-Iamt-U7v4Csl70xkR24WWA1Lzu-7zGR2AGLS5cwoen1ytWOHoTWRaxH6RgGL04wJTbzM5t1-9YDbA_pMItHcfMMcteqxWbCt6VB4YQNAYCbXBe8Y&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "أكثر من 9.4 ألف مشاهدة  ·  قبل 10 أشهر",
+        "snippet": "“شقة أحلامك في العبور الجديدة بـ ٥٥٠ ألف واستلام فوري! ✨ يلا قبل ما تروح عليك!”01036932697#أسعار_لقطة #العبور_دوله_جوه_دوله #عقارات # ...",
+        "position": 4
+      },
+      {
+        "title": "العبور الجديدة: مدينة مخططة حديثًا وفرص استثمارية بأسعار وأنظمة ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXIgX_gse3qVUfsdN4tSRRfaOnHNFTWwtrve1VfrpTUGpY4mdzzh6Dap3rNJG_Yk_CTXT6Ks8mM35HAz2atvI5LaKWND60FN7zfrl6lhTjU8Dqj91ZDxNhlNZ6LyuW69Soy0wahx9RQ2KQe897xwchIa1iM01A&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "https://www.tiktok.com › video",
+        "snippet": "العبور الجديدة ليست مجرد امتداد للعبور القديمة بل مدينة مصممة بتخطيط حديث ومحاور وطرق واسعة تربطها بمناطق استراتيجية مثل القاهرة الجديدة، العاصمة الإدارية، ...",
+        "position": 5
+      },
+      {
+        "title": "شقق الإسكان الاجتماعي في العبور الجديدة 90 متر – التفاصيل",
+        "link": "https://www.google.com/goto?url=CAESdQHEIkXXaTr5nzH3ahxAYN535EbLURjTYsw8K4RLoJvgPJd0XmOrhnab4inxgnwMiBYQeXTO5P2rTZ20p4VDaldpv8AjvjJoV40eo7SJc-VjHzvXt29NkfTb8WKoshjanmGz5JJOuQBKTP7nkzByIThUvFn-rw&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "أكثر من 29 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "تتميز عمارات الإسكان الاجتماعي في العبور الجديدة بتصميم موحد، وغالبًا ما تظهر بألوان مميزة مثل اللون البرتقالي في بعض العمارات، مع واجهات حديثة ...",
+        "position": 6
+      },
+      {
+        "title": "شقق للبيع في العبور الجديدة - طوب أحمر 160 متر",
+        "link": "https://www.google.com/goto?url=CAESfAHEIkXX0w9RHPXGa1qvuKWzOf0p9dM9AvhThN5yO_SIlJvO5Frx6jkhmIVjfqQGbC7o1TC26m3BXC--CFw3TF_5NguIzemiDdKwQW8xkSmDEh6eI7cQ75e8HC9e0WEGDekvxYLdI98j6QnMzPBc-yET_JHvA4p4P3m4Sh4&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "https://www.tiktok.com › photo",
+        "snippet": "شقق للبيع في العبور الجديدة - طوب أحمر 160 متر. عرض لبيع شقق 160 متر في العبور الجديدة، قطعة 11، بلوك 3، طوب أحمر. شقق في الدور الأرضي والثالث. تسليم فوري.",
+        "position": 7
+      },
+      {
+        "title": "شقق تمويل عقاري بالعبور: 320 شقة كاملة التشطيب في الحي ...",
+        "link": "https://www.google.com/goto?url=CAESdwHEIkXXE-60hzAMPOmfIFbpXDGdeUOiKTR8oYzTN7qHXzmkax8xhi6f24k2di8h5xXkL56fZXVhJZyPaMpXR36Av782Q6hF1NeKxPX24XGGZzB1mgYN1NWWU1nh-C0pDCwz9HBnlqtJHCjCehcWWF45xszwn0VH&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "أكثر من 128.7 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "أعلن صندوق تمويل المساكن التابع لوزارة الإسكان عن طرح 320 شقة كاملة التشطيب في الحي الثاني بمدينة العبور، بعد انتظار طويل من سكان محافظة ...",
+        "position": 8
+      },
+      {
+        "title": "شقة 63 متر جاهزة للسكن في العبور على طريق الشباب | كود 8",
+        "link": "https://www.google.com/goto?url=CAESewHEIkXX4TITtaRx-H9lzoSaAdv7cDW6PpBOBXZ9ILdqcDyyO8pEXIREtGLi_Yeyiru9IegLofeYgejt8bC1oWLm8FfXwvo3fT3NfRt7brOyar-VdEWIs2BB6093zuBhfoyphlTYilWnOgFPIl6fJ2JWznjti7537gEjqA&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "أكثر من 452.3 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "* **المساحة:** مساحة 63 مترًا تجعلها مثالية للأفراد أو الأسر الصغيرة التي تبحث عن شقة مريحة وعملية. **كود الشقة: 8️⃣** إذا كنت تبحث عن شقة في ...",
+        "position": 9
+      },
+      {
+        "title": "حال سكان العبور لمه يخرجوا منها",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXXFCmtKiR4VGqGgRpHj9kUCf8sYwqKRAALva3uHoSoax2nGuyqBnoTi7aTFSLhtBoJUPj0h0ZqwL_rzcwxVQG5ng72Mk3mZGQhHOMRQm1je7uzY3dbSTCWzFIcbA65Rch4YiF3szLLHjADCerMUqXgHTiY_kU&gsessionid=Zqm8SxAlKPJ7UZUx9grsuLd_GtkjXMpxjGOBMSCydyJepr7upDicZQ",
+        "displayedLink": "https://www.tiktok.com › video",
+        "snippet": "تعد العبور الجديدة من أكثر المناطق تميزاً في السكن، حيث تحتضن العديد من المشروعات العقارية التي تلبي احتياجات السكان. يتميز المكان بوقوعه خلف جهاز مدينة العبور ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:14.971544+00:00"
+}

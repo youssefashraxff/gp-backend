@@ -1,0 +1,311 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "pois_r1000",
+  "params": {
+    "kind": "pois",
+    "radius": 1000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];(node(around:1000,30.1938258,31.4601618)[amenity];node(around:1000,30.1938258,31.4601618)[shop];node(around:1000,30.1938258,31.4601618)[leisure];way(around:1000,30.1938258,31.4601618)[amenity];way(around:1000,30.1938258,31.4601618)[shop];way(around:1000,30.1938258,31.4601618)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 11,
+  "error": "",
+  "seconds": 31.901,
+  "raw": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-28T10:41:50Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 4901469923,
+        "lat": 30.187094,
+        "lon": 31.4560256,
+        "timestamp": "2017-06-07T08:46:42Z",
+        "version": 1,
+        "changeset": 49329284,
+        "user": "Amir Elzlaam",
+        "uid": 6135074,
+        "tags": {
+          "amenity": "waste_disposal",
+          "operator": "حلاوه بيست اوف فرانس"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702085,
+        "lat": 30.2006977,
+        "lon": 31.4668126,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "اسواق نور",
+          "name:ar": "اسواق نور",
+          "phone": "01032697425",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702086,
+        "lat": 30.2003082,
+        "lon": 31.4662093,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "حور",
+          "name:ar": "حور",
+          "phone": "01022490096",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702285,
+        "lat": 30.2006928,
+        "lon": 31.466545,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "الحسيني",
+          "name:ar": "الحسيني",
+          "phone": "01150210376",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10214911651,
+        "lat": 30.1956567,
+        "lon": 31.4595447,
+        "timestamp": "2025-04-30T08:25:24Z",
+        "version": 4,
+        "changeset": 165623539,
+        "user": "Blue Clip",
+        "uid": 22694011,
+        "tags": {
+          "air_conditioning": "yes",
+          "amenity": "fast_food",
+          "branch": "dounts",
+          "brand": "دانكن",
+          "brand:ar": "دانكن",
+          "brand:en": "Dunkin'",
+          "brand:wikidata": "Q847743",
+          "cuisine": "donut;coffee_shop",
+          "drive_through": "yes",
+          "name": "دانكن دونتس",
+          "name:ar": "دانكن دونتس",
+          "name:en": "Dunkin' Donuts",
+          "outdoor_seating": "yes",
+          "takeaway": "yes",
+          "website": "https://dunkin.ae/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10214983372,
+        "lat": 30.194938,
+        "lon": 31.4601777,
+        "timestamp": "2022-11-24T15:33:26Z",
+        "version": 1,
+        "changeset": 129332154,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "tags": {
+          "addr:city": "El Obour",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:wikidata": "Q839466",
+          "cuisine": "pizza",
+          "drive_through": "yes",
+          "name": "Domino's",
+          "operator": "Domino's",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13688898402,
+        "lat": 30.1983311,
+        "lon": 31.464498,
+        "timestamp": "2026-03-29T15:51:51Z",
+        "version": 1,
+        "changeset": 180591237,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "ريفلكت"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14133439601,
+        "lat": 30.1956806,
+        "lon": 31.4650383,
+        "timestamp": "2026-08-29T15:20:39Z",
+        "version": 1,
+        "changeset": 188203054,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد العزيز"
+        }
+      },
+      {
+        "type": "way",
+        "id": 773688361,
+        "timestamp": "2020-02-21T06:12:48Z",
+        "version": 2,
+        "changeset": 81302698,
+        "user": "MapsAndMarinates",
+        "uid": 8794050,
+        "center": {
+          "lat": 30.2013841,
+          "lon": 31.4552763
+        },
+        "nodes": [
+          7221756502,
+          7221756501,
+          7221756500,
+          7221756499,
+          7221756498,
+          7221756497,
+          7221756496,
+          7221756495,
+          7221756494,
+          7221756493,
+          7221756492,
+          7221756491,
+          7221756490,
+          7221756489,
+          7221756488,
+          7221756487,
+          7221756486,
+          7221756485,
+          7221741384,
+          7221741383,
+          7221741382,
+          7221741381,
+          7221741380,
+          7221741379,
+          7221741378,
+          7232092303,
+          7221741377,
+          7221741376,
+          7221741375,
+          7221741374,
+          7221741373,
+          7221741372,
+          7232092302,
+          7221741371,
+          7221741370,
+          7221741369,
+          7221741368,
+          7221741367,
+          7221741366,
+          7221741365,
+          7221741364,
+          7221741363,
+          7221741362,
+          7221741361,
+          7221741360,
+          7221741359,
+          7221741358,
+          7221756502
+        ],
+        "tags": {
+          "leisure": "sports_centre",
+          "name": "AutoVroom",
+          "sport": "motor;karting"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1116913396,
+        "timestamp": "2022-11-24T15:19:18Z",
+        "version": 1,
+        "changeset": 129331376,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "center": {
+          "lat": 30.1952974,
+          "lon": 31.45988
+        },
+        "nodes": [
+          10214911645,
+          10214911646,
+          10214911647,
+          10214911648,
+          10180531626,
+          10214911649,
+          10214911650,
+          10214911645
+        ],
+        "tags": {
+          "addr:city": "El Obour",
+          "amenity": "fuel",
+          "brand": "Master",
+          "cafe": "yes",
+          "food": "yes",
+          "fuel:octane_92": "yes",
+          "fuel:octane_95": "yes",
+          "name": "Master"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1116916498,
+        "timestamp": "2022-11-24T15:28:16Z",
+        "version": 1,
+        "changeset": 129331855,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "center": {
+          "lat": 30.1932846,
+          "lon": 31.4617248
+        },
+        "nodes": [
+          10214984317,
+          10214984318,
+          10214984319,
+          7954221317,
+          10214984317
+        ],
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "amenity": "fuel",
+          "brand": "Total",
+          "brand:wikidata": "Q154037",
+          "fuel:octane_92": "yes",
+          "fuel:octane_95": "yes",
+          "name": "Total",
+          "operator": "Total"
+        }
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v2",
+  "notes": "osm v2 control site",
+  "timestamp": "2026-11-28T10:42:57.828004+00:00"
+}

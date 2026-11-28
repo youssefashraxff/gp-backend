@@ -1,0 +1,16 @@
+{
+  "description": "Code-based relevance. A result (title + snippet + URL, lowercased, Arabic normalised) is relevant when it contains a keyword of the query's site AND one of the query's group. Keywords are matched as substrings after the same normalisation.",
+  "fresh_months": 24,
+  "place": {
+    "ain_sokhna": ["sokhna", "sukhna", "sokna", "galala", "ataqa", "السخنه", "سخنه", "الجلاله", "عتاقه"],
+    "new_obour": ["obour", "العبور"]
+  },
+  "topic": {
+    "market_division": ["market", "sector", "hospitality", "f&b", "food", "restaurant", "retail", "commercial", "investment", "سوق", "قطاع", "فنادق", "مطاعم", "تجاري", "استثمار", "حجم"],
+    "area_projects": ["project", "development", "compound", "road", "launch", "plan", "مشروع", "مشروعات", "تطوير", "كمبوند", "طريق", "طرح", "اطلاق"],
+    "prices": ["price", "per meter", "sqm", "egp", "for sale", "cost", "سعر", "اسعار", "متر", "جنيه", "للبيع"],
+    "demand_seasonality": ["visitor", "tourist", "season", "summer", "weekend", "holiday", "occupancy", "demand", "resident", "services", "زوار", "سياح", "موسم", "صيف", "اجازه", "اشغال", "طلب", "سكان", "خدمات"],
+    "supply": ["hotel", "room", "mall", "commercial center", "number of", "فندق", "فنادق", "غرف", "مول", "مولات", "مراكز تجاريه", "عدد"],
+    "strategy_fit": ["vision 2030", "strategy", "government", "ministry", "plan", "national", "رؤيه 2030", "استراتيجيه", "الحكومه", "وزاره", "خطه", "قومي"]
+  }
+}

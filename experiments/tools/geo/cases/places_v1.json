@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "description": "Google Places Nearby (New) vs Foursquare Places search, 6 competitor kinds from Ali's M Hub concept, 1 km and 3 km. Then Place Details for the 5 nearest Google places that have reviews.",
+  "providers": ["google", "foursquare"],
+  "radii_m": [1000, 3000],
+  "categories": [
+    {"id": "cafe", "google_types": ["cafe", "coffee_shop"], "fsq_query": "coffee"},
+    {"id": "restaurant", "google_types": ["restaurant", "fast_food_restaurant"], "fsq_query": "restaurant"},
+    {"id": "pharmacy", "google_types": ["pharmacy", "drugstore"], "fsq_query": "pharmacy"},
+    {"id": "grocery", "google_types": ["supermarket", "convenience_store", "grocery_store"], "fsq_query": "supermarket"},
+    {"id": "sports", "google_types": ["gym", "sports_complex", "athletic_field"], "fsq_query": "padel"},
+    {"id": "mall", "google_types": ["shopping_mall"], "fsq_query": "mall"}
+  ],
+  "details_max": 5
+}

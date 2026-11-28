@@ -1,0 +1,68 @@
+{
+  "tool": "routes",
+  "provider": "osrm",
+  "case": "tenth_ramadan_to_site",
+  "params": {
+    "origin": {
+      "lat": 30.303266599999997,
+      "lng": 31.740273900000002
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    }
+  },
+  "meta": {
+    "landmark": "tenth_ramadan",
+    "direction": "to_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.23,
+  "raw": {
+    "code": "Ok",
+    "routes": [
+      {
+        "legs": [
+          {
+            "steps": [],
+            "weight": 1529.3,
+            "summary": "",
+            "duration": 1529.3,
+            "distance": 33121.4
+          }
+        ],
+        "weight_name": "routability",
+        "weight": 1529.3,
+        "duration": 1529.3,
+        "distance": 33121.4
+      }
+    ],
+    "waypoints": [
+      {
+        "hint": "RcApgf___38BAAAACAAAACAAAAAIAAAAiskeQO14FkEskUpCZBZDQQEAAAAIAAAAIAAAAAgAAADKHgAAi1HkAQZkzgFyUeQBI2TOAQgArw4AAAAA",
+        "location": [
+          31.740299,
+          30.303238
+        ],
+        "name": "شارع ابو بكر الصديق",
+        "distance": 4.014462971
+      },
+      {
+        "hint": "CFm2if___38CAAAAFwAAACMAAAAkAwAACNLOQOtjPkJiEbRCj-btRAIAAAAXAAAAIwAAACQDAADKHgAA-4nhAXC2zgFKhOEBMLTOAQQAvwkAAAAA",
+        "location": [
+          31.558139,
+          30.324336
+        ],
+        "name": "الطريق الدائري الإقليمي",
+        "distance": 153.9838283
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:58.655156+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "version": "v1",
+  "description": "Google Routes with traffic, both directions, 4 times of the next Sunday (workday) and Friday midday, between the site and 5 places customers could come from. Google's resolved landmark points then go to OpenRouteService and OSRM (no traffic).",
+  "landmarks": [
+    {"id": "airport", "address": "Cairo International Airport, Cairo, Egypt"},
+    {"id": "obour_city", "address": "El Obour City, Qalyubia Governorate, Egypt"},
+    {"id": "heliopolis", "address": "Korba, Heliopolis, Cairo, Egypt"},
+    {"id": "madinaty", "address": "Madinaty, Cairo Governorate, Egypt"},
+    {"id": "tenth_ramadan", "address": "10th of Ramadan City, Sharqia Governorate, Egypt"}
+  ],
+  "departures": [
+    {"label": "sun_0800", "weekday": 6, "time": "08:00"},
+    {"label": "sun_1300", "weekday": 6, "time": "13:00"},
+    {"label": "sun_1730", "weekday": 6, "time": "17:30"},
+    {"label": "sun_2200", "weekday": 6, "time": "22:00"},
+    {"label": "fri_1300", "weekday": 4, "time": "13:00"}
+  ],
+  "no_traffic_providers": ["openrouteservice", "osrm"]
+}

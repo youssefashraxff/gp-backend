@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_ar_x",
+  "params": {
+    "q": "بادل العبور الجديدة (site:x.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_ar",
+    "variant": "x",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.903,
+  "raw": {
+    "searchParameters": {
+      "q": "بادل العبور الجديدة (site:x.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "beIN SPORTS - عبور يسير للثنائي خوسيماريا وسانتشيث",
+        "link": "https://x.com/beINSPORTS/status/1915453610760298618",
+        "displayedLink": "https://x.com › @beINSPORTS",
+        "snippet": "عبور يسير للثنائي خوسيماريا وسانتشيث #بادل #Padel https://t.co/lNpdhSFt8C.",
+        "position": 1
+      },
+      {
+        "title": "beIN SPORTS - عبور متوقع لتشينغوتو وغالان إلى نصف النهائي",
+        "link": "https://x.com/beINSPORTS/status/1837252898746511585",
+        "displayedLink": "https://x.com › @beINSPORTS",
+        "snippet": "عبور متوقع لتشينغوتو وغالان إلى نصف النهائي #بادل · GALAN. عبور متوقع لتشينغوتو وغالان إلى نصف النهائي · From beinsports.com · 3:10 PM · Sep 20, 2024·. 27.5K.",
+        "position": 2
+      },
+      {
+        "title": "beIN SPORTS",
+        "link": "https://x.com/beINSPORTS/status/1911909832724230267",
+        "displayedLink": "https://x.com › @beINSPORTS",
+        "snippet": "عبور الثنائي ماركيتي ورويث إلى ثاني أدوار بطولة أريدُ قطر الكبرى للبادل 2025 ▶️ شاهد ملخص المباراة #بادل | #بطولة_أريد_قطر_الكبرى_للبادل #Padel | #",
+        "position": 3
+      },
+      {
+        "title": "beIN SPORTS on X",
+        "link": "https://www.google.com/goto?url=CAESbwHEIkXXR3A5eqpoNrcGfl14povahyy-DModnVXEWXgubHUQIQKLmG24gEhx2eFhu7TsZ2N1OZr-8kxjFtFFwsE_15n2Ecxk4vCjpIyrz1Ir7F7FJNHNkC7zX_WSjrT0MFT8jN1Qn-Nb1JX12ueddg&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "أكثر من 10 معجب  ·  قبل 3 أسابيع",
+        "snippet": "صراع على بطاقة العبور إلى النهائي! الأرجنتين تواجه إيطاليا في قمة مرتقبة ضمن نصف نهائي الرجال في كأس العالم للبادل قطر 2026!",
+        "position": 4
+      },
+      {
+        "title": "أريانا سانشيث 🇪🇸 وباولا خوسيماريا 🇪🇸 تفشلان في العبور ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXTDJR36bNgbpAUuKyj9Kl5-iLV1UrVlZ29rjvcPjpWZsWmsT73jRgVdlsS5R45nzU6l-QLL3n2wunEKa9pvlBVVi23PtN2hu5N_CXrB3uJJ1nU7j29PITk6is-VGEdBWwh5RQG2fzAlDbAElDj1XB6hkS4i5Q&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "قبل سنة واحدة",
+        "snippet": "أريانا سانشيث وباولا خوسيماريا تفشلان في العبور إلى نهائي بطولة المكسيك بريميير بادل بخسارتهما 1 - 2 على يد صوفيا أراوخو ومارتا",
+        "position": 5
+      },
+      {
+        "title": "\"أريانا سانشيث 🇪🇸 وباولا خوسيماريا 🇪🇸 تفشلان في العبور إلى ...",
+        "link": "https://www.google.com/goto?url=CAESdAHEIkXXqvc4QuUAY3Y5pQCyt_R5vVdU9AFyz17PA_04ha8zAH3F0_sYCHVJ9gIRoB-veZWoiiG_MNmMkAu-ecFlsXt2TuWF3oJGCuuTH_RDQXZ6lvdES3ffinxmn08cqwPShS9BSYS0JB_UZ8rkvWnaHa7a&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "https://x.com › @falehalshaamry1",
+        "snippet": "أريانا سانشيث وباولا خوسيماريا تفشلان في العبور إلى نهائي بطولة المكسيك بريميير بادل بخسارتهما 1 - 2 على يد صوفيا أراوخو ومارتا أورتيغا.",
+        "position": 6
+      },
+      {
+        "title": "\"أريانا سانشيث 🇪🇸 وباولا خوسيماريا 🇪🇸 تفشلان في العبور إلى ...",
+        "link": "https://www.google.com/goto?url=CAEScgHEIkXX_bm_hlgJfGtoHQMPG0gTCBdHkV8SVgwEciN7zYPPVrmRm8WceeN9Fq1brQToRXg7a36PG2zs4jDm67fE3sTlyKEciG5x1I6I8kefXLwB6Q6mn2woJ8Er1qLo37VA24s_PHZ3wDIhqpWO4COing&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "https://x.com › @Q8_Microphone",
+        "snippet": "أريانا سانشيث وباولا خوسيماريا تفشلان في العبور إلى نهائي بطولة المكسيك بريميير بادل بخسارتهما 1 - 2 على يد صوفيا أراوخو ومارتا أورتيغا.",
+        "position": 7
+      },
+      {
+        "title": "Souq7سوق (@Souq7Azad) / X",
+        "link": "https://www.google.com/goto?url=CAESUwHEIkXXx1VWp70jySrD8HhcH7DXIFHTZdT55tGJxTyZrJy-DaZ2Uh2SVvSpzJjtKy3BBHt88T187FixeJhRZchUgmohr9hyLeLayOIi5YZExL37&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "أكثر من 6.7 ألف متابع",
+        "snippet": "تسوّق للعائلة كلها... من مكان واحد. 🛍️ نرحب بافتتاح R&B في #سوق7، بتشكيلة متنوعة من الأزياء والإكسسوارات للرجال، والنساء، والأطفال. Fashion ...",
+        "position": 8
+      },
+      {
+        "title": "الاتحاد السعودي للبادل (SPF) в X: „أجواء نصف النهائي 🔥🐺 أقوى ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXN_ZgD48SJ8BFeNe4EovS26cL9E-u6otGqE0rMIcTBb9aqgdMKyfiN_C1KqMg5sq0QS1vyvQaUnLGt8B0YSWG8w_KED_T54rfBDvb3LQ_p79MFW-uvXLG-kIC2npTGjFCsvOBOY3afvpLgDYWQXFVkXPBtQLs&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "https://x.com › @Saudipadel_sa",
+        "snippet": "أجواء نصف النهائي أقوى المواجهات… والكل يقاتل على بطاقة العبور للنهائي @TheebRentACar · 16:23 · 24.04.2026 г.·.",
+        "position": 9
+      },
+      {
+        "title": "\"عابد أبو فخر موجود لدى عشائر البدو في منطقة اللجاة بدرعا وهو ...",
+        "link": "https://www.google.com/goto?url=CAEScQHEIkXXROpwT05YrV5fpoyvJyXsMhXKb58jxEdOAcJpmuOZaz2EhG077QlyKpnXZpCqsS_ic551tpJFBloMeyH7cRn7w13Q7c2ESmGqF4E6v1TQ0mehjoa5mIDGmm8igJjebP4kSYA_Ttzi1xrFnYQr&gsessionid=8BOcBmcqvbNT2YZXD_g4KivjoCgEVQjODRNHrGVbG4NKOTp730-r3g",
+        "displayedLink": "أكثر من 290 معجب  ·  قبل سنة واحدة",
+        "snippet": "عابد أبو فخر موجود لدى عشائر البدو في منطقة اللجاة بدرعا وهو بخير كما ظهر في مقطع قبل قليل والقافلة التي كان فيها حاولت العبور من جهة خربا ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:44.530341+00:00"
+}

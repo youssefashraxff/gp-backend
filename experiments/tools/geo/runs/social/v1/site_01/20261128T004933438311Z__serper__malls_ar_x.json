@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "malls_ar_x",
+  "params": {
+    "q": "مول العبور الجديدة (site:x.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "malls_ar",
+    "variant": "x",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 4.279,
+  "raw": {
+    "searchParameters": {
+      "q": "مول العبور الجديدة (site:x.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "رسالة للرئيس هيئة المجتمعات العمرانية الجديدة وجهاز مدينة العبور ...",
+        "link": "https://x.com/radwanelzayaty/status/2055279297997295974?lang=ca",
+        "displayedLink": "https://x.com › @radwanelzayaty",
+        "snippet": "رسالة للرئيس هيئة المجتمعات العمرانية الجديدة وجهاز مدينة العبور ينفذان مشروعا إجراميا لإغتيال الحزام الأخضر بطريق العبور الرئيسي لإقامة مولات تجارية علي ...",
+        "position": 1
+      },
+      {
+        "title": "Al Kayan Premium (@KayanPremium) / X",
+        "link": "https://x.com/KayanPremium",
+        "displayedLink": "عدد المتابعين: 2",
+        "snippet": "يُعد مول بروة الشروق ( Barwa El Shorouk ) واحدًا من أحدث وأهم المشروعات التجارية التي أطلقتها شركة بروة للتطوير والاستثمار العقاري، حيث حرصت الشركة على ...",
+        "position": 2
+      },
+      {
+        "title": "«فاليرو» تطلق مول «SIA Town» بالعبور الجديدة وتعلن عن ...",
+        "link": "https://x.com/Ncairoproperty/status/2073846101879234907",
+        "displayedLink": "https://x.com › Ncairoproperty › status",
+        "snippet": "«فاليرو» تطلق مول «SIA Town» بالعبور الجديدة وتعلن عن التسليم الفعلي لوحداته للتفاصيل: tinyurl.com/yc6pvwss · #فاليرو_للتطوير_العقاري",
+        "position": 3
+      },
+      {
+        "title": "رسالة للرئيس هيئة المجتمعات العمرانية الجديدة وجهاز مدينة ...",
+        "link": "https://www.google.com/goto?url=CAEScwHEIkXXP-cxLQwJflb2eWfLimmjhSy6yG1kUDyMY1KFNJuUuw3E3RJOlO-CffqWZQ2aEc2VytSTK5QafbGCkfj74RJrfMiUee_r-Ytma4MoT4Jfb8pzEpactB6mqENlFz0I0gRN4NOPXbG30R7OcXktVxo&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "أكثر من 90 معجب  ·  قبل 6 أشهر",
+        "snippet": "رسالة للرئيس هيئة المجتمعات العمرانية الجديدة وجهاز مدينة العبور ينفذان مشروعا إجراميا لإغتيال الحزام الأخضر بطريق العبور الرئيسي لإقامة مولات ...",
+        "position": 4
+      },
+      {
+        "title": "ريفلكت للتطوير العقاري تطلق مشروع فيلفت مول بمدينة ...",
+        "link": "https://www.google.com/goto?url=CAEScwHEIkXXx7moat-Xv_3DGE2ljSt0mW_5vMw0FwCzQqizH8NCo02ysbl1k_Vk1bvvDlom63WO3P0qlumcLu0u2ujxb3IrgQnSfSQkRe1H0ezmkDjpFPjxDaK9ZktybOzNBNfBZrwJBvuslg_6wjUGwbenCzo&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "2 نقرة على الزر أعجبني  ·  قبل سنة واحدة",
+        "snippet": "ريفلكت للتطوير العقاري تطلق مشروع فيلفت مول بمدينة العبور للتفاصيل https://t.co/xt64aZ7m1s #ريفلكت_للتطوير_العقاري #ريفلكت #Reflect ...",
+        "position": 5
+      },
+      {
+        "title": "\"تدمير الحزام الأخضر للعبور من أجل مشاريع تجارية.. مذابح ...",
+        "link": "https://www.google.com/goto?url=CAESdAHEIkXXvnTAdSRtu2WkHlpCR3bo-aB6OR6OvUtZeBuvJ2KL3EiBKzHWNlYvTrejvXvvjV4hHNfeqObPjmU-ECK2Dw0U2UX4WhB0_CSmhE21g979Y50oDadNViiSPldgjIYtK0BS2jEfRV2_YzW9ufF5U6NC&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "أكثر من 20 معجب  ·  قبل 3 أسابيع",
+        "snippet": "... مول سيليكت العبور، وكذلك مول أنفينيتي، دا بجانب شركة الكويت للتطوير العقاري اللي أعلنت عن مشروع تجاري في المدينة هي الأخرى. ***. - دا ...",
+        "position": 6
+      },
+      {
+        "title": "Tamer Abdo Amin",
+        "link": "https://www.google.com/goto?url=CAEScgHEIkXX7eYakMcLzBaRZ1fDENpUuIGgcfDkDic-YcAiZWrG-Xk26nnqupGXpFPUSlg1BUuZWfXu1W6R6gFTB4G65LqANQx-goLh4jeMmq9k18j9tHQwrohnG0-RFZ1AjVHc1c_zvo_21FF-lGcJsFDDUg&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "أكثر من 320 معجب  ·  قبل شهرين",
+        "snippet": "أعتقد إن المعلومات اللي هتتكتب في البوست ده تخليه واحد من أهم البوستات اللي ممكن تشوفها في 2026 وما بعدها.. خلال الشهرين اللي فاتوا كنت عايز ...",
+        "position": 7
+      },
+      {
+        "title": "العملة السورية الجديدة ليست \"حذف أصفار\".. بل \"كمين مالي ...",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXyNgTWNNVJ23AdT7M3vCrO16Hwo7kTil_w44sM0CXayRbSrIzKRApiEROhxBbP61KKNeP6Wnd-TQNckLl_LwRMT1upe6sRqpLbW0RwrtmJ19w1Jwj3Pn2ZWQXA3iiPP8UTwJ4AgeLoQ&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "أكثر من 1.9 ألف معجب  ·  قبل 11 شهرًا",
+        "snippet": "الخلاصة: الدولة السورية الجديدة تسحب البساط من تحت \"اقتصاد الظل\". المال الذي كان يمول \"الكبتاغون\" والسلاح بالأمس، سيصبح اليوم بلا قيمة قانونية.",
+        "position": 8
+      },
+      {
+        "title": "ابدأ حياتك من جديد (@startanew_house) ...",
+        "link": "https://www.google.com/goto?url=CAESWQHEIkXXFgxFJjd7tYVKHFKyd9ZszkpqhDV_s_Bp3MpTVbXlCLhwOkqBumi6XC7Uq_fEibYIIWIpi1FdwwuMHOCM086QYz7EXlqxZKf6GHEu0PF2ib0kKSV6&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "https://x.com › startanew_house",
+        "snippet": "أرض مشاركة 31 فدان (130,200 م²) مدينة العبور الجديدة أمام سكن مصر وكمبوند البروج عمراني متكامل خالصة ومحضر استلام buff.ly/ZFdbPtt #عقار #أرض #مشاركة #مصر ...",
+        "position": 9
+      },
+      {
+        "title": "مستلزمات أمن صناعى : شارع عماد الدين - 6 اكتوبر ميدان ليلة ...",
+        "link": "https://www.google.com/goto?url=CAEScQHEIkXXT8NFxgUquhRm82a2EFCcqAxgGadthFcxRZ4BotDcF5jX1YLtIT3pbp9GfpOQiqe5rbqU6RDwev51RW1amiWUSDhdBjIpox5YhnJrUrZVHWIGVSa40J_rq96-wCXYngpm5DT07DDHYSiQezWf&gsessionid=W6QeIoo0UPZMY2LvBzME5f_S0KSpXqG6Io2cqotH547L13ktLsWhOA",
+        "displayedLink": "أكثر من 3.7 ألف معجب  ·  قبل شهرين",
+        "snippet": "... الجديدة في وسط البلد - شارع رمسيس -مستلزمات أمن صناعى : شارع عماد ... العبور -ملابس : العتبة و وكالة البلح -إكسسوار و قطع غيار السيارات ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:33.438041+00:00"
+}

@@ -1,0 +1,71 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "pharmacy_r1000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 1000,
+    "query": "pharmacy"
+  },
+  "meta": {
+    "category": "pharmacy",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.92,
+  "raw": {
+    "results": [
+      {
+        "fsq_place_id": "4ee5e3820aaf89395127693a",
+        "latitude": 30.199681255143055,
+        "longitude": 31.459491116770508,
+        "categories": [
+          {
+            "fsq_category_id": "4d954b06a243a5684965b473",
+            "name": "Apartment or Condo",
+            "short_name": "Apartment or Condo",
+            "plural_name": "Apartments or Condos",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2011-12-12",
+        "date_refreshed": "2024-11-12",
+        "distance": 653,
+        "extended_location": {},
+        "link": "/places/4ee5e3820aaf89395127693a",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "El Basyouni Pharmacy",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4ee5e3820aaf89395127693a",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      }
+    ],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.1938258,
+            "longitude": 31.4601618
+          },
+          "radius": 1000
+        }
+      }
+    }
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:30.982356+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "description": "7 x 7 grid 100 m apart over the plot (600 m x 600 m) plus 8 points at 1 km and 3 km. Google vs OpenTopoData SRTM 30 m and ASTER 30 m.",
+  "grid_n": 7,
+  "grid_spacing_m": 100,
+  "ring_m": [1000, 3000],
+  "providers": ["google", "opentopodata_srtm30m", "opentopodata_aster30m"]
+}

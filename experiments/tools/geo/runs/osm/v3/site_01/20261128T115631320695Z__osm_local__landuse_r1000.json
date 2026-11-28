@@ -1,0 +1,44 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "landuse_r1000",
+  "params": {
+    "kind": "landuse",
+    "radius": 1000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];(way(around:1000,30.32376,31.5566816)[landuse];relation(around:1000,30.32376,31.5566816)[landuse];);out meta center;"
+  },
+  "meta": {
+    "kind": "landuse",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.005,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "area",
+        "id": "w1340175433",
+        "tags": {
+          "landuse": "military"
+        },
+        "timestamp": "2024-12-04T23:43:36+00:00",
+        "center": {
+          "lat": 30.321646,
+          "lon": 31.5703835
+        }
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v3",
+  "notes": "osm v3 local",
+  "timestamp": "2026-11-28T11:56:31.320662+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_ar_instagram",
+  "params": {
+    "q": "كافيهات العبور الجديدة (site:instagram.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_ar",
+    "variant": "instagram",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.931,
+  "raw": {
+    "searchParameters": {
+      "q": "كافيهات العبور الجديدة (site:instagram.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "جربنا بعض الكافيهات في العبور💜 قولنا انت كمان جربت ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXsePWGFZXY66Rfj08VDXUadCLxRXJ35EHi1x_6flwHTBChfbfrrhLvoch01lJAkqBYpUE88Abfd3T060yP35RbKZm5xVdoEwgpkV4OUun7PU-gbfXWQWUu6SoUsf6bYr2juE&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 650 معجب  ·  قبل سنة واحدة",
+        "snippet": "رد على التليفون.. قهوة بويو بترن عليك! ☕ ابتداءً من 8:00 الصبح، بويو بيقدملك تشكيلة مشروبات سخنة وباردة هتدمنها من أول مرة! قولولنا ...",
+        "position": 1
+      },
+      {
+        "title": "جديد في العبور كافيه @notcoffee.eg موجود في C3 بجانب ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXqF-ViYsg5-hFdhxAWyAgHnwbz5sXnGvTfhljeN_cqewdYoWKeP-q9G-r8J23UywAvdmorFRSO_D2dXnTv9nKXnyRDVz5Ajhik-wJL8yKZBYCt6r8NyDrUxZCV-HrREA&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 560 معجب  ·  قبل سنة واحدة",
+        "snippet": "جديد في العبور @snax.eg في c3 mall قدام كارفور الجديد. هتلاقوا عندهم زلابية و French toast و pancakes وحاجات تانية sweet كتير وعندهم ...",
+        "position": 2
+      },
+      {
+        "title": "كافيهات لذيذه في العبور 📍 #fyp #explorepage✨ #explore #food # ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXX05sHNuf6RYq5eeCa-fAlWNvSKjsoI4Y1uDFI5LXQLQi5EE9-HWYXJEtLAHPNsdGCMLvugq4FhzmKuKq7-UwN56hQZ6f9Nqn6eetJGvsYSGrSG0PSSThkf5_p8IIfYJw&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "https://www.instagram.com › ...",
+        "snippet": "لو بتدور على كافيه هادي في التجمع تقدر تشتغل فيه أو تقضي كام ساعة هدوء، فأنا لقيت المكان ده. Cake cafe - new cairo من أحلى الكافيهات الهادية اللي ...",
+        "position": 3
+      },
+      {
+        "title": "360 Cafe (@360cafe.eg) · Obour City, Egypt",
+        "link": "https://www.google.com/goto?url=CAESYQHEIkXXQ-gTDNH1Z1PUesj6oRuwrOy4Lej3ep5Q1W9dcERsjlSqV0zyNBhm6Gl3g_WkjosVoz1c2QEwgvWkqXahH1BJLzaLqBdSv-tbADMLNG_yI-hF6958WhzDZUlaETU&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 32.1 ألف متابع",
+        "snippet": "Upgrade Your Mood with our speciality coffee. C3 mall - obour city ... مندوب طلبات شرب المشروب .. بنوجه نداء لنور تعالى الكافيه عاوزينك .. وعشانك وعشان ...",
+        "position": 4
+      },
+      {
+        "title": "من أجمل كافيهات القهوة المختصة فى العبور 🤩 أجواء المكان تجنن ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXs-JQrtbinv2MuzCNWb10F6hZh4kmIEX6NGyB3iDQuKivNVUEfGpB2nBuoEJbsy8ciLLAnsWC0Bz8KwnlyOL_ZF0xTMEQd_LkpoEYqvIOjhxZ0H0hiMJrngJkWPYxuSPC2e4&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 10 معجب  ·  قبل 4 أيام",
+        "snippet": "مكان خطير في العبور أديله مليون من عشرة أجواء المكان تجنن وفيه تفاصيل كيوت اوى قهوتهم من أجود المحاصيل ☕️ الفطار عندهم لذيذ وكواليتي ...",
+        "position": 5
+      },
+      {
+        "title": "‎كافيهات افينيو مول العبور‎",
+        "link": "https://www.google.com/goto?url=CAES5wEBxCJF141cWZAMTO0F6LU7Zjo2SvlcE6YmAZaRRrAGGki2NfdHno9POqlR8YWyt925l5S4HWxrfkD8cbI32qmtCUeHFoES5Zy_HBHSHXr0qg9Sw0Lq_PTn5nEnayofeWchUsE528e8tIOHwmnErWBngPVTalefHAYS7QHM07TMjvsbqkRlUw1usLC8zQSXyPU9D2WvNXsddro4LSVXMjGXW1cMS2B9eFSlWP5LGQ12EwN7WYh5EJazWZh6ieOkjD5bZL3fO60yGgjhIAP3N7WSUx2wnXSggymfRBSaJoCsyLMXBqGFe1c&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "https://www.instagram.com › popular › كافيهات-افيني...",
+        "snippet": "⁨ ⁨ مكان جديد في شارع فؤاد لمحبين الاماكن الهاديه والروقان والقهوه ☕️ ⁩ 32.2K · كافيه جميل للمثقفين و محبين القراءة مكانه في الديره انصح فيه @ ...",
+        "position": 6
+      },
+      {
+        "title": "احنا_قريبين_منك #العبور #SAMZ_CUP #Specialty_Coffee ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXBz-AhYJh65ajTPINJH9BaOeVL_YJTyV4qZsVFut-7NA4ixmXe-c65iHaMP6iS5iZGsEcMS_sEfWU39a7PTpxCimFpf-KWaNDYBFqTwFpOwgYnBGcjzoHDx2mnD5fs--0fPk&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "2 نقرة على الزر أعجبني  ·  قبل أسبوعين",
+        "snippet": "#BambooNewHouse ☕ SAM'Z CUP – Specialty Coffee وجهة جديدة في العبور، وإضافة جميلة نفتخر إننا ساهمنا في تجهيزها من البداية للنهاية. في المشروع ...",
+        "position": 7
+      },
+      {
+        "title": "جديد في العبور .. كافيه sams في يو بلاز الحي السابع",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXUetAaivdPSToW94oKHkw5wugA7uXHKpdgTS3BEz85LmVhYwRVQTGV2vyoLVhdL50IB_jvCsgLy3rQCoUl9o8yzJlLiCeotfo6-IjY0wN0iWmtOyow9TDNZ3uvD2kP1Q&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 100 معجب  ·  قبل 3 أشهر",
+        "snippet": "من أجمل كافيهات القهوة المختصة فى العبور أجواء المكان تجنن والديكور لذيذ جدا وقعداته مريحة سواء indoor او outdoor وفي تفاصيل كيوت اوى ...",
+        "position": 8
+      },
+      {
+        "title": "Full Cup Cafe (@fullcup._)",
+        "link": "https://www.google.com/goto?url=CAESYAHEIkXXnARNqlCVODMugHN9Y3d47fsiWOzHqr5csfEskdJm6KoAMhfxqNDjkRRM1Q7m_pNPHpgj9-9RXGHjqCtF3vIi67neGi191xlMyJkvWms3BFMehEdYHdXhS91W0Q&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 420 متابع",
+        "snippet": "قهوة؟ ☕️ ياريت! طب مستنيين إيه؟ الـ FULL CUP مستنيكم في العبور قهوة، مشروبات، وقعدة تخلي اليوم أحلى. C3 Mall – Obour City ابعتلنا رسالة ...",
+        "position": 9
+      },
+      {
+        "title": "‎ مكان حلو اووي في العبور لسه فاتح جديد كافيه وحلويات ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXUl-zFDlT1nyw7ZGd2RAtttVLthpDfm--kTZXlMa-YtZKCkd2n-pq0Wb3g-XGAZr8V6y8AiPMJetnvKjZqaD9fjLX6Xlg3nlxBndvL1yXcjIbRwAX0gCRmBeShjQgJ6B08fg&gsessionid=lAQBmmnbvt-aLGUbleu2P7shJTBWqdUVaaAj6dbZASjX8cy_v6ExZw",
+        "displayedLink": "أكثر من 60 معجب  ·  قبل 8 أشهر",
+        "snippet": "مكان حلو اووي في العبور لسه فاتح جديد كافيه وحلويات وفطاير وسحور ... ٥ش المنتزه - مصر الجديدة #chillvibes #cairo #80s #coffee ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:21.724099+00:00"
+}

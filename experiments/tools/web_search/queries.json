@@ -1,0 +1,17 @@
+{
+  "version": "v1",
+  "queries": [
+    {"id": "sokhna_q1", "site": "ain_sokhna", "group": "market_division", "query": "Ain Sokhna hospitality F&B market size 2026"},
+    {"id": "sokhna_q2", "site": "ain_sokhna", "group": "area_projects", "query": "Ain Sokhna new development projects 2026"},
+    {"id": "sokhna_q3", "site": "ain_sokhna", "group": "prices", "query": "Ain Sokhna chalet prices per square meter 2026"},
+    {"id": "sokhna_q4", "site": "ain_sokhna", "group": "demand_seasonality", "query": "Ain Sokhna peak season weekend visitors"},
+    {"id": "sokhna_q5", "site": "ain_sokhna", "group": "supply", "query": "Ain Sokhna number of hotels rooms"},
+    {"id": "sokhna_q6", "site": "ain_sokhna", "group": "strategy_fit", "query": "Ain Sokhna Vision 2030 tourism development"},
+    {"id": "obour_q1", "site": "new_obour", "group": "market_division", "query": "New Obour City commercial retail market 2026"},
+    {"id": "obour_q2", "site": "new_obour", "group": "area_projects", "query": "New Obour City new projects roads 2026"},
+    {"id": "obour_q3", "site": "new_obour", "group": "prices", "query": "New Obour City shop prices per square meter 2026"},
+    {"id": "obour_q4", "site": "new_obour", "group": "demand_seasonality", "query": "New Obour City residents services needs"},
+    {"id": "obour_q5", "site": "new_obour", "group": "supply", "query": "New Obour City malls commercial centers"},
+    {"id": "obour_q6", "site": "new_obour", "group": "strategy_fit", "query": "New Obour City Vision 2030 development"}
+  ]
+}

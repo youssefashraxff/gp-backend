@@ -1,0 +1,29 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "heliopolis_to_site",
+  "params": {
+    "origin": {
+      "lat": 30.0909557,
+      "lng": 31.324386800000003
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    }
+  },
+  "meta": {
+    "landmark": "heliopolis",
+    "direction": "to_site",
+    "slot": "no_traffic"
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Client error '410 Gone' for url 'https://api.openrouteservice.org/v2/directions/driving-car'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410",
+  "seconds": 0.559,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:44.675538+00:00"
+}
