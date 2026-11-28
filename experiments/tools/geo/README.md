@@ -1,5 +1,9 @@
 # Map tool comparison (Places, OSM, Routes, Elevation, Social)
 
+**Result:** Google for Places, Routes and Elevation; OpenStreetMap from a local copy for roads;
+Serper for social. See [`reports/2026-11-28_map_tools_decision.md`](reports/2026-11-28_map_tools_decision.md)
+and the per-tool reports in `reports/`.
+
 Same method as [`../web_search/`](../web_search/README.md): the tools are called **directly,
 with no LLM**, on a fixed test site, every raw response is saved, and the saved files are
 measured afterwards. The results decide which tool each agent uses (plan A3).
