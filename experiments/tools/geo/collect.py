@@ -11,6 +11,7 @@ overwritten). Then run `python -m experiments.tools.geo.score`.
 from __future__ import annotations
 
 import argparse
+import json
 import time
 from datetime import UTC, datetime
 from types import ModuleType
@@ -50,6 +51,13 @@ def _dry_keys() -> Keys:
     )
 
 
+def load_saved(folder) -> list[dict[str, Any]]:
+    """Every run file already saved in a folder, oldest first (names start with the time)."""
+    if not folder.exists():
+        return []
+    return [json.loads(f.read_text(encoding="utf-8")) for f in sorted(folder.glob("*.json"))]
+
+
 def collect_tool(
     tool: str,
     site_id: str,
@@ -58,15 +66,27 @@ def collect_tool(
     keys: Keys,
     dry_run: bool = False,
     base_dir=BASE_DIR,
-    pause: float = PAUSE_SECONDS,
+    pause: float | None = None,
+    only: list[str] | None = None,
 ) -> list[dict[str, Any]]:
-    """Run one tool's calls (then its follow-up calls) and save each result."""
+    """Run one tool's calls (then its follow-up calls) and save each result.
+
+    `only` keeps just those providers. Follow-up calls are then built from every saved
+    run in the folder, so e.g. OpenRouteService can be rerun alone on the landmark points
+    an earlier Google run resolved, without calling Google again.
+    """
     module = TOOLS[tool]
     site = load_site(site_id)
     cases = load_cases(tool, version, base_dir)
     folder = runs_dir(tool, version, site_id, base_dir)
+    wait = float(cases.get("pause_seconds", PAUSE_SECONDS)) if pause is None else pause
     calls: list[Call] = module.build_calls(site, cases, keys)
+    if only:
+        calls = [c for c in calls if c.provider in only]
     if dry_run:
+        if only:  # follow-ups from what is already saved
+            later = module.followup_calls(load_saved(folder), cases, keys)
+            calls += [c for c in later if c.provider in only]
         print(f"[{tool}] {len(calls)} calls planned (+ follow-ups after them):")
         for c in calls:
             print(f"  {c.provider:<22} {c.case}")
@@ -92,10 +112,12 @@ def collect_tool(
                 f"[{tool}] {res['provider']:<22} {res['case']:<32} {res['status']:<6}"
                 f" items={res['n_items']:<4} {res['seconds']}s{err}"
             )
-            time.sleep(pause)
+            time.sleep(wait)
 
     run(calls)
-    run(module.followup_calls(results, cases, keys))
+    basis = load_saved(folder) if only else results
+    followups = module.followup_calls(basis, cases, keys)
+    run([c for c in followups if not only or c.provider in only])
     return results
 
 
@@ -106,13 +128,19 @@ def main() -> None:
     parser.add_argument("--cases", default="v1", help="case file version, e.g. v1")
     parser.add_argument("--notes", default="")
     parser.add_argument("--dry-run", action="store_true", help="list the calls, call nothing")
+    parser.add_argument(
+        "--only", default="", help="comma-separated providers to run, e.g. openrouteservice"
+    )
     args = parser.parse_args()
 
     keys = _dry_keys() if args.dry_run else Keys()
     tools = list(TOOLS) if args.tool == "all" else [args.tool]
     for tool in tools:
         try:
-            results = collect_tool(tool, args.site, args.cases, args.notes, keys, args.dry_run)
+            only = [x.strip() for x in args.only.split(",") if x.strip()] or None
+            results = collect_tool(
+                tool, args.site, args.cases, args.notes, keys, args.dry_run, only=only
+            )
         except RuntimeError as exc:  # a missing key stops this tool only
             print(f"[{tool}] skipped: {exc}")
             continue

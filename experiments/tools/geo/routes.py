@@ -13,14 +13,15 @@ from typing import Any
 
 import httpx
 
-from experiments.tools.geo.common import TIMEOUT_SECONDS, Call, Keys, require
+from experiments.tools.geo.common import POLITE_HEADERS, TIMEOUT_SECONDS, Call, Keys, require
 
 GOOGLE_ROUTES_URL = "https://routes.googleapis.com/directions/v2:computeRoutes"
 GOOGLE_ROUTES_FIELDS = (
     "routes.duration,routes.staticDuration,routes.distanceMeters,"
     "routes.legs.startLocation,routes.legs.endLocation"
 )
-ORS_URL = "https://api.openrouteservice.org/v2/directions/driving-car"
+# api.openrouteservice.org was shut down on 2026-09-28 (410 Gone); HeiGIT moved it here.
+ORS_URL = "https://api.heigit.org/openrouteservice/v2/directions/driving-car"
 OSRM_URL = "https://router.project-osrm.org/route/v1/driving/{a};{b}?overview=false"
 
 
@@ -113,7 +114,7 @@ def osrm_route() -> Any:
     def fn(p: dict[str, Any]) -> tuple[Any, int]:
         o, d = p["origin"], p["destination"]
         url = OSRM_URL.format(a=f"{o['lng']},{o['lat']}", b=f"{d['lng']},{d['lat']}")
-        r = httpx.get(url, timeout=TIMEOUT_SECONDS)
+        r = httpx.get(url, headers=POLITE_HEADERS, timeout=TIMEOUT_SECONDS)
         r.raise_for_status()
         raw = r.json()
         return raw, len(raw.get("routes", []))

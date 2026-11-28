@@ -12,8 +12,12 @@ measured afterwards. The results decide which tool each agent uses (plan A3).
 | `elevation` | Google Elevation vs OpenTopoData SRTM 30 m and ASTER 30 m | Site analysis |
 | `social` | Serper with `site:` filters for Facebook, Instagram, X, TikTok | Segments (Could) |
 
-Test site: `experiments/test_sites/site_01.json`, Ali's Manara / M Hub site in New Obour
-(pin from his brief, plot ~28 feddans, ~220 m frontage).
+Test sites:
+
+- `site_01`: Ali's Manara / M Hub site in New Obour (pin from his brief, plot ~28 feddans,
+  ~220 m frontage). Desert next to the Regional Ring Road, almost nothing built within 3 km.
+- `site_02`: El Obour City centre, a **control** site that is not one of Ali's concepts. It
+  is built up, so Places and OSM have something to find and the providers can be told apart.
 
 ## Run
 
@@ -34,6 +38,17 @@ python -m experiments.tools.geo.score
 
 A tool whose key is missing is skipped; the others still run.
 
+`--only <provider>[,<provider>]` runs just those providers. Follow-up calls are then built from
+the runs already saved, so one failed provider can be rerun alone:
+
+```bash
+python -m experiments.tools.geo.collect --tool routes --site site_01 --only openrouteservice
+```
+
+Public OSM services (Overpass, OSRM, OpenTopoData) get a descriptive `User-Agent` and
+`Referer` (`common.POLITE_HEADERS`): since 2026 `overpass-api.de` answers a generic client
+with `406` and then refuses its IP for a while.
+
 | Step | Writes |
 |---|---|
 | `collect.py` | one new file per call in `runs/<tool>/<cases version>/<site>/` (time first in the name, never overwritten) |
@@ -53,6 +68,7 @@ run; add `<tool>_v2.json` and run with `--cases v2`.
 |---|---|
 | `places_v1` | 6 kinds from the M Hub concept (cafe, restaurant, pharmacy, grocery, sports/padel, mall) at 1 km and 3 km; then Place Details for the 5 nearest Google places with reviews |
 | `osm_v1` | areas containing the pin; roads 1 km; major roads 3 km; land use 1 km; buildings 500 m and 1 km; points of interest 1 km and 3 km |
+| `osm_v2` | osm_v1's queries with the descriptive headers, a third server (`overpass.private.coffee`) and 5 s between calls |
 | `routes_v1` | 5 landmarks (airport, Obour City, Heliopolis, Madinaty, 10th of Ramadan), both directions, Sunday 08:00, 13:00, 17:30, 22:00 and Friday 13:00 (Cairo time, the next such day) |
 | `elevation_v1` | 7 x 7 grid 100 m apart over the plot, plus 8 points at 1 km and 3 km |
 | `social_v1` | 6 questions (4 Arabic, 2 English), once with all platforms in one `site:` filter and once per platform |
@@ -68,3 +84,5 @@ run; add `<tool>_v2.json` and run with `--cases v2`.
 | social | results, results naming the place, dated, last 12 months, per platform; side by side: how many results the per-platform calls found that the single combined call missed |
 
 Places that both providers found are matched by distance (≤ 150 m) and shared name words.
+Social results are matched by title, because most Serper links are `google.com/goto?url=<token>`
+redirects whose token changes on every call.

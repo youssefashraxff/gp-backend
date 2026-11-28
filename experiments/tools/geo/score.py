@@ -68,6 +68,7 @@ def score_row(tool: str, name: str, p: dict[str, Any], base_dir: Path) -> dict[s
         cases = load_cases("social", p["case_version"], base_dir)
         scored = social.score_file(p, cases["platforms"], cases["place_words"])
         scored.pop("urls")
+        scored.pop("titles")
         row.update(scored)
     return row
 
@@ -185,21 +186,21 @@ def summary_social(newest: dict[tuple, dict[str, Any]], base_dir: Path) -> list[
         all_s = (
             social.score_file(all_v, plat, words) if all_v and all_v["status"] != "error" else None
         )
-        all_urls = set(all_s["urls"]) if all_s else set()
+        all_titles = set(all_s["titles"]) if all_s else set()
         per = {
             name: social.score_file(p, plat, words)
             for name, p in variants.items()
             if name != "all" and p["status"] != "error"
         }
-        union = set().union(*(set(s["urls"]) for s in per.values())) if per else set()
+        union = set().union(*(set(s["titles"]) for s in per.values())) if per else set()
         row: dict[str, Any] = {
             "site_id": site,
             "case_version": ver,
             "query_id": qid,
-            "all_n": len(all_urls),
+            "all_n": len(all_titles),
             "all_mentions_place": all_s["n_mentions_place"] if all_s else 0,
             "per_platform_union_n": len(union),
-            "missed_by_all_call": len(union - all_urls),
+            "missed_by_all_call": len(union - all_titles),
         }
         for name, s in sorted(per.items()):
             row[f"{name}_n"] = s["n_results"]

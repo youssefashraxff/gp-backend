@@ -115,7 +115,7 @@ def fake_http(monkeypatch, seen: list[dict[str, Any]]) -> None:
                     ]
                 }
             )
-        if "openrouteservice" in url:
+        if "openrouteservice" in url or "heigit" in url:
             return FakeResponse({"routes": [{"summary": {"duration": 1440, "distance": 24000}}]})
         if "project-osrm" in url:
             return FakeResponse({"routes": [{"duration": 1380, "distance": 24500}]})
@@ -339,3 +339,58 @@ def test_collect_then_score(tool: str, base_dir: Path, monkeypatch) -> None:
     assert n == len(files) and s > 0
     with (base_dir / f"summary_{tool}.csv").open(encoding="utf-8") as f:
         assert list(csv.DictReader(f))
+
+
+def test_overpass_sends_descriptive_user_agent(monkeypatch) -> None:
+    seen: list[dict[str, Any]] = []
+    fake_http(monkeypatch, seen)
+    calls = osm.build_calls(
+        SITE,
+        {
+            "endpoints": {"m": "https://overpass.x/api"},
+            "cases": [{"kind": "roads", "radius_m": 100}],
+        },
+        keys(),
+    )
+    common.run_call(calls[0])
+    ua = seen[0]["headers"]["User-Agent"]
+    assert "gp-backend" in ua and "httpx" not in ua
+
+
+def test_only_reruns_followups_from_saved_runs(base_dir: Path, monkeypatch) -> None:
+    seen: list[dict[str, Any]] = []
+    fake_http(monkeypatch, seen)
+    collect.collect_tool("routes", "site_01", "v1", "first", keys(), base_dir=base_dir, pause=0)
+    seen.clear()
+    again = collect.collect_tool(
+        "routes",
+        "site_01",
+        "v1",
+        "ors only",
+        keys(),
+        base_dir=base_dir,
+        pause=0,
+        only=["openrouteservice"],
+    )
+    assert again and {r["provider"] for r in again} == {"openrouteservice"}
+    assert all("heigit" in s["url"] for s in seen)  # Google was not called again
+
+
+def test_social_titles_match_across_redirect_links() -> None:
+    a = {
+        "meta": {},
+        "raw": {
+            "organic": [
+                {"link": "https://www.google.com/goto?url=AAA", "title": "Cafe X — العبور!"}
+            ]
+        },
+    }
+    b = {
+        "meta": {},
+        "raw": {
+            "organic": [{"link": "https://www.google.com/goto?url=BBB", "title": "cafe x  العبور"}]
+        },
+    }
+    ta = social.score_file(a, {}, [])["titles"]
+    tb = social.score_file(b, {}, [])["titles"]
+    assert ta == tb

@@ -89,6 +89,12 @@ def parse_date(text: str | None, now: datetime | None = None) -> datetime | None
     return None
 
 
+def title_key(title: str) -> str:
+    """Results are matched by title: Google often returns `google.com/goto?url=<token>`
+    links whose token differs on every call, so the URL can't tell two results apart."""
+    return re.sub(r"\W+", " ", title.lower()).strip()[:80]
+
+
 def platform_of(url: str, platforms: dict[str, str]) -> str:
     host = (urlsplit(url).hostname or "").lower().removeprefix("www.")
     for name, dom in platforms.items():
@@ -129,4 +135,5 @@ def score_file(
         "n_last_12_months": recent,
         "by_platform": "; ".join(f"{k}={v}" for k, v in sorted(by_platform.items())),
         "urls": [o.get("link", "") for o in organic],
+        "titles": [title_key(o.get("title", "")) for o in organic],
     }

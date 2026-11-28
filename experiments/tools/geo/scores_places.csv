@@ -16,16 +16,16 @@ timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,r
 2026-11-28T00:36:55.859143+00:00,site_01,v1,places,google,restaurant_r3000,empty,0,0.45,,20261128T003655859282Z__google__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:36:57.659396+00:00,site_01,v1,places,foursquare,restaurant_r3000,empty,0,0.794,,20261128T003657659535Z__foursquare__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:36:58.897491+00:00,site_01,v1,places,google,pharmacy_r3000,empty,0,0.237,,20261128T003658897690Z__google__pharmacy_r3000.json,pharmacy,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T00:37:00.808290+00:00,site_01,v1,places,foursquare,pharmacy_r3000,ok,1,0.905,,20261128T003700808534Z__foursquare__pharmacy_r3000.json,pharmacy,3000,1,1,0,0,,0,0,2872,3691.3,مستشفى الغندور,,,,
+2026-11-28T00:37:00.808290+00:00,site_01,v1,places,foursquare,pharmacy_r3000,ok,1,0.905,,20261128T003700808534Z__foursquare__pharmacy_r3000.json,pharmacy,3000,1,1,0,0,,0,0,2872,3691.4,مستشفى الغندور,,,,
 2026-11-28T00:37:02.169638+00:00,site_01,v1,places,google,grocery_r3000,ok,2,0.355,,20261128T003702169694Z__google__grocery_r3000.json,grocery,3000,2,2,1,1,1.0,2,0,460,,ماركت أبو علي | ماركت الشهبندر,,,,
 2026-11-28T00:37:03.622189+00:00,site_01,v1,places,foursquare,grocery_r3000,empty,0,0.447,,20261128T003703622370Z__foursquare__grocery_r3000.json,grocery,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:37:05.047208+00:00,site_01,v1,places,google,sports_r3000,empty,0,0.423,,20261128T003705047254Z__google__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:37:06.876812+00:00,site_01,v1,places,foursquare,sports_r3000,empty,0,0.828,,20261128T003706876955Z__foursquare__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:37:08.441376+00:00,site_01,v1,places,google,mall_r3000,ok,1,0.56,,20261128T003708441531Z__google__mall_r3000.json,mall,3000,1,1,1,1,225.0,1,0,2786,,مظلوم فرع بلبيس Mazloum tiles belbeis,,,,
 2026-11-28T00:37:10.308787+00:00,site_01,v1,places,foursquare,mall_r3000,empty,0,0.861,,20261128T003710309051Z__foursquare__mall_r3000.json,mall,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T00:37:11.938190+00:00,site_01,v1,places,google,details_1,ok,1,0.621,,20261128T003711938376Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1519.8,1519.8
-2026-11-28T00:37:13.472312+00:00,site_01,v1,places,google,details_2,ok,3,0.529,,20261128T003713472549Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,247.9,991.3
-2026-11-28T00:37:14.829059+00:00,site_01,v1,places,google,details_3,ok,5,0.35,,20261128T003714829107Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.8,1984.5
+2026-11-28T00:37:11.938190+00:00,site_01,v1,places,google,details_1,ok,1,0.621,,20261128T003711938376Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.0,1520.0
+2026-11-28T00:37:13.472312+00:00,site_01,v1,places,google,details_2,ok,3,0.529,,20261128T003713472549Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,248.0,991.5
+2026-11-28T00:37:14.829059+00:00,site_01,v1,places,google,details_3,ok,5,0.35,,20261128T003714829107Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.9,1984.6
 2026-11-28T01:40:43.041263+00:00,site_01,v1,places,google,cafe_r1000,empty,0,0.437,,20261128T014043041633Z__google__cafe_r1000.json,cafe,1000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:40:45.182823+00:00,site_01,v1,places,foursquare,cafe_r1000,empty,0,1.136,,20261128T014045182929Z__foursquare__cafe_r1000.json,cafe,1000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:40:46.513919+00:00,site_01,v1,places,google,restaurant_r1000,empty,0,0.326,,20261128T014046513960Z__google__restaurant_r1000.json,restaurant,1000,0,0,0,0,,0,0,,,,,,,
@@ -43,13 +43,13 @@ timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,r
 2026-11-28T01:41:05.980595+00:00,site_01,v1,places,google,restaurant_r3000,empty,0,0.338,,20261128T014105980651Z__google__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:07.729092+00:00,site_01,v1,places,foursquare,restaurant_r3000,empty,0,0.743,,20261128T014107729296Z__foursquare__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:09.151444+00:00,site_01,v1,places,google,pharmacy_r3000,empty,0,0.415,,20261128T014109151645Z__google__pharmacy_r3000.json,pharmacy,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T01:41:11.072631+00:00,site_01,v1,places,foursquare,pharmacy_r3000,ok,1,0.915,,20261128T014111072844Z__foursquare__pharmacy_r3000.json,pharmacy,3000,1,1,0,0,,0,0,2872,3691.3,مستشفى الغندور,,,,
+2026-11-28T01:41:11.072631+00:00,site_01,v1,places,foursquare,pharmacy_r3000,ok,1,0.915,,20261128T014111072844Z__foursquare__pharmacy_r3000.json,pharmacy,3000,1,1,0,0,,0,0,2872,3691.4,مستشفى الغندور,,,,
 2026-11-28T01:41:12.424772+00:00,site_01,v1,places,google,grocery_r3000,ok,2,0.348,,20261128T014112424830Z__google__grocery_r3000.json,grocery,3000,2,2,1,1,1.0,2,0,460,,ماركت أبو علي | ماركت الشهبندر,,,,
 2026-11-28T01:41:14.471652+00:00,site_01,v1,places,foursquare,grocery_r3000,empty,0,1.041,,20261128T014114471911Z__foursquare__grocery_r3000.json,grocery,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:15.716136+00:00,site_01,v1,places,google,sports_r3000,empty,0,0.237,,20261128T014115716183Z__google__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:17.593177+00:00,site_01,v1,places,foursquare,sports_r3000,empty,0,0.872,,20261128T014117593443Z__foursquare__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:18.919566+00:00,site_01,v1,places,google,mall_r3000,ok,1,0.323,,20261128T014118919628Z__google__mall_r3000.json,mall,3000,1,1,1,1,225.0,1,0,2786,,مظلوم فرع بلبيس Mazloum tiles belbeis,,,,
 2026-11-28T01:41:20.581719+00:00,site_01,v1,places,foursquare,mall_r3000,empty,0,0.657,,20261128T014120581994Z__foursquare__mall_r3000.json,mall,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T01:41:21.945161+00:00,site_01,v1,places,google,details_1,ok,1,0.356,,20261128T014121945229Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1519.8,1519.8
-2026-11-28T01:41:23.274954+00:00,site_01,v1,places,google,details_2,ok,3,0.324,,20261128T014123275039Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,247.9,991.3
-2026-11-28T01:41:24.684027+00:00,site_01,v1,places,google,details_3,ok,5,0.403,,20261128T014124684118Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.8,1984.5
+2026-11-28T01:41:21.945161+00:00,site_01,v1,places,google,details_1,ok,1,0.356,,20261128T014121945229Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.0,1520.0
+2026-11-28T01:41:23.274954+00:00,site_01,v1,places,google,details_2,ok,3,0.324,,20261128T014123275039Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,248.0,991.5
+2026-11-28T01:41:24.684027+00:00,site_01,v1,places,google,details_3,ok,5,0.403,,20261128T014124684118Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.9,1984.6

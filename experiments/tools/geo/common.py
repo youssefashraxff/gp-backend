@@ -25,6 +25,15 @@ SITES_DIR = REPO_DIR / "experiments" / "test_sites"
 TIMEOUT_SECONDS = 40
 PAUSE_SECONDS = 1.0  # between calls; OpenTopoData and the public Overpass/OSRM need it
 
+# Public OSM servers (Overpass, OSRM, OpenTopoData) reject or ban generic clients: since
+# 2026 overpass-api.de answers python-httpx's default User-Agent with 406, then blocks the IP.
+CONTACT = "https://github.com/youssefashraxff/gp-backend"
+POLITE_HEADERS = {
+    "User-Agent": f"gp-backend-experiments/0.2 (graduation project; {CONTACT})",
+    "Referer": CONTACT,
+    "Accept": "*/*",
+}
+
 STATUS_OK = "ok"
 STATUS_EMPTY = "empty"  # the call worked but returned nothing
 STATUS_ERROR = "error"

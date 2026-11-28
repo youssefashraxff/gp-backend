@@ -11,7 +11,14 @@ from typing import Any
 
 import httpx
 
-from experiments.tools.geo.common import TIMEOUT_SECONDS, Call, Keys, offset_point, require
+from experiments.tools.geo.common import (
+    POLITE_HEADERS,
+    TIMEOUT_SECONDS,
+    Call,
+    Keys,
+    offset_point,
+    require,
+)
 
 GOOGLE_ELEVATION_URL = "https://maps.googleapis.com/maps/api/elevation/json"
 OPENTOPODATA_URL = "https://api.opentopodata.org/v1/{dataset}"
@@ -67,6 +74,7 @@ def opentopodata(dataset: str) -> Any:
         r = httpx.get(
             OPENTOPODATA_URL.format(dataset=dataset),
             params={"locations": _locations(p["points"])},
+            headers=POLITE_HEADERS,
             timeout=TIMEOUT_SECONDS,
         )
         r.raise_for_status()

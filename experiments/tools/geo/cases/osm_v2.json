@@ -1,0 +1,20 @@
+{
+  "version": "v2",
+  "description": "osm_v1's queries with a descriptive User-Agent and Referer (v1 got 406 then a connection ban from overpass-api.de, and timeouts from kumi), a third public server (private.coffee), and 5 s between calls.",
+  "pause_seconds": 5,
+  "endpoints": {
+    "overpass_main": "https://overpass-api.de/api/interpreter",
+    "overpass_private": "https://overpass.private.coffee/api/interpreter",
+    "overpass_kumi": "https://overpass.kumi.systems/api/interpreter"
+  },
+  "cases": [
+    {"kind": "pin_area"},
+    {"kind": "roads", "radius_m": 1000},
+    {"kind": "major_roads", "radius_m": 3000},
+    {"kind": "landuse", "radius_m": 1000},
+    {"kind": "buildings", "radius_m": 500},
+    {"kind": "buildings", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 3000}
+  ]
+}

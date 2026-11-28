@@ -13,7 +13,15 @@ from typing import Any
 
 import httpx
 
-from experiments.tools.geo.common import TIMEOUT_SECONDS, Call, Keys, age_days, haversine_m, median
+from experiments.tools.geo.common import (
+    POLITE_HEADERS,
+    TIMEOUT_SECONDS,
+    Call,
+    Keys,
+    age_days,
+    haversine_m,
+    median,
+)
 
 MAJOR = "motorway|trunk|primary|secondary|tertiary"
 MAJOR_SET = set(MAJOR.split("|")) | {f"{c}_link" for c in MAJOR.split("|")}
@@ -43,7 +51,12 @@ def overpass_query(kind: str, lat: float, lng: float, radius: int) -> str:
 
 def overpass(endpoint: str) -> Any:
     def fn(p: dict[str, Any]) -> tuple[Any, int]:
-        r = httpx.post(endpoint, data={"data": p["query"]}, timeout=TIMEOUT_SECONDS + 30)
+        r = httpx.post(
+            endpoint,
+            data={"data": p["query"]},
+            headers=POLITE_HEADERS,
+            timeout=TIMEOUT_SECONDS + 50,
+        )
         r.raise_for_status()
         raw = r.json()
         elements = raw.get("elements", [])
