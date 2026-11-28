@@ -21,7 +21,7 @@ everything in its "Depends on" column is done.
 | Topic | Decision |
 |---|---|
 | LLM models | **Mixed per agent:** each agent's owner picks a cheap and a strong model through the shared routing layer (A4), and writes the choice in their agent's spec section. |
-| Web search | **Tavily**, for the Market and Segments agents. |
+| Web search | **Serper** (Google Search), for the Market and Segments agents (X2 decision, spec Q10). |
 | Map (frontend) | **Google Maps JS** (`@angular/google-maps`), with satellite view for seeing the land. |
 | Escalation scorer | Built as a separate parallel track. Until it's trained, the rule decides: missing or conflicting sources → escalate. |
 | Sprint order | **First sprint: experiments** (X0–X6, plus A3 and the keys P2–P4, which the experiments need). **Then the build:** sections 3–8 with LangChain/LangGraph, memory, database, checkpoints and the frontend. Seminar 2 covers Phase 1 only. |
@@ -34,7 +34,7 @@ everything in its "Depends on" column is done.
 |---|---|
 | P1 | gp-schemas PR #3, the spec PR (#11) and the "remove Ruff from CI" PR (#12) are merged ✅ |
 | P2 | A Google Cloud project with billing and a **restricted key** for Places API (New), Elevation API and Maps JavaScript API, plus a budget alert on the account. |
-| P3 | A Tavily API key. |
+| P3 | A Serper API key. |
 | P4 | LLM keys for the providers the agent owners choose. |
 | P5 | The Supabase Postgres connection string in `.env` for the checkpointer (`.env.example` updated, real values never committed). |
 
@@ -52,7 +52,7 @@ PR that updates the agent's section 6 in spec.md to `Status: decided`, with the 
 |---|---|---|---|---|
 | X0 | **Test set and scoring:** 3–5 fixed test sites (ideally from Ali's past concepts, mixing dense city, new city and desert road), each with what a good output looks like per agent and what must escalate; agent-specific checks added to `scoring.py` | `experiments/test_sites/`, `experiments/shared/scoring.py` | — | The site files are reviewed (with Ali if possible) and `--site all` runs on them |
 | X1 | **Site analysis experiment:** OSM + elevation data quality, the computed facts, the summary prompt and model | `experiments/site_analysis/` | X0, A3 | Passes all test sites; spec 6.1 PR opened with the results |
-| X2 | **Market research experiment:** Tavily queries, the 6-call limit, synthesis prompt and model; propose Q9 with the Gap owner | `experiments/market_research/` | X0, A3 | Passes all test sites; spec 6.2 PR opened with the results |
+| X2 | **Market research experiment:** Serper queries, the 6-call limit, synthesis prompt and model; propose Q9 with the Gap owner | `experiments/market_research/` | X0, A3 | Passes all test sites; spec 6.2 PR opened with the results |
 | X3 | **Gap analysis experiment:** prompt and model over saved Site + Market outputs, no tools | `experiments/gap_analysis/` | X0, first X1 + X2 runs | Passes all test sites; spec 6.3 PR opened with the results |
 | X4 | **Segments experiment:** demographic sources, the 5-call limit, escalation instead of estimates | `experiments/segments/` | X0, A3, first X3 runs | Passes all test sites; spec 6.4 PR opened with the results |
 | X5 | **Competitors experiment:** the density radius on each kind of site, Places quality, classification model | `experiments/competitors/` | X0, A3 | Passes all test sites; spec 6.5 PR opened with the results |
@@ -70,7 +70,7 @@ Everything else builds on these.
 |---|---|---|---|---|
 | A1 | Bump the schemas submodule, regenerate the types, and rename the progress fields everywhere (workflow query, heartbeat, `ProgressEvent`) | `schemas/`, `app/shared/schemas_generated/`, `app/orchestrator/`, `app/api/progress.py`, `app/api/websocket.py`, tests | P1 | The schema check passes; the existing progress and workflow tests pass with the new names |
 | A2 | Frontend: bump the schemas submodule and regenerate the types | gp-frontend `schemas/`, `src/app/shared/schemas/` | P1 | Frontend CI passes |
-| A3 | Shared tool clients: Google Places (nearby search + details), Overpass (OSM), Tavily, Google Elevation. Each with its timeout, retries on timeout/429/5xx, throttling and caching (spec section 5.6) | `app/shared/tools/` | P2, P3 | Unit tests with **recorded responses** (no network in CI); one test per client for "times out → retries → gives up cleanly" |
+| A3 | Shared tool clients (spec Q10): Google Places (nearby search + details), OSM from a local copy (cache built from Geofabrik's Egypt extract), Serper web search, Google Elevation, Google Routes. Each with its timeout, retries on timeout/429/5xx, throttling and a per-run cache with a search log (spec section 5.6) | `app/shared/tools/` | P2, P3 | Unit tests with **recorded responses** (no network in CI); one test per client for "times out → retries → gives up cleanly"; `scripts/try_tools.py` returns real data for Ali's Manara site |
 | A4 | Model routing: `get_model(tier, agent)` returns the agent's configured cheap or strong model through LangChain's model interface; responses cached by input hash | `app/shared/models/` | P4 | A test with a fake model gets the right tier, and a repeated call hits the cache |
 | A5 | Evidence helpers: build a `Fact` (with its `Evidence`), and `check_evidence(output)`, which lists every fact without evidence | `app/shared/evidence.py` | A1 | Tests: a complete output passes; a missing source is reported with its path |
 | A6 | The real research graph: six nodes (stubs at first) in the spec order, parallel branches with reducers, `progress_agent` on every node, output in the `research_output` shape, and the Postgres checkpointer. Replaces the current stub | `app/phases/research/graph.py`, `interface.py` | A1, A5, A7 | A run with all stubs finishes and passes `check_evidence`; the progress test sees all six agents in order; the stub's made-up `"share": 0.4` is gone |
@@ -83,8 +83,8 @@ Each agent replaces its stub node in A6. Its owner first updates the agent's spe
 
 | # | Agent | Depends on | Done when |
 |---|---|---|---|
-| B1 | **Site analysis** (spec section 6.1): roads and access from OSM, distances and sun path computed, elevation, and zoning always escalated | X1, A3, A6 | Unit tests with known answers for the distance and sun-path functions; recorded Overpass data; "empty OSM → escalates" |
-| B2 | **Market research** (spec section 6.2): Tavily searches, at most 6 tool calls | X2, A3, A4, A6 | Recorded Tavily responses; "conflicting sources → escalates"; every summary sentence cites a fact |
+| B1 | **Site analysis** (spec section 6.1): roads and access from OSM, distances and sun path computed, elevation, and zoning always escalated | X1, A3, A6 | Unit tests with known answers for the distance and sun-path functions; a recorded OSM cache; "empty OSM → escalates" |
+| B2 | **Market research** (spec section 6.2): Serper searches, at most 6 tool calls | X2, A3, A4, A6 | Recorded Serper responses; "conflicting sources → escalates"; every summary sentence cites a fact |
 | B3 | **Gap analysis** (spec section 6.3): one structured LLM step with no tools, then the evidence check. Settle Q9 (supply-side data) with the Market owner first | X3, A4, A6 | "A gap without evidence is rejected"; a fixed input gives a stable structure |
 | B4 | **Segments** (spec section 6.4): at most 5 tool calls | X4, A3, A4, A6 | "No demographic source → escalates"; "no share without evidence" |
 | B5 | **Competitors** (spec section 6.5): the radius computed from local density | X5, A3, A4, A6 | Unit tests for `competitor_radius` (dense street vs desert road); recorded Places data; "zero results → escalates" |

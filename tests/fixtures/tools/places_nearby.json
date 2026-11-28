@@ -1,0 +1,96 @@
+{
+ "places": [
+  {
+   "id": "ChIJcQUALwAbWBQR4Dla3iCywZA",
+   "types": [
+    "coffee_shop",
+    "cafe",
+    "food_store",
+    "food",
+    "point_of_interest",
+    "store",
+    "establishment"
+   ],
+   "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+   "location": {
+    "latitude": 30.193808599999997,
+    "longitude": 31.4601614
+   },
+   "businessStatus": "OPERATIONAL",
+   "displayName": {
+    "text": "يانو كافيه",
+    "languageCode": "ar"
+   },
+   "primaryType": "coffee_shop"
+  },
+  {
+   "id": "ChIJ3TbAdgAbWBQRzSppZa1w0FU",
+   "types": [
+    "coffee_shop",
+    "cafe",
+    "food_store",
+    "food",
+    "point_of_interest",
+    "store",
+    "establishment"
+   ],
+   "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+   "location": {
+    "latitude": 30.193808599999997,
+    "longitude": 31.4601614
+   },
+   "businessStatus": "OPERATIONAL",
+   "displayName": {
+    "text": "KiNG EGYPT",
+    "languageCode": "ar"
+   },
+   "primaryType": "coffee_shop"
+  },
+  {
+   "id": "ChIJiTijRwAbWBQRubRSy39-Qlk",
+   "types": [
+    "coffee_shop",
+    "cafe",
+    "food_store",
+    "food",
+    "point_of_interest",
+    "store",
+    "establishment"
+   ],
+   "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+   "location": {
+    "latitude": 30.193808599999997,
+    "longitude": 31.4601614
+   },
+   "businessStatus": "OPERATIONAL",
+   "displayName": {
+    "text": "كافيه Bon777",
+    "languageCode": "ar"
+   },
+   "primaryType": "coffee_shop"
+  },
+  {
+   "id": "ChIJzVwabwAbWBQR6HEK9sBTK_M",
+   "types": [
+    "coffee_shop",
+    "cafe",
+    "food_store",
+    "food",
+    "point_of_interest",
+    "store",
+    "establishment"
+   ],
+   "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+   "location": {
+    "latitude": 30.193808599999997,
+    "longitude": 31.4601614
+   },
+   "businessStatus": "OPERATIONAL",
+   "displayName": {
+    "text": "ليدام",
+    "languageCode": "ar"
+   },
+   "primaryType": "coffee_shop"
+  }
+ ]
+}
