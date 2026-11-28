@@ -1,0 +1,37 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "cafe_r1000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 1000,
+    "query": "coffee"
+  },
+  "meta": {
+    "category": "cafe",
+    "radius": 1000
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 1.136,
+  "raw": {
+    "results": [],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.32376,
+            "longitude": 31.5566816
+          },
+          "radius": 1000
+        }
+      }
+    }
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T01:40:45.182823+00:00"
+}

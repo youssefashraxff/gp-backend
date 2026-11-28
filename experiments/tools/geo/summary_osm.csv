@@ -1,9 +1,9 @@
 site_id,case_version,case,overpass_kumi_status,overpass_kumi_n,overpass_kumi_seconds,overpass_main_status,overpass_main_n,overpass_main_seconds
-site_01,v1,buildings_r1000,error,0,70.203,error,0,0.616
-site_01,v1,buildings_r500,error,0,70.221,error,0,0.475
-site_01,v1,landuse_r1000,error,0,70.19,error,0,0.906
-site_01,v1,major_roads_r3000,error,0,70.209,error,0,0.736
-site_01,v1,pin_area,error,0,70.377,error,0,0.485
-site_01,v1,pois_r1000,error,0,70.173,error,0,0.194
-site_01,v1,pois_r3000,error,0,31.865,error,0,0.219
-site_01,v1,roads_r1000,error,0,70.251,error,0,1.052
+site_01,v1,buildings_r1000,error,0,14.701,error,0,0.205
+site_01,v1,buildings_r500,error,0,34.477,error,0,0.235
+site_01,v1,landuse_r1000,error,0,0.015,error,0,0.231
+site_01,v1,major_roads_r3000,error,0,0.019,error,0,0.435
+site_01,v1,pin_area,error,0,70.159,error,0,0.312
+site_01,v1,pois_r1000,error,0,70.321,error,0,0.216
+site_01,v1,pois_r3000,error,0,70.258,error,0,0.221
+site_01,v1,roads_r1000,error,0,67.524,error,0,0.32

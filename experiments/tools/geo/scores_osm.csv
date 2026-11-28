@@ -22,3 +22,23 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-11-28T00:45:46.216882+00:00,site_01,v1,osm,overpass_kumi,pois_r1000,error,0,70.173,ReadTimeout: The read operation timed out,20261128T004546217353Z__overpass_kumi__pois_r1000.json
 2026-11-28T00:46:19.085537+00:00,site_01,v1,osm,overpass_kumi,pois_r3000,error,0,31.865,"HTTPStatusError: Server error '504 Gateway Timeout' for url 'https://overpass.kumi.systems/api/interpreter'
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504",20261128T004619085829Z__overpass_kumi__pois_r3000.json
+2026-11-28T01:41:26.348866+00:00,site_01,v1,osm,overpass_main,pin_area,error,0,0.312,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T014126349184Z__overpass_main__pin_area.json
+2026-11-28T01:41:27.676501+00:00,site_01,v1,osm,overpass_main,roads_r1000,error,0,0.32,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T014127676574Z__overpass_main__roads_r1000.json
+2026-11-28T01:41:29.117374+00:00,site_01,v1,osm,overpass_main,major_roads_r3000,error,0,0.435,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T014129117619Z__overpass_main__major_roads_r3000.json
+2026-11-28T01:41:30.351886+00:00,site_01,v1,osm,overpass_main,landuse_r1000,error,0,0.231,ConnectError: [Errno 61] Connection refused,20261128T014130351936Z__overpass_main__landuse_r1000.json
+2026-11-28T01:41:31.593342+00:00,site_01,v1,osm,overpass_main,buildings_r500,error,0,0.235,ConnectError: [Errno 61] Connection refused,20261128T014131593386Z__overpass_main__buildings_r500.json
+2026-11-28T01:41:32.803718+00:00,site_01,v1,osm,overpass_main,buildings_r1000,error,0,0.205,ConnectError: [Errno 61] Connection refused,20261128T014132803763Z__overpass_main__buildings_r1000.json
+2026-11-28T01:41:34.025611+00:00,site_01,v1,osm,overpass_main,pois_r1000,error,0,0.216,ConnectError: [Errno 61] Connection refused,20261128T014134025650Z__overpass_main__pois_r1000.json
+2026-11-28T01:41:35.251879+00:00,site_01,v1,osm,overpass_main,pois_r3000,error,0,0.221,ConnectError: [Errno 61] Connection refused,20261128T014135251920Z__overpass_main__pois_r3000.json
+2026-11-28T01:42:46.416384+00:00,site_01,v1,osm,overpass_kumi,pin_area,error,0,70.159,ReadTimeout: The read operation timed out,20261128T014246416714Z__overpass_kumi__pin_area.json
+2026-11-28T01:53:48.028891+00:00,site_01,v1,osm,overpass_kumi,roads_r1000,error,0,67.524,RemoteProtocolError: Server disconnected without sending a response.,20261128T015348029051Z__overpass_kumi__roads_r1000.json
+2026-11-28T01:53:49.055481+00:00,site_01,v1,osm,overpass_kumi,major_roads_r3000,error,0,0.019,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T015349055626Z__overpass_kumi__major_roads_r3000.json
+2026-11-28T01:53:50.081445+00:00,site_01,v1,osm,overpass_kumi,landuse_r1000,error,0,0.015,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T015350081596Z__overpass_kumi__landuse_r1000.json
+2026-11-28T02:43:48.017803+00:00,site_01,v1,osm,overpass_kumi,buildings_r500,error,0,34.477,RemoteProtocolError: Server disconnected without sending a response.,20261128T024348019973Z__overpass_kumi__buildings_r500.json
+2026-11-28T02:48:30.190111+00:00,site_01,v1,osm,overpass_kumi,buildings_r1000,error,0,14.701,"HTTPStatusError: Server error '502 Bad Gateway' for url 'https://overpass.kumi.systems/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",20261128T024830190460Z__overpass_kumi__buildings_r1000.json
+2026-11-28T04:12:10.358725+00:00,site_01,v1,osm,overpass_kumi,pois_r1000,error,0,70.321,ReadTimeout: The read operation timed out,20261128T041210361916Z__overpass_kumi__pois_r1000.json
+2026-11-28T06:19:56.252433+00:00,site_01,v1,osm,overpass_kumi,pois_r3000,error,0,70.258,ReadTimeout: The read operation timed out,20261128T061956254568Z__overpass_kumi__pois_r3000.json
