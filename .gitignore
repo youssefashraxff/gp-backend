@@ -16,5 +16,5 @@ build/
 experiments/tools/web_search/runs/*
 !experiments/tools/web_search/runs/.gitkeep
 
-# Local OpenStreetMap data: built by `python -m app.shared.tools.osm`, never committed
+# Local OpenStreetMap data: built by `scripts/build_osm_cache.py`, never committed
 data/osm/

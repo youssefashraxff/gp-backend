@@ -3,9 +3,7 @@
 The A3 experiment found the public Overpass servers unusable (7 of 80 calls answered), so the
 data is read once from Geofabrik's Egypt extract into a small cache and queried locally.
 
-Build or refresh the cache (needs the `osmium` package, in the dev extras):
-    # download https://download.geofabrik.de/africa/egypt-latest.osm.pbf first
-    python -m app.shared.tools.osm --source egypt-latest.osm.pbf
+Build or refresh the cache with scripts/build_osm_cache.py (needs `osmium`, in the dev extras).
 
 Use it for roads and access. Buildings are not kept: OSM has none in new cities like Obour,
 and land use there is thin, so "nothing mapped" must be escalated, never read as empty land.
@@ -13,7 +11,6 @@ and land use there is thin, so "nothing mapped" must be escalated, never read as
 
 from __future__ import annotations
 
-import argparse
 import asyncio
 import gzip
 import json
@@ -302,7 +299,7 @@ async def osm_around(
             "OpenStreetMap (local copy)",
             args,
             f"no OSM cache at {settings.osm_cache_path}; build it with "
-            "python -m app.shared.tools.osm",
+            "python scripts/build_osm_cache.py",
         )
     source = f"OpenStreetMap, Geofabrik Egypt extract of {cache['meta']['data_date']} (local copy)"
     if not _in_boxes([lat, lng, lat, lng], cache["meta"]["boxes"]):
@@ -310,30 +307,3 @@ async def osm_around(
     data = await asyncio.to_thread(query, cache, lat, lng, radius_m, major_radius_m)
     has_any = data["roads"] or data["nearest_major_road"] or data["landuse"] or data["pois"]
     return result("osm_around", source, args, data if has_any else None)
-
-
-def main() -> None:
-    from app.shared.settings import settings
-
-    parser = argparse.ArgumentParser(description="Build the local OSM cache")
-    parser.add_argument("--source", required=True, help="path to egypt-latest.osm.pbf")
-    parser.add_argument("--delete-source", action="store_true")
-    args = parser.parse_args()
-    source = Path(args.source).expanduser()
-    print(f"Reading {source} ({source.stat().st_size / 1e6:.0f} MB), a few minutes...")
-    cache = build_cache(source)
-    path = settings.osm_cache_path
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with gzip.open(path, "wt", encoding="utf-8") as f:
-        json.dump(cache, f, ensure_ascii=False, separators=(",", ":"))
-    print(
-        f"Wrote {path} ({path.stat().st_size / 1e6:.1f} MB): {cache['meta']['counts']}, "
-        f"data date {cache['meta']['data_date'] or 'unknown'}"
-    )
-    if args.delete_source:
-        source.unlink()
-        print(f"Deleted {source}")
-
-
-if __name__ == "__main__":
-    main()

@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     # called without its key returns an error result, which the agent escalates.
     google_maps_api_key: SecretStr | None = None  # Places (New), Routes, Elevation
     serper_api_key: SecretStr | None = None
-    osm_cache_path: Path = Path("data/osm/osm_cache.json.gz")  # built by tools/osm.py
+    osm_cache_path: Path = Path("data/osm/osm_cache.json.gz")  # built by scripts/build_osm_cache.py
 
 
 settings = Settings()  # type: ignore[call-arg]
