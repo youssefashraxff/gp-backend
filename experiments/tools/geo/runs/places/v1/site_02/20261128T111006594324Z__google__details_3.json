@@ -1,0 +1,36 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "details_3",
+  "params": {
+    "place_id": "ChIJhXZz0ekbWBQR3YGSqoRTGu0"
+  },
+  "meta": {
+    "category": "details",
+    "name": "مطعم كريب لارچ",
+    "distance_m": 1.9
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.447,
+  "raw": {
+    "id": "ChIJhXZz0ekbWBQR3YGSqoRTGu0",
+    "rating": 5,
+    "userRatingCount": 1,
+    "displayName": {
+      "text": "مطعم كريب لارچ",
+      "languageCode": "ar"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "publishTime": "2026-09-06T20:44:46.570276674Z"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:10:06.594106+00:00"
+}

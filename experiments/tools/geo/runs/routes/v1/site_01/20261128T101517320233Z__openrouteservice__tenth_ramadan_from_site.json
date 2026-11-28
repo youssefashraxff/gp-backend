@@ -1,0 +1,269 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "tenth_ramadan_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.303266599999997,
+      "lng": 31.740273900000002
+    }
+  },
+  "meta": {
+    "landmark": "tenth_ramadan",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.472,
+  "raw": {
+    "bbox": [
+      31.558139,
+      30.221575,
+      31.755532,
+      30.324336
+    ],
+    "metadata": {
+      "query": {
+        "coordinates": [
+          [
+            31.5566816,
+            30.32376
+          ],
+          [
+            31.740273900000002,
+            30.303266599999997
+          ]
+        ],
+        "format": "json",
+        "profile": "driving-car",
+        "profileName": "driving-car"
+      },
+      "attribution": "openrouteservice.org | OpenStreetMap contributors",
+      "engine": {
+        "build_date": "2026-11-18T10:33:03Z",
+        "graph_date": "2026-11-24T04:57:00Z",
+        "osm_date": "2026-11-22T00:00:00Z",
+        "version": "10.1.1"
+      },
+      "service": "routing",
+      "system_message": "Please note that the URL api.openrouteservice.org has been deprecated. All information available at ask.openrouteservice.org",
+      "timestamp": 1795860917283
+    },
+    "routes": [
+      {
+        "bbox": [
+          31.558139,
+          30.221575,
+          31.755532,
+          30.324336
+        ],
+        "geometry": "cvaxDkur_ElAi@~AaAxFgCdB{@pK{GzCaB~@a@~DeB~ZgL`A_@dCkA|CeBbEmCzCaC`DqCpEaF|AiBvAoBbA}AbA}A~AyC|A{C|HwPhKgTpHwNRcAj@iBNs@Hu@nNiZxAmDl@cBl@kBj@sB^aBr@mDXiBj@oE^iGHiCFgEG_GsD_qCQkW@sALmDd@cHXcC^aCd@aCvAaGp@{BdCwG`AqBnBeDbCgDb@m@fDoDlyBymB`M{Kb@_@xF{ErFaFxO_N`JgIpe@ya@x`DiqChCaCjEoD~GgGrBkB~GgGhLcKbAMl@C^B^JVLXTX\\Zt@Np@B~@Et@Sz@a@t@k@h@]N_@He@Bg@E_@O_@UeK{PuDeG}\\qj@oAuBaBwCaEiEcUc_@qRm[yG}K{MeT_`@oo@uB_GcW}a@}MkUqBgD{AiCiPoWeVgb@kAwBi@cAi@cBDWBe@Ce@Gc@Ma@S]WY[Sq@Qa@Aa@B]J]RYVS\\O`@Ib@AH{ArA_@V[Lc@PeK~BaFlAeM~CgTlF_Cn@IIUKY@SNIJGZkCj@qSpFo@Lw@FQES?QHMPAB{An@a@HSFSDaIfBwU~FUHkIpB{@TcKlCmBf@yFrA}@TqFrAc@Nu@PiBd@wD`AwCt@gAVaDx@WF{IxBu@NWF{@TuKjCU?SEUIQMOQMSoAcIGGIAMDEHh@lDj@rDCZK\\OXSRkCt@wDx@Hj@bIkBTDRHRNNP@B",
+        "segments": [
+          {
+            "distance": 32118.1,
+            "duration": 1408.7,
+            "steps": [
+              {
+                "distance": 3573.9,
+                "duration": 151.4,
+                "instruction": "Head southeast on الطريق الدائري الإقليمي, 515",
+                "name": "الطريق الدائري الإقليمي, 515",
+                "type": 11,
+                "way_points": [
+                  0,
+                  25
+                ]
+              },
+              {
+                "distance": 15133.4,
+                "duration": 554.4,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  25,
+                  73
+                ]
+              },
+              {
+                "distance": 2012.6,
+                "duration": 123.3,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  73,
+                  98
+                ]
+              },
+              {
+                "distance": 2957.0,
+                "duration": 127.4,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  98,
+                  104
+                ]
+              },
+              {
+                "distance": 2779.5,
+                "duration": 160.6,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  104,
+                  114
+                ]
+              },
+              {
+                "distance": 321.3,
+                "duration": 28.9,
+                "exit_number": 3,
+                "instruction": "Enter the roundabout and take the 3rd exit onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 7,
+                "way_points": [
+                  114,
+                  132
+                ]
+              },
+              {
+                "distance": 1215.7,
+                "duration": 54.7,
+                "instruction": "Continue straight onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 6,
+                "way_points": [
+                  132,
+                  141
+                ]
+              },
+              {
+                "distance": 70.4,
+                "duration": 3.2,
+                "exit_number": 2,
+                "instruction": "Enter the roundabout and take the 2nd exit onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 7,
+                "way_points": [
+                  141,
+                  147
+                ]
+              },
+              {
+                "distance": 524.1,
+                "duration": 23.6,
+                "instruction": "Continue straight onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 6,
+                "way_points": [
+                  147,
+                  151
+                ]
+              },
+              {
+                "distance": 46.5,
+                "duration": 2.1,
+                "exit_number": 2,
+                "instruction": "Enter the roundabout and take the 2nd exit onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 7,
+                "way_points": [
+                  151,
+                  156
+                ]
+              },
+              {
+                "distance": 2772.0,
+                "duration": 125.8,
+                "instruction": "Continue straight onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 6,
+                "way_points": [
+                  156,
+                  190
+                ]
+              },
+              {
+                "distance": 26.2,
+                "duration": 6.3,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  190,
+                  194
+                ]
+              },
+              {
+                "distance": 176.2,
+                "duration": 12.7,
+                "instruction": "Turn left onto شارع عمر بن الخطاب",
+                "name": "شارع عمر بن الخطاب",
+                "type": 0,
+                "way_points": [
+                  194,
+                  196
+                ]
+              },
+              {
+                "distance": 247.5,
+                "duration": 14.8,
+                "instruction": "Keep right onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 13,
+                "way_points": [
+                  196,
+                  202
+                ]
+              },
+              {
+                "distance": 262.1,
+                "duration": 19.7,
+                "instruction": "Continue straight onto شارع ابو بكر الصديق",
+                "name": "شارع ابو بكر الصديق",
+                "type": 6,
+                "way_points": [
+                  202,
+                  209
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "instruction": "Arrive at شارع ابو بكر الصديق, on the right",
+                "name": "-",
+                "type": 10,
+                "way_points": [
+                  209,
+                  209
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 32118.1,
+          "duration": 1408.7
+        },
+        "way_points": [
+          0,
+          209
+        ]
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "ORS new URL",
+  "timestamp": "2026-11-28T10:15:17.320148+00:00"
+}

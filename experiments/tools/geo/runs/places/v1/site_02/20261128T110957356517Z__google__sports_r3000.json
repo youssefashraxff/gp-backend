@@ -1,0 +1,605 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "sports_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "types": [
+      "gym",
+      "sports_complex",
+      "athletic_field"
+    ]
+  },
+  "meta": {
+    "category": "sports",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.387,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJ9UfgRgAbWBQRReVgLVbAcyo",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "H20 gym new",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJQ50IC8IbWBQRHQ1uY3Xv9sU",
+        "types": [
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.201600900000003,
+          "longitude": 31.455036999999997
+        },
+        "rating": 4.9,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 2:00 PM – 12:00 AM",
+            "Tuesday: 2:00 PM – 12:00 AM",
+            "Wednesday: 2:00 PM – 12:00 AM",
+            "Thursday: 2:00 PM – 12:00 AM",
+            "Friday: 2:00 PM – 1:00 AM",
+            "Saturday: 2:00 PM – 1:00 AM",
+            "Sunday: 2:00 PM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1781,
+        "displayName": {
+          "text": "Epic shooting club",
+          "languageCode": "en"
+        },
+        "primaryType": "sports_complex"
+      },
+      {
+        "id": "ChIJYzTDbywbWBQRs5S3m3NKvps",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F23+WV3, Obour, Al-Qalyubia Governorate 6360136, Egypt",
+        "location": {
+          "latitude": 30.202262299999997,
+          "longitude": 31.454678500000004
+        },
+        "rating": 4.1,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 5:00 AM – 12:00 AM",
+            "Tuesday: 5:00 AM – 12:00 AM",
+            "Wednesday: 5:00 AM – 12:00 AM",
+            "Thursday: 5:00 AM – 12:00 AM",
+            "Friday: 5:00 AM – 12:00 AM",
+            "Saturday: 5:00 AM – 12:00 AM",
+            "Sunday: 5:00 AM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 89,
+        "displayName": {
+          "text": "Gold's Gym",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJ7RP1WGQbWBQRzs71wHsl0rI",
+        "types": [
+          "athletic_field",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Unnamed Road, محافظة القاهرة‬،, 6F58+FW2، العبور، محافظة القليوبية 6361138, Egypt",
+        "location": {
+          "latitude": 30.208636100000003,
+          "longitude": 31.4672665
+        },
+        "rating": 4.5,
+        "businessStatus": "CLOSED_TEMPORARILY",
+        "userRatingCount": 25,
+        "displayName": {
+          "text": "Fit soccer field",
+          "languageCode": "en"
+        },
+        "primaryType": "athletic_field"
+      },
+      {
+        "id": "ChIJwb1VLagbWBQRKajapLGQP8Q",
+        "types": [
+          "fitness_center",
+          "gym",
+          "sports_club",
+          "school",
+          "educational_institution",
+          "association_or_organization",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "جويس مول - الحي السادس - بجوار مسجد التيسير ، اعلي, صيدلية د/ ليديا, العبور، Cairo 6361138, Egypt",
+        "location": {
+          "latitude": 30.207910499999997,
+          "longitude": 31.4691142
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 6:00 AM – 2:00 AM",
+            "Tuesday: 6:00 AM – 2:00 AM",
+            "Wednesday: 6:00 AM – 2:00 AM",
+            "Thursday: 6:00 AM – 2:00 AM",
+            "Friday: 3:00 – 10:00 PM",
+            "Saturday: 6:00 AM – 2:00 AM",
+            "Sunday: 6:00 AM – 2:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 23,
+        "displayName": {
+          "text": "Muscles Arena Gym",
+          "languageCode": "en"
+        },
+        "primaryType": "fitness_center"
+      },
+      {
+        "id": "ChIJb1JAbQAbWBQRldIzaT81E-Y",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F67+284, Obour, Al-Qalyubia Governorate 6361140, Egypt",
+        "location": {
+          "latitude": 30.209608399999997,
+          "longitude": 31.463912999999998
+        },
+        "rating": 4.2,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 30,
+        "displayName": {
+          "text": "Power gym",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJr1QiKjIbWBQRnNzpCgHWe4I",
+        "types": [
+          "athletic_field",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F58+FVX, Obour, Al-Qalyubia Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.208741200000002,
+          "longitude": 31.467325799999998
+        },
+        "rating": 4.6,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 5,
+        "displayName": {
+          "text": "Swedish international football academy",
+          "languageCode": "ar"
+        },
+        "primaryType": "athletic_field"
+      },
+      {
+        "id": "ChIJiY6MIfcbWBQRtCqKCyTw-WA",
+        "types": [
+          "fitness_center",
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "El-Obour Rd, Obour, Cairo Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.208945399999998,
+          "longitude": 31.469558799999998
+        },
+        "rating": 4.5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 7:00 AM – 2:00 AM",
+            "Tuesday: 7:00 AM – 2:00 AM",
+            "Wednesday: 7:00 AM – 2:00 AM",
+            "Thursday: 7:00 AM – 2:00 AM",
+            "Friday: 7:00 AM – 2:00 AM",
+            "Saturday: 7:00 AM – 2:00 AM",
+            "Sunday: 7:00 AM – 2:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 90,
+        "displayName": {
+          "text": "Fit Punch Gym - Obour",
+          "languageCode": "en"
+        },
+        "primaryType": "fitness_center"
+      },
+      {
+        "id": "ChIJv0OhiYEQWBQRxoTPCepiq_Q",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "شارع أحد،النهضة ، قسم السلام تاني، 5CJV+CFH, El-Nahda, Obour, Cairo Governorate 4651251, Egypt",
+        "location": {
+          "latitude": 30.181065800000002,
+          "longitude": 31.4437253
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 5:00 AM – 12:00 AM",
+            "Tuesday: 5:00 AM – 12:00 AM",
+            "Wednesday: 5:00 AM – 12:00 AM",
+            "Thursday: 5:00 AM – 12:00 AM",
+            "Friday: Closed",
+            "Saturday: 5:00 AM – 12:00 AM",
+            "Sunday: 5:00 AM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Joe",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJb0dsUtIbWBQRUUOFkv35cdk",
+        "types": [
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Obour, Al-Qalyubia Governorate 6361140, Egypt",
+        "location": {
+          "latitude": 30.2129184,
+          "longitude": 31.464286899999998
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 9,
+        "displayName": {
+          "text": "Challenge Squash Academy",
+          "languageCode": "ar"
+        },
+        "primaryType": "sports_complex"
+      },
+      {
+        "id": "ChIJ67GqoqAaWBQRxwhMXy7xT30",
+        "types": [
+          "skateboard_park",
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Obour, Al-Qalyubia Governorate 6360153, Egypt",
+        "location": {
+          "latitude": 30.210054099999997,
+          "longitude": 31.4463304
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Happiness company",
+          "languageCode": "ar"
+        },
+        "primaryType": "skateboard_park"
+      },
+      {
+        "id": "ChIJ3d7EscYRWBQR-D2dMrJWt-E",
+        "types": [
+          "athletic_field",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "7 عمر المختار، النهضة، أول السلام، محافظة القاهرة‬،، El-Nahda, Second Al Salam, Cairo Governorate 4651242, Egypt",
+        "location": {
+          "latitude": 30.1776403,
+          "longitude": 31.445060399999996
+        },
+        "rating": 3.8,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 12,
+        "displayName": {
+          "text": "ملعب نادى طلائع النهضة",
+          "languageCode": "ar"
+        },
+        "primaryType": "athletic_field"
+      },
+      {
+        "id": "ChIJJ-DFZ2obWBQR3lt4BYO4OkI",
+        "types": [
+          "athletic_field",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "25 عمر المختار، النهضة، أول السلام، محافظة القاهرة‬،، El-Nahda, Second Al Salam, Cairo Governorate 4651242, Egypt",
+        "location": {
+          "latitude": 30.177011099999998,
+          "longitude": 31.4457183
+        },
+        "rating": 4,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 5,
+        "displayName": {
+          "text": "ملعب خماسى بنادى طلائع النهضة",
+          "languageCode": "ar"
+        },
+        "primaryType": "athletic_field"
+      },
+      {
+        "id": "ChIJHV7v1TwbWBQRTgOp7GtPbck",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Unnamed Road, 5FF2+PCX، النهضة، قسم أول السلام، محافظة القاهرة‬ 4651130, Egypt",
+        "location": {
+          "latitude": 30.174363999999997,
+          "longitude": 31.451096500000002
+        },
+        "rating": 3,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 9,
+        "displayName": {
+          "text": "GYM GaMaLia",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJ2RZAawAbWBQRf10AFxqws9U",
+        "types": [
+          "fitness_center",
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F78+M64, Obour, Al-Qalyubia Governorate 6361143, Egypt",
+        "location": {
+          "latitude": 30.214256999999996,
+          "longitude": 31.465878
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Verve Sports academy",
+          "languageCode": "en"
+        },
+        "primaryType": "fitness_center"
+      },
+      {
+        "id": "ChIJF8bTMAAbWBQR3curTwi13Nk",
+        "types": [
+          "fitness_center",
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F78+M64, Obour, Al-Qalyubia Governorate 6361143, Egypt",
+        "location": {
+          "latitude": 30.214256999999996,
+          "longitude": 31.465878
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Verve Sports Academy",
+          "languageCode": "en"
+        },
+        "primaryType": "fitness_center"
+      },
+      {
+        "id": "ChIJ_V3pegAbWBQRck2BVBmwSMk",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "6F87+5PV، الإمام مالك، Obour, Cairo Governorate 6361140, Egypt",
+        "location": {
+          "latitude": 30.2153705,
+          "longitude": 31.464324800000004
+        },
+        "rating": 4.8,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:00 AM – 11:00 PM",
+            "Tuesday: 8:00 AM – 11:00 PM",
+            "Wednesday: 8:00 AM – 11:00 PM",
+            "Thursday: 8:00 AM – 11:00 PM",
+            "Friday: 8:00 AM – 11:00 PM",
+            "Saturday: 8:00 AM – 11:00 PM",
+            "Sunday: 8:00 AM – 11:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 17,
+        "displayName": {
+          "text": "APEX GYM",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJt76NiUQRWBQRJxsPH-vT3Ao",
+        "types": [
+          "athletic_field",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Unnamed Road, النهضة، الظهير الصحراوى للعبور، القليوبية،،، 5CVM+4WC, El-Nahda, Obour, Cairo Governorate 4650252, Egypt",
+        "location": {
+          "latitude": 30.1928066,
+          "longitude": 31.4347675
+        },
+        "rating": 4.6,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 10,
+        "displayName": {
+          "text": "ملعب خماسى مدرسة المحروسة",
+          "languageCode": "ar"
+        },
+        "primaryType": "athletic_field"
+      },
+      {
+        "id": "ChIJC8Ooj1gaWBQRTEioUT_Hjtw",
+        "types": [
+          "athletic_field",
+          "sports_complex",
+          "sports_club",
+          "association_or_organization",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Near El Obour City, Al Qalyubia Governorate, Inside city club in, العبور، محافظة القليوبية 6361002, Egypt",
+        "location": {
+          "latitude": 30.1766272,
+          "longitude": 31.476403299999994
+        },
+        "rating": 4.4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 11:00 AM – 10:00 PM",
+            "Tuesday: 11:00 AM – 10:00 PM",
+            "Wednesday: 11:00 AM – 10:00 PM",
+            "Thursday: 11:00 AM – 10:00 PM",
+            "Friday: 10:00 AM – 10:00 PM",
+            "Saturday: 10:00 AM – 9:30 PM",
+            "Sunday: 12:00 – 10:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 28,
+        "displayName": {
+          "text": "Ramy Ashour Squash Academy",
+          "languageCode": "en"
+        },
+        "primaryType": "sports_club"
+      },
+      {
+        "id": "ChIJjzCx-asbWBQRvFofqch1AzQ",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "قطر الندي، قطعة ١٣ عمارة ١٨٠، علي ٩٥، Obour, Al-Qalyubia Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.213970000000003,
+          "longitude": 31.448469999999997
+        },
+        "rating": 4.1,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:30 AM – 6:00 PM",
+            "Tuesday: 9:30 AM – 6:00 PM",
+            "Wednesday: 9:30 AM – 6:00 PM",
+            "Thursday: 9:30 AM – 6:00 PM",
+            "Friday: Closed",
+            "Saturday: 9:30 AM – 6:00 PM",
+            "Sunday: 9:30 AM – 6:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 7,
+        "displayName": {
+          "text": "شركة رايت فيتنس",
+          "languageCode": "ar"
+        },
+        "primaryType": "gym"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:57.356407+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "details_1",
+  "params": {
+    "place_id": "ChIJm-14XAAbWBQRvdNGym6nzn8"
+  },
+  "meta": {
+    "category": "details",
+    "name": "Rocket Bike Cafe",
+    "distance_m": 1.9
+  },
+  "status": "ok",
+  "n_items": 2,
+  "error": "",
+  "seconds": 0.239,
+  "raw": {
+    "id": "ChIJm-14XAAbWBQRvdNGym6nzn8",
+    "rating": 5,
+    "userRatingCount": 2,
+    "displayName": {
+      "text": "Rocket Bike Cafe",
+      "languageCode": "en"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "publishTime": "2025-04-01T14:22:40.663531Z"
+      },
+      {
+        "rating": 5,
+        "publishTime": "2024-09-16T01:58:12.643900Z"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:10:03.747920+00:00"
+}

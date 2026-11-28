@@ -1,0 +1,559 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "cafe_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  "meta": {
+    "category": "cafe",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.337,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJcQUALwAbWBQR4Dla3iCywZA",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "يانو كافيه",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJ3TbAdgAbWBQRzSppZa1w0FU",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "KiNG EGYPT",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJiTijRwAbWBQRubRSy39-Qlk",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "كافيه Bon777",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJzVwabwAbWBQR6HEK9sBTK_M",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ليدام",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJQw4jGgAbWBQRk5w8V3vK4WM",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "مصطفى",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJm-14XAAbWBQRvdNGym6nzn8",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "Rocket Bike Cafe",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJ4QCBfAAbWBQRilPNfrjpk2g",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 1,
+        "businessStatus": "CLOSED_TEMPORARILY",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "Colombian coffee",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJD5Q3OAAbWBQRP1MsaGh-BX4",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "كافيه التكعيبه",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJN3O1LAAbWBQRZW9Z4_SmHfY",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سالم سعيد عبد الغفور خالد",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJsw9zHwAbWBQRjZ2iaoHWJAU",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Cafe blue view",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJP8XLLQAbWBQRhBgeXjPLl3I",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "المنصف، شارع الشيخ محمد متولي الشعراوي، Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Joumrik",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJZ6rfNgAbWBQRL7ev9pc0ZeQ",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+86C, Obour, Al-Qalyubia Governorate 6360084, Egypt",
+        "location": {
+          "latitude": 30.194027499999994,
+          "longitude": 31.4610571
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Room11",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJR_xRRQ4bWBQRZ3PWobRWKO4",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+V3Q, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.1947051,
+          "longitude": 31.4602376
+        },
+        "rating": 3,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "Santos Coffee Co",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJue-58usbWBQR0mtBFm1p8qg",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "The Continental School of Cairo، Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.194701499999994,
+          "longitude": 31.4602914
+        },
+        "rating": 3.9,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 28,
+        "displayName": {
+          "text": "زهرة البن البرازيلي",
+          "languageCode": "ar"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJZSSjdMUbWBQRgVDUFNrxNE0",
+        "types": [
+          "cafe",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+5GP, Obour, Al-Qalyubia Governorate 6360084, Egypt",
+        "location": {
+          "latitude": 30.192951200000003,
+          "longitude": 31.461328399999996
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "flowers location",
+          "languageCode": "en"
+        },
+        "primaryType": "cafe"
+      },
+      {
+        "id": "ChIJu0KoCCcbWBQRwdBKP2auB7w",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV5+XJF, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.194937499999998,
+          "longitude": 31.459062499999998
+        },
+        "rating": 4.2,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 7:00 AM – 1:00 AM",
+            "Tuesday: 7:00 AM – 1:00 AM",
+            "Wednesday: 7:00 AM – 1:00 AM",
+            "Thursday: 7:00 AM – 1:00 AM",
+            "Friday: 7:00 AM – 1:00 AM",
+            "Saturday: 7:00 AM – 1:00 AM",
+            "Sunday: 7:00 AM – 1:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1058,
+        "displayName": {
+          "text": "Dunkin' Donut",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJFUbmMo4aWBQR1wxctlfawUw",
+        "types": [
+          "cafe",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FR5+GX7، شارع ٣٢، Obour, Cairo Governorate 6360082, Egypt",
+        "location": {
+          "latitude": 30.1912875,
+          "longitude": 31.459926900000003
+        },
+        "rating": 3.8,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 652,
+        "displayName": {
+          "text": "سنتر علاء الدين",
+          "languageCode": "ar"
+        },
+        "primaryType": "cafe"
+      },
+      {
+        "id": "ChIJu8Tr9qEbWBQRCAITZZ8Hg-4",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "One Way Mall, Obour, Al-Qalyubia Governorate 6361025, Egypt",
+        "location": {
+          "latitude": 30.1948386,
+          "longitude": 31.464512
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 7:00 AM – 1:00 AM",
+            "Tuesday: 7:00 AM – 1:00 AM",
+            "Wednesday: 7:00 AM – 1:00 AM",
+            "Thursday: 7:00 AM – 1:00 AM",
+            "Friday: 7:00 AM – 1:00 AM",
+            "Saturday: 7:00 AM – 1:00 AM",
+            "Sunday: 7:00 AM – 1:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 43,
+        "displayName": {
+          "text": "Common Grounds - Specialty Coffee",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJx_drNAAbWBQRAoASi0UOhVM",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "العبور، المنطقة الصناعية، قسم ثالث القاهره الجديده، محافظة القاهرة‬, 5FX4+7H4، العبور، محافظة القليوبية 6360135, Egypt",
+        "location": {
+          "latitude": 30.197783599999998,
+          "longitude": 31.4573376
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "قهوة حسام",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      },
+      {
+        "id": "ChIJvYcIs0sbWBQRqdk3mumU_mA",
+        "types": [
+          "coffee_shop",
+          "cafe",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "U Plaza Mall, Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.1952791,
+          "longitude": 31.465465299999995
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 11:30 PM",
+            "Tuesday: 9:00 AM – 11:30 PM",
+            "Wednesday: 9:00 AM – 11:30 PM",
+            "Thursday: 9:00 AM – 11:30 PM",
+            "Friday: 9:00 AM – 11:30 PM",
+            "Saturday: 9:00 AM – 11:30 PM",
+            "Sunday: 9:00 AM – 11:30 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 32,
+        "displayName": {
+          "text": "Sam’z Cup",
+          "languageCode": "en"
+        },
+        "primaryType": "coffee_shop"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:43.161152+00:00"
+}

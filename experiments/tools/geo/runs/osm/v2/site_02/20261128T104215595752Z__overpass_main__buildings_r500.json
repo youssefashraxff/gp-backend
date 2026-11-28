@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "buildings_r500",
+  "params": {
+    "kind": "buildings",
+    "radius": 500,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];way(around:500,30.1938258,31.4601618)[building];out count;"
+  },
+  "meta": {
+    "kind": "buildings",
+    "radius": 500
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://overpass-api.de/api/interpreter'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",
+  "seconds": 0.265,
+  "raw": null,
+  "site_id": "site_02",
+  "case_version": "v2",
+  "notes": "osm v2 control site",
+  "timestamp": "2026-11-28T10:42:15.595522+00:00"
+}
