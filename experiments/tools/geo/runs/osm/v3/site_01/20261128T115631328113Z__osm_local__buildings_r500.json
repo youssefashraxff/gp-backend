@@ -1,0 +1,38 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "buildings_r500",
+  "params": {
+    "kind": "buildings",
+    "radius": 500,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];way(around:500,30.32376,31.5566816)[building];out count;"
+  },
+  "meta": {
+    "kind": "buildings",
+    "radius": 500
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 0.007,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "count",
+        "tags": {
+          "total": "0"
+        }
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v3",
+  "notes": "osm v3 local",
+  "timestamp": "2026-11-28T11:56:31.328069+00:00"
+}
