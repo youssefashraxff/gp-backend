@@ -116,7 +116,7 @@ async def _send_progress(websocket: WebSocket, client: Client, concept_id: str) 
             await websocket.send_json(current.model_dump(mode="json"))
             previous = current
 
-        if current.status in FINAL_STATUSES:
+        if current.progress_status in FINAL_STATUSES:
             await websocket.close()
             return
 
@@ -128,10 +128,12 @@ async def _send_progress(websocket: WebSocket, client: Client, concept_id: str) 
 async def _send_not_found(websocket: WebSocket, concept_id: str) -> None:
     event = ProgressEvent(
         concept_id=concept_id,
-        phase=PhaseName.research,
-        status=PhaseStatus.failed,
-        step="not_found",
-        percent=None,
+        progress_phase=PhaseName.research,
+        progress_status=PhaseStatus.failed,
+        progress_step="not_found",
+        progress_agent=None,
+        progress_percent=None,
+        escalation_id=None,
         message="Unknown concept id",
         timestamp=datetime.now(UTC),
     )

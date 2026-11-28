@@ -30,9 +30,19 @@ class ProgressEvent(BaseModel):
         extra='forbid',
     )
     concept_id: str
-    phase: PhaseName
-    status: PhaseStatus
-    step: str = Field(..., description="Current step inside the phase, e.g. 'market_research'.")
-    percent: float | None = Field(None, ge=0.0, le=100.0)
+    progress_phase: PhaseName
+    progress_status: PhaseStatus
+    progress_step: str = Field(
+        ..., description="Current step inside the phase, e.g. 'market_research'."
+    )
+    progress_agent: str | None = Field(
+        None,
+        description="Which agent inside the phase is working, e.g. 'site_analysis'. Absent for phase-level steps.",
+    )
+    progress_percent: float | None = Field(None, ge=0.0, le=100.0)
+    escalation_id: str | None = Field(
+        None,
+        description='Set while progress_status is waiting_for_expert: the open escalation the expert must answer.',
+    )
     message: str | None = None
     timestamp: AwareDatetime

@@ -25,13 +25,14 @@ def build_event(concept_id: str, query: dict, heartbeat: dict | None) -> Progres
     else:
         step = query["step"]
         percent = None
-
     return ProgressEvent(
         concept_id=concept_id,
-        phase=query["current_phase"],
-        status=query["status"],
-        step=step,
-        percent=percent,
+        progress_phase=query["current_phase"],
+        progress_status=query["status"],
+        progress_step=step,
+        progress_agent=None,
+        progress_percent=percent,
+        escalation_id=None,
         timestamp=datetime.now(UTC),
     )
 
