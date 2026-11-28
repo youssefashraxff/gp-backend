@@ -18,6 +18,8 @@ from typing import Any, Literal
 import httpx
 from pydantic import SecretStr
 
+from app.shared.schemas_generated.evidence_schema import Evidence, Fact, FactType, Kind, Source
+
 RETRY_STATUS = {429, 500, 502, 503, 504}
 ATTEMPTS = 3
 BACKOFF_SECONDS = 1.0  # 1 s, then 2 s
@@ -41,6 +43,29 @@ class ToolResult:
     data: Any = None
     error: str = ""
     capped: bool = False  # the provider's result limit was hit: coverage is incomplete
+
+    def evidence(self, url: str | None = None, title: str | None = None) -> Evidence:
+        """The gp-schemas `Evidence` for something this call returned. Pass `url` (and
+        `title`) for one web page among the results; otherwise the API and query are cited."""
+        if self.status == "error":
+            raise ValueError(f"{self.tool} failed ({self.error}); escalate instead of citing it")
+        if url:
+            source = Source(kind=Kind.url, ref=url, title=title)
+        else:
+            ref = f"{self.source}: {json.dumps(self.query, ensure_ascii=False, default=str)}"
+            source = Source(kind=Kind.api, ref=ref, title=self.source)
+        return Evidence(fact_type=FactType.retrieved, source=source, retrieved_at=self.retrieved_at)  # type: ignore[arg-type]
+
+    def fact(
+        self,
+        label: str,
+        value: Any,
+        unit: str | None = None,
+        url: str | None = None,
+        title: str | None = None,
+    ) -> Fact:
+        """A gp-schemas `Fact` whose evidence is this call."""
+        return Fact(label=label, value=value, unit=unit, evidence=self.evidence(url, title))
 
 
 def now() -> str:

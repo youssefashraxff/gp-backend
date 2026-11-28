@@ -229,3 +229,31 @@ async def test_osm_outside_coverage_or_no_cache_is_an_error(osm_cache: Path, mon
 def test_distance_uses_segments_not_vertices() -> None:
     lat = 30.0 + 100 / 111_320.0  # 100 m north of the middle of a 2 km road
     assert 95 < osm.distance_m(lat, 31.01, [[30.0, 31.0], [30.0, 31.02]]) < 105
+
+
+# --- results as gp-schemas Evidence / Fact ---------------------------------------------
+
+
+async def test_result_becomes_a_fact_citing_the_api_call(monkeypatch) -> None:
+    serve(monkeypatch, recorded("routes"))
+    res = await travel_time((30.12, 31.40), (30.32, 31.56), FUTURE)
+    fact = res.fact("drive time from Cairo Airport", res.data["minutes"], unit="min")
+    ev = fact.evidence
+    assert ev.fact_type == "retrieved" and ev.source.kind == "api"
+    assert ev.source.ref.startswith("Google Routes API") and "30.12" in ev.source.ref
+    assert ev.retrieved_at.tzinfo is not None and KEY not in fact.model_dump_json()
+
+
+async def test_web_result_cites_its_page(monkeypatch) -> None:
+    serve(monkeypatch, recorded("serper"))
+    res = await web_search("كافيهات العبور الجديدة", lang="ar")
+    page = res.data[0]
+    ev = res.evidence(url=page["url"], title=page["title"])
+    assert ev.source.kind == "url" and ev.source.ref == page["url"]
+
+
+async def test_a_failed_call_cannot_be_cited(monkeypatch) -> None:
+    serve(monkeypatch, 403)
+    res = await elevation([(30.32, 31.55)])
+    with pytest.raises(ValueError, match="escalate"):
+        res.evidence()
