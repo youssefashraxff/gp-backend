@@ -1,0 +1,108 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_ar_tiktok",
+  "params": {
+    "q": "بادل العبور الجديدة (site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_ar",
+    "variant": "tiktok",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.204,
+  "raw": {
+    "searchParameters": {
+      "q": "بادل العبور الجديدة (site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "ملاعب بادل في العبور",
+        "link": "https://www.tiktok.com/@obour360/video/7560282983270206728",
+        "displayedLink": "أكثر من 12.4 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "‎تجربتنا في Malaz Co-Working Space المكان هادي ومريح و فيه rooms كتير traning rooms مناسبة لل workshops، shared area وكمان فيه موجود فيها ...",
+        "position": 1
+      },
+      {
+        "title": "افتتاح V-Padel في هب مول العبور",
+        "link": "https://www.tiktok.com/@obour360/video/7292184191909825798",
+        "displayedLink": "أكثر من 26.3 ألف مشاهدة  ·  قبل 3 سنوات",
+        "snippet": "شاهدوا افتتاح V-Padel الجديد في هب مول العبور، تجربة رائعة لعشاق الرياضة! ... العبور, العبور في هب مول, منطقة العبور بمصر, أحداث ملهمة في العبور.",
+        "position": 2
+      },
+      {
+        "title": "اماكن بادل في العبور",
+        "link": "https://www.tiktok.com/discover/%D8%A7%D9%85%D8%A7%D9%83%D9%86-%D8%A8%D8%A7%D8%AF%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "افتتاح V-Padel في هب مول العبور. شاهدوا افتتاح V-Padel الجديد في هب مول العبور، تجربة رائعة لعشاق الرياضة! 285 Likes, 9 Comments. TikTok ...",
+        "date": "21‏/09‏/2026",
+        "position": 3
+      },
+      {
+        "title": "اماكن بادل في العبور",
+        "link": "https://www.google.com/goto?url=CAES0gEBxCJF16IEAtjS7LtF0ATyfx4O5wPIdC95mSDFrn-ATXeeG1UehGXehgR5V0LuCM6fr6gSR8tbwD-kxJqJdu1peIPK8UEy24A3E5ZTEdK5S1s3Sbmy7FOX8PffYncrmAsBx9jZPFVo2pmj252azz7oTNkmfSyQAHVBeQOuG-D8q6dn6bWJAsEU5iB9SgnAvh5-_LmiNUfiEMYV83VzJSrIO7QhfDXRZbMXnBts8ejw8lJhCOR3TGE4nsd4s7tPxHjLObdgRDrJwetWscXpWD6GXAc&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "https://www.tiktok.com › content › اماكن-بادل-في-العبور",
+        "snippet": "افتتاح V-Padel في هب مول العبور. شاهدوا افتتاح V-Padel الجديد في هب مول العبور، تجربة رائعة لعشاق الرياضة! 4319 Likes, 342 Comments. TikTok video from Ayosh ...",
+        "position": 4
+      },
+      {
+        "title": "بادل نادي Sunrise العبور",
+        "link": "https://www.google.com/goto?url=CAESvAEBxCJF19Cws1UI-vjsiKdl_WFw9hl07bsWg6-bZyYfaOVFfeAVRDEBVW_xKtSiKSJV5CYh4qROxbENlM2XiPiy3PkTS1mVb8eOb-LqJe4KQgSjTptdNfpki5GvmmKfMHiq_9kYZaDWWhKZ7ZZElBxmn45kOTrUrv4rCSE6LMmr_Uq35xZUKwMXUp2QCWcay-z5WWqJoD27DKUgkngEM-nrVhknE9Gac7Uxgi8ALeYgmt5fnNzeMMGgQUdcJw&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "تجربة جديدة في بادل مع الأصدقاء. استمتعوا بلعبة البادل مع الأصدقاء في وايلد بادل بالقطيف وتعلموا الأساسيات في أجواء ممتعة! 616 Likes, 6 Comments. TikTok ...",
+        "position": 5
+      },
+      {
+        "title": "تمرين بادل في العبور",
+        "link": "https://www.google.com/goto?url=CAESyAEBxCJF17bLL5NWf8azFPs-MkjjolXAV2PuKc3Yh3jlG-9oL6AKhqjNIvdr7ZGZZrn3tDIQZjJ0NtswC_Y7S9CwXFO1dLKFde1XHZ4W6bo7eK7wYaxKpXoyk2scEe2r-nPARkHLdBKtN5g9IR9DsarNAnGB1XAtanjl5uWpPjVPrpUfuw_yXmExTM4fHFaL8cFm-SAa9tCVFugx6hPrpXLypneeLXwIL9XneAM0ah494Nl_S-cofrxyvC8M6dJNd1C8Yq-ahb8MdQ&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "ملاعب بادل في العبور: ملعب بادل في عرابي ومكانه. تعرف على ملاعب بادل في العبور، وملعب بادل في عرابي الذي لا يزال مفتوحًا بعد إغلاق ملعب آخر، مع معلومات عن مكانه ...",
+        "position": 6
+      },
+      {
+        "title": "Bring the padel vibes to YOUR home! 🏡 Book our Pop-Up ...",
+        "link": "https://www.google.com/goto?url=CAESewHEIkXX_tkK51S7-l7r1XU-Wz_FwnqKKKCaE3IofHwRR4NClyX_yUQrkMvMTdvKlKuMdz1DHxLzdKhRDvB7DtFZ76di6WOUO0Gfl7FjVQiQT29PaLsECdyQXXioa4ngyVX3fy8Sh9oW77DqWJDk8iscrqv4VPNsF97g0A&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "أكثر من 58.6 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "اختيار مضرب بادل, مضرب بادل للتحكم العالي, مضرب بادل هجين, مضرب بادل ... كم سعر حجز البادل في العبور ملعب V Padel · بادل شروره · الدمام Padel in ...",
+        "position": 7
+      },
+      {
+        "title": "ملعب بادل نادي بلازا العبور",
+        "link": "https://www.google.com/goto?url=CAES7QEBxCJF19VS_wsf64OSdpCwSDh443QIBmmjWT63dXc-2Xe6hcL-rdiJfxqavbpoH06CYzScJW9BMGRCRA0czKQVfihO6UFpfla24HMPwwhmzuRawkvj5FH8-k3VSAoi6OkHoYehGvrH59yU2AMK1vSalZtnngdtbTLFuFPSc1CUnO7AUFfw26Y47DxSN0ZVEjTH767vbC6ka66EoEgc_nr-kGhpj2IMT-TmuHASEECaNO8yr_OFw26nxgi_sgwnct72xlscSpsc2rOlp8hymxDTJN_g70t8oE_Yagxpos04IQdfJAy9xl2haMTGd0g&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "تخيّل مكان يجمع ضحكة العائلة، حماس الرياضة، هدوء الاسترخاء، ومتعة الأصدقاء... كل هذا بمكان واحد. ... نادي الذرى الترفيهي مو مجرد مشروع... هو بداية ...",
+        "date": "16‏/11‏/2026",
+        "position": 8
+      },
+      {
+        "title": "اماكن بادل في العبور",
+        "link": "https://www.google.com/goto?url=CAES0gEBxCJF17nCEF7K6XEHdZpQLNF13XAUvLSFGy9nPnkRMPAqt-d_Yi_5h1RIUTefWThKRwV_am4HfE4O3t0_2ycuNb0OpqvPavrEFNkZLWUf_Pm_0ZcX_bf7v27vrrlBHxaZXISL7AMCmQKTTCrQrZze9cFvxe0eMLiUJKLN2za0rfaiGVBV4hmZA8NNPkHYXHe0oK4Jbk06XfB207Lm8Byt7M0ghPn8g3LQirEH29HacmpG6QC5CvD2fAH7aKSVruTr9r7-ZGZBlrt598pZjO8zf20&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "https://www.tiktok.com › content › اماكن-بادل-في-العبور",
+        "snippet": "افتتاح V-Padel في هب مول العبور. شاهدوا افتتاح V-Padel الجديد في هب مول العبور، تجربة رائعة لعشاق الرياضة! 98 Likes, 11 Comments. TikTok video from ...",
+        "position": 9
+      },
+      {
+        "title": "ملعب بادل ايزي تاون في المنصورة — العنوان وأجواء المكان",
+        "link": "https://www.google.com/goto?url=CAESewHEIkXXbqtW-6jB28HHQIEDo56SBIDQhHX_crlpjvBs_JU5DP_bPKDKraSfdXZrxXQdRJGvwNyVd7DscL38EfJ4fvLYxtFbunVq4dhH7WULD4whdJd6RAVAOdwZyQuPlHIi4I4CGRoIYgxY2VheUeD02fW8DqYTmI1JNA&gsessionid=7O4TpZzHoDBkJfPZHDjUId4VNs_xR9F2ZaqE3njNZPiGvwmjLSxoqA",
+        "displayedLink": "أكثر من 62.5 ألف مشاهدة  ·  قبل شهر واحد",
+        "snippet": "خلاصة ملعب بادل ايزي تاون خلف مساكن العبور على الطريق السريع في المنصورة يبرز كمكان جديد هادي ورايق للاستمتاع بالقهوة، الفطور، أو لعب البادل ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:47.739994+00:00"
+}

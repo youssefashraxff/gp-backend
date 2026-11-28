@@ -1,0 +1,609 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "pharmacy_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "types": [
+      "pharmacy",
+      "drugstore"
+    ]
+  },
+  "meta": {
+    "category": "pharmacy",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.373,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJZZAtEQAbWBQRDUIDa_Re2cY",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "صيدلية /د/ابراهيم سالم",
+          "languageCode": "ar"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJj24FAwAbWBQRB1g9BsW0jt0",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "صالح",
+          "languageCode": "ar"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJ4fB4H2cbWBQRUqdgn57uLqs",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "مول يو بلازا, خلف مدرسة انتركونتيننتال, Obour, Al-Qalyubia Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.195161700000003,
+          "longitude": 31.465151199999998
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "Clouds pharmacies",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJ6XEgf6kbWBQRdhGZNPSYVmo",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV3+XCJ، شارع ٥٠٠، Obour, Cairo Governorate 6360130, Egypt",
+        "location": {
+          "latitude": 30.1949737,
+          "longitude": 31.4535223
+        },
+        "rating": 3,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "صيدليه رشا مصطفي",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJHabVte4bWBQR-fV_2VZvx-Q",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "مول روضة العبور, شارع رابعة العدوية, Obour, Cairo Governorate 6361122, Egypt",
+        "location": {
+          "latitude": 30.200212299999997,
+          "longitude": 31.466417099999997
+        },
+        "rating": 4.1,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 9,
+        "displayName": {
+          "text": "صيدليات القاهرة فرع العبور",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJlXDvTIMaWBQRxfH-L-bE7fw",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV2+R5J, Obour, Al-Qalyubia Governorate 6360130, Egypt",
+        "location": {
+          "latitude": 30.1945995,
+          "longitude": 31.450391000000003
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "Pharmaceutical Mogamaa In Obour ( Abo Khaled El Obour )",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJO0lfupwaWBQR3Yg6G1q6qCg",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FW2+553, Al Salam First, Cairo Governorate 6360130, Egypt",
+        "location": {
+          "latitude": 30.1953779,
+          "longitude": 31.450433000000004
+        },
+        "rating": 4.7,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 6,
+        "displayName": {
+          "text": "مجمع أحمد عرابي",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJ00g0S10bWBQRnbLUUHD2JP0",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "6F28+6GX, Obour, Al-Qalyubia Governorate 6361122, Egypt",
+        "location": {
+          "latitude": 30.200621100000003,
+          "longitude": 31.4663699
+        },
+        "rating": 3.7,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 7,
+        "displayName": {
+          "text": "Cairo Pharmacy",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJa1rwNIMaWBQR-Y16W0GxgW0",
+        "types": [
+          "drugstore",
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "شارع ٦٠٠، Obour, Al-Qalyubia Governorate 6360130, Egypt",
+        "location": {
+          "latitude": 30.1947705,
+          "longitude": 31.449671799999994
+        },
+        "rating": 3.7,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 9:00 PM",
+            "Tuesday: 9:00 AM – 9:00 PM",
+            "Wednesday: 9:00 AM – 9:00 PM",
+            "Thursday: 9:00 AM – 9:00 PM",
+            "Friday: 9:00 AM – 9:00 PM",
+            "Saturday: 9:00 AM – 9:00 PM",
+            "Sunday: 9:00 AM – 9:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 14,
+        "displayName": {
+          "text": "Ezz Eldeen Pharmacies - صيدليات عز الدين",
+          "languageCode": "en"
+        },
+        "primaryType": "drugstore"
+      },
+      {
+        "id": "ChIJ6YJutJwaWBQRC82mWVSSjL0",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "مجمع العبور الصناعى، Obour, Al-Qalyubia Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.1949623,
+          "longitude": 31.449651399999993
+        },
+        "rating": 3.5,
+        "businessStatus": "CLOSED_TEMPORARILY",
+        "userRatingCount": 10,
+        "displayName": {
+          "text": "صيدلية ابو خالد",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJDYqTcIEbWBQRhRvRipF24vI",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "398 ميدان جمال عبد الناصر، Obour, Al-Qalyubia Governorate, Egypt",
+        "location": {
+          "latitude": 30.187672100000004,
+          "longitude": 31.468749
+        },
+        "rating": 3.9,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 9,
+        "displayName": {
+          "text": "صيدلية رضوي هاشم",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJhc05dL0aWBQR46IFHW21LM4",
+        "types": [
+          "pharmacy",
+          "medical_clinic",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "Al-Amaar Center ; 6th District; 1st Entrance, العبور، محافظة القليوبية 11828, Egypt",
+        "location": {
+          "latitude": 30.203616000000004,
+          "longitude": 31.459705999999997
+        },
+        "rating": 4.3,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 12:00 – 1:00 AM, 8:00 AM – 1:00 AM",
+            "Tuesday: 8:00 AM – 1:00 AM",
+            "Wednesday: 8:00 AM – 1:00 AM",
+            "Thursday: 8:00 AM – 1:00 AM",
+            "Friday: 8:00 AM – 1:00 AM",
+            "Saturday: 8:00 AM – 12:00 AM",
+            "Sunday: Closed"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 18,
+        "displayName": {
+          "text": "El-Basiouny Pharmacy",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJXb9MAaEbWBQRZLFHYATEerw",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "سنتر العمار بجوار كوك دور, Obour, Al-Qalyubia Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.203622,
+          "longitude": 31.459581399999998
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 12:00 AM",
+            "Tuesday: 9:00 AM – 12:00 AM",
+            "Wednesday: 9:00 AM – 12:00 AM",
+            "Thursday: 9:00 AM – 12:00 AM",
+            "Friday: 9:00 AM – 12:00 AM",
+            "Saturday: 9:00 AM – 12:00 AM",
+            "Sunday: 9:00 AM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "صيدلية النجار العبور",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJ-zCXAUobWBQROxq44UmuysA",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "Unnamed Road, 5FWC+3X8، العبور، محافظة القليوبية 6361033, Egypt",
+        "location": {
+          "latitude": 30.1951637,
+          "longitude": 31.472444799999998
+        },
+        "rating": 4.9,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 9:00 AM – 12:00 AM",
+            "Tuesday: 9:00 AM – 12:00 AM",
+            "Wednesday: 9:00 AM – 12:00 AM",
+            "Thursday: 9:00 AM – 12:00 AM",
+            "Friday: 9:00 AM – 12:00 AM",
+            "Saturday: 9:00 AM – 12:00 AM",
+            "Sunday: 9:00 AM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 20,
+        "displayName": {
+          "text": "Afnan pharmacy",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJjey6iXIbWBQRj9Dt4TMbDPU",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "مركز خدمات 132، بجوار مدرسة الفرسان، Obour, Al-Qalyubia Governorate 6361130, Egypt",
+        "location": {
+          "latitude": 30.205076699999996,
+          "longitude": 31.462930699999994
+        },
+        "rating": 3.2,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 19,
+        "displayName": {
+          "text": "Omran Pharmacy - صيدلية عمران",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJh6al8SUbWBQRGcX6tccmo7o",
+        "types": [
+          "pharmacy",
+          "drugstore",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "الحي السادس- مول اخناتون - خلف, كوباوند الحياة تاون, العبور، محافظة القليوبية 6361130, Egypt",
+        "location": {
+          "latitude": 30.2069062,
+          "longitude": 31.4627662
+        },
+        "rating": 4.7,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 10:00 AM – 1:00 AM",
+            "Tuesday: 10:00 AM – 1:00 AM",
+            "Wednesday: 10:00 AM – 1:00 AM",
+            "Thursday: 10:00 AM – 1:00 AM",
+            "Friday: 10:00 AM – 1:00 AM",
+            "Saturday: 10:00 AM – 1:00 AM",
+            "Sunday: 10:00 AM – 1:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 35,
+        "displayName": {
+          "text": "Mahmoud Ismail Pharmacy صيدلية الدكتور محمود إسماعيل",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJu9757dkbWBQRHBmgXENzAMc",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "ش احمد بن حنبل مدخل ١، Obour, Al-Qalyubia Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.2073205,
+          "longitude": 31.465474500000003
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "صيدلية د/علا محمد فاروق",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJUY4pkZgbWBQRO3PIRbWfp6A",
+        "types": [
+          "pharmacy",
+          "veterinary_care",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "الحى السادس، العبور،، Obour, Al-Qalyubia Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.207457399999996,
+          "longitude": 31.4655818
+        },
+        "rating": 4.4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 1:00 AM – 9:00 PM",
+            "Tuesday: 1:00 AM – 9:00 PM",
+            "Wednesday: 1:00 AM – 9:00 PM",
+            "Thursday: 1:00 AM – 9:00 PM",
+            "Friday: 4:00 – 7:00 PM",
+            "Saturday: 1:00 AM – 9:00 PM",
+            "Sunday: 1:00 AM – 9:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 63,
+        "displayName": {
+          "text": "Petzania",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJPxb64LgaWBQRVKnx8S19VE0",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "6F58+28P، الإمام مالك، Obour, Al-Qalyubia Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.2075866,
+          "longitude": 31.4658186
+        },
+        "rating": 4.5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:00 AM – 2:00 AM",
+            "Tuesday: 8:00 AM – 2:00 AM",
+            "Wednesday: 8:00 AM – 2:00 AM",
+            "Thursday: 8:00 AM – 2:00 AM",
+            "Friday: 8:00 AM – 2:00 AM",
+            "Saturday: 8:00 AM – 2:00 AM",
+            "Sunday: 8:00 AM – 2:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 4,
+        "displayName": {
+          "text": "Dr. Ola pharmacy صيدلية د. علا",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      },
+      {
+        "id": "ChIJQ1ReCLkaWBQRl6xHrGfh20k",
+        "types": [
+          "pharmacy",
+          "health",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "6F57+HW3, Obour, Al-Qalyubia Governorate 6361138, Egypt",
+        "location": {
+          "latitude": 30.208876500000002,
+          "longitude": 31.464800500000003
+        },
+        "rating": 4.4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 7,
+        "displayName": {
+          "text": "Elag Pharmacy صيدلية علاج",
+          "languageCode": "en"
+        },
+        "primaryType": "pharmacy"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:50.172091+00:00"
+}

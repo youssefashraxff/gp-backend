@@ -1,0 +1,54 @@
+{
+  "tool": "routes",
+  "provider": "google",
+  "case": "tenth_ramadan_to_site_sun_2200",
+  "params": {
+    "origin": {
+      "address": "10th of Ramadan City, Sharqia Governorate, Egypt"
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "departure_utc": "2026-11-29T20:00:00Z"
+  },
+  "meta": {
+    "landmark": "tenth_ramadan",
+    "direction": "to_site",
+    "slot": "sun_2200",
+    "local": "2026-11-29T22:00:00+02:00"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.355,
+  "raw": {
+    "routes": [
+      {
+        "legs": [
+          {
+            "startLocation": {
+              "latLng": {
+                "latitude": 30.303266599999997,
+                "longitude": 31.740273900000002
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 30.3243069,
+                "longitude": 31.558225800000002
+              }
+            }
+          }
+        ],
+        "distanceMeters": 34934,
+        "duration": "2376s",
+        "staticDuration": "2378s"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:26.599498+00:00"
+}

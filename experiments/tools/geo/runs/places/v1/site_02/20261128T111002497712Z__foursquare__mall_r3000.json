@@ -1,0 +1,200 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "mall_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "query": "mall"
+  },
+  "meta": {
+    "category": "mall",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 4,
+  "error": "",
+  "seconds": 0.94,
+  "raw": {
+    "results": [
+      {
+        "fsq_place_id": "4fecc3c1e4b0184b4aae46e9",
+        "latitude": 30.200161146294693,
+        "longitude": 31.455658223011675,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1fd941735",
+            "name": "Shopping Mall",
+            "short_name": "Mall",
+            "plural_name": "Shopping Malls",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2012-06-28",
+        "date_refreshed": "2026-11-18",
+        "distance": 826,
+        "extended_location": {},
+        "link": "/places/4fecc3c1e4b0184b4aae46e9",
+        "location": {
+          "address": "1'st Industrial Zone",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "1'st Industrial Zone, El Obour City, القليوبية"
+        },
+        "name": "Star House (ستار هاوس)",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4fecc3c1e4b0184b4aae46e9",
+        "related_places": {},
+        "social_media": {
+          "facebook_id": "535471539819952",
+          "twitter": ""
+        },
+        "tel": "2016189"
+      },
+      {
+        "fsq_place_id": "4fecc355e4b06c866a21503f",
+        "latitude": 30.187807,
+        "longitude": 31.469,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1fd941735",
+            "name": "Shopping Mall",
+            "short_name": "Mall",
+            "plural_name": "Shopping Malls",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2012-06-28",
+        "date_refreshed": "2021-12-23",
+        "distance": 1080,
+        "extended_location": {},
+        "link": "/places/4fecc355e4b06c866a21503f",
+        "location": {
+          "address": "El Moshir Ahmed Ismail Rd",
+          "locality": "El Obour City",
+          "region": "Al Qalyubia Governorate",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "El Moshir Ahmed Ismail Rd (7'th District), El Obour City, Al Qalyubia Governorate"
+        },
+        "name": "Town Stars",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4fecc355e4b06c866a21503f",
+        "related_places": {
+          "children": [
+            {
+              "fsq_place_id": "61c434c3e565fe05c7027a47",
+              "categories": [
+                {
+                  "fsq_category_id": "52f2ab2ebcbc57f1066b8b46",
+                  "name": "Supermarket",
+                  "short_name": "Supermarket",
+                  "plural_name": "Supermarkets",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+                    "suffix": ".png"
+                  }
+                }
+              ],
+              "name": "Kheir Zaman"
+            }
+          ]
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "59666a97ccad6b72857b1718",
+        "latitude": 30.209127,
+        "longitude": 31.465263,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1fd941735",
+            "name": "Shopping Mall",
+            "short_name": "Mall",
+            "plural_name": "Shopping Malls",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2017-07-12",
+        "date_refreshed": "2017-12-30",
+        "distance": 1769,
+        "extended_location": {},
+        "link": "/places/59666a97ccad6b72857b1718",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "Haleem Mall",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/59666a97ccad6b72857b1718",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "58582f87fd27165611af225e",
+        "latitude": 30.187485,
+        "longitude": 31.479864,
+        "categories": [
+          {
+            "fsq_category_id": "5744ccdfe4b0c0459246b4df",
+            "name": "Outlet Mall",
+            "short_name": "Outlet Mall",
+            "plural_name": "Outlet Malls",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-12-19",
+        "date_refreshed": "2022-04-12",
+        "distance": 2019,
+        "extended_location": {},
+        "link": "/places/58582f87fd27165611af225e",
+        "location": {
+          "address": "7th District",
+          "locality": "Obour City",
+          "region": "القاهرة",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "7th District, Obour City, القاهرة"
+        },
+        "name": "7th District Mall",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/58582f87fd27165611af225e",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      }
+    ],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.1938258,
+            "longitude": 31.4601618
+          },
+          "radius": 3000
+        }
+      }
+    }
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:10:02.497341+00:00"
+}

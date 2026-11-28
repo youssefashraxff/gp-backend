@@ -1,0 +1,527 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "restaurant_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "types": [
+      "restaurant",
+      "fast_food_restaurant"
+    ]
+  },
+  "meta": {
+    "category": "restaurant",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.361,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJIaQAdAAbWBQRaCtpp-XhvQc",
+        "types": [
+          "fast_food_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Volt",
+          "languageCode": "ar"
+        },
+        "primaryType": "fast_food_restaurant"
+      },
+      {
+        "id": "ChIJOSEfaAAbWBQRyDngsYxWF28",
+        "types": [
+          "fast_food_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "مطعم روح الجمبري",
+          "languageCode": "ar"
+        },
+        "primaryType": "fast_food_restaurant"
+      },
+      {
+        "id": "ChIJrRIvBQAbWBQRlul2avbSjQQ",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "محمصات دهب",
+          "languageCode": "ar"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJ55FKHwAbWBQRKqnZQ5oTzVc",
+        "types": [
+          "seafood_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "أسماك فليف استارز",
+          "languageCode": "ar"
+        },
+        "primaryType": "seafood_restaurant"
+      },
+      {
+        "id": "ChIJhXZz0ekbWBQR3YGSqoRTGu0",
+        "types": [
+          "meal_takeaway",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "مول معمار الاشراف التجاري امام سكن مصر العبور، الجديدة، Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 3:00 PM – 4:00 AM",
+            "Tuesday: 3:00 PM – 4:00 AM",
+            "Wednesday: 3:00 PM – 4:00 AM",
+            "Thursday: 3:00 PM – 4:00 AM",
+            "Friday: 3:00 PM – 4:00 AM",
+            "Saturday: 3:00 PM – 4:00 AM",
+            "Sunday: 3:00 PM – 4:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "مطعم كريب لارچ",
+          "languageCode": "ar"
+        },
+        "primaryType": "meal_takeaway"
+      },
+      {
+        "id": "ChIJrTq0MAAbWBQRIUDG66-S5ig",
+        "types": [
+          "fast_food_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ايجيبشيان جولدن كينج",
+          "languageCode": "ar"
+        },
+        "primaryType": "fast_food_restaurant"
+      },
+      {
+        "id": "ChIJBSDJBwAbWBQRtRg4Xf-QHJY",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "المنطقه الصناعيه",
+          "languageCode": "ar"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJH1LQTQAbWBQR7NNeyDH2XaE",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Muhammed",
+          "languageCode": "en"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJSaKcJwAbWBQRubbhpXsOGos",
+        "types": [
+          "brunch_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "وليد حسين احمد",
+          "languageCode": "ar"
+        },
+        "primaryType": "brunch_restaurant"
+      },
+      {
+        "id": "ChIJkwMEcQAbWBQRGLRLj4cPHbw",
+        "types": [
+          "seafood_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ركن الأسماك",
+          "languageCode": "ar"
+        },
+        "primaryType": "seafood_restaurant"
+      },
+      {
+        "id": "ChIJO9npagAbWBQRQnK_xTcotNU",
+        "types": [
+          "chicken_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "البيك",
+          "languageCode": "ar"
+        },
+        "primaryType": "chicken_restaurant"
+      },
+      {
+        "id": "ChIJIRkbMwAbWBQR1L7-ld5LTSY",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "El mahhy",
+          "languageCode": "en"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJE0taAwAbWBQR7MFxI35JgEw",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 6,
+        "displayName": {
+          "text": "روح الشام",
+          "languageCode": "ar"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJcwFRegAbWBQRiZ1BgNJu1Xg",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "مطعم بيبو",
+          "languageCode": "ar"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJw_0EaQAbWBQRTX6ZFAWnuJA",
+        "types": [
+          "fast_food_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, El-Obour Rd, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "عالرايق",
+          "languageCode": "en"
+        },
+        "primaryType": "fast_food_restaurant"
+      },
+      {
+        "id": "ChIJ8XGf0VMbWBQRYMmBCt9gEh4",
+        "types": [
+          "barbecue_restaurant",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+V3Q, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.1946847,
+          "longitude": 31.460348399999997
+        },
+        "rating": 4,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 70,
+        "displayName": {
+          "text": "ORMA Authentic Food",
+          "languageCode": "en"
+        },
+        "primaryType": "barbecue_restaurant"
+      },
+      {
+        "id": "ChIJ01sU2kQbWBQR_TcG_yse4lU",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+W3M, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.1948458,
+          "longitude": 31.460159599999994
+        },
+        "rating": 4.2,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 10:00 AM – 1:00 AM",
+            "Tuesday: 10:00 AM – 1:00 AM",
+            "Wednesday: 10:00 AM – 1:00 AM",
+            "Thursday: 10:00 AM – 1:00 AM",
+            "Friday: 10:00 AM – 1:00 AM",
+            "Saturday: 10:00 AM – 1:00 AM",
+            "Sunday: 10:00 AM – 1:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1153,
+        "displayName": {
+          "text": "Koshary El Tahrir كشرى التحرير",
+          "languageCode": "en"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJPQs6jQwbWBQR4y4PNIwkR10",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+CH4, El-Mosheer Ahmed Ismail, Obour, Cairo Governorate 6360084, Egypt",
+        "location": {
+          "latitude": 30.1935223,
+          "longitude": 31.4614602
+        },
+        "rating": 3.9,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 25,
+        "displayName": {
+          "text": "TBS obour city (total station)",
+          "languageCode": "en"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJyWjwnCIbWBQRmGZS1Df0aXU",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV5+XJF, Obour, Cairo Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.194937499999998,
+          "longitude": 31.459062499999998
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 6:00 AM – 11:30 PM",
+            "Tuesday: 6:00 AM – 11:30 PM",
+            "Wednesday: 6:00 AM – 11:30 PM",
+            "Thursday: 6:00 AM – 11:30 PM",
+            "Friday: 6:00 AM – 11:30 PM",
+            "Saturday: 6:00 AM – 11:30 PM",
+            "Sunday: 6:00 AM – 11:30 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "La Casa",
+          "languageCode": "ar"
+        },
+        "primaryType": "restaurant"
+      },
+      {
+        "id": "ChIJWfZgrowbWBQRtJPwxjAJWWg",
+        "types": [
+          "pizza_restaurant",
+          "chicken_wings_restaurant",
+          "pizza_delivery",
+          "fast_food_restaurant",
+          "meal_takeaway",
+          "meal_delivery",
+          "food_delivery",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Axis Road, Obour, Cairo Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.195753,
+          "longitude": 31.459611
+        },
+        "rating": 3.9,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 10:30 AM – 1:59 AM",
+            "Tuesday: 10:30 AM – 1:59 AM",
+            "Wednesday: 10:30 AM – 1:59 AM",
+            "Thursday: 10:30 AM – 1:59 AM",
+            "Friday: 10:30 AM – 1:59 AM",
+            "Saturday: 10:30 AM – 1:59 AM",
+            "Sunday: 10:30 AM – 1:59 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 97,
+        "displayName": {
+          "text": "Domino's Pizza دومينوز بيتزا",
+          "languageCode": "en"
+        },
+        "primaryType": "pizza_restaurant"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:46.899200+00:00"
+}

@@ -1,0 +1,513 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "grocery_r1000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 1000,
+    "types": [
+      "supermarket",
+      "convenience_store",
+      "grocery_store"
+    ]
+  },
+  "meta": {
+    "category": "grocery",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 20,
+  "error": "",
+  "seconds": 0.411,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJf4ICNAAbWBQRuWUU8B5QNhg",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 4,
+        "displayName": {
+          "text": "ماركت الشلقامي 1",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJpTmqDwAbWBQRElGYq7XRe8s",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Closed",
+            "Saturday: Closed",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "محمصات بندق",
+          "languageCode": "ar"
+        },
+        "primaryType": "grocery_store"
+      },
+      {
+        "id": "ChIJ0z15EAAbWBQRqahFWc7JTMc",
+        "types": [
+          "convenience_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F، الجديدة، العبور، محافظة القليوبية 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "بقاله ماركت عطارة",
+          "languageCode": "ar"
+        },
+        "primaryType": "convenience_store"
+      },
+      {
+        "id": "ChIJz6nFBAAbWBQRv_V2ilObnuU",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "عطاره الاندلس العبور",
+          "languageCode": "ar"
+        },
+        "primaryType": "grocery_store"
+      },
+      {
+        "id": "ChIJnZKXRgAbWBQR5z14xEfyyr8",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سوبر ماركت الفا",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJ9Y_FCQAbWBQRHDBLtyAYcKM",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Pick &pick",
+          "languageCode": "en"
+        },
+        "primaryType": "grocery_store"
+      },
+      {
+        "id": "ChIJ61XEMwAbWBQR0GoVHaRks_0",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "جامع فلفل، ١٧ ارض، Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سرجة واللبان التوحيد",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJef4FXwAbWBQRS4IDY67Xcrk",
+        "types": [
+          "convenience_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "مركت حبش",
+          "languageCode": "ar"
+        },
+        "primaryType": "convenience_store"
+      },
+      {
+        "id": "ChIJETNmdwAbWBQRBlgfFK4lqp4",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, el hay 2, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Supermarket alhoot سوبر ماركت الحوت",
+          "languageCode": "en"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJdbDdZgAbWBQRnmZeFURNyYk",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F، الجديده، حي، محافظة القليوبية 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "هايبر ابو الضمراني",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJj4kGMQAbWBQRjCw0V2mxZxY",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "الخما سين الحمرني",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJhbzKDAAbWBQRej_RG0xGNCw",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "حي الحرية ، مول, الحرية, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سوبر ماركت دريم",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJ5yQ_KgAbWBQRH1SMf_HFP6A",
+        "types": [
+          "convenience_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "اسواق صلاح زكي",
+          "languageCode": "ar"
+        },
+        "primaryType": "convenience_store"
+      },
+      {
+        "id": "ChIJPwcHUAAbWBQRJ9Uch4gLUbM",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "بداية الخير",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJjxm7RgAbWBQRmrGLMu7niTw",
+        "types": [
+          "convenience_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F مدخل الاول، Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ماركت صفوان المولى",
+          "languageCode": "ar"
+        },
+        "primaryType": "convenience_store"
+      },
+      {
+        "id": "ChIJPZXTCAAbWBQRbEBz298sJFg",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F مدرسة الجمهوريه، الجديدة، العبوربجور، Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ماركت فتحه خير",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJFeR9QwAbWBQRJS_XvoCVz3g",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "rating": 2.5,
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 2,
+        "displayName": {
+          "text": "مترو ماركت",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJL0pUbQAbWBQRUHBs27BKXrk",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, El-Obour Rd, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سوبرماركت تحيا مصر 🇪🇬",
+          "languageCode": "en"
+        },
+        "primaryType": "grocery_store"
+      },
+      {
+        "id": "ChIJVRTMWQAbWBQRumNpH9RZK0I",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "Street 100, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.1942526,
+          "longitude": 31.459872899999997
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "باباي2",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      },
+      {
+        "id": "ChIJkcFHKAAbWBQRljqLxfdRz58",
+        "types": [
+          "supermarket",
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+86C, Obour, Al-Qalyubia Governorate 6360084, Egypt",
+        "location": {
+          "latitude": 30.193699999999996,
+          "longitude": 31.461
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "سوبر ماركت",
+          "languageCode": "ar"
+        },
+        "primaryType": "supermarket"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:32.399226+00:00"
+}

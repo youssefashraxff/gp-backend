@@ -1,0 +1,68 @@
+{
+  "tool": "routes",
+  "provider": "osrm",
+  "case": "obour_city_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.1938258,
+      "lng": 31.460161799999998
+    }
+  },
+  "meta": {
+    "landmark": "obour_city",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.318,
+  "raw": {
+    "code": "Ok",
+    "routes": [
+      {
+        "legs": [
+          {
+            "steps": [],
+            "weight": 1428.8,
+            "summary": "",
+            "duration": 1428.8,
+            "distance": 25485.3
+          }
+        ],
+        "weight_name": "routability",
+        "weight": 1428.8,
+        "duration": 1428.8,
+        "distance": 25485.3
+      }
+    ],
+    "waypoints": [
+      {
+        "hint": "CFm2if___38CAAAAFwAAACMAAAAkAwAACNLOQOtjPkJiEbRCj-btRAIAAAAXAAAAIwAAACQDAADKHgAA-4nhAXC2zgFKhOEBMLTOAQQAvwkAAAAA",
+        "location": [
+          31.558139,
+          30.324336
+        ],
+        "name": "الطريق الدائري الإقليمي",
+        "distance": 153.9838283
+      },
+      {
+        "hint": "A8g9gf___38IAAAAIAAAAAAAAAAAAAAAr_0WQewqz0EAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAADKHgAAOwvgAcu4zAFCC-ABorjMAQAAXxAAAAAA",
+        "location": [
+          31.460155,
+          30.193867
+        ],
+        "name": "شارع 90",
+        "distance": 4.594805747
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:43.110350+00:00"
+}

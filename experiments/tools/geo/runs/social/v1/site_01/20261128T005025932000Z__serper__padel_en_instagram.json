@@ -1,0 +1,112 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_en_instagram",
+  "params": {
+    "q": "New Obour City padel (site:instagram.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_en",
+    "variant": "instagram",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.935,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City padel (site:instagram.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "This is Padel Mondo Obour City, Start Now Come To Train ...",
+        "link": "https://www.instagram.com/reel/C9MYyYKtyPw/",
+        "displayedLink": "10+ likes  ·  2 years ago",
+        "snippet": "This is Padel Mondo Obour City, Start Now Come To Train To shine ✨ #padelMondo #trainToShine - @padel_mondo on July 9, 2024.",
+        "date": "2 years ago",
+        "position": 1
+      },
+      {
+        "title": "Here is Padel Mondo academy Obour City 🎾#traintoshine ...",
+        "link": "https://www.instagram.com/reel/DMlxKDrCIdm/",
+        "displayedLink": "10+ likes  ·  1 year ago",
+        "snippet": "Train. Play. Maintain your fitness. Take care of your health. Keep developing your own game. Because coaching demands energy, movement, ...",
+        "date": "1 year ago",
+        "position": 2
+      },
+      {
+        "title": "Padel Mondo Academy in obour city We are glad to ...",
+        "link": "https://www.instagram.com/p/ChHxUzrKo-_/",
+        "displayedLink": "10+ likes  ·  4 years ago",
+        "snippet": "Padel Mondo Academy in obour city. We are glad to announce upgrading the Academy and make 3 packages *First package (Padel Only)* _1800 EGP_",
+        "date": "4 years ago",
+        "position": 3
+      },
+      {
+        "title": "Padel Mondo (@padel_mondo)",
+        "link": "https://www.google.com/goto?url=CAESYgHEIkXXNbWaV0KlnFfV23t4Qf84lVHurTpA9QE2uTD3nR0i2jT4uxSmKQ_okPpanVEMb5y52YrfTHfu5q7YT-_tUdaDjze1-FXuRAcU70qrJt3eTG5IdJuxcC5KrY1lgAHF&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "4.7K+ followers",
+        "snippet": "The ultimate and super experience for what the real and genuine padel is about Road 10, Orabi, Obour City, Cairo, Egypt For booking: Follow. Message ...",
+        "position": 4
+      },
+      {
+        "title": "We are back again!! 🎉🎉 PADEL MONDO IS LAUNCHING ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXTkj-dvtq9p3Cn4pmnvlQC3QEbg3zX4eQAQgGnmxUOidD1U8AIo4i6N5GQeQqIf_sRwhf8uTf28sFIuh-cnYTE0eRY0bvGeQrJgYOoRnVpDceyDyMKdvyknoDV8729UY&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "4 likes  ·  5 years ago",
+        "snippet": "PADEL MONDO IS LAUNCHING ITS SECOND TOURNAMENT When? 🗓️10th,11th and 12th of June Where? Road 10, Near Gate 6 Orabi Residence, Obour City ...",
+        "date": "5 years ago",
+        "position": 5
+      },
+      {
+        "title": "NEW!! 🚨 After launching fitness classes for juniors for padel ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXIiOCmSh5-fygwWPANGlqkemuIR4G5a7eHdW0LUPy2jmXLuw1a50YGQo674725Qu9l5dEcTFPsebmytsDg29pKwbYi-RBHxauDr99S1FeU_zdoPm101aT_ghivVNNHqozSVw&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "130+ likes  ·  1 year ago",
+        "snippet": "Join our specialized classes to progress in fitness in all areas: become more explosive, increase your endurance, improve flexibility, and ...",
+        "date": "1 year ago",
+        "position": 6
+      },
+      {
+        "title": "A place designed around the life you deserve. Discover Mirissa ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXKHd9iT49z8JpQUfnfW4dIcwqqIkWs5siam3kSz7w0qS427jTTnUykhdsdskdOLJ6DNbmnvGp0Lgz7R6kDGdHqRpbeURKijBUDrpihIoaZjxxP9Vlgz1oLnyQeZz-h8M&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "https://www.instagram.com › ...",
+        "snippet": "The New Obour City Authority has announced a new ... مجتمع متكامل على مساحة 28 فدان يضم Swimming Pools، Gym & Spa، Padel Courts، Green Spaces، Kids Area و ...",
+        "position": 7
+      },
+      {
+        "title": "A special thanks to the superstar Elham Abdel Badea for ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXX5E8Chohr3C73sK6YbEFdu66twjAEnXWQNIe0b-whQvDvdWmDzQ9PmIWkKwHluhf_-R3cUYGlvmY2Mm9OuHGHRiOlr0o4n90OwBfWKqYnhkP8YnDBnvVv7vg-s6vaEjpfJq8&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "540+ likes  ·  1 year ago",
+        "snippet": "A New Destination in Obour City. A New Standard of Excellence ... مجتمع متكامل على مساحة 28 فدان يضم Swimming Pools، Gym & Spa، Padel Courts، ...",
+        "date": "1 year ago",
+        "position": 8
+      },
+      {
+        "title": "Superstar Enas Ezzedine congratulates Reflect Developments ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXnfyl1fscaMSEN6N7xV4-wzXCRfNfPwD8Ows_BvbRD7ecq1bh0ZO5LMps0J64sS1znxDNxGHCZALhy0KyDmLr_A4s4VGaZYHYAmIyQ6OjZMiWasCLCT02PGxb17sgZrYCDvk&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "https://www.instagram.com › reel",
+        "snippet": "... Obour City, New Obour City, and Ahmed Orabi Association. ... padel courts, and an arcade area. Second, it's in ... OBOUR CITY 8TH DISTRICT BAIT EL WATAN ...",
+        "position": 9
+      },
+      {
+        "title": "Superstar Mohamed Nagaty congratulates Reflect ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXn0FEd6w_FdV4x51pXhwTYTH2GBgO4LEnkgiin6sBmAj5hNJqZZ7hKvDmCg_SSGTr88WIYAGnoSbo8I9bt4TeOyv4CHWs8tC1g36qHUKpMDy9KAvraENWEmjDJK6SgEXjhzs&gsessionid=LVFbzX65bzUimsmd7SQ36BnvwycBSLQ8w_NDKIfXIIdIwvqEYpEpAA",
+        "displayedLink": "https://www.instagram.com › reel",
+        "snippet": "... Obour City, New Obour City, and Ahmed Orabi Association. ... padel courts, and an arcade area. Second, it's in ... OBOUR CITY 8TH DISTRICT BAIT EL WATAN ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:25.931723+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "residents_ar_instagram",
+  "params": {
+    "q": "جروب سكان العبور الجديدة (site:instagram.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "residents_ar",
+    "variant": "instagram",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 5.917,
+  "raw": {
+    "searchParameters": {
+      "q": "جروب سكان العبور الجديدة (site:instagram.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "في Jazeel Residence كل تفصيلة في المشروع بتبدأ من ...",
+        "link": "https://www.instagram.com/p/Dfj2zoDArzV/",
+        "displayedLink": "معجب واحد  ·  قبل أسبوعين",
+        "snippet": "نعلن عن بدء أعمال الجسات بمشروع جزيل ريزيدنس العبور الجديدة، تمهيدًا للمرحلة الإنشائية، في خطوة جديدة نحو بناء مجتمع سكني يجمع بين جودة البناء، ...",
+        "position": 1
+      },
+      {
+        "title": "العبور الجديدة على موعد مع انطلاقة جديدة في السوق العقاري",
+        "link": "https://www.instagram.com/reel/DgM7GVLBT0j/",
+        "displayedLink": "معجب واحد  ·  قبل يوم واحد",
+        "snippet": "العبور الجديدة على موعد مع انطلاقة جديدة في السوق العقاري، مع إطلاق شركة خالد عودة لمشروعها الجديد أور جروف فيلاز (O Grove Villas)، في خطوة ...",
+        "position": 2
+      },
+      {
+        "title": "سنوات من المشروعات ومحطات كثيرة صنعت رحلة مستمرة. ...",
+        "link": "https://www.instagram.com/reel/DejRMIggZ3I/",
+        "displayedLink": "أكثر من 20 معجب  ·  قبل شهر واحد",
+        "snippet": "نعلن عن بدء أعمال الجسات بمشروع جزيل ريزيدنس العبور الجديدة، تمهيدًا للمرحلة الإنشائية، في خطوة جديدة نحو بناء مجتمع سكني يجمع بين جودة البناء، ...",
+        "position": 3
+      },
+      {
+        "title": "Launching Now .. Jazeel Residence. مشروع جديد ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXX93Y0eJEJcxaneQc8OObXygC88mp2B7WPoZguSmiEORKqELxx9CzYKL1koY31RN4MPyiPlc1yu7QVkgCiTwZgCxyP-4WgGdm0d6c97jftbRc2M2TLeBk2Nkv1GCbbgEk&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "https://www.instagram.com › ...",
+        "snippet": "**الموقع:** في الحي الـ14 بالعبور الجديدة، أمام سكن مصر وحي الياقوت، بمنطقة الـ25 كمباوند، وعلى الطريق الدائري الأوسطي **الخدمات والمميزات:** ✓ بوابتان ...",
+        "position": 4
+      },
+      {
+        "title": "يقع Jazeel Residence في موقع استراتيجي بقلب العبور ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXB_r7JvKnlNQ-Tes07cMT7GyEP0-KXnOBT7nA6moRYOR7nIjzkU77_sYhldSSBxcW6omoXbrVLd7u-FSENel2qdrsp_fh6KduBlaq01BBa6tBdpJ2kndMFv2STEKi6W4&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "4 نقرة على الزر أعجبني  ·  قبل شهر واحد",
+        "snippet": "امتلك وحدتك JAZEEL Residence موقع مميز داخل قلب العبور الجديدة، في مشروع يجمع بين الهدوء، التصميم العصري، والمساحات المناسبة للحياة والاستثمار.",
+        "position": 5
+      },
+      {
+        "title": "\"شركة الفتح جروب AFG .. تطرح احدث مشروعاتها في مدينة ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXvLPtKwNaJkUBjlbN2fiXJnBu0VeEHY_JNUH0kWriAT1rDVn1ft_2sjuHELFCQC2KDlMKD5sEdl4nQAxJ90R-oQEyVuRP7VeFeBi6XQ_6RIbEqlhzJjXVVNMxf8AGXsfC6DI&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "7 نقرة على الزر أعجبني  ·  قبل 7 أشهر",
+        "snippet": "أسعار تبدأ من: استوديو: 1,600,000 جنيه. شقق غرفتين نوم: 2,200,000 جنيه. شقق 3 غرف نوم: 2,650,000 جنيه. ✨ أنظمة سداد مميزة: ✓ مقدم ...",
+        "position": 6
+      },
+      {
+        "title": "من هليوبوليس الجديدة … إلى العبور الجديدة في الفتح جروب ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXOzxSZarvoQrH7wodzdkBdKPm6RBCXLcI8KkySL7fyNqr7ebssWMLdwKiwK524UZmFhmstnowdG3qxRvWMgkg42vfh5ZF_1hZ9fZeuwcrHkjkmI-csk8KhP5reKqyHVk&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "معجب واحد  ·  قبل 7 أشهر",
+        "snippet": "من هليوبوليس الجديدة … إلى العبور الجديدة في الفتح جروب AFG نواصل رحلتنا من مواقع راسخة، إلى مدن تحمل فرصًا أكبر للنمو والاستثمار.",
+        "position": 7
+      },
+      {
+        "title": "شقة للبيع بالعبور الجديدة حي الياقوت موقع متميز أول عمارة ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXv0LHMgny1B3ZyWmc4NJlZEJtYf650C3wKoGdRti9z0u-Q-xkW-x_KmtecNdgtuI-kSpx5XS_7OlaDMdr94PWbZFxkgGwcAluyDzHdWcpmU3WRJKGck8lpu8a0Xfr-aUy730&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "2 نقرة على الزر أعجبني  ·  قبل سنة واحدة",
+        "snippet": "شقة للبيع بالعبور الجديدة حي الياقوت موقع متميز أول عمارة على الشارع مباشرةً وش الميدان 90م 3 غرف دور ارضي على جنينه بحري صِرف تأمين حديد",
+        "position": 8
+      },
+      {
+        "title": "مجموعة خالد عوده تتوسع بـ 3 مشروعات جديدة في العبور أعلنت ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXasteTj6c-5ZZeUc1idVkIM4SalIxgx2Q2cXRqHh7u-uvXpzpLYGh1E0tua5yWJA3g9mS1iGMSAAEG1YnZaVT15ewtPQODc9vvjax9INJea7mKkvlbkqd_SLVZR5WbJ8&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "قبل أسبوع واحد",
+        "snippet": "المشروعات الـ 3 الجديدة: 1. إبداع تاورز - مجمع شقق سكنية على طريق الإسماعيلية 2. كناري ريزدنس - كمبوند متكامل الخدمات بالعبور الجديدة 3. أو جروف ...",
+        "position": 9
+      },
+      {
+        "title": "مدينة العبور الجديدة",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXX8RWD7cYDpSunInV-8qI5wotjAOdsGnZD5uxmDuhl4hchfHF_F6o3RgbtEBp1Sw0upFFY3y2Q4t10EBTtrBf7rKe6bYXmu8PQqW1mQIEuTzMlcPTnjVQrJoN85L2Rs7gEg_8&gsessionid=ZDdHzge9NGZ1C3TywMw_pEjaZ_vBtClG8NoaSI9aGdKarxT9QIWLIA",
+        "displayedLink": "7 نقرة على الزر أعجبني  ·  قبل 8 أشهر",
+        "snippet": "ليه العبور الجديدة هي وجهة الاستثمار والسكن القادمة؟ ✨ العبور الجديدة (59,000 فدان) مش مجرد امتداد عادي، دي مدينة جديدة كلياً وفي مرحلة ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:04.348708+00:00"
+}

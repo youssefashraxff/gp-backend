@@ -1,0 +1,107 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_ar_tiktok",
+  "params": {
+    "q": "كافيهات العبور الجديدة (site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_ar",
+    "variant": "tiktok",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.348,
+  "raw": {
+    "searchParameters": {
+      "q": "كافيهات العبور الجديدة (site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "كافيه في العبور: باستا وسيزر سلاد وقهوة في مكان مميز",
+        "link": "https://www.tiktok.com/@basmafoodie/video/7309407693582765317",
+        "displayedLink": "أكثر من 136.1 ألف مشاهدة  ·  قبل سنتين",
+        "snippet": "إذا كنت تبحث عن كافيه في العبور يقدم باستا، سيزر سلاد، قهوة، وفرابيه في مكان مميز، فهذا الكافيه من الأماكن التي تستحق الزيارة عند البحث عن أماكن ...",
+        "position": 1
+      },
+      {
+        "title": "وجود كافيه العبور: ريفيو كافيه جديد ببنز إثيوبي في الحي ...",
+        "link": "https://www.tiktok.com/@spot_by_m_/video/7668737549199887637",
+        "displayedLink": "أكثر من 92.4 ألف مشاهدة  ·  قبل 3 أشهر",
+        "snippet": "اكتشاف وجود كافيه: تجربة قهوة فريدة في مدينة العبور إذا كنت تبحث عن مكان جديد، هادئ، ولطيف في مدينة العبور، فقد يكون \"وجود كافيه\" (Wojoud ...",
+        "position": 2
+      },
+      {
+        "title": "The Grey Elephant Cafe العبور: كافيه هادي وأجواء مميزة",
+        "link": "https://www.tiktok.com/@obour.new5/video/7704332272912043284",
+        "displayedLink": "أكثر من 370 مشاهدة  ·  قبل 3 أسابيع",
+        "snippet": "لو بتحب القعدة الحلوة، والأجواء المميزة، يبقى لازم تحط المكان ده في خططك القادمة ❤️ العنوان: العبور – الحي التاسع، شارع الصحافة، الجانب ...",
+        "position": 3
+      },
+      {
+        "title": "كافيه نوت العبور الجديد: مكان خروجات وتصوير في ...",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXXIR4opo72oiUA5STKzwVvxi57zd0J9hMyWqQXpmxWrM25la8UTWGdkW7VB_DRq5Rpccwhh868cMGsCIS0mVJ8qj1_RyYWt4fuf4WPkrpdvfTLIhOvRH1xlc4pX44pO1ilElD94qc78_rboq6AXjpLB1tbx6A&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "أكثر من 153.2 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "كافيه نوت العبور الجديد: مكان خروجات وتصوير في العبور. افتتح كافيه نوت (Not Coffee) فرعًا جديدًا في مدينة العبور، ليصبح واحدًا من الأماكن ...",
+        "position": 4
+      },
+      {
+        "title": "افينيو مول العبور: مطاعم وكافيهات وأجمل جلسات المول",
+        "link": "https://www.google.com/goto?url=CAESdQHEIkXXtaeSQuGLiRJZFtTY66CdRXwpgj-8iEjrs5M4U01fkp63LwDIuHLMKqtC_jFYpvkktkdMmbozJy4YTBKE3JF_IHDa9FzS3RpUSbbqSwY51jX9FUyTmze75pS_Hs2O0Asex8ReK-e3i3MU9xjBpeKvTA&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "أكثر من 186.9 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "المول يوفر تجربة متكاملة تجمع بين التسوق، تناول الطعام، والجلوس في مقاهي جميلة. إذا كنت تبحث عن مكان خروج في العبور أو تريد تجربة مطاعم أفينيو ...",
+        "position": 5
+      },
+      {
+        "title": "كافيهات C3 Mall العبور",
+        "link": "https://www.google.com/goto?url=CAESugEBxCJF15pOjEFgmS0zavMU8a--jQ5YrbV9o6QU5W1LhjB_c5ugC3TyNHhr7T4QCGg0bi8UdaTUOGEwLRnk2vrxOawY_QX5HggiZR80IdBoIKjp7yvw4_tgokVkZRghpBPsgVIAsO-Ln5aoq7cqeQSbfFsaj2B5RIK6P8ak9FD4fTTCtoO1CLuvynPiFtVuOBPWzb9NJkwVEbUitVaPPZ1RlRrY0-X4RvfxZ0JvNEKRKaQKeKC0nciOpy0&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "https://www.tiktok.com › discover › كافيهات-c3-mall-ال...",
+        "snippet": "مشروب الماتشا في كافيه ايلول: بنكهات متنوعة لأكتوبر . اكتشفوا مشروب الماتشا الجديد في كافيه ايلول! متوفر الآن بنكهات متنوعة ومميزة. جربوا أفضل ماتشا في ...",
+        "position": 6
+      },
+      {
+        "title": "كافيهات في كارفور العبور الجديد",
+        "link": "https://www.google.com/goto?url=CAESggIBxCJF1w64jgk7Me4hVXZXvsJOkW7ze-7ImFsFOJYcUxqyqfIsgsXfQhsVqG1TR1xE4XK8x3Qt77F1GuU25LgfmMN8xz-T4A83KfeH3vnMZ7zEqraQo5CDKK0_Jw2SoPmgskm4mTEXBbWaC_-G48dCy6TjufSKwMmIRtpY7DxibCxipee-2k7Eb4EajgMU2Nj7UcMLZwW1x0Pqf5qtZgqQDnBogrKXUq8P35FQQX0HFn2stAYd0eaRf4_QdBV7w_g4oSENLfV7LZlW56PGia2QzVyqN5J0u2Dua8CoGl8vL9KyCHXu1P5udGbjUd_ZXV2csU9NX9wrhDViJX66hcKPdJM&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "Not Cafe: تجربة قهوة مميزة في العبور. استمتع بأجواء Not Cafe الفريدة مع ديكور مميز وقعدة هادية، تستحق كل لحظة من المشوار! 6609 Likes, ...",
+        "date": "19‏/10‏/2026",
+        "position": 7
+      },
+      {
+        "title": "كافيه نوفا العبور: مكان جديد للبنات بس | سوفت أوبنينج يوم ...",
+        "link": "https://www.google.com/goto?url=CAESdwHEIkXX3buc0Nna_4OHaOZ1F77hSxOK5ldaG2qs_tzEQp0thYcjL8b5g_mVCApwuzh5ouFtZ_Hkd3vPHVJ-Mj2HE7XLxmHxEMb-282cakErpM5n728WsVQFXH-tnvMUVd3HRNpWGCV7AXNbJW0ju8k2z4arCtsy&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "أكثر من 65 ألف مشاهدة  ·  قبل 8 أشهر",
+        "snippet": "### تجربة فريدة من نوعها تم تصميم كافيه نوفا خصيصًا ليقدم لكِ قعدة براحتك، مع خصوصية تامة وصحبة بنات من دون أي دوشة. يتميز المكان بتصميمه المميز ...",
+        "position": 8
+      },
+      {
+        "title": "‏من أجمل كافيهات القهوة المختصة فى العبور 🤩 أجواء المكان تجنن ...",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXXiTowA3NurHpS3x4AR9V6lJufQ-94HJgeVj8pusdCGBbT5YV0AOgS4nWMmafxhZa1a5COL1eKILM73j_Z7Pa5FOS4ucQNnav9mX11zMfDl-bS879_LmRPHbwxH4YDHr9rU1TQtKLvCJLZ9QJcshSHtjc3z-s&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "أكثر من 470 مشاهدة  ·  قبل 4 أيام",
+        "snippet": "الأصناف البارزة المذكورة - كريب كندر - لافا كيك - كيكه الهرم - ميني بان كيك - قهوة اليوم سعر مميز تغريدة الغلاف توضح عرضًا جذابًا: بـ 12﷼ تقدر ...",
+        "position": 9
+      },
+      {
+        "title": "كافيه بابلو العبور في أفينو مول | لمة الويك اند مع الأهل",
+        "link": "https://www.google.com/goto?url=CAESggEBxCJF16nGkJ4_z_nPVWaSQbqJTuBflY8u1LUVy9cclZ0vmJDOk6mdrkTo1AmA4-_UXOneUjx1infjO2BUQ1b9wggWaPig5P4SNgTsLV2dS3ATAkeWMUZBZbMCpzNu0XFXccaGvYlOiKp1rDzpPKn-aHg7IDLZQKhDUxAJGHHa5dlp&gsessionid=AU3t0t17gqdw--l6-OH-DBLyHK3OGY7VMwGz6lBF0_CviJIc3Oidcw",
+        "displayedLink": "أكثر من 68.8 ألف مشاهدة  ·  قبل 3 سنوات",
+        "snippet": "الموقع: Avenue Mall Cairo, Egypt العنوان: أفينو مول العبور للتواصل: 01220079911 يمكنك زيارة كافيه بابلو في العبور والاستمتاع بأجواء مريحة مع ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:29.146909+00:00"
+}

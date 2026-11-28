@@ -1,0 +1,82 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "pin_area",
+  "params": {
+    "kind": "pin_area",
+    "radius": 0,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];is_in(30.1938258,31.4601618)->.a;area.a;out tags;"
+  },
+  "meta": {
+    "kind": "pin_area",
+    "radius": 0
+  },
+  "status": "ok",
+  "n_items": 5,
+  "error": "",
+  "seconds": 1.454,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "area",
+        "id": "w47977982",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "المنطقة الصناعية الاولى",
+          "name:en": "First Industrial Zone"
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755651302",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "الامتداد الشمالى",
+          "name:en": "Northern Extension"
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852606",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12018",
+          "name:en": "Block 12018"
+        }
+      },
+      {
+        "type": "area",
+        "id": "r4103337",
+        "tags": {
+          "boundary": "administrative",
+          "admin_level": "4",
+          "name": "القليوبية",
+          "name:en": "Al Qalyubiya"
+        }
+      },
+      {
+        "type": "area",
+        "id": "r1473947",
+        "tags": {
+          "boundary": "administrative",
+          "admin_level": "2",
+          "name": "مصر",
+          "name:en": "Egypt"
+        }
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v3",
+  "notes": "osm v3 local control",
+  "timestamp": "2026-11-28T11:56:34.740369+00:00"
+}

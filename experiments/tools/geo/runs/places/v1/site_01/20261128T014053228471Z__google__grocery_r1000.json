@@ -1,0 +1,66 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "grocery_r1000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 1000,
+    "types": [
+      "supermarket",
+      "convenience_store",
+      "grocery_store"
+    ]
+  },
+  "meta": {
+    "category": "grocery",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.404,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJKRVBU2cBWBQR-END7iqjImg",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "food",
+          "point_of_interest",
+          "store",
+          "establishment"
+        ],
+        "formattedAddress": "8HC6+M88, الطريق الدائرى الاقليمى،, Al Adleyah, 10th of Rammadan Second, Al-Sharqia Governorate 7051020, Egypt",
+        "location": {
+          "latitude": 30.3216669,
+          "longitude": 31.560813099999997
+        },
+        "rating": 4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "ماركت أبو علي",
+          "languageCode": "en"
+        },
+        "primaryType": "grocery_store"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T01:40:53.228368+00:00"
+}

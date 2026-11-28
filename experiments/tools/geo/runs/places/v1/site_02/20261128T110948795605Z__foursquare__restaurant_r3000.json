@@ -1,0 +1,1197 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "restaurant_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "query": "restaurant"
+  },
+  "meta": {
+    "category": "restaurant",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 22,
+  "error": "",
+  "seconds": 0.89,
+  "raw": {
+    "results": [
+      {
+        "fsq_place_id": "5f2b5885bb6eab234bc0e17b",
+        "latitude": 30.201528,
+        "longitude": 31.455207,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2020-08-06",
+        "date_refreshed": "2022-04-19",
+        "distance": 979,
+        "extended_location": {},
+        "link": "/places/5f2b5885bb6eab234bc0e17b",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "Al Obour",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), Al Obour, Qalyubia"
+        },
+        "name": "Pablo",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5f2b5885bb6eab234bc0e17b",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "5783d144498ef49b19511daf",
+        "latitude": 30.20199,
+        "longitude": 31.455376,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-07-11",
+        "date_refreshed": "2022-06-23",
+        "distance": 1017,
+        "extended_location": {},
+        "link": "/places/5783d144498ef49b19511daf",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, Qalub"
+        },
+        "name": "Torrié Café & Restaurant",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5783d144498ef49b19511daf",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "4fe89e67e4b0daa8b6cd7dd5",
+        "latitude": 30.203507188222563,
+        "longitude": 31.45970870080677,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2012-06-25",
+        "date_refreshed": "2026-11-20",
+        "distance": 1076,
+        "extended_location": {},
+        "link": "/places/4fe89e67e4b0daa8b6cd7dd5",
+        "location": {
+          "address": "Amar Mall, 6th Zone",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Amar Mall, 6th Zone (Infront of El Sahaba Mosque), El Obour City, Qalub"
+        },
+        "name": "Cook Door",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4fe89e67e4b0daa8b6cd7dd5",
+        "related_places": {},
+        "social_media": {
+          "facebook_id": "308558172512529",
+          "instagram": "cookdooreg",
+          "twitter": ""
+        },
+        "tel": "2016999",
+        "website": "http://www.cookdoor.com.eg"
+      },
+      {
+        "fsq_place_id": "59b2bc1d73fe25689baaf6f2",
+        "latitude": 30.20252,
+        "longitude": 31.45491,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16c941735",
+            "name": "Burger Joint",
+            "short_name": "Burgers",
+            "plural_name": "Burger Joints",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2017-09-08",
+        "date_refreshed": "2025-06-30",
+        "distance": 1089,
+        "extended_location": {},
+        "link": "/places/59b2bc1d73fe25689baaf6f2",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "Al Obour",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), Al Obour, Qalyubia"
+        },
+        "name": "Splendor Burgers",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/59b2bc1d73fe25689baaf6f2",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "576d9f10498ee7073d3a1a48",
+        "latitude": 30.20272565978995,
+        "longitude": 31.45428657531738,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-06-24",
+        "date_refreshed": "2026-03-19",
+        "distance": 1138,
+        "extended_location": {},
+        "link": "/places/576d9f10498ee7073d3a1a48",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, القليوبية"
+        },
+        "name": "Café Suprēme",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/576d9f10498ee7073d3a1a48",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "facebook_id": "255999327821545",
+          "instagram": "cafesupremeeg",
+          "twitter": "cafesupremeeg"
+        },
+        "tel": "010 02097118",
+        "website": "http://cafesupreme-eg.com"
+      },
+      {
+        "fsq_place_id": "5d093e733fcee8002c5286c7",
+        "latitude": 30.202932,
+        "longitude": 31.454345,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d10f941735",
+            "name": "Indian Restaurant",
+            "short_name": "Indian",
+            "plural_name": "Indian Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/indian_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2019-06-18",
+        "date_refreshed": "2025-07-31",
+        "distance": 1155,
+        "extended_location": {},
+        "link": "/places/5d093e733fcee8002c5286c7",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "Al Obour",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), Al Obour, Qalyubia"
+        },
+        "name": "Mahraja",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5d093e733fcee8002c5286c7",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "739eb9d1ac284c0a49f764d4",
+        "latitude": 30.179748,
+        "longitude": 31.466733,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2015-05-04",
+        "date_refreshed": "2015-05-04",
+        "distance": 1686,
+        "extended_location": {},
+        "link": "/places/739eb9d1ac284c0a49f764d4",
+        "location": {
+          "address": "بلوك 13014 - القطعة السادسة - ش 31 - المنطقة الصناعية الاولى",
+          "locality": "مدينة العبور",
+          "region": "القليوبية",
+          "country": "EG",
+          "formatted_address": "بلوك 13014 - القطعة السادسة - ش 31 - المنطقة الصناعية الاولى, مدينة العبور, القليوبية"
+        },
+        "name": "كوك دوور",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/739eb9d1ac284c0a49f764d4",
+        "related_places": {},
+        "social_media": {},
+        "tel": "010 06021696"
+      },
+      {
+        "fsq_place_id": "5198d534498e76a603ec275f",
+        "latitude": 30.178637298948317,
+        "longitude": 31.4700797304256,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2013-05-19",
+        "date_refreshed": "2016-09-11",
+        "distance": 1938,
+        "extended_location": {},
+        "link": "/places/5198d534498e76a603ec275f",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "Gemstone",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5198d534498e76a603ec275f",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "62028cfa668ac13db1b44424",
+        "latitude": 30.17927,
+        "longitude": 31.472652,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556f7a12bd6a75a9903bddb2",
+            "name": "McDonald's"
+          }
+        ],
+        "date_created": "2022-02-08",
+        "date_refreshed": "2024-05-13",
+        "distance": 2013,
+        "extended_location": {},
+        "link": "/places/62028cfa668ac13db1b44424",
+        "location": {
+          "address": "ChillOut",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "ChillOut (El Obour Axis), El Obour City, القليوبية"
+        },
+        "name": "McDonald's",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/62028cfa668ac13db1b44424",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "62028bd6b64e6c1839dd7ef9",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d113951735",
+                "name": "Fuel Station",
+                "short_name": "Fuel Station",
+                "plural_name": "Fuel Stations",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/gas_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "ChillOut"
+          }
+        },
+        "social_media": {
+          "facebook_id": "280155560076",
+          "instagram": "mcdonaldsegypt",
+          "twitter": ""
+        },
+        "website": "http://www.mcdonalds.eg"
+      },
+      {
+        "fsq_place_id": "4c909d47160ea09382cfd7fc",
+        "latitude": 30.17631381696092,
+        "longitude": 31.47444971631565,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d110941735",
+            "name": "Italian Restaurant",
+            "short_name": "Italian",
+            "plural_name": "Italian Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2010-09-15",
+        "date_refreshed": "2022-05-08",
+        "distance": 2381,
+        "extended_location": {},
+        "link": "/places/4c909d47160ea09382cfd7fc",
+        "location": {
+          "address": "Golf Square",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf Square, El Obour City, القليوبية"
+        },
+        "name": "Latino's",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4c909d47160ea09382cfd7fc",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "4e999cf68b81f319134f18dc",
+        "latitude": 30.176158905029297,
+        "longitude": 31.474536895751953,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          },
+          {
+            "fsq_category_id": "4d4b7105d754a06374d81259",
+            "name": "Restaurant",
+            "short_name": "Restaurant",
+            "plural_name": "Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2011-10-15",
+        "date_refreshed": "2018-09-06",
+        "distance": 2400,
+        "extended_location": {},
+        "link": "/places/4e999cf68b81f319134f18dc",
+        "location": {
+          "address": "Golf Square",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf Square (El Obour City), El Obour City, Qalub"
+        },
+        "name": "La Cucina Cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4e999cf68b81f319134f18dc",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "513a114de4b0ba282e759f71",
+        "latitude": 30.17452621459961,
+        "longitude": 31.476543426513672,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizzeria",
+            "short_name": "Pizza",
+            "plural_name": "Pizzerias",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556f5631bd6a75a99036aba1",
+            "name": "Pizza Hut"
+          }
+        ],
+        "date_created": "2013-03-08",
+        "date_refreshed": "2023-07-18",
+        "distance": 2660,
+        "extended_location": {},
+        "link": "/places/513a114de4b0ba282e759f71",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalub"
+        },
+        "name": "Pizza Hut",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/513a114de4b0ba282e759f71",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "66093853683",
+          "instagram": "pizzahutme",
+          "twitter": "pizzahutme"
+        },
+        "tel": "2019000",
+        "website": "https://www.egypt.pizzahut.me"
+      },
+      {
+        "fsq_place_id": "4f0457edf9ab88b0c236c9f2",
+        "latitude": 30.174449453411366,
+        "longitude": 31.476589738658724,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556e0f6fa7c82e6b724f8c88",
+            "name": "Hardee's"
+          }
+        ],
+        "date_created": "2012-01-04",
+        "date_refreshed": "2023-07-18",
+        "distance": 2669,
+        "extended_location": {},
+        "link": "/places/4f0457edf9ab88b0c236c9f2",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalioubeya",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalioubeya"
+        },
+        "name": "Hardee's",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4f0457edf9ab88b0c236c9f2",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "1652552928351834",
+          "instagram": "hardeesegypt",
+          "twitter": "hardeesarabia"
+        },
+        "tel": "2019066",
+        "website": "https://www.hardees.com.eg"
+      },
+      {
+        "fsq_place_id": "562bc318498e46b4280f669a",
+        "latitude": 30.173822,
+        "longitude": 31.47569,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2015-10-24",
+        "date_refreshed": "2023-12-30",
+        "distance": 2676,
+        "extended_location": {},
+        "link": "/places/562bc318498e46b4280f669a",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalub"
+        },
+        "name": "Tatbeela",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/562bc318498e46b4280f669a",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "51c88fcd498e5b522cfc2705",
+        "latitude": 30.174433,
+        "longitude": 31.476799,
+        "categories": [
+          {
+            "fsq_category_id": "4d4ae6fc7a7b7dea34424761",
+            "name": "Fried Chicken Joint",
+            "short_name": "Fried Chicken",
+            "plural_name": "Fried Chicken Joints",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/friedchicken_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556e40c7bd6a82902e2671cb",
+            "name": "KFC"
+          }
+        ],
+        "date_created": "2013-06-24",
+        "date_refreshed": "2023-07-18",
+        "distance": 2682,
+        "extended_location": {},
+        "link": "/places/51c88fcd498e5b522cfc2705",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalub"
+        },
+        "name": "KFC",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/51c88fcd498e5b522cfc2705",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "48754878397",
+          "instagram": "kfcarabia",
+          "twitter": "kfcarabia"
+        },
+        "tel": "2019019",
+        "website": "https://www.egypt.kfc.me/en/"
+      },
+      {
+        "fsq_place_id": "53de8e36498ec521fc6c1c74",
+        "latitude": 30.174106856772433,
+        "longitude": 31.476602554321286,
+        "categories": [
+          {
+            "fsq_category_id": "5283c7b4e4b094cb91ec88d7",
+            "name": "Kebab Restaurant",
+            "short_name": "Kebab",
+            "plural_name": "Kebab Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+              "suffix": ".png"
+            }
+          },
+          {
+            "fsq_category_id": "4bf58dd8d48988d115941735",
+            "name": "Middle Eastern Restaurant",
+            "short_name": "Middle Eastern",
+            "plural_name": "Middle Eastern Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2014-08-03",
+        "date_refreshed": "2018-09-06",
+        "distance": 2701,
+        "extended_location": {},
+        "link": "/places/53de8e36498ec521fc6c1c74",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalub"
+        },
+        "name": "Mashawy (مشاوي)",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/53de8e36498ec521fc6c1c74",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "4f86f505e4b027051152011d",
+        "latitude": 30.172928911950297,
+        "longitude": 31.476109027862545,
+        "categories": [
+          {
+            "fsq_category_id": "56aa371ae4b08b9a8d5734ba",
+            "name": "Tex-Mex Restaurant",
+            "short_name": "Tex-Mex",
+            "plural_name": "Tex-Mex Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+              "suffix": ".png"
+            }
+          },
+          {
+            "fsq_category_id": "4bf58dd8d48988d14e941735",
+            "name": "American Restaurant",
+            "short_name": "American",
+            "plural_name": "American Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556df7e1a7c82e6b724d8229",
+            "name": "Chili's Grill & Bar"
+          }
+        ],
+        "date_created": "2012-04-12",
+        "date_refreshed": "2023-10-16",
+        "distance": 2781,
+        "extended_location": {},
+        "link": "/places/4f86f505e4b027051152011d",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, القليوبية"
+        },
+        "name": "Chili's Grill & Bar",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4f86f505e4b027051152011d",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "126594990816685",
+          "instagram": "chiliseg",
+          "twitter": "chilisegypt"
+        },
+        "tel": "2019002",
+        "website": "https://www.chilis.com"
+      },
+      {
+        "fsq_place_id": "4db2cb6481543d71da213f5c",
+        "latitude": 30.172677839530657,
+        "longitude": 31.4762661993794,
+        "categories": [
+          {
+            "fsq_category_id": "5283c7b4e4b094cb91ec88d7",
+            "name": "Kebab Restaurant",
+            "short_name": "Kebab",
+            "plural_name": "Kebab Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2011-04-23",
+        "date_refreshed": "2021-10-07",
+        "distance": 2813,
+        "extended_location": {},
+        "link": "/places/4db2cb6481543d71da213f5c",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour",
+          "region": "Qalioubeya",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour, Qalioubeya"
+        },
+        "name": "Studio Masr",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4db2cb6481543d71da213f5c",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "twitter": "studiomasrgrill"
+        },
+        "tel": "2019002",
+        "website": "http://www.amer-group.com/business-segments/restaurants/studio-masr-19139/about/40"
+      },
+      {
+        "fsq_place_id": "4f6eeae6e4b07a4bc5cc7cad",
+        "latitude": 30.172294331623302,
+        "longitude": 31.47623252309625,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16e941735",
+            "name": "Fast Food Restaurant",
+            "short_name": "Fast Food",
+            "plural_name": "Fast Food Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556f7a12bd6a75a9903bddb2",
+            "name": "McDonald's"
+          }
+        ],
+        "date_created": "2012-03-25",
+        "date_refreshed": "2026-11-17",
+        "distance": 2847,
+        "extended_location": {},
+        "link": "/places/4f6eeae6e4b07a4bc5cc7cad",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, القليوبية"
+        },
+        "name": "McDonald's (ماكدونالدز)",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4f6eeae6e4b07a4bc5cc7cad",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "280155560076",
+          "instagram": "mcdonaldsegypt",
+          "twitter": "mcdonaldsegypt"
+        },
+        "tel": "2019991",
+        "website": "http://www.mcdonalds.eg"
+      },
+      {
+        "fsq_place_id": "4f6e2885e4b09530af0b4f70",
+        "latitude": 30.172281323581934,
+        "longitude": 31.476249879838253,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d10b941735",
+            "name": "Falafel Restaurant",
+            "short_name": "Falafel",
+            "plural_name": "Falafel Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/falafel_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2012-03-24",
+        "date_refreshed": "2026-11-17",
+        "distance": 2849,
+        "extended_location": {},
+        "link": "/places/4f6e2885e4b09530af0b4f70",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalyubia"
+        },
+        "name": "Arabiata (ارابياتا)",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4f6e2885e4b09530af0b4f70",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "366387633397599",
+          "instagram": "arabiata.eg",
+          "twitter": ""
+        },
+        "tel": "2016919",
+        "website": "http://www.a-arabiata.com"
+      },
+      {
+        "fsq_place_id": "5410620f498eae11016d17f9",
+        "latitude": 30.170941233569327,
+        "longitude": 31.44598336619898,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizzeria",
+            "short_name": "Pizza",
+            "plural_name": "Pizzerias",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2014-09-10",
+        "date_refreshed": "2015-03-06",
+        "distance": 2884,
+        "extended_location": {},
+        "link": "/places/5410620f498eae11016d17f9",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "بيتزا المسلمى النهضة",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5410620f498eae11016d17f9",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "591245c6464d65429c74bc4f",
+        "latitude": 30.171637,
+        "longitude": 31.477837,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2017-05-09",
+        "date_refreshed": "2026-06-11",
+        "distance": 2993,
+        "extended_location": {},
+        "link": "/places/591245c6464d65429c74bc4f",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalyubia"
+        },
+        "name": "Omar Cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/591245c6464d65429c74bc4f",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      }
+    ],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.1938258,
+            "longitude": 31.4601618
+          },
+          "radius": 3000
+        }
+      }
+    }
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:48.795471+00:00"
+}

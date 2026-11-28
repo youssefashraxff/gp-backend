@@ -1,0 +1,99 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "grocery_r3000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 3000,
+    "types": [
+      "supermarket",
+      "convenience_store",
+      "grocery_store"
+    ]
+  },
+  "meta": {
+    "category": "grocery",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 2,
+  "error": "",
+  "seconds": 0.355,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJKRVBU2cBWBQR-END7iqjImg",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "store",
+          "point_of_interest",
+          "food",
+          "establishment"
+        ],
+        "formattedAddress": "8HC6+M88, الطريق الدائرى الاقليمى،, Al Adleyah, 10th of Rammadan Second, Al-Sharqia Governorate 7051020, Egypt",
+        "location": {
+          "latitude": 30.3216669,
+          "longitude": 31.560813099999997
+        },
+        "rating": 4,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1,
+        "displayName": {
+          "text": "ماركت أبو علي",
+          "languageCode": "en"
+        },
+        "primaryType": "grocery_store"
+      },
+      {
+        "id": "ChIJPbJx4V8BWBQR_w3_RhJuNXs",
+        "types": [
+          "grocery_store",
+          "food_store",
+          "store",
+          "point_of_interest",
+          "food",
+          "establishment"
+        ],
+        "formattedAddress": "8HHC+28J, الظهير الصحراوى, Al Adleyah, Bilbeis, Al-Sharqia Governorate 7051020, Egypt",
+        "location": {
+          "latitude": 30.3275905,
+          "longitude": 31.5707766
+        },
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: Open 24 hours",
+            "Tuesday: Open 24 hours",
+            "Wednesday: Open 24 hours",
+            "Thursday: Open 24 hours",
+            "Friday: Open 24 hours",
+            "Saturday: Open 24 hours",
+            "Sunday: Open 24 hours"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "ماركت الشهبندر",
+          "languageCode": "ar"
+        },
+        "primaryType": "grocery_store"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:37:02.169638+00:00"
+}

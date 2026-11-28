@@ -1,0 +1,54 @@
+{
+  "tool": "routes",
+  "provider": "google",
+  "case": "heliopolis_to_site_sun_1300",
+  "params": {
+    "origin": {
+      "address": "Korba, Heliopolis, Cairo, Egypt"
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "departure_utc": "2026-11-29T11:00:00Z"
+  },
+  "meta": {
+    "landmark": "heliopolis",
+    "direction": "to_site",
+    "slot": "sun_1300",
+    "local": "2026-11-29T13:00:00+02:00"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.359,
+  "raw": {
+    "routes": [
+      {
+        "legs": [
+          {
+            "startLocation": {
+              "latLng": {
+                "latitude": 30.0909557,
+                "longitude": 31.324386800000003
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 30.3243069,
+                "longitude": 31.558225800000002
+              }
+            }
+          }
+        ],
+        "distanceMeters": 47269,
+        "duration": "2762s",
+        "staticDuration": "2762s"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:46:55.346991+00:00"
+}

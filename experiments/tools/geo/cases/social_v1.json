@@ -1,0 +1,19 @@
+{
+  "version": "v1",
+  "description": "Serper with site: filters for social platforms. Each question once with all platforms in one filter and once per platform.",
+  "platforms": {
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "x": "x.com",
+    "tiktok": "tiktok.com"
+  },
+  "place_words": ["obour", "العبور"],
+  "queries": [
+    {"id": "cafes_ar", "lang": "ar", "text": "كافيهات العبور الجديدة"},
+    {"id": "padel_ar", "lang": "ar", "text": "بادل العبور الجديدة"},
+    {"id": "residents_ar", "lang": "ar", "text": "جروب سكان العبور الجديدة"},
+    {"id": "malls_ar", "lang": "ar", "text": "مول العبور الجديدة"},
+    {"id": "cafes_en", "lang": "en", "text": "New Obour City cafe"},
+    {"id": "padel_en", "lang": "en", "text": "New Obour City padel"}
+  ]
+}

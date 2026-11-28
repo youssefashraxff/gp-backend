@@ -1,0 +1,52 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "details_3",
+  "params": {
+    "place_id": "ChIJPbCTKDIHWBQR-N2_E4f78n8"
+  },
+  "meta": {
+    "category": "details",
+    "name": "مظلوم فرع بلبيس Mazloum tiles belbeis",
+    "distance_m": 2786.3
+  },
+  "status": "ok",
+  "n_items": 5,
+  "error": "",
+  "seconds": 0.403,
+  "raw": {
+    "id": "ChIJPbCTKDIHWBQR-N2_E4f78n8",
+    "rating": 4.1,
+    "userRatingCount": 225,
+    "displayName": {
+      "text": "مظلوم فرع بلبيس Mazloum tiles belbeis",
+      "languageCode": "en"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "publishTime": "2024-06-17T10:36:58.428100Z"
+      },
+      {
+        "rating": 3,
+        "publishTime": "2024-06-28T12:42:27.760420Z"
+      },
+      {
+        "rating": 5,
+        "publishTime": "2021-06-22T19:30:49.866934Z"
+      },
+      {
+        "rating": 2,
+        "publishTime": "2023-01-04T22:17:57.989982Z"
+      },
+      {
+        "rating": 4,
+        "publishTime": "2022-01-10T02:17:39.460055Z"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T01:41:24.684027+00:00"
+}

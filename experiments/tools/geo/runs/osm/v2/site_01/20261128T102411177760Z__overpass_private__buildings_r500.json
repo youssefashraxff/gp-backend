@@ -1,0 +1,44 @@
+{
+  "tool": "osm",
+  "provider": "overpass_private",
+  "case": "buildings_r500",
+  "params": {
+    "kind": "buildings",
+    "radius": 500,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];way(around:500,30.32376,31.5566816)[building];out count;"
+  },
+  "meta": {
+    "kind": "buildings",
+    "radius": 500
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 0.927,
+  "raw": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-07-15T15:22:01Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "count",
+        "id": 0,
+        "tags": {
+          "nodes": "0",
+          "ways": "0",
+          "relations": "0",
+          "total": "0"
+        }
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v2",
+  "notes": "osm v2 headers",
+  "timestamp": "2026-11-28T10:24:11.177496+00:00"
+}

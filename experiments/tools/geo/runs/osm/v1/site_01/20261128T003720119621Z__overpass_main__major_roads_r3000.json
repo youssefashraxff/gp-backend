@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "major_roads_r3000",
+  "params": {
+    "kind": "major_roads",
+    "radius": 3000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];way(around:3000,30.32376,31.5566816)[highway~\"^(motorway|trunk|primary|secondary|tertiary)(_link)?$\"];out meta geom;"
+  },
+  "meta": {
+    "kind": "major_roads",
+    "radius": 3000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",
+  "seconds": 0.736,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:37:20.119484+00:00"
+}

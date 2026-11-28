@@ -1,0 +1,61 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "mall_r3000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 3000,
+    "types": [
+      "shopping_mall"
+    ]
+  },
+  "meta": {
+    "category": "mall",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.56,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJPbCTKDIHWBQR-N2_E4f78n8",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Cairo - Belbeis Desert Rd, Bilbeis, Al-Sharqia Governorate 7050301, Egypt",
+        "location": {
+          "latitude": 30.340747900000004,
+          "longitude": 31.535339299999997
+        },
+        "rating": 4.1,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 8:00 AM – 7:00 PM",
+            "Tuesday: 8:00 AM – 7:00 PM",
+            "Wednesday: 8:00 AM – 7:00 PM",
+            "Thursday: 8:00 AM – 7:00 PM",
+            "Friday: 8:00 AM – 7:00 PM",
+            "Saturday: 8:00 AM – 7:00 PM",
+            "Sunday: 8:00 AM – 7:00 PM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 225,
+        "displayName": {
+          "text": "مظلوم فرع بلبيس Mazloum tiles belbeis",
+          "languageCode": "en"
+        },
+        "primaryType": "shopping_mall"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:37:08.441376+00:00"
+}

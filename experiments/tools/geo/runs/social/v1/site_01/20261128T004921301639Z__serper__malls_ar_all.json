@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "malls_ar_all",
+  "params": {
+    "q": "مول العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "malls_ar",
+    "variant": "all",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 5.325,
+  "raw": {
+    "searchParameters": {
+      "q": "مول العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "مول بانوراما العبور الجديده حي الحرية",
+        "link": "https://www.google.com/goto?url=CAESrwIBxCJF1-8UrP-8lQQz0xAgbjVNpgrVQRx3jHRNwJXzrWy2m_bKiuvO6ySOT5H4WAA1jcAKWp9JoMt4TDIS6Kk8AYV-ITp61V-MuPFRlheYfcLeA8FTCsr0HRucYO2KyVRSCmfbpsb55M-nhKyX8AU0jPhbaev2nhxrRYnOz6kId6-Qwa06tkJOsWKvSgFdI9YlibBLcWcCRj5zkuig9kcckxMwZt7MFnoHAalv6HJjc0JBNFoOWQFVKov28ASUvd_JZYDW8MVWHDDJFp4-lsYpEP9Q7ZzjXiXj2_P71XKh_tXtEtPC2WErD8Rt-NKu6JbkwsbnEQTnocoXXWqI01FJjVwjOrsTzJMgIuwJ9E_EhmHcEbN_c7cZHFElBpqiOj14bea-W2Vg0_86LTfw4gA&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "أكثر من 7.5 ألف متابع",
+        "snippet": "مول تجاري اداري طبي سكني في مدينة العبور الجديده (ماركت-خضار-عيادات طبيه-معمل تحاليل-تسالي-خضار- مطاعم-كافيه-موبايل-فرن-منظفات-حلاق رجالي-بيوتي سنتر- ...",
+        "position": 1
+      },
+      {
+        "title": "مباشرة على محور الـ 90. أول مول ترفيهي متكامل في العبور ...",
+        "link": "https://www.facebook.com/m.alashraaf/videos/%D8%A7%D9%85%D8%AA%D9%84%D9%83-%D9%88%D8%AD%D8%AF%D8%AA%D9%83-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A3%D9%88-%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A3%D9%88-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D9%81%D9%8A-%D8%AC%D8%B0%D8%A8-%D8%A8%D9%84%D8%A7%D8%B2%D8%A7-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%AD%D9%88%D8%B1-%D8%A7%D9%84%D9%80-90-%D8%A3/2124331161770700/",
+        "displayedLink": "أكثر من 20 تفاعل  ·  قبل 4 أشهر",
+        "snippet": "امتلك وحدتك التجارية أو الإدارية أو الطبية في جذب بلازا، مباشرة على محور الـ 90. أول مول ترفيهي متكامل في العبور الجديدة. بمقدم يبدأ من 15% ...",
+        "position": 2
+      },
+      {
+        "title": "مول معالم في قلب مدينة العبور الجديدة يقدم واجهات عصرية ...",
+        "link": "https://www.google.com/goto?url=CAESoAQBxCJF10FwW_4X-ynBHP59G7laWspyEP_Z-30kvg37oD_R8K0bcwQFpFOY4MMk5u3lS2PODvFvpE91Z8H_6Ai-1zFUV5LleLliwhf9hkPreaqiJ8RJMDUoOlnmlIRcbhwNC-pRagMAzEEfICgUtBMxcWoXDWsrfD4s4wfZTblKXEL-eLtgdoZSKvL7t3S0rmKim-lzFYPfZAPyL73oSIQt22gRZoUbXiVYTOwbp0uGL61vzVhqgGVJ_AofDLoSfp_janZBvOu6lA4H8WOBzKyuGxv0DJURxgi6zfbeY95AxfhArXwHcljq-T_hYwiXLdyfGST36dGP20_fMONslRezPd0p672q1tYEDGHZ4x2nIEV7A7YEq3QLExO96n8N8BxmqFVax4flGTPd_Fs9XEzs8PNBK6RgPiHRlpgDe3_t6ZnxRv60tOwxQLWx3Jckiz69BI-OLfYEt9ya05P0iBNEQMaXd6RuuP2zGws6VSHZ-l7IzCV9xZauOv4AyYeH3eY_vFSQMxF3hV6gI5Z6rjehnWcgcd99zpHP4KyRPPdb_dHH8KQ0ppTKXPWmlj1PYHLl2wXaJam3CkA031oRKviJoxlixuLk6qMwdpEFfnBqYWY5RXCIQcpkhAIEDGxjoS2IlFrJnzLhYWd1kE1gCsdXjmpAE_nMVn6w4cbqBWmktccKHz97MxDE1DFRVF81LJ30hnBp2Dk8TlB5K7rFoOAu&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل سنتين",
+        "snippet": "الموقع: قطعة أرض مميزة بمدينة العبور القديمة، بجوار جمعية عرابي وبوابة 8، على محور خط 10 (الشريان الجديد للمدينة) أمام الحي الثالث ...",
+        "position": 3
+      },
+      {
+        "title": "\"\"بازار مول\" وجهة جديدة تجمع بين الرؤية المعمارية العصرية ...",
+        "link": "https://www.google.com/goto?url=CAESaQHEIkXX48fZHozqm17u3NKwKVTJLB1uAPmQ-fQDxMj9LA7E3J2JwYXPnf-btI0Ye1uoqrVWqLM7aWAedwK1KR4BKTmrM4Zc99hyvFUDdGUnmsGJAfhhMPo6Ht3-NFjgpiAzL1cNwBQlBQ&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "أكثر من 30 معجب  ·  قبل أسبوع واحد",
+        "snippet": "اليوم نبدأ خطوة جديدة على أرض الواقع. انطلاق أعمال الإنشاءات في ORIN Mall – العبور الجديدة بتاريخ 28 سبتمبر 2026، في بداية مرحلة جديدة نحو وجهة ...",
+        "position": 4
+      },
+      {
+        "title": "السلام عليكم ايه افضل مول فى العبور من حيث التسوق والخروج",
+        "link": "https://www.facebook.com/groups/2684938655126180/posts/4235103080109722/",
+        "displayedLink": "أكثر من 40 تعليق  ·  قبل سنة واحدة",
+        "snippet": "#بيان_توضيحي الدخول مركز تجاري فيزا مول بالمسيلة Visa moll مجاني تمامًا، لكن المركز الترفيهي الخاص بالألعاب يتطلب: • شراء بطاقة بـ150 ألف صالحة ...",
+        "position": 5
+      },
+      {
+        "title": "أكبر مول وأكبر ممشى سياحي وترفيهي في العبور الجديدة ...",
+        "link": "https://www.google.com/goto?url=CAESaQHEIkXXwPQueFR3bSGiVv86KjFVRiiKdyDhK_ZA-tsNISIHyJpaYjfm9Kd2H5vqc3_P-FJbWjXJpVN95b9WlJNIxXJoj1sLKyMrVdgaWAMG84r2D6ksN4CxnDlXb57KdwoZetYuLhiYmg&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "قبل 3 أسابيع",
+        "snippet": "الأسعار والمساحات: المساحات تبدأ من 34 متر. التجاري يبدأ من 230,000 جنيه للمتر. الطبي يبدأ من 85,000 جنيه للمتر. الإداري يبدأ من 68,000 جنيه ...",
+        "position": 6
+      },
+      {
+        "title": "في قلب العبور الجديدة، بالقرب من كل حاجة مول Aspire Mall من ...",
+        "link": "https://www.google.com/goto?url=CAESiwMBxCJF19hLANXBR-QS3iatjzR2d9OvzGFnh3Iwjl8tfPipg-PtVqlqEJwmJxqPBcRIVy2PJnW3eooFAyDM_8axklkG7qeFkeiPIn1sUj0TCx6joc1uy8ymdUKACuFpOnru1bvJ7TFXImC2xELWaO4XnCCBLzZVTW3L2b_snGj9cO9n5tMxPChU8UEaNnAGy16yW2zHCrELK17oNJ57RYQLNk1SLUEY71AvQHRH8XH7d_DnOW88gPpKqaLBX1Km0osz6L9HOmSi8M2P4q7S7YPGb3R2QbrrWvFP3f59IATkK7pKe1u4cbZmEk1b1BuZH3J3GjMLCRUMQlqbzzeKiroA7KSrzhtO8n8Mm9UuInTiacUPeRMja6pCFEFMd8n65iF2xwkk4-OHflhiHUwfU8S5Bo0kTAoT0eUxdgAAu_5E8Cn5ZQJLVNYmG5TF67W3lI1WYYZpjk3UZZ6wo2zEY_YiTlrKvhDxyOdbqvU0miM_q08bh3MytBhSDez1Xav7ycvz72kBBxaWSlNt9g&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "أكثر من 30 تفاعل  ·  قبل 12 شهرًا",
+        "snippet": "الموقع: قطعة أرض مميزة بمدينة العبور القديمة، بجوار جمعية عرابي وبوابة 8، على محور خط 10 (الشريان الجديد للمدينة) أمام الحي الثالث ...",
+        "position": 7
+      },
+      {
+        "title": "أسواق للتطوير العقاري تطلق مشروع verto mall في مدينة ...",
+        "link": "https://www.google.com/goto?url=CAESaQHEIkXXu4cfrNYEq8n1mL1XsftHlG7qBGGa-Wsw44rAEa0HPXTeut2DcMAFs9_o26tFo73LA9WE0GSLR5TnQXAnOZ1HxoiQiXlQyGfo3oFWnmFoP96S2E0QRQmPRgVZOz4ueL6uD5wv4w&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "معجب واحد  ·  قبل شهرين",
+        "snippet": "مرتقي بطرحها الجديد في اكبر مول ترفيهي: مساحات تجارية تبدأ من 30 متر أسعار متوقعة تبدأ من 250,000 جنيه للمتر للدور الأول، و300 ...",
+        "position": 8
+      },
+      {
+        "title": "خصم يصل لـ25% على وحدتك الاستثمارية في العبور الجديدة! ...",
+        "link": "https://www.google.com/goto?url=CAESZgHEIkXXs_uy7xPieam8_8xYfyRy2kXE1iSun9O-C1ONz5T2E-nkHjYcbuV2zR275hjw7kXTOizW-_GAFDBZx1eyaaj0LtM4Hc8qhDiiI9VE-gbH3IQQZTTnszlWM8KjCK-H9GfJGw&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "قبل 4 أيام",
+        "snippet": "المول على محور الـ70 مباشرة، في موقع حيوي بالقرب من وحدة المرور والتراخيص، وعلى بُعد دقيقة تقريبًا من الطريق الدائري الأوسطي، وسط مناطق سكنية ...",
+        "position": 9
+      },
+      {
+        "title": "🔥 امتلك محلك في زون مول العبور الجديدة بمقدم ...",
+        "link": "https://www.google.com/goto?url=CAEShQEBxCJF16pl60hh0S-K6EyANIF25CyTpnif48Ten9q5VqIi2dt5F7fMiITB4e_8SKJb7XJwoE-EbRhOcYQnvlU9Hnc49WosR0FQsx6jW2nkJYxlNzmVKy1wGaMCjtB3edxrMnZyyOv0T8tXq2UBjqcx6eSCIrCmDUXEFYZzKUEEVNP-fjdd&gsessionid=T6ymNCyIcHT6dlyy8XGXXmo57XFqcQ-dU9OHwOwkhON_jiA_O24tsQ",
+        "displayedLink": "قبل أسبوع واحد",
+        "snippet": "ZONE MALL – حي الحرية موقع استراتيجي على بُعد خطوات من محور التسعين وشارع السبعين، وسط منطقة سكنية بتخدم أكتر من 130,000 نسمة! محل ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:21.301423+00:00"
+}

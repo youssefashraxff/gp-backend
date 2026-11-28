@@ -1,0 +1,35 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_en_x",
+  "params": {
+    "q": "New Obour City padel (site:x.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_en",
+    "variant": "x",
+    "lang": "en"
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 2.067,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City padel (site:x.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:29.003430+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "v3",
+  "description": "osm_v2's questions answered from a local copy of Geofabrik's Egypt extract (built by osm_data.py) instead of the public Overpass servers, which failed 41 of 48 calls in v2. Box: east Greater Cairo, from Heliopolis/Nasr City to 10th of Ramadan and from New Cairo to north of New Obour.",
+  "pause_seconds": 0,
+  "box": {"min_lat": 29.95, "max_lat": 30.45, "min_lng": 31.2, "max_lng": 31.85},
+  "endpoints": {"osm_local": "local"},
+  "cases": [
+    {"kind": "pin_area"},
+    {"kind": "roads", "radius_m": 1000},
+    {"kind": "major_roads", "radius_m": 3000},
+    {"kind": "landuse", "radius_m": 1000},
+    {"kind": "buildings", "radius_m": 500},
+    {"kind": "buildings", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 3000}
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_en_all",
+  "params": {
+    "q": "New Obour City cafe (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_en",
+    "variant": "all",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 4.399,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City cafe (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "Do Cafe Now Open in Al Obour City: Coffee, Waffles & Crepes",
+        "link": "https://www.facebook.com/61593168855510/videos/do-cafedo-your-day-right-coffee-foryou-obourcity-obour-fyp/2119941048731044/",
+        "displayedLink": "https://www.facebook.com › ... › Do Café › Videos",
+        "snippet": "This promotional video announces the new opening hours for O2 Cafe, stating it now opens at 9:00 AM instead of being closed at noon as previously thought. The ...",
+        "position": 1
+      },
+      {
+        "title": "Your New Spot for Syrian Cuisine & Coffee at Avenue Mall ...",
+        "link": "https://www.instagram.com/p/DOtPwiEjCS4/",
+        "displayedLink": "1 like  ·  1 year ago",
+        "snippet": "Your New Spot for Syrian Cuisine & Coffee at Avenue Mall Address: Obour City - Avenue Mall - Ninth District For inquiries and home orders:",
+        "date": "1 year ago",
+        "position": 2
+      },
+      {
+        "title": "Cafe Nova Obour City — New Cairo Cozy Café Guide",
+        "link": "https://www.tiktok.com/@cafe.nova0/video/7637135825553100052",
+        "displayedLink": "3.3K+ views  ·  6 months ago",
+        "snippet": "Cafe Nova sits in Obour City with a New Cairo vibe that draws locals and visitors seeking a relaxed coffee and casual hangout. and simple ...",
+        "date": "6 months ago",
+        "position": 3
+      },
+      {
+        "title": "Big News, El Obour! The wait is officially over",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXIDLiiFSdi2cOj4vxWVypbzyyKydkyuJEa6e-bCzoalcRs7GZd1netbDiRIeYO1AqgyfqhgJBfw0FxfcyNa5XbvnCXci6i3bdcd8z5bY0RCXgzO5kvkqzJAeqkhBmcjk&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "110+ likes  ·  1 year ago",
+        "snippet": "Coffee House is now brewing in your neighborhood! our newest branch in El Obour City is here. Opening Hours: Daily | 7:30 AM – 1:00 AM is ...",
+        "date": "1 year ago",
+        "position": 4
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAESzgEBxCJF103BD7kCkgVDYIhXhR7YkG8oAVn2Ye8U2evDfJn7B686CA0soyZ6sYC7dlhtA7xsS6bKgsjvlgpgglm3MzTk2FDMlT-9AJQDiAaXOo9uFE_tVh-JJFGnMUq9MIqTYLCRkTVy7MDpooKHLlhEONRWTJGUhuFWBwlkiHkuvfmhXAIGnHoFFCKB_F1uZ81k9MbxtWOpl31pGrcqHCqedciSnlmjJVQrIAhqxY_FntldHEoVECFhpfwYABNN2aYSEfTwI8O2Cga_d25sCw&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "2 reactions  ·  1 day ago",
+        "snippet": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo Obour City. Good drinks, sweet bites, and beautiful moments. croissants, cheesecake, ...",
+        "date": "1 day ago",
+        "position": 5
+      },
+      {
+        "title": "Le Doux Dessert & More Opens in Obour City with 50% Off ...",
+        "link": "https://www.google.com/goto?url=CAESywEBxCJF19Q-UCZFWogYeW3DPpaF5sb7D1yFLg4QJFenRHxsAqpXjIkDixPNNsTYfPLaTgY4uZmxYa6sPLTio82bBOiniORscqHSPn8ukKcr7oD6nX5QZ2ak-HhZW2TgWOfEehxQdrHzgR1fPRvqng82hwvhAi43SZBFXySDShWdXDCgz-rGv3RtWs6MVhWhPVhaU3gPY4i-3MEVKMJMc4q04I05WeSix3Txnm0o6sYuzFf0U51g9-BUyQWtIHuix218DB8rO07pEG0dRw&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "60+ reactions  ·  11 months ago",
+        "snippet": "Obour City just got sweeter with the opening of our newest branch, Le Doux The perfect way to wrap up 2025 and welcome a brand new year.",
+        "date": "11 months ago",
+        "position": 6
+      },
+      {
+        "title": "Big News, El Obour! The wait is over — Not! Coffee is ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXFzECxPH2J5m8QtAsFu5U_EZ7ihdMekC83FV2gVcPaIOV5FtPnS4BUmPIcnoUPK1O8ghaVh_r2YjA_Vb8odJB5SHoLg6G71O-LkM1D0aJ2_eCmPMrZpmq-uGmqPDTdic&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "110+ likes  ·  1 year ago",
+        "snippet": "Big News, El Obour! The wait is over — Not! Coffee is officially brewing in your city! Step into a world of bold flavors, chilled vibes, ...",
+        "date": "1 year ago",
+        "position": 7
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee Opening Soon in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAESzgEBxCJF16isdJqtqI2FxENrYhGX4aN61nThc9M-fkCg3GbxGR1Ath1K6X_IWkLNfhvd4QmTXxbJsAn55wAd-yqYFGGemvREWTT_qB7v1IU3rFDMlCAnlSxt99RFsz8xXBNI7B4FLdm76LvDDiLtFynfyhULblzQ8royfosyiSsfs-GCPvmh1wQXoAtfVcalAWaCei7fII8DkY5tFXIKpoV9pEnPOEMGV6-pW5aRohWVyEBLvxhqLYCtWcvJ617gtKstuilf2jTADBqcx_zNMQ&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "10+ reactions  ·  1 week ago",
+        "snippet": "Cafe Nova, located in New Cairo and Obour City. Open at 7AM for Coworking & Coffee",
+        "date": "1 week ago",
+        "position": 8
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAES1wEBxCJF1zYzTKxmfq6cmqkfMsxx6ewmV0hhFn0eLMZEpi0_71ERwcj9zHTg5wXGGpRgBWog8FsWf6SiAyw2WP2BB1bnISzCuIrOShLTLvTWujflOeg0d75DvdEwBbNiFEjvs7s6E6n1hBwlxAGE0TN6Aii8mFF1vFydqzSgnqs6fEIq-RzsTXXbxFZkeP4DOTdGOw60iSquLpGtnQClddcM2zYEyXWoYoPF4-hmAmXz_XX6K4JUZd_vL1nn2x4c_S8Bf8jyTM8jO3syYdlQeUh7uSu_2g89ig&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "2 reactions  ·  1 day ago",
+        "snippet": "Good drinks, sweet bites, and beautiful moments. ☕️ That's the NOVA experience! #CafeNova #MoreThanCoffee #goodvibes #obour #new_cairo.",
+        "date": "1 day ago",
+        "position": 9
+      },
+      {
+        "title": "Qahwet Oraby Soft Opening at UNI MALL Obour City",
+        "link": "https://www.google.com/goto?url=CAESjAIBxCJF15OkR793rexXgT4ABbzUXhykx5jf7WrsdhUYviAJicaR2o0bhuqiYCx98_ItJiH1HXGCUk6VyooXBhZR7Pe4pzhHutHqcc0tVpnnBgpd8ifoCtd4N29D9fh6D2vOzc4MfS2-aKTusMTh8TnfXI2MvQNBMnsamwnJog_G2n_mdCcgeh8x6Fwlx8hsk3QWRlDgKQNouMwswajK41-YTiDIKHx3Rc2988LY2S3o3JHt-e0hUoRLVN_yQKb4iMIWsc9RbvNLuyWiGIs_-Od3jW10S0trxsUs88TJDGAKV1ACTQbK4NCa3An0s461SGKZh1tOwysfETzCrhVTL3uEAyOUt-CCscDxHe2J&gsessionid=f-U5uTmylOqY3BZwHiUKjoXsxpl9DyIrIdNlJf-OssG17rd3X0EeMQ",
+        "displayedLink": "9 reactions  ·  4 weeks ago",
+        "snippet": "This video showcases the soft opening of Uni Mall, a new restaurant located in Obour City, Egypt. It features a tour of the establishment's ...",
+        "date": "4 weeks ago",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:46.622241+00:00"
+}

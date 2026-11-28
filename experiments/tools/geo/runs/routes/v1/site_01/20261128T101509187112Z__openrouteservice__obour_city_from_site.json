@@ -1,0 +1,258 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "obour_city_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.1938258,
+      "lng": 31.460161799999998
+    }
+  },
+  "meta": {
+    "landmark": "obour_city",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.246,
+  "raw": {
+    "bbox": [
+      31.448355,
+      30.193867,
+      31.567694,
+      30.324336
+    ],
+    "metadata": {
+      "query": {
+        "coordinates": [
+          [
+            31.5566816,
+            30.32376
+          ],
+          [
+            31.460161799999998,
+            30.1938258
+          ]
+        ],
+        "format": "json",
+        "profile": "driving-car",
+        "profileName": "driving-car"
+      },
+      "attribution": "openrouteservice.org | OpenStreetMap contributors",
+      "engine": {
+        "build_date": "2026-11-18T10:33:03Z",
+        "graph_date": "2026-11-24T04:57:00Z",
+        "osm_date": "2026-11-22T00:00:00Z",
+        "version": "10.1.1"
+      },
+      "service": "routing",
+      "system_message": "Please note that the URL api.openrouteservice.org has been deprecated. All information available at ask.openrouteservice.org",
+      "timestamp": 1795860909153
+    },
+    "routes": [
+      {
+        "bbox": [
+          31.448355,
+          30.193867,
+          31.567694,
+          30.324336
+        ],
+        "geometry": "cvaxDkur_ElAi@~AaAxFgCdB{@pK{GzCaB~@a@~DeB~ZgL`A_@dCkA|CeBbEmCzCaC`DqC^Qb@Mb@Cb@@`@FrCvCjMvNxJpLrNnPvTzWrBjCVf@Jj@?b@BNFNTXXL^BLCb@P^VxFxGjUfXdFlG`AvA|@~AlE|HbEbHjC~DbBxBfAjAbF~ErGfGRTHTBZEf@AN@NEj@Ij@_FtR{H|QaClGcArCi@hBqAdJcB~GaBzHiAlGoB~Ma@lD}@zJ]dF[~Fs@~TAtEH`Lz@rSd@xGj@fGj@tF~@zG|BfOj@jEb@~Df@lFp@dMM|GTdIF~JGjZ?tOA`GAfCArAKd@]p@i@d@g@Rk@Fi@Ci@QQM_@c@Ue@]kBC[BYLe@NURO`@MnABr@HjNxErMnE|T|HdBl@rCz@vAf@~EbBz@^lB|@|AbAn@d@rAlAtBbCxBtCvD~EnAdBhDnErKzMff@xm@`@f@nLzNnE|FhZf_@j@s@sReVk@aA]u@UaAGc@B}@D_@Jc@Pg@^g@PQRKVGzD{@vD_AXI|GcBzGcBhD}@lEiAlCm@~Bc@tAOXAdFQf@E|@O`AWhAc@~@e@bCwArAu@tAm@z@WdBIlBLjYbEhAHbA@jB?hCBnCFlE@lDJt@@hA?`D?~FFzFDfKJtADbE|@dD^pIb@L@tBLbA?b@CbAOx@UtA]|@O~@K~@E~@A~@DrCTdB@dAGbAKnBC`XV~WRpNFnABvHJpa@Z|AAzAMzAYxAa@h@UrAq@nA{@|H{GlGoF|@w@f@LPHPLJLZh@Xj@?DDRDFLDH@@P",
+        "segments": [
+          {
+            "distance": 25504.5,
+            "duration": 1315.4,
+            "steps": [
+              {
+                "distance": 1954.7,
+                "duration": 82.8,
+                "instruction": "Head southeast on الطريق الدائري الإقليمي, 515",
+                "name": "الطريق الدائري الإقليمي, 515",
+                "type": 11,
+                "way_points": [
+                  0,
+                  15
+                ]
+              },
+              {
+                "distance": 1927.8,
+                "duration": 143.7,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  15,
+                  28
+                ]
+              },
+              {
+                "distance": 93.3,
+                "duration": 6.7,
+                "exit_number": 1,
+                "instruction": "Enter the roundabout and take the 1st exit",
+                "name": "-",
+                "type": 7,
+                "way_points": [
+                  28,
+                  35
+                ]
+              },
+              {
+                "distance": 2137.8,
+                "duration": 153.9,
+                "instruction": "Continue straight",
+                "name": "-",
+                "type": 6,
+                "way_points": [
+                  35,
+                  53
+                ]
+              },
+              {
+                "distance": 16.0,
+                "duration": 1.2,
+                "exit_number": 1,
+                "instruction": "Enter the roundabout and take the 1st exit",
+                "name": "-",
+                "type": 7,
+                "way_points": [
+                  53,
+                  55
+                ]
+              },
+              {
+                "distance": 995.0,
+                "duration": 53.1,
+                "instruction": "Continue straight",
+                "name": "-",
+                "type": 6,
+                "way_points": [
+                  55,
+                  62
+                ]
+              },
+              {
+                "distance": 3648.9,
+                "duration": 127.8,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  62,
+                  84
+                ]
+              },
+              {
+                "distance": 1385.6,
+                "duration": 67.0,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  84,
+                  92
+                ]
+              },
+              {
+                "distance": 5136.6,
+                "duration": 265.4,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  92,
+                  134
+                ]
+              },
+              {
+                "distance": 533.8,
+                "duration": 30.7,
+                "instruction": "Continue straight onto طريق القاهرة, بلبيس الصحراوي, 17",
+                "name": "طريق القاهرة, بلبيس الصحراوي, 17",
+                "type": 6,
+                "way_points": [
+                  134,
+                  136
+                ]
+              },
+              {
+                "distance": 7526.2,
+                "duration": 367.2,
+                "instruction": "Keep right onto محور العبور",
+                "name": "محور العبور",
+                "type": 13,
+                "way_points": [
+                  136,
+                  222
+                ]
+              },
+              {
+                "distance": 106.7,
+                "duration": 12.8,
+                "instruction": "Turn right",
+                "name": "-",
+                "type": 1,
+                "way_points": [
+                  222,
+                  228
+                ]
+              },
+              {
+                "distance": 32.3,
+                "duration": 2.3,
+                "exit_number": 2,
+                "instruction": "Enter the roundabout and take the 2nd exit onto شارع 90",
+                "name": "شارع 90",
+                "type": 7,
+                "way_points": [
+                  228,
+                  233
+                ]
+              },
+              {
+                "distance": 9.8,
+                "duration": 0.7,
+                "instruction": "Continue straight onto شارع 90",
+                "name": "شارع 90",
+                "type": 6,
+                "way_points": [
+                  233,
+                  234
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "instruction": "Arrive at شارع 90, on the left",
+                "name": "-",
+                "type": 10,
+                "way_points": [
+                  234,
+                  234
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 25504.5,
+          "duration": 1315.4
+        },
+        "way_points": [
+          0,
+          234
+        ]
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "ORS new URL",
+  "timestamp": "2026-11-28T10:15:09.187051+00:00"
+}

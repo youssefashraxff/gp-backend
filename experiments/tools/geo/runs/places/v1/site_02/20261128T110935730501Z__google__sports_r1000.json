@@ -1,0 +1,85 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "sports_r1000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 1000,
+    "types": [
+      "gym",
+      "sports_complex",
+      "athletic_field"
+    ]
+  },
+  "meta": {
+    "category": "sports",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 2,
+  "error": "",
+  "seconds": 0.376,
+  "raw": {
+    "places": [
+      {
+        "id": "ChIJ9UfgRgAbWBQRReVgLVbAcyo",
+        "types": [
+          "gym",
+          "sports_activity_location",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "5FV6+G3F, Obour, Al-Qalyubia Governorate 6360134, Egypt",
+        "location": {
+          "latitude": 30.193808599999997,
+          "longitude": 31.4601614
+        },
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "H20 gym new",
+          "languageCode": "en"
+        },
+        "primaryType": "gym"
+      },
+      {
+        "id": "ChIJQ50IC8IbWBQRHQ1uY3Xv9sU",
+        "types": [
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "Obour, Cairo Governorate 11828, Egypt",
+        "location": {
+          "latitude": 30.201600900000003,
+          "longitude": 31.455036999999997
+        },
+        "rating": 4.9,
+        "regularOpeningHours": {
+          "weekdayDescriptions": [
+            "Monday: 2:00 PM – 12:00 AM",
+            "Tuesday: 2:00 PM – 12:00 AM",
+            "Wednesday: 2:00 PM – 12:00 AM",
+            "Thursday: 2:00 PM – 12:00 AM",
+            "Friday: 2:00 PM – 1:00 AM",
+            "Saturday: 2:00 PM – 1:00 AM",
+            "Sunday: 2:00 PM – 12:00 AM"
+          ]
+        },
+        "businessStatus": "OPERATIONAL",
+        "userRatingCount": 1781,
+        "displayName": {
+          "text": "Epic shooting club",
+          "languageCode": "en"
+        },
+        "primaryType": "sports_complex"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:35.730384+00:00"
+}

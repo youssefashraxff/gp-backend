@@ -1,0 +1,23 @@
+{
+  "site_id": "site_02",
+  "name": "El Obour City centre (control site for tool tests)",
+  "lat": 30.1938258,
+  "lng": 31.4601618,
+  "business_types": [],
+  "area_type": "suburban",
+  "from_ali_concept": "none: a control site, not a concept site",
+  "expected": {
+    "site_analysis": [
+      "built-up area: residential districts, a commercial centre and an industrial zone"
+    ],
+    "market_research": [],
+    "gap_analysis": [],
+    "segments": [],
+    "competitors": [
+      "many cafes, restaurants, pharmacies, supermarkets and malls within 3 km (visible on the satellite map, e.g. Obour Mall, The Hub Mall, Padel Mondo)"
+    ],
+    "supervisor": []
+  },
+  "must_escalate": [],
+  "notes": "Used only to compare map tools where there is data to find. site_01 (Ali's Manara site) is almost empty within 3 km, so it cannot tell two Places providers apart. The point is where Google Routes placed 'El Obour City' in the site_01 v1 routes run (2026-11-28); satellite view checked the same day."
+}
