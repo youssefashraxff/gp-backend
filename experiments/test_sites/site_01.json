@@ -1,0 +1,36 @@
+{
+  "site_id": "site_01",
+  "name": "Manara / M Hub, New Obour City",
+  "lat": 30.32376,
+  "lng": 31.5566816,
+  "business_types": [
+    "drive-thru coffee",
+    "padel courts",
+    "coworking",
+    "convenience store",
+    "pharmacy",
+    "arcade / kids activities"
+  ],
+  "area_type": "new_city",
+  "from_ali_concept": "Manara / M Hub temporary destination (Yodeero for Manara Development, Sept-Oct 2026)",
+  "expected": {
+    "site_analysis": [
+      "parent plot about 28 feddans (about 117,600-120,000 m2; the two sources differ)",
+      "frontage about 220 m on a road",
+      "surrounding planned uses: commercial, office/administrative and residential",
+      "new city: land around the site is largely undeveloped or under construction"
+    ],
+    "market_research": [],
+    "gap_analysis": [],
+    "segments": [],
+    "competitors": [
+      "candidate competitor kinds from the concept: cafes, drive-thru coffee and fast food, padel, pharmacy, convenience"
+    ],
+    "supervisor": []
+  },
+  "must_escalate": [
+    "zoning / permitted use (no public record)",
+    "exact cadastral boundary and entrances (pin only; Ali's notes say survey needed)"
+  ],
+  "notes": "Pin from the Google Maps link in Ali's Manara brief (maps.app.goo.gl/NakRM7a4CNTsVnNo9), resolved 2026-11-28. Plot size, frontage and uses are user-reported in Ali's brief, not survey-verified."
+}

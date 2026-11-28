@@ -1,0 +1,18 @@
+{
+  "version": "v1",
+  "description": "Overpass: roads 1 km, major roads 3 km, land use 1 km, buildings 500 m and 1 km, points of interest 1 km and 3 km, and the areas containing the pin. Same queries to two public Overpass servers.",
+  "endpoints": {
+    "overpass_main": "https://overpass-api.de/api/interpreter",
+    "overpass_kumi": "https://overpass.kumi.systems/api/interpreter"
+  },
+  "cases": [
+    {"kind": "pin_area"},
+    {"kind": "roads", "radius_m": 1000},
+    {"kind": "major_roads", "radius_m": 3000},
+    {"kind": "landuse", "radius_m": 1000},
+    {"kind": "buildings", "radius_m": 500},
+    {"kind": "buildings", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 1000},
+    {"kind": "pois", "radius_m": 3000}
+  ]
+}
