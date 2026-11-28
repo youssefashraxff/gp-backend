@@ -6,6 +6,7 @@ through one `ToolRun` per phase run, which caches identical calls and logs every
     run = ToolRun()
     res = await run.call(places_nearby, lat=30.19, lng=31.46, radius_m=1000, types=["cafe"])
     if res.status != "ok": ...  # escalate (spec 5.6)
+    fact = res.fact("cafes within 1 km", len(res.data))  # a gp-schemas Fact with its Evidence
 """
 
 from app.shared.tools.base import ToolResult, ToolRun
