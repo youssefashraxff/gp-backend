@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "residents_ar_all",
+  "params": {
+    "q": "جروب سكان العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "residents_ar",
+    "variant": "all",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.913,
+  "raw": {
+    "searchParameters": {
+      "q": "جروب سكان العبور الجديدة (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "جروب سكان العبور",
+        "link": "https://www.facebook.com/groups/1478494675548620/",
+        "displayedLink": "أكثر من 113.7 ألف متابع",
+        "snippet": "الموقع: العبور الجديدة – الحي 12 – المجاورة 4. ✨ مميزات القطعة: ✓ ناصية بحري صريح. ✓ بجانب جنينة خاصة. ✓ خطوتين من الطريق الرئيسي. ✓ دقائق من الطريق ...",
+        "position": 1
+      },
+      {
+        "title": "جروب أهالي العبور الجديدة",
+        "link": "https://www.facebook.com/groups/371137734469439/",
+        "displayedLink": "أكثر من 43 ألف متابع",
+        "snippet": "جروب أهالي العبور الجديدة · About this group · مصنع هاي كلاس لصيانة وتجديد واستبدال جميع انواع المراتب بضمان عشر سنين للتواصل 01224722635 · مصنع هاي كلاس لصيانة ...",
+        "position": 2
+      },
+      {
+        "title": "مجموعه جروب العبور الجديده حي المجد",
+        "link": "https://www.facebook.com/groups/343593826238999/",
+        "displayedLink": "أكثر من 72.6 ألف متابع",
+        "snippet": "الفرصة دي تستحق الاهتمام! للتواصل ومعرفه مزيد من التفاصيل والمعاينه واتساب / wsend.co/201055496949 هاتفيا / 01055496949 تابع قناتنا على الواتساب لمزيد من ...",
+        "position": 3
+      },
+      {
+        "title": "جروب سكان الحى الثانى بمدينة العبور",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXX5rOMcs80CBRU7yXdWogwCn74FPjqdNSycCj_BXLMztqlQ41AVmya697OJskpOOmNlT7_3cZKf7sQ1Y36NL97ayHzrlEv-RB0Mh8klzgQQcOLANPHmJO_lROjtoi1K8h67URo1p4SsQ&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 11.1 ألف متابع",
+        "snippet": "الموقع: الحي الثاني – عمارات مصر للطيران (المساكن) ✨ تفاصيل الشقة: ✓ المساحة: 100 متر ✓ 3 غرف نوم ✓ مطبخ كبير ✓ حمام ✓ دور أرضي مرتفع ✓ مؤمّنة بحديد ...",
+        "position": 4
+      },
+      {
+        "title": "مدينة العبور الجديده",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXeTy6FxPHezNc_nSbx25gbNslgiTFqv_N3oS7l7dHBGzHT07bRMc1d63jN2Zg37gEKTvWZ2nzruFniC4yRA2EWvuvTSCLEPqBl1IT2V79Y5lj-OUZUxNXxmGIozpOBmB72HfpxqLpeQ&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 63.8 ألف متابع",
+        "snippet": "About this group. تقدروا تشرفونا في الجروب الرسمي الجديد لمدينة العبور الخاص بالإعلانات والاخبار والشكاوي ✓✓ ... سكان العبور الجديدة(حى الحرية-حى الكرامة- حى ...",
+        "position": 5
+      },
+      {
+        "title": "سكان العبور الجديدة(حى الحرية-حى الكرامة- حى المجد وباقى ...",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXcQqsuGlHtPtM3jOk_4B2XAmmiyVWnBZ09UDgYZ0tPXlZZJ2Q8iiW52FfaV1RYsgslzIMgao2cNUu1Wuq5z3_BRpAEfcIo9hcyA2DIvF3y9Cl35sTyKsSP4rmRFArQNIQKR1D6uXA9Q&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 61.2 ألف متابع",
+        "snippet": "للايجار شقه في حي الكرامه العبور الجديده مساحه 90م 3 غرف وريسيبشن وحمام ومطبخ دور اخير خلفي بجوار زمزم والطريق الرئيسي والنادي الشقه بها غاز للتواصل.",
+        "position": 6
+      },
+      {
+        "title": "الجروب الرسمي لخدمات مدينة العبور والمدن الجديدة",
+        "link": "https://www.google.com/goto?url=CAESawHEIkXXpM5xjkgVh7ZKK8CzJzSgoCbDilLFu9S4AxifmKvTG7mqNKX-FNo8KzC3YCqIv_e71N8TStEpAekpu7QD3-579lxPMYknlrqWUdadUJ5l_Y9k9RMGsF1CZCs53EPejYyV8D7QMagj&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 129.4 ألف متابع",
+        "snippet": "الجروب الرسمي لخدمات مدينة العبور والمدن الجديدة الساده أعضاء الجروب الحالين والجدد هذا جروب لخدمات المشتركين حيث يتيح لكل المشتركين إضافة اعلانات وإضافة ...",
+        "position": 7
+      },
+      {
+        "title": "خدمات سكان سكن مصر العبور الجديده",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXwVGQvVKDvVeTTCPV_mCSCZ9cUPzEzRO0cIDjDVymeAv5xfk_RymRjyRJKNseNTztob3Jmg-ihOVYwQ2ixUDSu1W-xvBmm7sTXbhiWcidQaU3h39v_r7F-jCi4H3nz-kLu_7nHUMSqw&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 10 ألف متابع",
+        "snippet": "فنيين متخصصين وخبرة سنين ⚡️ تركيب في نفس اليوم خامات أصلية وضمان حقيقي أسعار مناسبة للجميع العنوان: مدينة العبور - إسكان الشباب - سوق المدينة - ...",
+        "position": 8
+      },
+      {
+        "title": "تجمع سكان العبور و جمعيه عرابي و العبور الجديده",
+        "link": "https://www.google.com/goto?url=CAESawHEIkXXiibf9bxxmMN1j3Jitwzh-7xdKfjEMDZg8A5qLcdNzlAF4fXd2GztjSFGqn13g8Eet4EbdK7l0FtL_3ZZyr6RcNvDzpfxR8zUkBGi4Zl_Zz10Wy_Gu9i2pF2hfQQ9_M9WMocqnsUj&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 29.1 ألف متابع",
+        "snippet": "تضم * أولاً: المباني السكنية* *1. عمارة سكنية أولى:* ▫ مساحة مباني: 1,200 متر مربع - 3 أدوار ▫ 6 شقق - الشقة 200 متر ▫ إحدى الشقق غير مكتملة التشطيب * ...",
+        "position": 9
+      },
+      {
+        "title": "سكان حى الكرامة .. العبور الجديدة",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXAkMFXad13qcPShU4pFEGN74Y6C1dlKXDbnvUN0SPjfFnRIT6ZHpiDZ7jjPuEwLzLjrGFe4_Jylsi_5O7vr6sFArIvrzYIZWoBCYbmShkf0rVKvtCUA9udPsR1g8NueoRmdggKai8rA&gsessionid=5Lw5I7Fr23ZENQG91jqTHZ2OdbLVCPgHlRXAa29iLR6ML-qVoiETkQ",
+        "displayedLink": "أكثر من 24.9 ألف متابع",
+        "snippet": "بسم الله الرحمن الرحيم ورشه اولاد بدر العبور الجديده مجمع الويش 7000 جنيه بفضل الله ورشه اولاد بدر عاملين عروض ممتازه جدا تواصل معانا وتس او فون 01114732619 ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:52.660017+00:00"
+}

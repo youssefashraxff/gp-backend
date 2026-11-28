@@ -1,0 +1,279 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "heliopolis_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.0909557,
+      "lng": 31.324386800000003
+    }
+  },
+  "meta": {
+    "landmark": "heliopolis",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.367,
+  "raw": {
+    "bbox": [
+      31.321301,
+      30.088869,
+      31.567694,
+      30.324336
+    ],
+    "metadata": {
+      "query": {
+        "coordinates": [
+          [
+            31.5566816,
+            30.32376
+          ],
+          [
+            31.324386800000003,
+            30.0909557
+          ]
+        ],
+        "format": "json",
+        "profile": "driving-car",
+        "profileName": "driving-car"
+      },
+      "attribution": "openrouteservice.org | OpenStreetMap contributors",
+      "engine": {
+        "build_date": "2026-11-18T10:33:03Z",
+        "graph_date": "2026-11-24T04:57:00Z",
+        "osm_date": "2026-11-22T00:00:00Z",
+        "version": "10.1.1"
+      },
+      "service": "routing",
+      "system_message": "Please note that the URL api.openrouteservice.org has been deprecated. All information available at ask.openrouteservice.org",
+      "timestamp": 1795860911841
+    },
+    "routes": [
+      {
+        "bbox": [
+          31.321301,
+          30.088869,
+          31.567694,
+          30.324336
+        ],
+        "geometry": "cvaxDkur_ElAi@~AaAxFgCdB{@pK{GzCaB~@a@~DeB~ZgL`A_@dCkA|CeBbEmCzCaC`DqC^Qb@Mb@Cb@@`@FrCvCjMvNxJpLrNnPvTzWrBjCVf@Jj@?b@BNFNTXXL^BLCb@P^VxFxGjUfXdFlG`AvA|@~AlE|HbEbHjC~DbBxBfAjAbF~ErGfGRTHTBZEf@AN@NEj@Ij@_FtR{H|QaClGcArCi@hBqAdJcB~GaBzHiAlGoB~Ma@lD}@zJ]dF[~Fs@~TAtEH`Lz@rSd@xGj@fGj@tF~@zG|BfOj@jEb@~Df@lFp@dMM|GTdIF~JGjZ?tOA`GAfCArAKd@]p@i@d@g@Rk@Fi@Ci@QQM_@c@Ue@]kBC[BYLe@NURO`@MnABr@HjNxErMnE|T|HdBl@rCz@vAf@~EbBz@^lB|@|AbAn@d@rAlAtBbCxBtCvD~EnAdBhDnErKzMff@xm@`@f@nLzNnE|FhZf_@|HvJ|D|EbBtBn^bd@fApAj_@be@fAdAjA`ApA|@pAx@rAr@vAj@xAb@xA\\lB^v[~EjAP~x@lMxCb@hCd@|VrG`UhGzEpC`@^\\d@b@`A\\f@d@\\TJj@JzC?hCFbDV|@LdGtAlIxBjNrDx@NhBLhB?dAG|@Kf@SnBe@`EuAjGkBlCw@t@Up@SxDqAj@SjDaBrzAcg@fF_Bv@Sv@Qx@Kx@Ix@Cx@?x@Bx@Fx@Jv@Pv@Rp@V`Ad@pGnDh@Xl@\\f@VrCxAXNp@\\hBbAxGrD`D|A|BhApAn@tBfApFlCdAj@f@TlAf@tBh@z@LjAHzBEr@Gt@OnBi@jAm@jCiB`O{JvE{CdIwFrBuA|B_Bh@MtAg@bCo@x@MdAIbAEl@?pBNdANVJTPPRNVLXD\\@ZA~AFd@HVLVT\\PPTL\\Ld@Ff@?nBe@p@M`@EZ?XFXJTPV\\T`@l@dBbAnF|@lElArHzH`b@nAbHXfBr@xE~BjNvBzL`CfM`EfS`@rBlAdGZ~@PZVV`@VVFb@FpDLZDZLVNTVPXhExLxA~Ef@xAz@zBN^l@hBv@tBb@jAfArCtChG~DlGdX|a@xCpEfA~AjIzK~U`\\fM`Qp@|@xBlDzAzBHLfBfClHlKnFpHlAxAr@n@l@b@r@\\x@Zv@Px@Jz@DbA?p@Ez@Kz@Qz@[v@_@`BeAhE{CpBuBdCgCzAk@RAP@RHn@n@d@l@f@z@fEpKT\\LHJb@jA`DnRff@`A~Bn@zApEnJb@~@DHpArCn@tAvFtL|EhKz@lB~DvIv@`Bn@tAr@zAlAfCP^dFjJrAnCxJ~S|@jBlApCpBxFzAdD~AjDzAbDf@hA`@x@pBjEnBfErBlEnBfEP^B^ANET_@`Ac@fA}@xBiCrGU`@o@h@s@n@QLyAlApCxB}@nGAX?PBNJT~AjB~BpCRZnBfEh@bAH@FCDG@IGMUYCSOOQYe@aAq@_BQYiC}CgAoAOUGOC]",
+        "segments": [
+          {
+            "distance": 44358.6,
+            "duration": 2223.5,
+            "steps": [
+              {
+                "distance": 1954.7,
+                "duration": 82.8,
+                "instruction": "Head southeast on الطريق الدائري الإقليمي, 515",
+                "name": "الطريق الدائري الإقليمي, 515",
+                "type": 11,
+                "way_points": [
+                  0,
+                  15
+                ]
+              },
+              {
+                "distance": 1927.8,
+                "duration": 143.7,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  15,
+                  28
+                ]
+              },
+              {
+                "distance": 93.3,
+                "duration": 6.7,
+                "exit_number": 1,
+                "instruction": "Enter the roundabout and take the 1st exit",
+                "name": "-",
+                "type": 7,
+                "way_points": [
+                  28,
+                  35
+                ]
+              },
+              {
+                "distance": 2137.8,
+                "duration": 153.9,
+                "instruction": "Continue straight",
+                "name": "-",
+                "type": 6,
+                "way_points": [
+                  35,
+                  53
+                ]
+              },
+              {
+                "distance": 16.0,
+                "duration": 1.2,
+                "exit_number": 1,
+                "instruction": "Enter the roundabout and take the 1st exit",
+                "name": "-",
+                "type": 7,
+                "way_points": [
+                  53,
+                  55
+                ]
+              },
+              {
+                "distance": 995.0,
+                "duration": 53.1,
+                "instruction": "Continue straight",
+                "name": "-",
+                "type": 6,
+                "way_points": [
+                  55,
+                  62
+                ]
+              },
+              {
+                "distance": 3648.9,
+                "duration": 127.8,
+                "instruction": "Keep left",
+                "name": "-",
+                "type": 12,
+                "way_points": [
+                  62,
+                  84
+                ]
+              },
+              {
+                "distance": 1385.6,
+                "duration": 67.0,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  84,
+                  92
+                ]
+              },
+              {
+                "distance": 10430.0,
+                "duration": 503.6,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  92,
+                  156
+                ]
+              },
+              {
+                "distance": 7077.6,
+                "duration": 301.7,
+                "instruction": "Keep right onto طريق القاهرة, بلبيس الصحراوي",
+                "name": "طريق القاهرة, بلبيس الصحراوي",
+                "type": 13,
+                "way_points": [
+                  156,
+                  232
+                ]
+              },
+              {
+                "distance": 8612.2,
+                "duration": 455.8,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  232,
+                  335
+                ]
+              },
+              {
+                "distance": 4562.4,
+                "duration": 206.3,
+                "instruction": "Keep right",
+                "name": "-",
+                "type": 13,
+                "way_points": [
+                  335,
+                  380
+                ]
+              },
+              {
+                "distance": 498.1,
+                "duration": 35.9,
+                "instruction": "Keep right onto شارع الثوره",
+                "name": "شارع الثوره",
+                "type": 13,
+                "way_points": [
+                  380,
+                  392
+                ]
+              },
+              {
+                "distance": 100.7,
+                "duration": 12.1,
+                "instruction": "Turn sharp left onto شارع حبيب",
+                "name": "شارع حبيب",
+                "type": 2,
+                "way_points": [
+                  392,
+                  393
+                ]
+              },
+              {
+                "distance": 524.1,
+                "duration": 37.7,
+                "instruction": "Turn right onto شارع الثوره",
+                "name": "شارع الثوره",
+                "type": 1,
+                "way_points": [
+                  393,
+                  403
+                ]
+              },
+              {
+                "distance": 394.3,
+                "duration": 34.3,
+                "instruction": "Turn left",
+                "name": "-",
+                "type": 0,
+                "way_points": [
+                  403,
+                  420
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "instruction": "Arrive at your destination, on the left",
+                "name": "-",
+                "type": 10,
+                "way_points": [
+                  420,
+                  420
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 44358.6,
+          "duration": 2223.5
+        },
+        "way_points": [
+          0,
+          420
+        ]
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "ORS new URL",
+  "timestamp": "2026-11-28T10:15:11.880257+00:00"
+}

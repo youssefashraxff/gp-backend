@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_kumi",
+  "case": "pois_r1000",
+  "params": {
+    "kind": "pois",
+    "radius": 1000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];(node(around:1000,30.32376,31.5566816)[amenity];node(around:1000,30.32376,31.5566816)[shop];node(around:1000,30.32376,31.5566816)[leisure];way(around:1000,30.32376,31.5566816)[amenity];way(around:1000,30.32376,31.5566816)[shop];way(around:1000,30.32376,31.5566816)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 1000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "ReadTimeout: The read operation timed out",
+  "seconds": 70.321,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T04:12:10.358725+00:00"
+}

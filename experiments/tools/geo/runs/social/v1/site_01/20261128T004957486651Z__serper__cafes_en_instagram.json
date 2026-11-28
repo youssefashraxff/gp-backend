@@ -1,0 +1,115 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_en_instagram",
+  "params": {
+    "q": "New Obour City cafe (site:instagram.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_en",
+    "variant": "instagram",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.596,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City cafe (site:instagram.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "Big News, El Obour! The wait is over - Instagram",
+        "link": "https://www.instagram.com/p/DJY52zUt2il/",
+        "displayedLink": "110+ likes  ·  1 year ago",
+        "snippet": "Big News, El Obour! The wait is over — Not! Coffee is officially brewing in your city! Step into a world of bold flavors, chilled vibes, ...",
+        "date": "1 year ago",
+        "position": 1
+      },
+      {
+        "title": "Big News, El Obour! The wait is officially over",
+        "link": "https://www.instagram.com/p/DJT_7OfNhnH/",
+        "displayedLink": "110+ likes  ·  1 year ago",
+        "snippet": "A little coffee, a lot of character☕ Welcome to Vertex, where every cup is crafted with care, every detail has its own touch, and every visit ...",
+        "date": "1 year ago",
+        "position": 2
+      },
+      {
+        "title": "Where date nights hit different💫 - 📍El Obour City, Ahmed ...",
+        "link": "https://www.instagram.com/reel/DMI5Bo0sdIW/",
+        "displayedLink": "50+ likes  ·  1 year ago",
+        "snippet": "✨ SKAS Restaurant & Venue — Ahmed Orabi Agricultural Compound, Gate 6, Road 9, El Obour City +20 128 6333361",
+        "date": "1 year ago",
+        "position": 3
+      },
+      {
+        "title": "A day well spent, starts here. ✨ From elegant bites to ...",
+        "link": "https://www.google.com/goto?url=CAEScAHEIkXXo656Pp-XDQVhF_JXUWkHU1phDdYxx2X_8qFlvuzkkYuYaaxUxZ73v7tyDk8Xz9WQns7c-xREfW6-2Jb5bAFMV_npvv17BGmPuqvFxFu5cy7LkP4pk-I1JKe5uqIxjM5yGXd38dRP6brJd5s&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "10+ likes  ·  2 months ago",
+        "snippet": "The perfect espresso pour exists, and it's waiting for you at Picky. ✨ Stop by Picky at Avenue Mall, Obour City for your daily caffeine ...",
+        "date": "2 months ago",
+        "position": 4
+      },
+      {
+        "title": "Enjoy the match atmosphere on big screens with delicious ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXeoqdQ2RkTUNQHf8w9xWBnnIAi80Kk_ybaQPqWyIiH4zhEqocurSO1qtyHFEYEvGVBn9HLqXPAK6c3R-qLLssAhJsiCA5WevYPQnFCgf4QRrryRjY_NH858WkZPwKG3uBeIQ&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "20+ likes  ·  10 months ago",
+        "snippet": "Enjoy the match atmosphere on big screens with delicious food and a great vibe at La Scala ⚽🍽️ For reservations, call: 01012277000 ...",
+        "date": "10 months ago",
+        "position": 5
+      },
+      {
+        "title": "Not your regular dinner date♥️ - 📍El Obour City, Ahmed ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXSQgOH63_DMqn1pAgpBNlveinsM6qRzh7yMKtioBALZYWRToRxrupqKAEcTqJPH3_gA-El5zyVlec6GCDwxwNTXk-R3qyR_MC8yxH46YGSaczWgOCxpe63hklLis-WbQ&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "70+ likes  ·  1 year ago",
+        "snippet": "Not your regular dinner date♥️ - El Obour City, Ahmed Orabi Agricultural Compound, Gate 6, Road 9, Villa 310.",
+        "date": "1 year ago",
+        "position": 6
+      },
+      {
+        "title": "Good vibes, great coffee, and your kind of atmosphere. ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXYZsP85g-buei4OB2w0CvmkjfxkBkSac4is8JJIV-wvsWqTdWnQFY4M0bf0e43643Zn8TpsJhuJ4p4n0nS6FbPnCz5ildDQxo9tCt3VWpMXcVBvCdZsa_5-8ClxKVbzPSKKk&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "120+ likes  ·  12 months ago",
+        "snippet": "Good vibes, great coffee, and your kind of atmosphere. Welcome to 360 Café ☕ We're waiting for you at C3 Mall – Obour City! View all ...",
+        "date": "12 months ago",
+        "position": 7
+      },
+      {
+        "title": "Your New Spot for Syrian Cuisine & Coffee at Avenue Mall ...",
+        "link": "https://www.google.com/goto?url=CAESZAHEIkXXkMEuTpT7P20fot-BKXY_PayRYk1PLcY_ycjQWIGA1bS0QvTLP2wRDh-i4ETxNjSRZcdAu0lteN6Kc04FcXjRwRKrqkIx-KYaPij2Sfe4pK_Hfsp49jHemsd9KFsVk_Q&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "1 like  ·  1 year ago",
+        "snippet": "Your New Spot for Syrian Cuisine & Coffee at Avenue Mall Address: Obour City - Avenue Mall - Ninth District For inquiries and home orders:",
+        "date": "1 year ago",
+        "position": 8
+      },
+      {
+        "title": "Every great place starts with a vision. Meet Mamdouh ...",
+        "link": "https://www.google.com/goto?url=CAESZwHEIkXXt0s5_GfUwTpRy5WlaVffCqSsxB0inSbLQ8m-ID3KE4OCQ4eIAYHLVafEGtlnGCgGZ3I0V178M8FIh3CDVoHef2v30lJy_jhD3JAMtltnvJUPbfHLb90G7XMhGHDZGv1bL2M&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "90+ likes  ·  5 months ago",
+        "snippet": "Meet Mamdouh Altabbaa, Co-Founder of Picual Café & Restaurant at Agora, where hospitality, community, and unforgettable experiences come ...",
+        "date": "5 months ago",
+        "position": 9
+      },
+      {
+        "title": "Orbt speciality coffee (@orbt.eg)",
+        "link": "https://www.google.com/goto?url=CAESXgHEIkXX9LcQAMvLnVN5vRp8w_s4_-AYXDAx7GFVQuflOVx26ThuH4R-lkw_pr_xXwU_HUS84RAugrth6DIIt_1qpdexIaHSmDfkHMOiM6ggBJW1l7ph0-NZV8NOk5k&gsessionid=5dOl9TEXtxYphrAhPbtGcluKZgJF0fyEAQAZ4WuR9btX9ihDPBUStQ",
+        "displayedLink": "14K+ followers",
+        "snippet": "edenbakery.egyEvery cup tells a story, crafted with passion and brewed to perfection. ☕ Your daily coffee moment, made special at Eden Bakery.",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:57.486390+00:00"
+}

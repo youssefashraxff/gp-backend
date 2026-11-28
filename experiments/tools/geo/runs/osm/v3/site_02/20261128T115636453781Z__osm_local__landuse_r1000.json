@@ -1,0 +1,1247 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "landuse_r1000",
+  "params": {
+    "kind": "landuse",
+    "radius": 1000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];(way(around:1000,30.1938258,31.4601618)[landuse];relation(around:1000,30.1938258,31.4601618)[landuse];);out meta center;"
+  },
+  "meta": {
+    "kind": "landuse",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 81,
+  "error": "",
+  "seconds": 0.004,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "area",
+        "id": "w47977982",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "المنطقة الصناعية الاولى",
+          "name:en": "First Industrial Zone"
+        },
+        "timestamp": "2022-10-15T00:59:46+00:00",
+        "center": {
+          "lat": 30.1900375,
+          "lon": 31.4562695
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755651302",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "الامتداد الشمالى",
+          "name:en": "Northern Extension"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201417999999997,
+          "lon": 31.4497095
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852598",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12008",
+          "name:en": "Block 12008"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199802,
+          "lon": 31.450817
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852599",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12011",
+          "name:en": "Block 12011"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.196758,
+          "lon": 31.4517005
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852600",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12009",
+          "name:en": "Block 12009"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199768,
+          "lon": 31.452939999999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852601",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12020",
+          "name:en": "Block 12020"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.197088,
+          "lon": 31.454908500000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852602",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12010",
+          "name:en": "Block 12010"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1982475,
+          "lon": 31.455726
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852603",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12017",
+          "name:en": "Block 12017"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1949155,
+          "lon": 31.451660500000003
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852606",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12018",
+          "name:en": "Block 12018"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1954015,
+          "lon": 31.457107
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755852609",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 12001",
+          "name:en": "Block 12001"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.202030999999998,
+          "lon": 31.452787
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869797",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13024",
+          "name:en": "Block 13024"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.1877005,
+          "lon": 31.464363
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869798",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13023",
+          "name:en": "Block 13023"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.190683,
+          "lon": 31.461865
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869799",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13022",
+          "name:en": "Block 13022"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.192632500000002,
+          "lon": 31.459346500000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869800",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13027",
+          "name:en": "Block 13027"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.190631,
+          "lon": 31.459571
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869801",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13026",
+          "name:en": "Block 13026"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.18755,
+          "lon": 31.4613795
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755869802",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13025",
+          "name:en": "Block 13025"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.185435499999997,
+          "lon": 31.462860499999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870854",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13028",
+          "name:en": "Block 13028"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.184047,
+          "lon": 31.4598675
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870855",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13029",
+          "name:en": "Block 13029"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.1855595,
+          "lon": 31.4592325
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870856",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13030",
+          "name:en": "Block 13030"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.187029000000003,
+          "lon": 31.4586185
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870857",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13044",
+          "name:en": "Block 13044"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1861745,
+          "lon": 31.454317
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870858",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13036",
+          "name:en": "Block 13036"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.187384,
+          "lon": 31.455925999999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870859",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13033",
+          "name:en": "Block 13033"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.18347,
+          "lon": 31.456581
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870865",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13035",
+          "name:en": "Block 13035"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.188114499999998,
+          "lon": 31.4526225
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870866",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13038",
+          "name:en": "Block 13038"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.191702499999998,
+          "lon": 31.450286
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870867",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13039",
+          "name:en": "Block 13039"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1912295,
+          "lon": 31.4510815
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870868",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13041",
+          "name:en": "Block 13041"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.188171,
+          "lon": 31.4505665
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870869",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13040",
+          "name:en": "Block 13040"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.190913000000002,
+          "lon": 31.451901
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755870870",
+        "tags": {
+          "landuse": "industrial",
+          "place": "neighbourhood",
+          "name": "بلوك 13037",
+          "name:en": "Block 13037"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.190971,
+          "lon": 31.4511705
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895691",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14018",
+          "name:en": "Block 14018"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201833,
+          "lon": 31.464236
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895692",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14019",
+          "name:en": "Block 14019"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.2018195,
+          "lon": 31.4647745
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895693",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14020",
+          "name:en": "Block 14020"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.2011055,
+          "lon": 31.464775500000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895694",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14023",
+          "name:en": "Block 14023"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199966,
+          "lon": 31.463006
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895695",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14021",
+          "name:en": "Block 14021"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.200377500000002,
+          "lon": 31.464768
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895696",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14022",
+          "name:en": "Block 14022"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199564,
+          "lon": 31.464766
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895697",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14029",
+          "name:en": "Block 14029"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199942999999998,
+          "lon": 31.467318499999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895701",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14027",
+          "name:en": "Block 14027"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201057,
+          "lon": 31.468947999999997
+        }
+      },
+      {
+        "type": "area",
+        "id": "w755895702",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14028",
+          "name:en": "Block 14028"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.2009395,
+          "lon": 31.4695095
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034875",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "مشروع العشر العمارات",
+          "name:en": "The Ten Buildings Project"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.199329,
+          "lon": 31.459637
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034876",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14017",
+          "name:en": "Block 14017"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201784,
+          "lon": 31.461343499999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034877",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14016",
+          "name:en": "Block 14016"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.2021215,
+          "lon": 31.461587
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034882",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14086",
+          "name:en": "Block 14086"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.2004905,
+          "lon": 31.4616745
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034884",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14085",
+          "name:en": "Block 14085"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.200028,
+          "lon": 31.461149
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034885",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14084",
+          "name:en": "Block 14084"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201849,
+          "lon": 31.459986999999998
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756034886",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 14083",
+          "name:en": "Block 14083"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.201638,
+          "lon": 31.459238
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756184483",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "منطقة 4",
+          "name:en": "Area 4"
+        },
+        "timestamp": "2021-03-04T01:36:34+00:00",
+        "center": {
+          "lat": 30.204169999999998,
+          "lon": 31.464406500000003
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756195873",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "الحى 6",
+          "name:en": "District 6"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.208858,
+          "lon": 31.4652555
+        }
+      },
+      {
+        "type": "area",
+        "id": "w756324744",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "الحى 7",
+          "name:en": "District 7"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.1926895,
+          "lon": 31.4719835
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027762",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15006",
+          "name:en": "Block 15006"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.195510499999997,
+          "lon": 31.462237000000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027763",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15014",
+          "name:en": "Block 15014"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.190956,
+          "lon": 31.4676815
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027764",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15015",
+          "name:en": "Block 15015"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.190036999999997,
+          "lon": 31.4684235
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027765",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15018",
+          "name:en": "Block 15018"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.1887245,
+          "lon": 31.468758
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027766",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15017",
+          "name:en": "Block 15017"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.189882500000003,
+          "lon": 31.469603
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027767",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15016",
+          "name:en": "Block 15016"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.1894365,
+          "lon": 31.4675935
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027768",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15013",
+          "name:en": "Block 15013"
+        },
+        "timestamp": "2020-11-25T23:45:16+00:00",
+        "center": {
+          "lat": 30.190939,
+          "lon": 31.4678635
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027769",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15011",
+          "name:en": "Block 15011"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.193027999999998,
+          "lon": 31.466271
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027770",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15008",
+          "name:en": "Block 15008"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.194605000000003,
+          "lon": 31.4655075
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027771",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15010",
+          "name:en": "Block 15010"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.193692,
+          "lon": 31.466274
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027772",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15009",
+          "name:en": "Block 15009"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.193343,
+          "lon": 31.464575
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027773",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15012",
+          "name:en": "Block 15012"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.192100500000002,
+          "lon": 31.466448
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027774",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15004",
+          "name:en": "Block 15004"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1962895,
+          "lon": 31.4644755
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027775",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15003",
+          "name:en": "Block 15003"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1969345,
+          "lon": 31.463333499999997
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027776",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15002",
+          "name:en": "Block 15002"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.197658500000003,
+          "lon": 31.463759500000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027777",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15001",
+          "name:en": "Block 15001"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.197012,
+          "lon": 31.461713000000003
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027778",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15005",
+          "name:en": "Block 15005"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1962435,
+          "lon": 31.462679
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027779",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15007",
+          "name:en": "Block 15007"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.194955999999998,
+          "lon": 31.463248
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027787",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15105",
+          "name:en": "Block 15105"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1913065,
+          "lon": 31.469973500000002
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027788",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15104",
+          "name:en": "Block 15104"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1919555,
+          "lon": 31.471232
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027790",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15029",
+          "name:en": "Block 15029"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.194029999999998,
+          "lon": 31.4704105
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027791",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15027",
+          "name:en": "Block 15027"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1937155,
+          "lon": 31.4692185
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027792",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15028",
+          "name:en": "Block 15028"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1936675,
+          "lon": 31.4714015
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027793",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15026",
+          "name:en": "Block 15026"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.193625,
+          "lon": 31.4688105
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027794",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15025",
+          "name:en": "Block 15025"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.193527,
+          "lon": 31.4718375
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027795",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15030",
+          "name:en": "Block 15030"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.194753,
+          "lon": 31.4699755
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027796",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15036",
+          "name:en": "Block 15036"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.196436499999997,
+          "lon": 31.469237999999997
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027797",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15032",
+          "name:en": "Block 15032"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.196316,
+          "lon": 31.466693
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027798",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15031",
+          "name:en": "Block 15031"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1960295,
+          "lon": 31.4679625
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027799",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15039",
+          "name:en": "Block 15039"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1960215,
+          "lon": 31.470605
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027800",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15033",
+          "name:en": "Block 15033"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1968675,
+          "lon": 31.467538
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027801",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15037",
+          "name:en": "Block 15037"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1967955,
+          "lon": 31.469926
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027803",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15034",
+          "name:en": "Block 15034"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.19621,
+          "lon": 31.4669555
+        }
+      },
+      {
+        "type": "area",
+        "id": "w757027804",
+        "tags": {
+          "landuse": "residential",
+          "place": "neighbourhood",
+          "name": "بلوك 15035",
+          "name:en": "Block 15035"
+        },
+        "timestamp": "2020-11-26T04:07:52+00:00",
+        "center": {
+          "lat": 30.1970615,
+          "lon": 31.471223000000002
+        }
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v3",
+  "notes": "osm v3 local control",
+  "timestamp": "2026-11-28T11:56:36.453730+00:00"
+}

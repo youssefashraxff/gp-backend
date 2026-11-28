@@ -1,0 +1,110 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_ar_facebook",
+  "params": {
+    "q": "بادل العبور الجديدة (site:facebook.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_ar",
+    "variant": "facebook",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.679,
+  "raw": {
+    "searchParameters": {
+      "q": "بادل العبور الجديدة (site:facebook.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "V-padel | Cairo",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXj8fyQcAVGLkgG38OhK-2LGwedd_hA8nnXslHYezNzrN4n5c5kHsI2EovibyfEPCBd98EcYG2PkHWqMCxOxeTWS3gfV3zpDuvWfYXq6F4v_MYA7G4Zr8Nzd6ssR7Yng&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 2.8 ألف متابع",
+        "snippet": "احجز مكانك دلوقتي! للاستفسار والتسجيل: 01147399450 العنوان: مدخل العبور - HUB MALL #رياضة_البادل #تدريب_الصيف #أكاديمية_البادل ...",
+        "rating": 5,
+        "ratingCount": 1,
+        "position": 1
+      },
+      {
+        "title": "انهاردة افتتاح أكبر ملاعب البادل في العبور V-padel هيكون ...",
+        "link": "https://www.facebook.com/Obour360/posts/%D8%A7%D9%86%D9%87%D8%A7%D8%B1%D8%AF%D8%A9-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%A3%D9%83%D8%A8%D8%B1-%D9%85%D9%84%D8%A7%D8%B9%D8%A8-%D8%A7%D9%84%D8%A8%D8%A7%D8%AF%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-v-padel-%D9%87%D9%8A%D9%83%D9%88%D9%86-%D9%81%D9%8A-%D9%87%D8%A8-%D9%85%D9%88%D9%84-%D9%88%D8%A7%D8%AD%D9%86%D8%A7-%D9%87%D9%86%D9%83%D9%88%D9%86-%D9%85/633444278985027/",
+        "displayedLink": "أكثر من 80 تفاعل  ·  قبل 3 سنوات",
+        "snippet": "انهاردة افتتاح أكبر ملاعب البادل في العبور V-padel هيكون في هب مول واحنا هنكون موجودين هناك ومعانا فاوتشرز وخصومات تصل إلي 100٪ يعني هتلعب ...",
+        "position": 2
+      },
+      {
+        "title": "لو بتفكر في خروجه تطلع طاقتك السلبية يبقى عليك وعلى ...",
+        "link": "https://www.facebook.com/Obour360/videos/%D9%84%D9%88-%D8%A8%D8%AA%D9%81%D9%83%D8%B1-%D9%81%D9%8A-%D8%AE%D8%B1%D9%88%D8%AC%D9%87-%D8%AA%D8%B7%D9%84%D8%B9-%D8%B7%D8%A7%D9%82%D8%AA%D9%83-%D8%A7%D9%84%D8%B3%D9%84%D8%A8%D9%8A%D8%A9-%D9%8A%D8%A8%D9%82%D9%89-%D8%B9%D9%84%D9%8A%D9%83-%D9%88%D8%B9%D9%84%D9%89-%D8%A3%D9%83%D8%A8%D8%B1-%D9%85%D9%84%D8%A7%D8%B9%D8%A8-%D8%A7%D9%84%D8%A8%D8%A7%D8%AF%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1/1019626622653029/",
+        "displayedLink": "أكثر من 20 تفاعل  ·  قبل 3 سنوات",
+        "snippet": "لو بتفكر في خروجه تطلع طاقتك السلبية يبقى عليك وعلى أكبر ملاعب البادل في العبور ... أول ملعب بادل في الصالحية الجديدة واللعب بدأ رسميًا!",
+        "position": 3
+      },
+      {
+        "title": "جماعة الناس اللى عايشة فى العبور و اماكن قريبة بتحسو انكم ...",
+        "link": "https://www.google.com/goto?url=CAEShQEBxCJF10eDv3NPICYSnFaxjA6a1yl2GPtXRwBQ8jXFjRH5z1WHItte8reaL04VjKqNvGugmThKkjwgs4TEivqIewKAQ0BSxxq_G79HCjSgs14KmX1GBGc-taFJcvmzugUseoovjInaizY8JtbGhQ2jeqmR4Jqn6i_uHbdIW8mJ7RQO2aJv&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 20 تعليق  ·  قبل 3 أشهر",
+        "snippet": "هو اصلا مفيش غير Padel Mondo اعتقد .. كان فيه واحد في Hubmall و قفل. ممكن لو بتعملوا تشوفوا ناحية الحي التاسع عشان يبقي الناحيتين بتوع العبور ...",
+        "position": 4
+      },
+      {
+        "title": "دلوقتي تقدر تلعب بادل تنس وتقضي أحلى الأوقات معانا 🥎💪 ...",
+        "link": "https://www.google.com/goto?url=CAES-AMBxCJF19_oaqb80bnB48Togwb1Kb9js9E5O56w3s17NIRBoR1SWITseyX1dsW1TE2sD8U3RzTO0h4Uk5mEqz2z65DDyaLZcudRhLbyoLN5RMJZ9kUhzBZXvQiFdyzZyTh7Uygf0tqN3Cw6TjuPxezM3mjI0GCh3whTSa7KLN71WXLftRc_hYertBPKpUKkAKPpZpT50FmB_Nb203_noD9CI9TpFK6rzo439U6Qbc1wH-y0Jtr2_n_4q_dbBjPcMC0utRIDtP-6lIJs4TeUONv6H0UhQ1aYZPTVcOnKysq0uoN9Ai1juaLCAjIbHdmGThiiTrh8VB37RGxBsdtDWd11wqD9PY_-gwsaS33_dO9gFl-oHyr0VB-Oqml_VON8DEWaM-oUgZ6Q51JpoH5IA0WHq_uJCsH5t6wE9mxiRAI-j2gRxN6kTc8-VSfKzY0xyiUbfwFrEzREcFPWzRkeJxCxMUR8HDME2Bsf_aVRk1WZ97QAAMvuavuVbpDJ52hKjo-zhzoEGnrUl4lhAnaQmtw2IhmnIZVubuQXRjYJETN04-5UWU5U501NcEvoZaEafTrLT42uRkoO1GOD6XIVYnYB2-qi9fc75SMKgslwnGPwOjuE4eJ7Mwt7CJ27nQtGK6a8nohUJSaH_i2JcpEylc0doE1A527L358&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "‫3 تفاعل  ·  قبل 3 سنوات",
+        "snippet": "دلوقتي تقدر تلعب بادل تنس وتقضي أحلى الأوقات معانا فرع v-padel العبور مدخل العبور - hup mall - بجوار بنزينةchell out تقدر توصلنا أسرع ...",
+        "position": 5
+      },
+      {
+        "title": "Padel Mondo | Cairo",
+        "link": "https://www.google.com/goto?url=CAESYgHEIkXXnXS90zmJBRZ1GER5xiVcX9tn7oLeRZWoer6ePMUyZBExtpmQxIwi_U_rOaXqu0Fc12iUE7BSeqlAuTyZ6rk_56eMmhnQxRhAUXj0dv5gBVMXCqPX1ddK_xVA6vsL&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 5.3 ألف متابع",
+        "snippet": "Padel Mondo ; 1 review ; Always open ; Road 10 , Obour city , 5 min from Carrefour obour, Cairo, Egypt ...",
+        "rating": 5,
+        "ratingCount": 1,
+        "position": 6
+      },
+      {
+        "title": "افتتاح اكبر ملاعب البادل في العبور V-Padel في هب مول ...",
+        "link": "https://www.google.com/goto?url=CAESvgMBxCJF14PPOfKjt1DWKbUPxUpXuiUiT27ly5HYNColbWhGlONoVXY56-UtjkNTvTDMatScTs6mvz1RTjtzDDSTZOYOXWgCKDYEP9g9ZTpRbwr5KnFypQyplUGCqkvda9Nz8WepQrhJCbUhpDROsGLRyyYyzcMWOEAPTtVrWoSppALoA7hDHOs1x49CkZ4dlMrgDQCr17i09GFuMVciJdyKD0-G_oqy0SuZ_Yn0qwUNJXRHOeBXfDNhMUjWSP8-Q9JSbdymXU6ziEa15WkRvGkoibcOLfX_sMfFvlj3Rj-LfV15GFx_rVwLT44U-SxIJfyRHakrcQj2TqOZQg_0UJ5J-nFGU5cpf_JD0sdhtAhW036iKe883NpWHcRuo3YwF6Rh6hLImausN3zZtai9Y7M3OCZLjH_5xS_Re1_Lmi6h8SfT4b-nwG-sAp4sPloXUmVHx054uxEP3u4HSBMyFXQvItTfTToMEszqwUamDElRRHGS4Dxsru8syR7V-I_UnwvkdwyDWFzl51Tc-vDkn6V0pUr_S5crynU5jBIHqKEoqW5KefD-P6BpGs_MfLVaOQ0pDGHvAQVdplVhGk09JQ&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 120 تفاعل  ·  قبل 3 سنوات",
+        "snippet": "افتتاح اكبر ملاعب البادل في العبور V-Padel في هب مول روحوا واتبسطوا❤️V-padel ... الجديدة منتظر كام واحد يموت عشان يعملوا مطبات بطول الطريق ...",
+        "position": 7
+      },
+      {
+        "title": "14 يوم بس… وبعدها العرض يخلص! عرض تلال العبور الجديدة ...",
+        "link": "https://www.google.com/goto?url=CAEShAEBxCJF18SzCbuw-dNQLRV60DFADhKh1iHksr021pawORbkqubzGdWr_G6UEG5V_0L8VvN-wMrxOQyX_FRlfYCA5cPaZ4IKZeLzrFDJvzETkuO_5VnIKk140L5Iby0ae8C8wPsxCyle7KlmOG5HLChf3IhrZMwd7uOCXEYLizlsj5iApZM&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "قبل 21 ساعة",
+        "snippet": "⏰ 14 يوم بس… وبعدها العرض يخلص! عرض تلال العبور الجديدة: ✓ مقدم 15% بس ✓ قسط شهري 10,000 جنيه ✓ خصم 50% على الجراج وعايش وسط حياة كاملة جوه ...",
+        "position": 8
+      },
+      {
+        "title": "ملعب بادل بمعايير عالمية في قلب فندق ونادي بلازا العبور ...",
+        "link": "https://www.google.com/goto?url=CAESnAQBxCJF12Yh3a5G1IW5JQr0YA4fYpZE3Csyb36TrdKVCGReNsaio_qeGnyzoP-3jhRRshnoDk1ktEqYsaGg_Sy1-eJxfqvkcaVry8Vf5C4pQO_HbHmGoZXXW_BGuxNsZWUBGxLP1yrPoV0yG6c8psmbhZcWMnrWVJU3KURluRmYM9axYyvlKHOxutmaRPOyn0C6cTC3eEkA0TPL2Ckv0l2z0NU2YDzChIFg38RAKvWRbDr1ceE0b0ntVHBIRIZ8rOT5wv_3pmrK4l9i4GXgnZxWmmgFdmoRf8zysQDnGhYJ6OtXsI8iKD2K9Se-7-sDUhj-PwP2BbCjdJ-4Ud-D18fVhbqv2_h9sSNQ5vyTB7PGATvjD8v77cmGdQNn6MasqRqY3dhyR3ebdiz5B81wMQ0Hv46m2d7uNwofCVCXSv7WqkHzGYxefUTvfDngrXe2lQ3Sn6Zfbh9h6ZKnHRnwhWDdfQN_ZZixFGhhqBb5x3hCMGJpNfcZx1U0ysU0FJjK1a0Q_sHKzHEWB8niJ1Bus-OIbqyCgMw_cIv3G4TE9gqwIlRFWBvIBLjepbGrK2NW9FlFDD4KQsvMwLJpaEPhEucEKc7ntEWLV0SpjskaXcVDEoisfGGu6t7AY0rHAwLoJ99pstd5nElKqwY84PMKlV80FC3a_PxUK5AYYrPQYv_-tHeGIxvUxdsH1Kyz12MmBM8lY00w1XVtz8hjlfQ&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل 10 أشهر",
+        "snippet": "ملعب بادل بمعايير عالمية في قلب فندق ونادي بلازا العبور تجربة رياضية مختلفة إضاءة احترافية • أرضية عالمية • أجواء تنافسية هنا تبدأ المتعة…",
+        "position": 9
+      },
+      {
+        "title": "Shady Elgabal ✨🎾",
+        "link": "https://www.google.com/goto?url=CAESiAEBxCJF156gIPQ1djYzKdHM-EFkov97UmjpIGaBZ277ReqsMsvJlpstb0_c1SkZPz42RbCWakJ-xjqn4DW-kHtBipGIvfYtTVUZfYlzXPRCLRd0jHJ5ZmuNw7q-Ir8MryJJQSJ9EhkjqygIqx83BSYhDqc10pB9DvmKmpAULJgIM8TY_DdiaRHV&gsessionid=v_1bld4Nd1gXL9eddj62o4mtMTNjSyzE_9Xv489qh055dZT4GhI4Mg",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل شهرين",
+        "snippet": "Shady Elgabal ✨ · Train to shine with padel Mondo, Now is the right time to Book your session · Train to shine with padel Mondo, Now is the ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:36.750621+00:00"
+}

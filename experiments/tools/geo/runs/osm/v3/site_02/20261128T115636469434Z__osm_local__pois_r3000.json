@@ -1,0 +1,848 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "pois_r3000",
+  "params": {
+    "kind": "pois",
+    "radius": 3000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];(node(around:3000,30.1938258,31.4601618)[amenity];node(around:3000,30.1938258,31.4601618)[shop];node(around:3000,30.1938258,31.4601618)[leisure];way(around:3000,30.1938258,31.4601618)[amenity];way(around:3000,30.1938258,31.4601618)[shop];way(around:3000,30.1938258,31.4601618)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 72,
+  "error": "",
+  "seconds": 0.001,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": "n1680830800",
+        "tags": {
+          "amenity": "place_of_worship"
+        },
+        "lat": 30.214678,
+        "lon": 31.470768,
+        "timestamp": "2012-03-18T22:06:12+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610577033",
+        "tags": {
+          "shop": "supermarket",
+          "name": "Carrefour Market",
+          "brand": "Carrefour Market"
+        },
+        "lat": 30.174457,
+        "lon": 31.475971,
+        "timestamp": "2021-11-18T20:22:09+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610577037",
+        "tags": {
+          "amenity": "cinema",
+          "name": "سينما جولف سيتى",
+          "name:en": "Golf City Cinema"
+        },
+        "lat": 30.1742,
+        "lon": 31.475711,
+        "timestamp": "2021-11-18T20:22:20+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610577041",
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Chili's",
+          "cuisine": "regional"
+        },
+        "lat": 30.173156,
+        "lon": 31.476098,
+        "timestamp": "2023-12-04T09:11:30+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610577044",
+        "tags": {
+          "amenity": "cinema",
+          "name": "ستوديو مصر",
+          "name:en": "Studio Misr"
+        },
+        "lat": 30.172843,
+        "lon": 31.476232,
+        "timestamp": "2023-12-04T09:11:30+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610577056",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "McDonald's",
+          "cuisine": "burger",
+          "brand": "McDonald's"
+        },
+        "lat": 30.172681,
+        "lon": 31.476301,
+        "timestamp": "2023-12-04T09:11:30+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n2610596524",
+        "tags": {
+          "amenity": "bank",
+          "name": "بنك أتش أس بى سى مصر",
+          "name:en": "HSBC Egypt"
+        },
+        "lat": 30.17749,
+        "lon": 31.47411,
+        "timestamp": "2014-01-05T09:18:24+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n4577117090",
+        "tags": {
+          "shop": "furniture",
+          "name": "معمل احمد طحان العبور"
+        },
+        "lat": 30.19118,
+        "lon": 31.450121,
+        "timestamp": "2016-12-28T11:15:00+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n4607194289",
+        "tags": {
+          "amenity": "cafe",
+          "name": "مقهي"
+        },
+        "lat": 30.180002,
+        "lon": 31.452983,
+        "timestamp": "2017-01-14T03:18:46+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n4855785021",
+        "tags": {
+          "amenity": "bank",
+          "name": "hsbc bank فرع جولف مدينة العبور"
+        },
+        "lat": 30.17698,
+        "lon": 31.473953,
+        "timestamp": "2017-05-15T13:56:31+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n4901469923",
+        "tags": {
+          "amenity": "waste_disposal"
+        },
+        "lat": 30.187094,
+        "lon": 31.456026,
+        "timestamp": "2017-06-07T08:46:42+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n4901469924",
+        "tags": {
+          "amenity": "waste_disposal"
+        },
+        "lat": 30.200015,
+        "lon": 31.450725,
+        "timestamp": "2017-06-07T08:46:42+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7059809798",
+        "tags": {
+          "shop": "bed",
+          "name": "مصانع بيد يانسن للمراتب"
+        },
+        "lat": 30.178614,
+        "lon": 31.464338,
+        "timestamp": "2026-05-20T13:04:18+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102141464",
+        "tags": {
+          "amenity": "bank",
+          "name": "bank of egypt"
+        },
+        "lat": 30.187901,
+        "lon": 31.468749,
+        "timestamp": "2020-01-02T18:37:38+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102141465",
+        "tags": {
+          "leisure": "fitness_centre",
+          "name": "Z Gym"
+        },
+        "lat": 30.191556,
+        "lon": 31.479618,
+        "timestamp": "2020-01-02T18:37:38+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102175300",
+        "tags": {
+          "shop": "supermarket",
+          "name": "نجمة السابع",
+          "name:en": "Star VII"
+        },
+        "lat": 30.187207,
+        "lon": 31.479612,
+        "timestamp": "2022-12-22T07:23:27+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102175301",
+        "tags": {
+          "shop": "supermarket",
+          "name": "الثورة",
+          "name:en": "Revolution"
+        },
+        "lat": 30.187266,
+        "lon": 31.479612,
+        "timestamp": "2022-12-22T07:23:27+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102175302",
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Fish & Chips"
+        },
+        "lat": 30.187326,
+        "lon": 31.479596,
+        "timestamp": "2022-12-22T07:23:27+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102175303",
+        "tags": {
+          "shop": "agrarian",
+          "name": "Al Iman",
+          "name:en": "Al Iman"
+        },
+        "lat": 30.187502,
+        "lon": 31.479643,
+        "timestamp": "2022-12-22T07:23:27+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7102227091",
+        "tags": {
+          "amenity": "restaurant",
+          "name": "waffle maker",
+          "cuisine": "waffle"
+        },
+        "lat": 30.188037,
+        "lon": 31.468984,
+        "timestamp": "2020-01-02T19:04:34+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7728120190",
+        "tags": {
+          "shop": "supermarket",
+          "name": "العنان ماركت"
+        },
+        "lat": 30.208032,
+        "lon": 31.468991,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7728120288",
+        "tags": {
+          "shop": "supermarket",
+          "name": "جرين ماركت"
+        },
+        "lat": 30.209003,
+        "lon": 31.465695,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7746360587",
+        "tags": {
+          "shop": "supermarket",
+          "name": "حبيبه"
+        },
+        "lat": 30.207359,
+        "lon": 31.465431,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7746366385",
+        "tags": {
+          "shop": "supermarket",
+          "name": "اولاد علي"
+        },
+        "lat": 30.209191,
+        "lon": 31.463438,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814700387",
+        "tags": {
+          "shop": "supermarket",
+          "name": "العمده"
+        },
+        "lat": 30.211007,
+        "lon": 31.463059,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702085",
+        "tags": {
+          "shop": "supermarket",
+          "name": "اسواق نور"
+        },
+        "lat": 30.200698,
+        "lon": 31.466813,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702086",
+        "tags": {
+          "shop": "supermarket",
+          "name": "حور"
+        },
+        "lat": 30.200308,
+        "lon": 31.466209,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702185",
+        "tags": {
+          "shop": "supermarket",
+          "name": "اولاد عاشور"
+        },
+        "lat": 30.200685,
+        "lon": 31.467122,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7814702285",
+        "tags": {
+          "shop": "supermarket",
+          "name": "الحسيني"
+        },
+        "lat": 30.200693,
+        "lon": 31.466545,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7834721086",
+        "tags": {
+          "shop": "supermarket",
+          "name": "الباشا"
+        },
+        "lat": 30.207971,
+        "lon": 31.470681,
+        "timestamp": "2020-11-26T04:07:52+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7856511685",
+        "tags": {
+          "shop": "supermarket",
+          "name": "المصطفي"
+        },
+        "lat": 30.178715,
+        "lon": 31.449576,
+        "timestamp": "2020-11-25T23:45:16+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7856511785",
+        "tags": {
+          "shop": "supermarket",
+          "name": "المنياوي"
+        },
+        "lat": 30.175826,
+        "lon": 31.450826,
+        "timestamp": "2020-11-25T23:45:16+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n7880834185",
+        "tags": {
+          "shop": "supermarket",
+          "name": "BEE MART"
+        },
+        "lat": 30.205108,
+        "lon": 31.462498,
+        "timestamp": "2020-09-06T11:30:14+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8199325779",
+        "tags": {
+          "amenity": "restaurant",
+          "name": "LaCucina"
+        },
+        "lat": 30.215529,
+        "lon": 31.448513,
+        "timestamp": "2026-05-20T12:57:13+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8461202017",
+        "tags": {
+          "shop": "supermarket",
+          "name": "إكسبريس ماركت",
+          "name:en": "Express Market"
+        },
+        "lat": 30.21654,
+        "lon": 31.452474,
+        "timestamp": "2021-02-26T13:06:30+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8461202117",
+        "tags": {
+          "shop": "bakery",
+          "name": "كريمينو فينو وحلويات غربي وشرقي",
+          "name:en": "Krimino Bakery"
+        },
+        "lat": 30.216545,
+        "lon": 31.451567,
+        "timestamp": "2021-02-26T13:06:31+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8461202118",
+        "tags": {
+          "amenity": "restaurant",
+          "name": "بروستد كينج",
+          "name:en": "Broasted King, (fried chicken)"
+        },
+        "lat": 30.216314,
+        "lon": 31.450796,
+        "timestamp": "2021-02-26T13:06:32+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8476146520",
+        "tags": {
+          "shop": "hairdresser",
+          "name": "باربر شوب",
+          "name:en": "Barber Shop"
+        },
+        "lat": 30.216309,
+        "lon": 31.451081,
+        "timestamp": "2021-03-01T14:54:34+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8518843619",
+        "tags": {
+          "shop": "supermarket",
+          "name": "إكسبريس ماركت الحي التاسع",
+          "name:en": "Express Market"
+        },
+        "lat": 30.216417,
+        "lon": 31.453896,
+        "timestamp": "2021-03-14T21:11:22+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8518858419",
+        "tags": {
+          "shop": "bakery",
+          "name": "كريمينو فينو وحلويات غربي وشرقي",
+          "name:en": "Krimino Bakery"
+        },
+        "lat": 30.216368,
+        "lon": 31.453544,
+        "timestamp": "2021-03-14T21:11:24+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8518867318",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "بروستد كينج",
+          "name:en": "Broasted King, Fried Chicken"
+        },
+        "lat": 30.216399,
+        "lon": 31.453213,
+        "timestamp": "2021-03-14T21:12:41+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8688089517",
+        "tags": {
+          "amenity": "pharmacy",
+          "name": "صيدليات هند",
+          "name:en": "Hend Pharmacies"
+        },
+        "lat": 30.20794,
+        "lon": 31.470631,
+        "timestamp": "2022-11-02T15:36:01+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n8780972017",
+        "tags": {
+          "amenity": "fuel",
+          "name": "بنزينة شيل أوت السابع",
+          "name:en": "Chill out 7th district"
+        },
+        "lat": 30.179357,
+        "lon": 31.472842,
+        "timestamp": "2021-05-30T12:19:22+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n10214911651",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "دانكن دونتس",
+          "name:en": "Dunkin' Donuts",
+          "cuisine": "donut;coffee_shop",
+          "brand": "دانكن"
+        },
+        "lat": 30.195657,
+        "lon": 31.459545,
+        "timestamp": "2025-04-30T08:25:24+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n10214983372",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Domino's",
+          "cuisine": "pizza",
+          "brand": "Domino's"
+        },
+        "lat": 30.194938,
+        "lon": 31.460178,
+        "timestamp": "2022-11-24T15:33:26+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n11305697426",
+        "tags": {
+          "shop": "bed",
+          "name": "نايتي بدك",
+          "name:en": "Nighty Pedic"
+        },
+        "lat": 30.192689,
+        "lon": 31.44466,
+        "timestamp": "2023-11-01T20:44:43+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13495307301",
+        "tags": {
+          "leisure": "escape_game",
+          "name": "مول سيتي"
+        },
+        "lat": 30.194984,
+        "lon": 31.473396,
+        "timestamp": "2026-01-26T10:07:17+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13495307302",
+        "tags": {
+          "amenity": "fuel"
+        },
+        "lat": 30.203371,
+        "lon": 31.464364,
+        "timestamp": "2026-01-26T10:07:18+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13495307601",
+        "tags": {
+          "amenity": "school",
+          "name": "اليابنيه"
+        },
+        "lat": 30.193683,
+        "lon": 31.480532,
+        "timestamp": "2026-01-26T10:07:19+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13495326501",
+        "tags": {
+          "amenity": "childcare",
+          "name": "كيدز كاسل"
+        },
+        "lat": 30.196497,
+        "lon": 31.475731,
+        "timestamp": "2026-01-26T10:14:38+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13495733201",
+        "tags": {
+          "amenity": "school",
+          "name": "احمد الشريف"
+        },
+        "lat": 30.196805,
+        "lon": 31.47711,
+        "timestamp": "2026-01-26T12:42:02+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13540632002",
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد النور"
+        },
+        "lat": 30.193944,
+        "lon": 31.484062,
+        "timestamp": "2026-02-10T12:11:25+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13688898402",
+        "tags": {
+          "amenity": "school",
+          "name": "ريفلكت"
+        },
+        "lat": 30.198331,
+        "lon": 31.464498,
+        "timestamp": "2026-03-29T15:51:51+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13766526701",
+        "tags": {
+          "amenity": "school",
+          "name": "كشك"
+        },
+        "lat": 30.187619,
+        "lon": 31.477076,
+        "timestamp": "2026-04-27T11:38:48+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n13850257105",
+        "tags": {
+          "amenity": "school",
+          "name": "ممر عربيه"
+        },
+        "lat": 30.195646,
+        "lon": 31.484071,
+        "timestamp": "2026-05-19T18:04:29+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14090008801",
+        "tags": {
+          "amenity": "school",
+          "name": "مزرعه الخطاري"
+        },
+        "lat": 30.203627,
+        "lon": 31.482179,
+        "timestamp": "2026-08-12T15:27:22+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14092292901",
+        "tags": {
+          "amenity": "school",
+          "name": "مستشفي ايوان"
+        },
+        "lat": 30.195334,
+        "lon": 31.471936,
+        "timestamp": "2026-08-13T14:45:49+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14122278402",
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Buffalo Burger - Obour Golf City",
+          "cuisine": "burger",
+          "brand": "Buffalo Burger"
+        },
+        "lat": 30.174767,
+        "lon": 31.47642,
+        "timestamp": "2026-10-25T13:25:34+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14133439601",
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد العزيز"
+        },
+        "lat": 30.195681,
+        "lon": 31.465038,
+        "timestamp": "2026-08-29T15:20:39+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14206181002",
+        "tags": {
+          "shop": "bathroom_furnishing"
+        },
+        "lat": 30.198411,
+        "lon": 31.474897,
+        "timestamp": "2026-09-22T11:03:14+00:00"
+      },
+      {
+        "type": "node",
+        "id": "n14420083834",
+        "tags": {
+          "amenity": "doctors",
+          "name": "One Dental Imaging"
+        },
+        "lat": 30.216395,
+        "lon": 31.455388,
+        "timestamp": "2026-11-26T15:06:49+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w155520065",
+        "tags": {
+          "amenity": "parking",
+          "name": "كارفور العبور",
+          "name:en": "carrefour aloboor"
+        },
+        "lat": 30.17629,
+        "lon": 31.473831,
+        "timestamp": "2023-11-30T12:27:15+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w184789210",
+        "tags": {
+          "amenity": "parking"
+        },
+        "lat": 30.17731,
+        "lon": 31.43559,
+        "timestamp": "2023-11-30T14:59:24+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w255365268",
+        "tags": {
+          "amenity": "parking"
+        },
+        "lat": 30.172274,
+        "lon": 31.475908,
+        "timestamp": "2023-12-03T11:48:57+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w255365269",
+        "tags": {
+          "shop": "mall",
+          "name": "جولف سيتى مول العبور",
+          "name:en": "Golf City Mall"
+        },
+        "lat": 30.174654,
+        "lon": 31.476457,
+        "timestamp": "2023-12-05T13:52:26+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w255365851",
+        "tags": {
+          "leisure": "swimming_pool",
+          "name": "WMSA swimming academy"
+        },
+        "lat": 30.175314,
+        "lon": 31.475605,
+        "timestamp": "2014-01-05T09:14:20+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w773688361",
+        "tags": {
+          "leisure": "sports_centre",
+          "name": "AutoVroom"
+        },
+        "lat": 30.201584,
+        "lon": 31.455319,
+        "timestamp": "2020-02-21T06:12:48+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1116913396",
+        "tags": {
+          "amenity": "fuel",
+          "name": "Master",
+          "brand": "Master"
+        },
+        "lat": 30.195283,
+        "lon": 31.459694,
+        "timestamp": "2022-11-24T15:19:18+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1116916498",
+        "tags": {
+          "amenity": "fuel",
+          "name": "Total",
+          "brand": "Total"
+        },
+        "lat": 30.193473,
+        "lon": 31.461668,
+        "timestamp": "2022-11-24T15:28:16+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1124076638",
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Al Rahman Mosque",
+          "name:en": "Al Rahman Mosque"
+        },
+        "lat": 30.186968,
+        "lon": 31.479281,
+        "timestamp": "2022-12-22T07:23:27+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1228588882",
+        "tags": {
+          "leisure": "garden"
+        },
+        "lat": 30.172786,
+        "lon": 31.476565,
+        "timestamp": "2023-12-04T09:11:30+00:00"
+      },
+      {
+        "type": "node",
+        "id": "w1228588883",
+        "tags": {
+          "leisure": "garden"
+        },
+        "lat": 30.172986,
+        "lon": 31.476434,
+        "timestamp": "2023-12-04T09:11:30+00:00"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v3",
+  "notes": "osm v3 local control",
+  "timestamp": "2026-11-28T11:56:36.469425+00:00"
+}

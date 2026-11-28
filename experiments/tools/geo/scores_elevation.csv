@@ -1,0 +1,4 @@
+timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,run_file,n_points,n_missing,site_min_m,site_max_m,site_relief_m,site_mean_m,max_slope_pct,mean_slope_pct,ring_relief_m,resolution_m
+2026-11-28T00:48:02.847123+00:00,site_01,v1,elevation,google,grid,ok,65,0.643,,20261128T004802848541Z__google__grid.json,65,0,85.5,97.9,12.4,91.2,4.45,1.48,116.7,9.5
+2026-11-28T00:48:04.294507+00:00,site_01,v1,elevation,opentopodata_srtm30m,grid,ok,65,0.437,,20261128T004804294630Z__opentopodata_srtm30m__grid.json,65,0,84.0,101.0,17.0,93.1,6.0,2.23,117.0,
+2026-11-28T00:48:06.988829+00:00,site_01,v1,elevation,opentopodata_aster30m,grid,ok,65,1.687,,20261128T004806988989Z__opentopodata_aster30m__grid.json,65,0,77.0,105.0,28.0,91.4,22.0,6.01,116.0,

@@ -1,0 +1,36 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "details_2",
+  "params": {
+    "place_id": "ChIJ4QCBfAAbWBQRilPNfrjpk2g"
+  },
+  "meta": {
+    "category": "details",
+    "name": "Colombian coffee",
+    "distance_m": 1.9
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.388,
+  "raw": {
+    "id": "ChIJ4QCBfAAbWBQRilPNfrjpk2g",
+    "rating": 1,
+    "userRatingCount": 1,
+    "displayName": {
+      "text": "Colombian coffee",
+      "languageCode": "en"
+    },
+    "reviews": [
+      {
+        "rating": 1,
+        "publishTime": "2025-11-01T12:40:14.395455219Z"
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:10:05.141354+00:00"
+}

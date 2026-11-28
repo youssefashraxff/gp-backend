@@ -1,0 +1,108 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_ar_facebook",
+  "params": {
+    "q": "كافيهات العبور الجديدة (site:facebook.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_ar",
+    "variant": "facebook",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.772,
+  "raw": {
+    "searchParameters": {
+      "q": "كافيهات العبور الجديدة (site:facebook.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "جربنا بعض الكافيهات في العبور💜قولنا انت كمان جربت ...",
+        "link": "https://www.google.com/goto?url=CAESlQQBxCJF15zuRGXbiVgtDRS0wuUD5ATY2RJ0w6TSS-JcbxwN7izqFZgpy0ejcJsknBpQXntz9041sRyV5U8lZKgbRc3Ou2KS0ihD2oqI_IRPN6zf-VW9TIq7ZzBXXZzKxPKser0hPnmQdpz3dyr8QqbfHCJLaxBiFLO9hdveMM0ipW8nP2V96YgFyxf7G6ZxjAI0y6S_ptGXRm205o0owOV7ongqWHhP-if1h04lCpEA2BezyXXB2sGdikkTZwFWttxG2mdR5ugoh4F_mQQcE39-zedIWe0TeMlfNuOvei3OYUZrs2g6Pu1n4Bpz69U9jSIvyGJg-MR03G1RkvesUriEpC_vJeGMSWqrBcY0fKXJgHuk-zTHnlGQkoc9oW-KiPxDr6cbZYfh8a_F71B_QlxacUeDg_5QF1ntqN0M_80DiCEm06gqh5qsGSCLcTsHzlqFugJ8jzZt6SFXMansq4jRZehnoLWsOXePmeKbgPHa3TKCSLmnjVMvU5N74qNQgpE1Pg835YPDLkeejAvdD6VeTEgrFmWnOz2hy__2PzbOJstO5Guw98ONUaO3DOQ7IOvjt5fXIpniJ6BLBXIMVbOyoJjjGmw2MgSAKasYA7bWJEMLqvymVnj_wITehhBcD2Baf5v8VUam3am8IrUtb2gpj59LLja9tg8tbdoeqrId0uEQIbR6PY4AJhwkcV9yeddaKM04ow&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 400 تفاعل  ·  قبل سنة واحدة",
+        "snippet": "العنوان : العبور، الحي الأول، مول ابو الدهب، الدور الأرضي للتواصل :- 01098029380 لوكيشن: https://maps.app.goo. gl/ixJQWTcW62TGEfku5?g_st=ic.",
+        "position": 1
+      },
+      {
+        "title": "عايزة اماكن كافيهات تكون نضيفة وشيك ف العبور نقعد فيها",
+        "link": "https://www.google.com/goto?url=CAEShAEBxCJF1_7znHnDqv1t5sHqnyEi9gTblf0OVKfZaReXOzceEKo0Nfx3cOw1mazbdThFZKVzoLGLBF-dDDpqmr4v11yely7D7L9_9iYsENqYpamgHu05J91Bz4T1_nqfLJE32i4DyvGZas14tnnZwLAEExsbfGhuNirxyH4hJM6v3_s-go8&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 10 تعليق  ·  قبل سنة واحدة",
+        "snippet": "AśMà ZéDàn. Rivo Café جميل جدا وقعدته مريحه · جراند رويال. Grand Royal Cafe · Adham ELshraawy. كافيه زين دياب مول أصول دار مصر أمام بوابه واحد دار ...",
+        "position": 2
+      },
+      {
+        "title": "Sky Café & Restaurant اول كافية علي الروف في مدينة العبور ...",
+        "link": "https://www.google.com/goto?url=CAESywMBxCJF1zpJU0XRfum7xD3EbPQda4-DTz3YMFynPCuro8ndQH1pLZpVBxSjaDfOI0Se8mpAt9iHBSsuGd4Td4aHcSb9u6N76W0QaSklCHTqyMrOFeW2ecOExli9bNttOPeyjcaikwLLGxp7JTuEDrbIqC-fExcg0kR6tdzEeCuTWuSWO4KY9kX4fm3ASFbiZA5i0a1K54JjOpyJhM7dV0bPaV_gQueWJIw1iuBnmgFthYGrjqI8TFMNk08FGMb_p-hTYpuIDjX4lhTtntx7v3cVd_u9TqP3ENmoLnX1RJklBuWQ9cgY6BgmSbA42ocOReWFYnL3WlwUc1g9-F4szhmf0y1yj_JEU1lsHI4bqmCnahCehb5bWsZITAXDJoW1tzP1XfuCXeZJ-dXmGkpmeWWQb-OnIpnN7ROwLQtUCLBxHsFXvNHB4vpo-pcSKugxo7LBxLzS1c4nPLC53RIjXp6j44YCuNh6xgolE5VzPo-zO3YToPRk_Cb0mBiChARaQjAigSMqyn9SNNiY19aBwUVC-OvyWZk2q5UZaDUhA5ZNak4_1hrKeF6fVubXuwWAR2s7me_QFjJclTjMN_0OtsDLqsEhjICYMyfxXVA&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 410 تفاعل  ·  قبل سنة واحدة",
+        "snippet": "Sky Café & Restaurant اول كافية علي الروف في مدينة العبور هتلاقوا جميع المشروبات سخن وساقع بجودة عالية ولو عندك مناسبة المكان بينظمهالك بافضل ...",
+        "position": 3
+      },
+      {
+        "title": "افتتاح الفرع الثاني لكافيه أثينا – العبور 🔥 ☕ قهوة ببلاش ...",
+        "link": "https://www.google.com/goto?url=CAESoAQBxCJF16wSGAyv3pU86OVp2DpC260CCAHkXpz-MvPWd7cC_CFxbJWP0ahRQULcY7lXYzJjTfMdCB_CNm11K6uau1SDyIn9Ts9BTKVKmACtzALgupREkn0laIfAOEZ-kABqx8NxA5GI1ef1g8klQgt6nLxZeo6Xq3AHfc6RDc0n9caiHnrxkmKQtjz75WCRsRN0UFY2NGH6193cTn_VdhmGTn9gyNYKHsPxcfEqVMEI-3biL1Doc0eV2Ps7pZlZlAeThbbPxfgxwVVy6FnHNDuQuGSTJzolycyNxS_7Qt5IH5_AqIdNMOvaLkSs9BxDkU1bI_YDlXbc63eppgUTZ4sYoTvompAdNqK2PY-PVIedlRlrLb7-FUu-sElLJ6eEzUOlqfEUOZ-U7rS-XgNGJC5fr_KSdAyLv6uUSlfvP4_lxOGsQhkcyEGTqA9vOb9Nx637Rz6XsU19s3VVK5TOWnowp_JyjglAG2dmdtti_Eo2fUBkbs9cQ7q_OiaNa6LbzT6LbxIrsh-HxwOY0CcqxJcen5Z_CLZAV7mL1IbhWJbRLlsTBeiafGatKxp1XVcBUSCHbD9WmmL34mL8Ont7OIvskC3Hg1ud4yeWUD9DpyWIsBuwFJ12k6PjMZWdZyOY3a1R4-Wy4mQVyU-dztZJdpMC-whKzfjFsPiR1fMC6ET7Pqqtw73P9rZ6TofT0Vj8fMqID_9kJhTDz9OMGbDuMQ9e&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل 11 شهرًا",
+        "snippet": "والأجواء نار عناوين الفروع: الفرع الأول: مدينة العبور – شارع الشباب – أول السبعين – بجوار بندر العبور لوكيشن:- https://maps.app.goo. gl ...",
+        "position": 4
+      },
+      {
+        "title": "من افضل الكافيهات اللي موجوده في العبور كافية The Tree ...",
+        "link": "https://www.google.com/goto?url=CAESgwEBxCJF1wEHq7zG7UgUydYUKM3fxiw8lqQIrDYFk9ivOLR49MzYzmGflrvHJc-qgSu5-eQFQTkeggIx-hHxKP2kKDeyMIK3DigcvcyC1t17ZJRHrvcP3FrwkJ4aS0R0eN0ex50zGSXPVNQ8DjQ893jwoX56wcB-NNqYVKdLX3Ph5dGFGw&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 20 تعليق  ·  قبل 7 أشهر",
+        "snippet": "من افضل الكافيهات اللي موجوده في العبور كافية The Tree في افينيو مول المكان جميل جدا والديكورات بتاعته ممتازه موجود جميع انواع المشروبات ...",
+        "position": 5
+      },
+      {
+        "title": "عايز افضل كافيهات ف مدينه العبور",
+        "link": "https://www.google.com/goto?url=CAESgwEBxCJF1wFoOsAlGt3ZrnyEoPGbH9fmmUyCX7yfdsDpEU9QhFIQhGdd-EA9grHsXuxG4i8YQFbMJ0xLPOnluKGfYEew2d3oojmjtbipvx-SDoyRfa4deL-6cn96PqGzQAM2vgvy3yEgK9U5hKTpW33uMMNs9o-joDER0w66RQkRMtyqJg&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 10 تعليق  ·  قبل سنة واحدة",
+        "snippet": "افينو مول في خدمات كتير وفي اكل غير الكافيهات و في العاب للكبار والصغيرن في بلياردو|Owls cafe يوني مول مكان لذيذ هو كافيه و work space مكان ...",
+        "position": 6
+      },
+      {
+        "title": "Rivo Café (@RivoCafeegy)",
+        "link": "https://www.google.com/goto?url=CAESYAHEIkXXiDrnuaYdN9hYNNoQ68QhuTGln1ZCzJoKEDFbRB6OS5xyQfyEKnWlNZLztOaMT04WRViXEPJjJk8wBSInZvovBAWvMd-Qm3f8Da2Y_FaH26D650xarBR2LFzY3A&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 1.8 ألف متابع",
+        "snippet": "... العبور ـ الحي الأول محلية ٥ سنتر قصر عطا التليفون : 01224631403 ... ‍ #بحر #رمل #ساحل #كافيه #coffee #شط #cafe #قهوة #آيس_سبانش_لاتيه #ليمون_نعناع # ...",
+        "rating": 5,
+        "ratingCount": 2,
+        "position": 7
+      },
+      {
+        "title": "جديد ف العبور 💜✨️ كافيه SKOVA Café مكان يستحق الخروج. ...",
+        "link": "https://www.google.com/goto?url=CAES7AMBxCJF17OH5QEfvHAkJVxi_qR-3Jtg9Y4GEcyghkhIie9tgLIo2ofs648OAQcdf0NvCjRNV0HBS4pbn8C5BpWqi_4Iava9CHPNfDzhdiyKpC17K2nmb9LjxzyvpGtu677KS1Qx9ACLpUBfg0UNejnrdcM2j3eNeq1zdvmWCprEcgPF9qJXOcnfTK9ZPCla24GpCpszXwOJ7ux2YopRhC3PYVy6wKwYCGWmwoNLjtsM1Mgwo1BwFsiSj6eDq6z4rAX-jTsNg76DQ3geJfCO0PxYSAeNptC4dap7eL505rSycsLLIbzzqZ_0F3JSjuM6HAw_uKNCOeDInwoY5btGU4oW75ugmwo2GH1Y5bU0YhNirziz1_qPtuNLaJLtttTOfSWnly3eAH3Hxk6_GZZ2YLbRHVotoqJDoYZcVKJ5r5Eq6dKq0dCU3bZTBdJ4zRyGmHOOLP1nfgpt1vvNJO2HO3bv3j8Eic9QhVWK4lw5_pT1aoXV_mWfiOjgakTv3kbR65Up0WtQFjsrzNPhRztiFkQu4msfymmQhVu2ZOJuJ7XECrG3OnVLV2Zsjja5WI-gFBMTOoRo0DEG_YJwRFBqi6bDaZ3gb8EptNV61yL-NSAJ3Kv7Z61x2U9E9firWwrO3Xt3IcJZvSjKIHuASFg&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "أكثر من 190 تفاعل  ·  قبل سنتين",
+        "snippet": "جديد ف العبور ✨️ كافيه SKOVA Café مكان يستحق الخروج. ✨ الافتتاح اليوم عاملين عروض جامده وده لانهم عندهم كل حاجه مميزه، مكان رايق تستجم فيه ...",
+        "position": 8
+      },
+      {
+        "title": "كافيه 360 موجود في c3 مول بجانب نادي العبور",
+        "link": "https://www.google.com/goto?url=CAESuQIBxCJF1ya7GCUAuRyKPJuR7ghY20N2ZnCBqBKr2bYJh43VpLKJlyRU--lfvTwhvWs-Sj87Qd0NV2alTy0t5mU7--YtUWmcoDM40sFEdmohGtJh-b_EQUeIUxcfJURxXCG7Lp5asXVKvwGLE1g0uVIbsKu3k4MTVn-Nzwu3knFL4bOKXrZv3bW8ajUw0AMH9-emCgbMkjQy_9P4ioirveGjfgK_Urv_GvMS7jz95XR8izWhAQYUviFQ4wbarXmxakl529oUM2fKIDtlrVVROw3yIFKBZ1XQ6kSVJ_nIu5gX1GVoXAISV1hN2M7YYZrnQivCv4awd8wtXdMsSnZT6RyHM9TlgGVkD2SUdQ2ulneCtcvJQZe1j4-ZJhnsgzJYPY_I4YybgpTzfBb5Fz4-pEoYXjEQrqSZUWrV&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "‫2 تفاعل  ·  قبل 12 شهرًا",
+        "snippet": "كافيه 360 موجود في c3 مول بجانب نادي العبور. ... الجديدة) وذلك من( الـ ١٢) ظهرا وحتي الساعة (الـ ٤) عصرا ويهيب جهاز ...",
+        "position": 9
+      },
+      {
+        "title": "فرصة لأصحاب مشاريع الكافيهات! ☕ كافيه بـ Outdoor Area ...",
+        "link": "https://www.google.com/goto?url=CAESgwEBxCJF11zhkF6SMNaYVgYE542Z7KJvub1NtSGj2ozoKvaf3I1QCA2FNTJopLospPeu_VIdc-bGj8qFNYg7nSM-ZB9kEfSdpbvkgT0m03ffFyHM0OLZpjHZFI-4Sa8CbXSqFdvjDyivQu_-CRBedQQEaJgYbIKjzDiqMFkyRt-aFF3FOg&gsessionid=6urZbq3NnzJdWfmLziKmAJpwcFrUbG5BDsJ3tYglHNEh0yU0ZBzPpg",
+        "displayedLink": "قبل شهر واحد",
+        "snippet": "فرصة لأصحاب مشاريع الكافيهات! ☕ كافيه بـ Outdoor Area داخل The Line Mall – العبور الجديدة. في Prime Location داخل المنطقة التجارية، عشان ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:16.787393+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "residents_ar_x",
+  "params": {
+    "q": "جروب سكان العبور الجديدة (site:x.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "residents_ar",
+    "variant": "x",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 5.401,
+  "raw": {
+    "searchParameters": {
+      "q": "جروب سكان العبور الجديدة (site:x.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "قوات الصاعقة المصرية تخترق شوارع مدينة العبور وتثير ...",
+        "link": "https://www.google.com/goto?url=CAESbQHEIkXXBctGUhbOwrt9kl-F3SaV0iZz9mGalZLIwlWFoHNn--acNx3gv6idIjAbuDZyu1-WhulgDGrnQNqjarXOy5tE4TIqw9iizPHsaM6C4C3-eMgcCaB5WS_6XgXrDfwBktaaUwf7iep10bY&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "أكثر من 180 معجب  ·  قبل 6 أشهر",
+        "snippet": "#ماعت_جروب| قوات الصاعقة المصرية تخترق شوارع مدينة العبور وتثير إعجاب السكان وتشــ ـعل مواقع التواصل #مصر| #الجيش_المصري.",
+        "position": 1
+      },
+      {
+        "title": "ماعت_جروب | استقبل #الهلال_الأحمر_المصري الدفعة الـ96 من ...",
+        "link": "https://www.google.com/goto?url=CAESbQHEIkXXWYsJOj9LpE_vVSL8d_3_0Su_2VOAWsVvD7uHfDVw0mvBX2DlGLrSLuiZi1vw7yIkmGXAKLvilCtFimSCVd8DNjYrNWDt1qWzPzWLj5ORbmdz5G00RjjqnDDtkg0nHVM162yEttH7OaQ&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "2 نقرة على الزر أعجبني  ·  قبل 3 أسابيع",
+        "snippet": "#ماعت_جروب | استقبل #الهلال_الأحمر_المصري الدفعة الـ96 من الأشقاء الفلسطينيين الجرحى والمرضى القادمين عبر #معبر_رفح لتلقي العلاج، كما ودّع ...",
+        "position": 2
+      },
+      {
+        "title": "بدر» ومستشفى العبور.. معدلات إنجاز تتجاوز 90 ...",
+        "link": "https://x.com/mohpegypt/status/2040411330969063826?lang=ar",
+        "displayedLink": "3 نقرة على الزر أعجبني  ·  قبل 7 أشهر",
+        "snippet": "ويقع المشروع على مساحة إجمالية 40 ألف متر مربع، بتكلفة تقديرية تصل إلى 1.375 مليار جنيه للمرحلة الأولى و2 مليار جنيه للمرحلة الثانية. وأكد ...",
+        "position": 3
+      },
+      {
+        "title": "نبأ السودان - Sudan Nabaa on X: \"نشرت مجموعة الأزمات الدولية ...",
+        "link": "https://www.google.com/goto?url=CAESbwHEIkXXV1HGoIYumPVvhYtXZCxqlirN_h6K89kT6-itcLr-xxlkgDWkBMTpfQEJ5mWvGF9mVHmkqOnES6rY_S4CJ6xGJbkN3mCZhncuNiNCdAlUZzs1ZsGXYORe0c7i-yNERC-eEMakYlyZ3CqPtA&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "قبل 3 أسابيع",
+        "snippet": "ينافسون السكان في الرعي والتعدين الحرفي للذهب، ويلجؤون إلى العنف في النزاعات. عزّزت بانغي حاميتها هناك، لكنها عجزت عن وقف عبورهم للحدود.",
+        "position": 4
+      },
+      {
+        "title": "كيف دفعت الإمارات بمرتزقة كولومبيين إلى حرب مليشيا الدعم ...",
+        "link": "https://www.google.com/goto?url=CAEScQHEIkXX15im4lK7-U0wdwxKC052X2vvWyQhMkA66WUblq4z-IakevLun_PBHG0YT8WZ1wTy3CwBXyIaHdRF-_Y-wV4c3oNY5N71bJz3-YNyeCHZcw02puHdQbqiKU8SVkpzLY4-KS2tAec-yGODQUbb&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "أكثر من 10 معجب  ·  قبل 11 شهرًا",
+        "snippet": "كما يوثّق التحقيق الدور المحوري لبوصاصو كمحطة عبور، حيث أفاد سكان محليون أنهم شاهدوا بين مارس ويوليو مجموعات من أجانب ذوي بنية عسكرية، في ...",
+        "position": 5
+      },
+      {
+        "title": "Gulf Post | جلف بوست",
+        "link": "https://x.com/GLFPost/status/1803808265718939841",
+        "displayedLink": "أكثر من 120 معجب  ·  قبل سنتين",
+        "snippet": "وقال: \"أنا أساعدهم فقط عندما يريدون الدخول إلى صالة V.I.P، وتناول وجبة الإفطار، وتوصيلهم إلى القاهرة في سيارة بي إم دبليو جميلة، والاستراحة ...",
+        "position": 6
+      },
+      {
+        "title": "Mark Bryson-Richardson (@mbrysonr) / ...",
+        "link": "https://www.google.com/goto?url=CAESUgHEIkXXK0EDrFXs042PNaXBDTRjKsIY-FSpbwuYoiefMHIDqttpnf38jUe1nrZvsqJP7Kpt-fqlNZ2z-Gn4JC1DWqJv9GkAnRXxiSNPZj8eVCU&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "أكثر من 8.5 ألف متابع",
+        "snippet": "... والسكان، السيد مارك برايسون ريتشاردسون، سفير بريطانيا لدى مصر، لبحث سبل ... يسعدني أنني زرت فرع جامعة كوفنتري في The Knowledge Hub بالعاصمة الجديدة، وتعرّفت عن ...",
+        "position": 7
+      },
+      {
+        "title": "Mada Masr مدى مصر a X: \"توصلت الحكومة السورية المؤقتة ...",
+        "link": "https://www.google.com/goto?url=CAESdQHEIkXXhA6KEWNbwKHxQd0iEk2tmXvMF5eUuL5F1rYh0QxDt0WvfgPXCjZg1CkI5E6DQcvZedOcHv9omc3sfT64A0pV-jDP8GFQf7bMtcIkEF_YjrtsDjp-ejwl3rtQeSrWyFtyylOlcEMCzDQXrzPpI-qetA&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "4 نقرة على الزر أعجبني  ·  قبل سنة واحدة",
+        "snippet": "توصلت الحكومة السورية المؤقتة، أمس، إلى اتفاق مبدئي لدمج محافظة السويداء، ذات الأغلبية الدرزية، في مؤسسات الدولة، بحسب موقع «العربية».",
+        "position": 8
+      },
+      {
+        "title": "Replies by UNHCR Sudan (@UNHCRinSudan) / ...",
+        "link": "https://x.com/UNHCRinSudan/with_replies",
+        "displayedLink": "أكثر من 19.3 ألف متابع",
+        "snippet": "2/1 تحقيق الأحلام يتم بالعمل الجماعي #مفوضية_اللاجئين ومعتمدية اللاجئين والشركاء نقلوا بأمان حوالي 3⃣5⃣0⃣ من اللاجئين الإثيوبيين من مركز العبور الحدودي في ...",
+        "position": 9
+      },
+      {
+        "title": "عصام المهيدب 🇸🇦 (@EssamAlMuhaidib) / ...",
+        "link": "https://www.google.com/goto?url=CAESWQHEIkXXX2J5uwtqJBxdcGZNovptvAStEY6KUVEgCUQs3EzFWH6_cxJky1FVsRKXSF_KR7jDtxOl8hJhW7ikIaE0fSh4qaoM9EylU3X_hUBF_BKDQi7TSf8s&gsessionid=oAccGPbueLWuKxnMivigPtyYTTvi3ScQ6PDNx1RK5XAj2c3Cfm78RA",
+        "displayedLink": "أكثر من 20.9 ألف متابع",
+        "snippet": "يعكس هذا التعاون رؤية مشتركة بين مجموعة \"طلعت مصطفى\" و \"مجموعة المهيدب\" لبناء مجتمعات حديثة تدعم التنمية المستدامة، وتُسهم في ازدهار المدن بما يعزز حضورنا ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:10.752350+00:00"
+}

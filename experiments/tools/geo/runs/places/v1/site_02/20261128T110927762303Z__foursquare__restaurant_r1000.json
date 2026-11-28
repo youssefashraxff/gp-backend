@@ -1,0 +1,213 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "restaurant_r1000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 1000,
+    "query": "restaurant"
+  },
+  "meta": {
+    "category": "restaurant",
+    "radius": 1000
+  },
+  "status": "ok",
+  "n_items": 5,
+  "error": "",
+  "seconds": 0.858,
+  "raw": {
+    "results": [
+      {
+        "fsq_place_id": "5de129eda3c08200084ff10c",
+        "latitude": 30.193627,
+        "longitude": 31.46142,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16a941735",
+            "name": "Bakery",
+            "short_name": "Bakery",
+            "plural_name": "Bakeries",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bakery_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2019-11-29",
+        "date_refreshed": "2026-04-08",
+        "distance": 122,
+        "extended_location": {},
+        "link": "/places/5de129eda3c08200084ff10c",
+        "location": {
+          "address": "El Obour Axis",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "El Obour Axis, El Obour City, القليوبية"
+        },
+        "name": "The Bakery Shop (TBS)",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5de129eda3c08200084ff10c",
+        "related_places": {},
+        "social_media": {
+          "facebook_id": "375734992476548",
+          "instagram": "tbsegypt",
+          "twitter": "tbsegypt"
+        },
+        "website": "http://www.tbsfresh.com"
+      },
+      {
+        "fsq_place_id": "639c747a5a17df530c5f79dd",
+        "latitude": 30.194936,
+        "longitude": 31.460269,
+        "categories": [
+          {
+            "fsq_category_id": "5bae9231bedf3950379f89e1",
+            "name": "Egyptian Restaurant",
+            "short_name": "Egyptian Restaurant",
+            "plural_name": "Egyptian Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2022-12-16",
+        "date_refreshed": "2022-12-16",
+        "distance": 123,
+        "extended_location": {},
+        "link": "/places/639c747a5a17df530c5f79dd",
+        "location": {
+          "locality": "Obour",
+          "region": "Qalyubiyya",
+          "postcode": "11828",
+          "country": "EG",
+          "formatted_address": "Obour, Qalyubiyya, 11828"
+        },
+        "name": "Koshay El Tahrir",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/639c747a5a17df530c5f79dd",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "529d7ec8498efb17e0cb61c3",
+        "latitude": 30.19144630432129,
+        "longitude": 31.45994758605957,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2013-12-03",
+        "date_refreshed": "2016-06-07",
+        "distance": 265,
+        "extended_location": {},
+        "link": "/places/529d7ec8498efb17e0cb61c3",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "x café",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/529d7ec8498efb17e0cb61c3",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "54969b8d498e3c926e91e983",
+        "latitude": 30.19794729025224,
+        "longitude": 31.46324577860139,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2014-12-21",
+        "date_refreshed": "2018-05-03",
+        "distance": 545,
+        "extended_location": {},
+        "link": "/places/54969b8d498e3c926e91e983",
+        "location": {
+          "locality": "Cairo",
+          "region": "Obour City",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Cairo, Obour City"
+        },
+        "name": "space cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/54969b8d498e3c926e91e983",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "512dcba3e4b0696e0a177810",
+        "latitude": 30.192502206285422,
+        "longitude": 31.452701172867,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2013-02-27",
+        "date_refreshed": "2022-03-03",
+        "distance": 731,
+        "extended_location": {},
+        "link": "/places/512dcba3e4b0696e0a177810",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "قهوة علاء الدين",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/512dcba3e4b0696e0a177810",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      }
+    ],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.1938258,
+            "longitude": 31.4601618
+          },
+          "radius": 1000
+        }
+      }
+    }
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:27.762238+00:00"
+}

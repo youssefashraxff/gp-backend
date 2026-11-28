@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_ar_x",
+  "params": {
+    "q": "كافيهات العبور الجديدة (site:x.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_ar",
+    "variant": "x",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.061,
+  "raw": {
+    "searchParameters": {
+      "q": "كافيهات العبور الجديدة (site:x.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "بندر ..حول العالم",
+        "link": "https://x.com/Bathaksaudi/status/1715111819625320577",
+        "displayedLink": "أكثر من 1.7 ألف معجب  ·  قبل 3 سنوات",
+        "snippet": "... جديد وشقه جديده مع مواقف سيارات مجاناً مكيفه كل الغرف آمنه وفيها حارس ‍♂️ طول الوقت وكل المطاعم والكافيهات تحتي مشي abnb.me ...",
+        "position": 1
+      },
+      {
+        "title": "\"🚩 عبارة كافيه Ebarah cafe 📍جديد #بريدة حي سلطانة\" / ...",
+        "link": "https://x.com/Restaandcafe/status/1805508002247582003",
+        "displayedLink": "معجب واحد",
+        "snippet": "عبارة كافيه Ebarah cafe جديد #بريدة حي سلطانة. ... حساب تثقيفي #بدون_مقابل كل مايتعلق بمطاعم وكافيهات #بريدة ☕️ Buraydah Restaurants and ...",
+        "position": 2
+      },
+      {
+        "title": "ذائقة أحمد ،مطاعم،كافيهات،سفر✈️ on X: \"@ask_tourist اذا ما راح ...",
+        "link": "https://x.com/C7Connoisseur/status/1819186187258433800",
+        "displayedLink": "https://x.com › @C7Connoisseur",
+        "snippet": "... عبور ولا اقعد بالمنطقه الدوليه بمطارهم فقط؟ 5 · 3.9K ... ذائقة أحمد ،مطاعم،كافيهات،سفر✈️ · @C7Connoisseur ... ذائقة أحمد ،مطاعم،كافيهات،سفر✈️ · @C7Connoisseur.",
+        "position": 3
+      },
+      {
+        "title": "تدمير حديقة عملاقة امام افينيو مول. - Ismail Hosny on ...",
+        "link": "https://www.google.com/goto?url=CAEScQHEIkXXwzrs7TPkCIMYgzRwFrtcz9GixHqvzr_S0QiEzscB48tv3rAa9uUfeJYe_q67WDweBbVbMbVg6M1GywPJFmc92ImHdf8wg-1umo83Id-BlfT0uxlFul6pLLSm_08wnuJMhwM6_xkDsuYUhW0N&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "أكثر من 670 معجب  ·  قبل شهرين",
+        "snippet": "بداية النهاية للحزام الاخضر في العبور ❗ في خلال ٣ شهور فقط : - تدمير حديقة عملاقة امام افينيو مول. - تدمير حديقة عملاقة في مدخل الحي التاسع ...",
+        "position": 4
+      },
+      {
+        "title": "Post",
+        "link": "https://www.google.com/goto?url=CAEScAHEIkXXg_Icf2V7vBqIJLoIpwRPwd2Ac1JdiphMP9WYCGKv64ihBKwP6UjWCDL3OKvn6U4OnZ3pJ0oGi76OXgexazwlxpdglqhMjvYM7NgBhN7BZTfueH9-QNJbUvWLuKiwbHaJOPFHs7DvU1nj4-c&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "معجب واحد  ·  قبل سنتين",
+        "snippet": "1. 2. @C7Connoisseur. ذائقة أحمد ،مطاعم،كافيهات،سفر✈️ · @C7Connoisseur · Sep 8, 2024. احرص يكون نفس النقال اذا ما راح تطلع من المطار ما تحتاج ...",
+        "position": 5
+      },
+      {
+        "title": "ذائقة أحمد ،مطاعم،كافيهات - رحلاتي 2025 ✈️ عطونا وين ...",
+        "link": "https://www.google.com/goto?url=CAEScgHEIkXXr2LPuUgaUtItgUY8U7l5hihsea_SqLHavqrvIwEdn0ri-9rS9BWDMOu4ji2iGqjJ4XrJ8zzZdtzzy5VhPw1FnBk3mPPmctaCFqVaU5UshcKInHMFd52iw2f4eBe9ylhCPgmsRmWzeUuUtZAT6g&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "أكثر من 30 معجب  ·  قبل 11 شهرًا",
+        "snippet": "@C7Connoisseur. ذائقة أحمد ،مطاعم،كافيهات،سفر✈️ · @C7Connoisseur. Show translation. رحلاتي 2025 ✈️ عطونا وين سافرتو هالسنة · @aljabass · صالح ...",
+        "position": 6
+      },
+      {
+        "title": "محمد القعود sur X : « 📌٦- براغ العاصمه 🇨🇿 خيارات التسوق في ...",
+        "link": "https://www.google.com/goto?url=CAESdAHEIkXXkiLBvuUd2RJavUt-QWWoZiEJhpSsith03LIIexz1h3049Yg0c9Soljk8ZHfssU82ap8OADeypAkn-3U3IPWmjK0-68A7eBrLzfCWF9DTzDlXRZFr-ta-dL53EowjFSa4FmB4_mLQsuo9JNVxlpby&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "أكثر من 110 معجب  ·  قبل 4 سنوات",
+        "snippet": "٦- براغ العاصمه خيارات التسوق في براغ - اوتلت fashion arena prague مميز - اوتلت premium outlet prague airport - مول PALLADIUM - مركز ...",
+        "position": 7
+      },
+      {
+        "title": "حسام مستشار رحلات الكروز (@mycruiseksa) / ...",
+        "link": "https://www.google.com/goto?url=CAESVQHEIkXXRGmw6eQxSfev3VuWwfDvXKInhwwtJcNJHPr_KHmi3IRNGrrfUVqAqDMM-sWT6PNmVe3FxMNUfYN4EhpIMigbgsvmNY0ggEaNfWQ_y57S0VI&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "أكثر من 50.8 ألف متابع",
+        "snippet": "يا هلا بكل عشاق رحلات الكروز! حياكم الله في مجتمع «رحلات الكروز» على منصة X هنا بنجمع كل اللي يحبون السفر بالبحر، سواء جربت الكروز من قبل أو للحين تخطط ...",
+        "position": 8
+      },
+      {
+        "title": "ماليزيا 🇲🇾 ✈️ تظنها بس أبراج وسوق🤔 لا والله ...",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXX6rNUAQL7ZDBUhhYbCYZjYtxx5TI91fQSpJ94gQQMPGxPfBd0DPm7d1e3PEOPRXDRa9wiW97nZC8o-03m51L9w_ppdOKVPtuC3zj59MAcZOt3xb-R3oOCptwo_FDq6b3IMJ-1GLaL_g&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "أكثر من 770 معجب  ·  قبل سنة واحدة",
+        "snippet": "... كافيهات أنسب وقت: مارس – سبتمبر فنادق: First World – Swiss-Garden ساعة من كوالالمبور تناسب: الأصدقاء – العائلات – العرسان ...",
+        "position": 9
+      },
+      {
+        "title": "احمد الميموني (@Ahmdalmaimoni) / ...",
+        "link": "https://www.google.com/goto?url=CAESWwHEIkXXh5iUu-53wDs62teGaFta_lAUSMKlDkHuaqmxL8tw9_rhiTdN5MMoJ7CEuN6ZxBvTdyH3uplVv44oN8SEgv5beKXo3Mt-J6UDCqaRQUyjSejd88hcc4c&gsessionid=RRKMIoomudWtPHr3oADe1eehZyVlP8EmzMXT2JnMEyC3NgvHa1RBYA",
+        "displayedLink": "https://x.com › Ahmdalmaimoni › all",
+        "snippet": "... وكافيهات ومتاحف ومسارح وصالة جليد والعاب غير الغطاء النباتي اللي مليان تفاصيل ونباتات نادرة وووو شقول شخلي عسى الله يبارك ويحفظ الكويت وشعبها ويديم عليها ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:25.792055+00:00"
+}

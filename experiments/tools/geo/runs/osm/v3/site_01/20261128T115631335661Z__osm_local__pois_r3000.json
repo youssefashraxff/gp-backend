@@ -1,0 +1,31 @@
+{
+  "tool": "osm",
+  "provider": "osm_local",
+  "case": "pois_r3000",
+  "params": {
+    "kind": "pois",
+    "radius": 3000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];(node(around:3000,30.32376,31.5566816)[amenity];node(around:3000,30.32376,31.5566816)[shop];node(around:3000,30.32376,31.5566816)[leisure];way(around:3000,30.32376,31.5566816)[amenity];way(around:3000,30.32376,31.5566816)[shop];way(around:3000,30.32376,31.5566816)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 3000
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 0.001,
+  "raw": {
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-27T21:21:21Z",
+      "source": "egypt-261127.osm.pbf"
+    },
+    "elements": []
+  },
+  "site_id": "site_01",
+  "case_version": "v3",
+  "notes": "osm v3 local",
+  "timestamp": "2026-11-28T11:56:31.335652+00:00"
+}

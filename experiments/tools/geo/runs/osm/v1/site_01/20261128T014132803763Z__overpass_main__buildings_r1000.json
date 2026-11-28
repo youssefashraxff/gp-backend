@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "buildings_r1000",
+  "params": {
+    "kind": "buildings",
+    "radius": 1000,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];way(around:1000,30.32376,31.5566816)[building];out count;"
+  },
+  "meta": {
+    "kind": "buildings",
+    "radius": 1000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "ConnectError: [Errno 61] Connection refused",
+  "seconds": 0.205,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T01:41:32.803718+00:00"
+}

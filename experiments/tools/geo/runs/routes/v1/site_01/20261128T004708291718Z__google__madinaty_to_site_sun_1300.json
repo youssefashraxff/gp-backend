@@ -1,0 +1,54 @@
+{
+  "tool": "routes",
+  "provider": "google",
+  "case": "madinaty_to_site_sun_1300",
+  "params": {
+    "origin": {
+      "address": "Madinaty, Cairo Governorate, Egypt"
+    },
+    "destination": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "departure_utc": "2026-11-29T11:00:00Z"
+  },
+  "meta": {
+    "landmark": "madinaty",
+    "direction": "to_site",
+    "slot": "sun_1300",
+    "local": "2026-11-29T13:00:00+02:00"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.216,
+  "raw": {
+    "routes": [
+      {
+        "legs": [
+          {
+            "startLocation": {
+              "latLng": {
+                "latitude": 30.095758500000002,
+                "longitude": 31.634766300000003
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 30.3243069,
+                "longitude": 31.558225800000002
+              }
+            }
+          }
+        ],
+        "distanceMeters": 45250,
+        "duration": "2362s",
+        "staticDuration": "2376s"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:08.291672+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "malls_ar_tiktok",
+  "params": {
+    "q": "مول العبور الجديدة (site:tiktok.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "malls_ar",
+    "variant": "tiktok",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 6.772,
+  "raw": {
+    "searchParameters": {
+      "q": "مول العبور الجديدة (site:tiktok.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "ملاهي سنتر العبور الجديدة: في مول الحرية (معمار الأشراف)",
+        "link": "https://www.tiktok.com/@obour.new5/video/7619111235757378837",
+        "displayedLink": "أكثر من 21.4 ألف مشاهدة  ·  قبل 8 أشهر",
+        "snippet": "أصبح لدى عائلات مدينة العبور خبر سار ومكان جديد للترفيه. أعلنت ملاهي سنتر العبور رسميًا عن انتقالها إلى موقع جديد وأضخم، لتقدم تجربة لعب مختلفة ...",
+        "position": 1
+      },
+      {
+        "title": "مول بانوراما العبور الجديده",
+        "link": "https://www.tiktok.com/discover/%D9%85%D9%88%D9%84-%D8%A8%D8%A7%D9%86%D9%88%D8%B1%D8%A7%D9%85%D8%A7-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D9%87",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "موقع استراتيجي: على 4 محاور رئيسية (محور الشباب، شارع التسعين، والدائري الأوسطي). • تصميم نيو يورك عصري: (بدروم + أرضي + 5 أدوار). • مساحات متتكررش: تبدأ من 75 ...",
+        "position": 2
+      },
+      {
+        "title": "العبور الجديدة: مدينة مخططة حديثًا وفرص استثمارية بأسعار وأنظمة ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXSY5EhY1rLjfpiRQep50zNsb73obfg_LlcodX7FB8R0hlvVfVR5dq0aDECZQPtCgBwTPJvi353PKbylL5BiE-B8UPHaunso3FZRsItMtTauPZo1YyT5CUqekUcKrrtbEpjQTShmn78Kww5lcQz87G_aUOdLTA&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "https://www.tiktok.com › video",
+        "snippet": "Lead هب مول العبور (Hub Mall Obour) هو وجهة تسوق وخروجات في مدينة العبور. هذا الدليل يقدّم نظرة سريعة للمكان، البدائل القريبة، ونقاط البحث الشائعة لتسهيل خطة ...",
+        "position": 3
+      },
+      {
+        "title": "فرع المدينه المنوره -خط 10 📌العبور الجديدة -كريتف مول - بجوا...",
+        "link": "https://www.google.com/goto?url=CAESgAEBxCJF11EiE4ZQrd1OIqHl0jKHNP4ocNVAT_rX935wZSG1uTbPuMYC-OJos93KVrhQoBQgOBxedWpekOycmNUPWOjZr2XQfZ0srcBHsYwZt9F2uJqUw6hvgHdJs-rmW-p7Cp4zYs7rCO99g2usfLDVbSwImE46DDWhg4TVplFeTw&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "أكثر من 60 مشاهدة  ·  قبل سنتين",
+        "snippet": "فيديو TikTok(تيك توك) من المدينة المنورة ادوات كهربائية (@elmadianhelmnowrah): \" فرع المدينه المنوره -خط 10 العبور الجديدة -كريتف مول ...",
+        "position": 4
+      },
+      {
+        "title": "عنوان جهاز مدينة العبور الجديدة وموقعه بالتحديد",
+        "link": "https://www.google.com/goto?url=CAESeAHEIkXXS5SYIou_opp8dsL_gXbOkhjJeQxCd9n2EOCY7AOIyOhtRL4i9QSlL9Vwmeu2_KuTDwwXnPnqL7hd2pAjudPo0P8ZtBrb3JnMdY_1hPKB6RoTaw3e3StJh4Gpcpa6NAu_P7vYl6XvWqwwMpVBDyYN7dle4Q&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "أكثر من 2.4 ألف مشاهدة  ·  قبل شهر واحد",
+        "snippet": "يقع جهاز مدينة العبور الجديدة على امتداد خط 10، أمام الحي الثامن وخلف موقف الأتوبيس. ويقدم الجهاز خدماته لسكان العبور 2 وعبور 3 والأحياء ...",
+        "position": 5
+      },
+      {
+        "title": "China Town العبور في أفينيو مول: كل المنتجات الصينية ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXsyWU3TMw46VOhXNk9evNgN7qdBC2GoA9P-KwQV4Mz3geQwqrunQY5N_5VhonlHOdBVYyQt757opA7EyUJQBzBVUFZlzbamHpbBj_saw1I72ov9AJTFMYaU3owH-V0qa2NDMZByz1SQrlPRTzPMdOjOs6Yc0g&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "أكثر من 20 ألف مشاهدة  ·  قبل سنة واحدة",
+        "snippet": "China Town في أفينيو مول العبور يقدم تجربة مختلفة داخل مصر، حيث تم افتتاح أول مجمع صيني كبير في العبور على مساحة 1200 متر مربع.",
+        "position": 6
+      },
+      {
+        "title": "C3 Mall العبور",
+        "link": "https://www.google.com/goto?url=CAESiAEBxCJF162uUlCDrLURiFRxmqNNHIXU4VpCOrixgk_AdJEVWfxy6RCADtAkENoQOjV-c51FwOJBqbymythB6TdUsDfr7zjhSoMYmHWV7Mkov72uh7bAE5L0s6y_iBFka268GRcvkh_DnHzj4rC437hSivd629jDp1vbNtoxcuQKlEkKz1hOHORy&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "الحق حجزك قبل ما يطير! ​ تنورونا في: مدينة العبور - C3 Mall (أمام كارفور الجديد) للحجز والتواصل السريع: 01038985800 - 01038981006 ​#Legend_Mobile_Shop ...",
+        "position": 7
+      },
+      {
+        "title": "‏عقارات العبور الجديدة (@aqaratobour)",
+        "link": "https://www.google.com/goto?url=CAESXwHEIkXXsoER1BUOqj6ErUQXjmZYz8TzXDBAYHC3CS87yPs0f4WiDNN64TvblsSe4EIt_MbsQZ7LE1-fFyvs0gb8RmR3oxSz6EWjdacvuTQHWqknANaQqZZYhLZPuVb-&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "أكثر من 40 متابع",
+        "snippet": "... مول طبي في العبور (O-Court). 173. تم إنشاء استثمار مضمون لصيدليتك في قلب العبور! مول Next بالكامل قدام عيونك. 242. تم إنشاء صيدلية استلام فوري في العبور ...",
+        "position": 8
+      },
+      {
+        "title": "The Line Mall اكبر مول جنب جهاز مدينة العبور الجديدة علي مساحة ...",
+        "link": "https://www.google.com/goto?url=CAESgAEBxCJF1-DOX4Kk0N0FONrkBbEEDbllmXzan9BXPCSKir52SHMPJifUzwBL8vO9XmHk4r5QwzsV46XUTM-PmgiHTsD9MjhtBgcJIMFq-8rLitm9h-BpA6mzyFuc67VZzvOlFHe1RfP-znj3ui7yVEMRc37K-T27zrwQhYKZhdlL6A&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "https://www.tiktok.com › video",
+        "snippet": "The Line Mall اكبر مول جنب جهاز مدينة العبور الجديدة علي مساحة 2500 متر من شركة Rodic Developments #rodic_developments #obour_city #realestate #investing # ...",
+        "position": 9
+      },
+      {
+        "title": "‏خصم 55% على شقتك بمناسبة الجمعة البيضاء💯 موقع مميز ...",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXX74Uyhxyh4toAy-8VIwZHIM338M27IwzKtiM2yg2_CWFjbA1Q9JG7ebpGzsjo2uL4yGLJd8RXICkTqXS3sSAf8sUKGqlwwlQSmxzhBdpcc55Ej-OnJE2PhL-bmiIxmzO-FF3Hqaa_wTvQd7s7xU61OUs0OQ4&gsessionid=pu00AuamuQihLVvDFmEI9A9hnmkGgEFh0ij4TxRqP5mmERlzICpmJQ",
+        "displayedLink": "أكثر من 1.3 ألف مشاهدة  ·  قبل أسبوعين",
+        "snippet": "... مول بمدينة العبور الجديدة مع مقدم 5% وخيارات تقسيط تصل إلى 10 سنوات. المشروع يتميز بواجهة تصل إلى 1000 متر على خط 10 ومدخل مدينة العبور الجديد ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:41.217196+00:00"
+}

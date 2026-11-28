@@ -1,0 +1,25 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "pin_area",
+  "params": {
+    "kind": "pin_area",
+    "radius": 0,
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "query": "[out:json][timeout:60];is_in(30.32376,31.5566816)->.a;area.a;out tags;"
+  },
+  "meta": {
+    "kind": "pin_area",
+    "radius": 0
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",
+  "seconds": 0.485,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:37:16.319837+00:00"
+}

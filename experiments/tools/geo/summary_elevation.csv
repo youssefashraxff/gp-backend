@@ -1,0 +1,4 @@
+site_id,case_version,provider,status,n_points,n_missing,site_min_m,site_max_m,site_relief_m,site_mean_m,max_slope_pct,mean_slope_pct,ring_relief_m,resolution_m,mean_abs_diff_vs_google_m
+site_01,v1,google,ok,65,0,85.5,97.9,12.4,91.2,4.45,1.48,116.7,9.5,
+site_01,v1,opentopodata_aster30m,ok,65,0,77.0,105.0,28.0,91.4,22.0,6.01,116.0,,4.81
+site_01,v1,opentopodata_srtm30m,ok,65,0,84.0,101.0,17.0,93.1,6.0,2.23,117.0,,2.4

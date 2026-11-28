@@ -1,0 +1,582 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "cafe_r3000",
+  "params": {
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "radius": 3000,
+    "query": "coffee"
+  },
+  "meta": {
+    "category": "cafe",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 11,
+  "error": "",
+  "seconds": 1.367,
+  "raw": {
+    "results": [
+      {
+        "fsq_place_id": "5bc3484161f070002ca2b7b4",
+        "latitude": 30.201458,
+        "longitude": 31.455292,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1e0931735",
+            "name": "Coffee Shop",
+            "short_name": "Coffee Shop",
+            "plural_name": "Coffee Shops",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "556a2163a7c8957d73d2a649",
+            "name": "Coffeeshop Company"
+          }
+        ],
+        "date_created": "2018-10-14",
+        "date_refreshed": "2022-04-19",
+        "distance": 968,
+        "extended_location": {},
+        "link": "/places/5bc3484161f070002ca2b7b4",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "القاهرة",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, القاهرة"
+        },
+        "name": "CoffeeShop Company",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5bc3484161f070002ca2b7b4",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "facebook_id": "578703792207256",
+          "instagram": "coffeeshop_co",
+          "twitter": "coffeeshopegypt"
+        },
+        "website": "http://www.coffeeshopcompany.com"
+      },
+      {
+        "fsq_place_id": "5783d144498ef49b19511daf",
+        "latitude": 30.20199,
+        "longitude": 31.455376,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-07-11",
+        "date_refreshed": "2022-06-23",
+        "distance": 1017,
+        "extended_location": {},
+        "link": "/places/5783d144498ef49b19511daf",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, Qalub"
+        },
+        "name": "Torrié Café & Restaurant",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5783d144498ef49b19511daf",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "5776c320498e9a303be79e3c",
+        "latitude": 30.202673,
+        "longitude": 31.454681,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-07-01",
+        "date_refreshed": "2022-12-20",
+        "distance": 1115,
+        "extended_location": {},
+        "link": "/places/5776c320498e9a303be79e3c",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, Qalub"
+        },
+        "name": "Astoria",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5776c320498e9a303be79e3c",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "576d9f10498ee7073d3a1a48",
+        "latitude": 30.20272565978995,
+        "longitude": 31.45428657531738,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2016-06-24",
+        "date_refreshed": "2026-03-19",
+        "distance": 1138,
+        "extended_location": {},
+        "link": "/places/576d9f10498ee7073d3a1a48",
+        "location": {
+          "address": "Avenue Cairo Mall - St 100",
+          "locality": "El Obour City",
+          "region": "القليوبية",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Avenue Cairo Mall - St 100 (District 9), El Obour City, القليوبية"
+        },
+        "name": "Café Suprēme",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/576d9f10498ee7073d3a1a48",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "5783d0d0498e9ca4f67c5590",
+            "categories": [
+              {
+                "fsq_category_id": "5744ccdfe4b0c0459246b4dc",
+                "name": "Shopping Plaza",
+                "short_name": "Shopping Plaza",
+                "plural_name": "Shopping Plazas",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Avenue Cairo"
+          }
+        },
+        "social_media": {
+          "facebook_id": "255999327821545",
+          "instagram": "cafesupremeeg",
+          "twitter": "cafesupremeeg"
+        },
+        "tel": "010 02097118",
+        "website": "http://cafesupreme-eg.com"
+      },
+      {
+        "fsq_place_id": "5198d534498e76a603ec275f",
+        "latitude": 30.178637298948317,
+        "longitude": 31.4700797304256,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2013-05-19",
+        "date_refreshed": "2016-09-11",
+        "distance": 1938,
+        "extended_location": {},
+        "link": "/places/5198d534498e76a603ec275f",
+        "location": {
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": ""
+        },
+        "name": "Gemstone",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/5198d534498e76a603ec275f",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "503e01e3e4b0fe273cc8a76b",
+        "latitude": 30.17626201840121,
+        "longitude": 31.474492047503105,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1e0931735",
+            "name": "Coffee Shop",
+            "short_name": "Coffee Shop",
+            "plural_name": "Coffee Shops",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2012-08-29",
+        "date_refreshed": "2023-06-25",
+        "distance": 2388,
+        "extended_location": {},
+        "link": "/places/503e01e3e4b0fe273cc8a76b",
+        "location": {
+          "address": "Golf Square",
+          "locality": "El Obour City",
+          "region": "Qalioubeya",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf Square (Beside Carrefour El Oboor), El Obour City, Qalioubeya"
+        },
+        "name": "Le Cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/503e01e3e4b0fe273cc8a76b",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "4e999cf68b81f319134f18dc",
+        "latitude": 30.176158905029297,
+        "longitude": 31.474536895751953,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          },
+          {
+            "fsq_category_id": "4d4b7105d754a06374d81259",
+            "name": "Restaurant",
+            "short_name": "Restaurant",
+            "plural_name": "Restaurants",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2011-10-15",
+        "date_refreshed": "2018-09-06",
+        "distance": 2400,
+        "extended_location": {},
+        "link": "/places/4e999cf68b81f319134f18dc",
+        "location": {
+          "address": "Golf Square",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf Square (El Obour City), El Obour City, Qalub"
+        },
+        "name": "La Cucina Cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4e999cf68b81f319134f18dc",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "53c6dacf498e21a7a6ce50f4",
+        "latitude": 30.175994436842384,
+        "longitude": 31.474492295455004,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1e0931735",
+            "name": "Coffee Shop",
+            "short_name": "Coffee Shop",
+            "plural_name": "Coffee Shops",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2014-07-16",
+        "date_refreshed": "2022-12-25",
+        "distance": 2412,
+        "extended_location": {},
+        "link": "/places/53c6dacf498e21a7a6ce50f4",
+        "location": {
+          "address": "Golf Square",
+          "locality": "El Obour City",
+          "region": "Qalub",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf Square, El Obour City, Qalub"
+        },
+        "name": "TiA Café",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/53c6dacf498e21a7a6ce50f4",
+        "related_places": {},
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "4c8f5bf7a8de224b90a02e01",
+        "latitude": 30.174274999797227,
+        "longitude": 31.475604144728408,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d1e0931735",
+            "name": "Coffee Shop",
+            "short_name": "Coffee Shop",
+            "plural_name": "Coffee Shops",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "chains": [
+          {
+            "fsq_chain_id": "5569efbaa7c8896abe7bf070",
+            "name": "Costa Coffee"
+          }
+        ],
+        "date_created": "2010-09-14",
+        "date_refreshed": "2026-05-04",
+        "distance": 2630,
+        "extended_location": {},
+        "link": "/places/4c8f5bf7a8de224b90a02e01",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalyubia"
+        },
+        "name": "Costa Coffee",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/4c8f5bf7a8de224b90a02e01",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "facebook_id": "209568855723232",
+          "instagram": "costaegypt",
+          "twitter": "costacoffee"
+        },
+        "tel": "2016460",
+        "website": "http://www.costa.co.uk"
+      },
+      {
+        "fsq_place_id": "6126d70839c8357b4bebcea2",
+        "latitude": 30.217712,
+        "longitude": 31.463914,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2021-08-25",
+        "date_refreshed": "2021-08-25",
+        "distance": 2678,
+        "extended_location": {},
+        "link": "/places/6126d70839c8357b4bebcea2",
+        "location": {
+          "locality": "El Obour",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "El Obour, Qalyubia"
+        },
+        "name": "Transit",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/6126d70839c8357b4bebcea2",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "601eb6807ea81e0498603139",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Capital Plaza"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      },
+      {
+        "fsq_place_id": "591245c6464d65429c74bc4f",
+        "latitude": 30.171637,
+        "longitude": 31.477837,
+        "categories": [
+          {
+            "fsq_category_id": "4bf58dd8d48988d16d941735",
+            "name": "Café",
+            "short_name": "Café",
+            "plural_name": "Cafés",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            }
+          }
+        ],
+        "date_created": "2017-05-09",
+        "date_refreshed": "2026-06-11",
+        "distance": 2993,
+        "extended_location": {},
+        "link": "/places/591245c6464d65429c74bc4f",
+        "location": {
+          "address": "Golf City Mall",
+          "locality": "El Obour City",
+          "region": "Qalyubia",
+          "postcode": "",
+          "country": "EG",
+          "formatted_address": "Golf City Mall (El Obour City), El Obour City, Qalyubia"
+        },
+        "name": "Omar Cafe",
+        "placemaker_url": "https://foursquare.com/placemakers/review-place/591245c6464d65429c74bc4f",
+        "related_places": {
+          "parent": {
+            "fsq_place_id": "4ccc1bbd7c2ff04df6ae967e",
+            "categories": [
+              {
+                "fsq_category_id": "4bf58dd8d48988d1fd941735",
+                "name": "Shopping Mall",
+                "short_name": "Mall",
+                "plural_name": "Shopping Malls",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Golf City Mall"
+          }
+        },
+        "social_media": {
+          "twitter": ""
+        }
+      }
+    ],
+    "context": {
+      "geo_bounds": {
+        "circle": {
+          "center": {
+            "latitude": 30.1938258,
+            "longitude": 31.4601618
+          },
+          "radius": 3000
+        }
+      }
+    }
+  },
+  "site_id": "site_02",
+  "case_version": "v1",
+  "notes": "places control site",
+  "timestamp": "2026-11-28T11:09:45.531812+00:00"
+}

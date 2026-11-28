@@ -1,0 +1,1639 @@
+{
+  "tool": "osm",
+  "provider": "overpass_main",
+  "case": "pois_r3000",
+  "params": {
+    "kind": "pois",
+    "radius": 3000,
+    "lat": 30.1938258,
+    "lng": 31.4601618,
+    "query": "[out:json][timeout:60];(node(around:3000,30.1938258,31.4601618)[amenity];node(around:3000,30.1938258,31.4601618)[shop];node(around:3000,30.1938258,31.4601618)[leisure];way(around:3000,30.1938258,31.4601618)[amenity];way(around:3000,30.1938258,31.4601618)[shop];way(around:3000,30.1938258,31.4601618)[leisure];);out meta center;"
+  },
+  "meta": {
+    "kind": "pois",
+    "radius": 3000
+  },
+  "status": "ok",
+  "n_items": 72,
+  "error": "",
+  "seconds": 41.67,
+  "raw": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-11-28T10:42:51Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 1680830800,
+        "lat": 30.2146776,
+        "lon": 31.470768,
+        "timestamp": "2012-03-18T22:06:12Z",
+        "version": 1,
+        "changeset": 11024702,
+        "user": "bauma",
+        "uid": 239172,
+        "tags": {
+          "amenity": "place_of_worship",
+          "religion": "muslim"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610577033,
+        "lat": 30.1744565,
+        "lon": 31.4759715,
+        "timestamp": "2021-11-18T20:22:09Z",
+        "version": 3,
+        "changeset": 113961304,
+        "user": "wheelmap_visitor",
+        "uid": 290680,
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "addr:housename": "كارفور العبور",
+          "addr:street": "محور مبارك",
+          "brand": "Carrefour Market",
+          "brand:wikidata": "Q2689639",
+          "name": "Carrefour Market",
+          "shop": "supermarket",
+          "wheelchair": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610577037,
+        "lat": 30.1742001,
+        "lon": 31.4757105,
+        "timestamp": "2021-11-18T20:22:20Z",
+        "version": 2,
+        "changeset": 113961304,
+        "user": "wheelmap_visitor",
+        "uid": 290680,
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "addr:housename": "سينما جولف سيتى",
+          "addr:street": "محور مبارك",
+          "amenity": "cinema",
+          "name": "سينما جولف سيتى",
+          "name:ar": "سينما جولف سيتى",
+          "name:en": "Golf City Cinema",
+          "wheelchair": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610577041,
+        "lat": 30.1731562,
+        "lon": 31.4760983,
+        "timestamp": "2023-12-04T09:11:30Z",
+        "version": 3,
+        "changeset": 144746478,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "regional",
+          "name": "Chili's",
+          "wheelchair": "no"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610577044,
+        "lat": 30.1728425,
+        "lon": 31.4762322,
+        "timestamp": "2023-12-04T09:11:30Z",
+        "version": 3,
+        "changeset": 144746478,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "tags": {
+          "amenity": "cinema",
+          "name": "ستوديو مصر",
+          "name:ar": "ستوديو مصر",
+          "name:en": "Studio Misr",
+          "wheelchair": "no"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610577056,
+        "lat": 30.1726813,
+        "lon": 31.4763011,
+        "timestamp": "2023-12-04T09:11:30Z",
+        "version": 4,
+        "changeset": 144746478,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "tags": {
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "cuisine": "burger",
+          "name": "McDonald's",
+          "takeaway": "yes",
+          "wheelchair": "limited"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2610596524,
+        "lat": 30.1774902,
+        "lon": 31.4741102,
+        "timestamp": "2014-01-05T09:18:24Z",
+        "version": 1,
+        "changeset": 19818925,
+        "user": "رامز",
+        "uid": 1790815,
+        "tags": {
+          "amenity": "bank",
+          "atm": "yes",
+          "name": "بنك أتش أس بى سى مصر",
+          "name:ar": "بنك أتش أس بى سى مصر",
+          "name:en": "HSBC Egypt"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4577117090,
+        "lat": 30.1911804,
+        "lon": 31.4501206,
+        "timestamp": "2016-12-28T11:15:00Z",
+        "version": 1,
+        "changeset": 44727808,
+        "user": "صبري الدبعي",
+        "uid": 5036359,
+        "tags": {
+          "name": "معمل احمد طحان العبور",
+          "name:ar": "معمل احمد طحان العبور",
+          "shop": "furniture"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4607194289,
+        "lat": 30.1800023,
+        "lon": 31.4529835,
+        "timestamp": "2017-01-14T03:18:46Z",
+        "version": 1,
+        "changeset": 45152837,
+        "user": "احمد مصطفي احمد",
+        "uid": 4915980,
+        "tags": {
+          "amenity": "cafe",
+          "name": "مقهي",
+          "name:ar": "مقهي"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4855785021,
+        "lat": 30.1769795,
+        "lon": 31.4739534,
+        "timestamp": "2017-05-15T13:56:31Z",
+        "version": 1,
+        "changeset": 48702562,
+        "user": "Samy bahgat",
+        "uid": 5143575,
+        "tags": {
+          "amenity": "bank",
+          "name": "hsbc bank فرع جولف مدينة العبور",
+          "name:ar": "hsbc bank فرع جولف مدينة العبور"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4901469923,
+        "lat": 30.187094,
+        "lon": 31.4560256,
+        "timestamp": "2017-06-07T08:46:42Z",
+        "version": 1,
+        "changeset": 49329284,
+        "user": "Amir Elzlaam",
+        "uid": 6135074,
+        "tags": {
+          "amenity": "waste_disposal",
+          "operator": "حلاوه بيست اوف فرانس"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4901469924,
+        "lat": 30.2000145,
+        "lon": 31.4507252,
+        "timestamp": "2017-06-07T08:46:42Z",
+        "version": 1,
+        "changeset": 49329284,
+        "user": "Amir Elzlaam",
+        "uid": 6135074,
+        "tags": {
+          "amenity": "waste_disposal",
+          "operator": "النورلمنتجات الالبان حلاوه"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7059809798,
+        "lat": 30.1786144,
+        "lon": 31.4643377,
+        "timestamp": "2026-05-20T13:04:18Z",
+        "version": 3,
+        "changeset": 182927453,
+        "user": "Aikiriza Justus",
+        "uid": 22072851,
+        "tags": {
+          "addr:block": "بلوك 13013",
+          "addr:block:en": "Block 13013",
+          "addr:city": "مدينة العبور",
+          "addr:city:en": "Al Obour City",
+          "addr:country": "EG",
+          "addr:district": "المنطقة الصناعية الاولى",
+          "addr:district:en": "First Industrial Zone",
+          "addr:housenumber": "7",
+          "addr:postcode": "11828",
+          "addr:province": "القليوبية",
+          "addr:province:en": "Al Qalyubia",
+          "addr:street": "شارع 200",
+          "addr:street:en": "Street 200",
+          "description": "تأسست شركة يانسن للمراتب عام 1955 صاحبها رجل الأعمال المصري السيد/ مصطفى النجار، الذي استطاع أن يجعل من يانسن واحدة من رواد صناعة المراتب في مصر، ومساهمًا قويًا في دعم الإنتاج المحلي وتطوير الصناعة المصرية.",
+          "image": "https://bedjanssen.com/cdn/shop/files/png_logo_400-120_120x@2x.png?v=1738762718",
+          "name": "مصانع بيد يانسن للمراتب",
+          "shop": "bed",
+          "start_date": "1955-01-01",
+          "website": "https://bedjanssen.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102141464,
+        "lat": 30.1879006,
+        "lon": 31.4687491,
+        "timestamp": "2020-01-02T18:37:38Z",
+        "version": 1,
+        "changeset": 79126356,
+        "user": "Muginator",
+        "uid": 10614112,
+        "tags": {
+          "amenity": "bank",
+          "atm": "yes",
+          "name": "bank of egypt"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102141465,
+        "lat": 30.1915558,
+        "lon": 31.4796178,
+        "timestamp": "2020-01-02T18:37:38Z",
+        "version": 1,
+        "changeset": 79126356,
+        "user": "Muginator",
+        "uid": 10614112,
+        "tags": {
+          "leisure": "fitness_centre",
+          "name": "Z Gym",
+          "sport": "fitness"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102175300,
+        "lat": 30.1872075,
+        "lon": 31.4796119,
+        "timestamp": "2022-12-22T07:23:27Z",
+        "version": 3,
+        "changeset": 130360593,
+        "user": "Aleksandar1994",
+        "uid": 3733993,
+        "tags": {
+          "name": "نجمة السابع",
+          "name:ar": "نجمة السابع",
+          "name:en": "Star VII",
+          "note": "Translation may not be accurate. Retranslation may be necessary.",
+          "opening_hours": "Mo-Su 08:00-21:00",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102175301,
+        "lat": 30.1872659,
+        "lon": 31.4796119,
+        "timestamp": "2022-12-22T07:23:27Z",
+        "version": 3,
+        "changeset": 130360593,
+        "user": "Aleksandar1994",
+        "uid": 3733993,
+        "tags": {
+          "name": "الثورة",
+          "name:ar": "الثورة",
+          "name:en": "Revolution",
+          "note": "Translation may not be accurate. Retranslation may be necessary.",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102175302,
+        "lat": 30.1873264,
+        "lon": 31.4795961,
+        "timestamp": "2022-12-22T07:23:27Z",
+        "version": 2,
+        "changeset": 130360593,
+        "user": "Aleksandar1994",
+        "uid": 3733993,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Fish & Chips",
+          "name:ar": "السمك والبطاطا"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102175303,
+        "lat": 30.1875018,
+        "lon": 31.4796434,
+        "timestamp": "2022-12-22T07:23:27Z",
+        "version": 2,
+        "changeset": 130360593,
+        "user": "Aleksandar1994",
+        "uid": 3733993,
+        "tags": {
+          "name": "Al Iman",
+          "name:ar": "الإيمان",
+          "name:en": "Al Iman",
+          "shop": "agrarian"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7102227091,
+        "lat": 30.1880369,
+        "lon": 31.4689841,
+        "timestamp": "2020-01-02T19:04:34Z",
+        "version": 1,
+        "changeset": 79127186,
+        "user": "Muginator",
+        "uid": 10614112,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "waffle",
+          "name": "waffle maker"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7728120190,
+        "lat": 30.2080317,
+        "lon": 31.4689905,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "العنان ماركت",
+          "name:ar": "العنان ماركت",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7728120288,
+        "lat": 30.2090028,
+        "lon": 31.4656948,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "جرين ماركت",
+          "name:ar": "جرين ماركت",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7746360587,
+        "lat": 30.2073585,
+        "lon": 31.4654309,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "حبيبه",
+          "name:ar": "حبيبه",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7746366385,
+        "lat": 30.2091915,
+        "lon": 31.4634376,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "اولاد علي",
+          "name:ar": "اولاد علي",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814700387,
+        "lat": 30.2110074,
+        "lon": 31.4630591,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "العمده",
+          "name:ar": "العمده",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702085,
+        "lat": 30.2006977,
+        "lon": 31.4668126,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "اسواق نور",
+          "name:ar": "اسواق نور",
+          "phone": "01032697425",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702086,
+        "lat": 30.2003082,
+        "lon": 31.4662093,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "حور",
+          "name:ar": "حور",
+          "phone": "01022490096",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702185,
+        "lat": 30.2006851,
+        "lon": 31.4671224,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "اولاد عاشور",
+          "name:ar": "اولاد عاشور",
+          "phone": "01096244942",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7814702285,
+        "lat": 30.2006928,
+        "lon": 31.466545,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "الحسيني",
+          "name:ar": "الحسيني",
+          "phone": "01150210376",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7834721086,
+        "lat": 30.207971,
+        "lon": 31.4706808,
+        "timestamp": "2020-11-26T04:07:52Z",
+        "version": 2,
+        "changeset": 94809726,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "الباشا",
+          "name:ar": "الباشا",
+          "phone": "01013048873",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7856511685,
+        "lat": 30.1787147,
+        "lon": 31.4495762,
+        "timestamp": "2020-11-25T23:45:16Z",
+        "version": 2,
+        "changeset": 94802322,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "المصطفي",
+          "name:ar": "المصطفي",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7856511785,
+        "lat": 30.1758258,
+        "lon": 31.4508255,
+        "timestamp": "2020-11-25T23:45:16Z",
+        "version": 2,
+        "changeset": 94802322,
+        "user": "MustafaQasim",
+        "uid": 9535554,
+        "tags": {
+          "name": "المنياوي",
+          "name:ar": "المنياوي",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7880834185,
+        "lat": 30.2051078,
+        "lon": 31.4624978,
+        "timestamp": "2020-09-06T11:30:14Z",
+        "version": 1,
+        "changeset": 90477187,
+        "user": "abdoahmed547",
+        "uid": 9310547,
+        "tags": {
+          "name": "BEE MART",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8199325779,
+        "lat": 30.2155295,
+        "lon": 31.4485128,
+        "timestamp": "2026-05-20T12:57:13Z",
+        "version": 2,
+        "changeset": 182927184,
+        "user": "Aikiriza Justus",
+        "uid": 22072851,
+        "tags": {
+          "amenity": "restaurant",
+          "description": "Italian restaurant",
+          "name": "LaCucina"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8461202017,
+        "lat": 30.2165404,
+        "lon": 31.4524744,
+        "timestamp": "2021-02-26T13:06:30Z",
+        "version": 1,
+        "changeset": 100052906,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:housenumber": "23",
+          "addr:postcode": "0000",
+          "addr:street": "شارع عباس العقاد",
+          "name": "إكسبريس ماركت",
+          "name:en": "Express Market",
+          "opening_hours": "24/7",
+          "phone": "0101 818 3545",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8461202117,
+        "lat": 30.2165452,
+        "lon": 31.4515674,
+        "timestamp": "2021-02-26T13:06:31Z",
+        "version": 1,
+        "changeset": 100052906,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:street": "شارع عباس العقاد",
+          "name": "كريمينو فينو وحلويات غربي وشرقي",
+          "name:en": "Krimino Bakery",
+          "shop": "bakery"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8461202118,
+        "lat": 30.2163138,
+        "lon": 31.4507961,
+        "timestamp": "2021-02-26T13:06:32Z",
+        "version": 1,
+        "changeset": 100052906,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:housenumber": "3",
+          "addr:street": "شارع عباس العقاد",
+          "amenity": "restaurant",
+          "name": "بروستد كينج",
+          "name:en": "Broasted King, (fried chicken)"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8476146520,
+        "lat": 30.2163089,
+        "lon": 31.451081,
+        "timestamp": "2021-03-01T14:54:34Z",
+        "version": 1,
+        "changeset": 100214204,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:street": "شارع عباس العقاد",
+          "name": "باربر شوب",
+          "name:en": "Barber Shop",
+          "shop": "hairdresser"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8518843619,
+        "lat": 30.216417,
+        "lon": 31.4538958,
+        "timestamp": "2021-03-14T21:11:22Z",
+        "version": 1,
+        "changeset": 101007999,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:housenumber": "28",
+          "addr:postcode": "0000",
+          "addr:street": "شارع عباس العقاد",
+          "name": "إكسبريس ماركت الحي التاسع",
+          "name:en": "Express Market",
+          "opening_hours": "Mo-Su 07:00-01:00",
+          "phone": "0101 818 3545",
+          "shop": "supermarket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8518858419,
+        "lat": 30.2163675,
+        "lon": 31.4535439,
+        "timestamp": "2021-03-14T21:11:24Z",
+        "version": 1,
+        "changeset": 101007999,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:housenumber": "27",
+          "addr:postcode": "0000",
+          "addr:street": "شارع عباس العقاد",
+          "name": "كريمينو فينو وحلويات غربي وشرقي",
+          "name:en": "Krimino Bakery",
+          "opening_hours": "24/7",
+          "shop": "bakery"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8518867318,
+        "lat": 30.2163986,
+        "lon": 31.4532134,
+        "timestamp": "2021-03-14T21:12:41Z",
+        "version": 2,
+        "changeset": 101008029,
+        "user": "A Karim Refat",
+        "uid": 12689145,
+        "tags": {
+          "addr:housenumber": "26",
+          "addr:postcode": "0000",
+          "addr:street": "شارع عباس العقاد",
+          "amenity": "fast_food",
+          "name": "بروستد كينج",
+          "name:en": "Broasted King, Fried Chicken",
+          "phone": "0101 536 1414"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8688089517,
+        "lat": 30.2079398,
+        "lon": 31.4706307,
+        "timestamp": "2022-11-02T15:36:01Z",
+        "version": 2,
+        "changeset": 128398796,
+        "user": "wvdp",
+        "uid": 436419,
+        "tags": {
+          "addr:housenumber": "85",
+          "addr:postcode": "02000",
+          "addr:street": "شارع لواء عبد الفتاح فؤاد",
+          "amenity": "pharmacy",
+          "healthcare": "pharmacy",
+          "name": "صيدليات هند",
+          "name:en": "Hend Pharmacies",
+          "opening_hours": "Mo-Su 07:00-02:00",
+          "phone": "01010030049"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8780972017,
+        "lat": 30.1793566,
+        "lon": 31.4728421,
+        "timestamp": "2021-05-30T12:19:22Z",
+        "version": 1,
+        "changeset": 105565805,
+        "user": "Shakshak",
+        "uid": 13377829,
+        "tags": {
+          "amenity": "fuel",
+          "name": "بنزينة شيل أوت السابع",
+          "name:en": "Chill out 7th district"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10214911651,
+        "lat": 30.1956567,
+        "lon": 31.4595447,
+        "timestamp": "2025-04-30T08:25:24Z",
+        "version": 4,
+        "changeset": 165623539,
+        "user": "Blue Clip",
+        "uid": 22694011,
+        "tags": {
+          "air_conditioning": "yes",
+          "amenity": "fast_food",
+          "branch": "dounts",
+          "brand": "دانكن",
+          "brand:ar": "دانكن",
+          "brand:en": "Dunkin'",
+          "brand:wikidata": "Q847743",
+          "cuisine": "donut;coffee_shop",
+          "drive_through": "yes",
+          "name": "دانكن دونتس",
+          "name:ar": "دانكن دونتس",
+          "name:en": "Dunkin' Donuts",
+          "outdoor_seating": "yes",
+          "takeaway": "yes",
+          "website": "https://dunkin.ae/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10214983372,
+        "lat": 30.194938,
+        "lon": 31.4601777,
+        "timestamp": "2022-11-24T15:33:26Z",
+        "version": 1,
+        "changeset": 129332154,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "tags": {
+          "addr:city": "El Obour",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:wikidata": "Q839466",
+          "cuisine": "pizza",
+          "drive_through": "yes",
+          "name": "Domino's",
+          "operator": "Domino's",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11305697426,
+        "lat": 30.192689,
+        "lon": 31.4446601,
+        "timestamp": "2023-11-01T20:44:43Z",
+        "version": 1,
+        "changeset": 143495889,
+        "user": "Haritron",
+        "uid": 19161555,
+        "tags": {
+          "contact:facebook": "https://www.facebook.com/nighty.pedic/",
+          "contact:instagram": "https://www.instagram.com/nighty.pedic/",
+          "name": "نايتي بدك",
+          "name:ar": "نايتي بدك",
+          "name:en": "Nighty Pedic",
+          "shop": "bed"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13495307301,
+        "lat": 30.1949838,
+        "lon": 31.4733962,
+        "timestamp": "2026-01-26T10:07:17Z",
+        "version": 1,
+        "changeset": 177713347,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "leisure": "escape_game",
+          "name": "مول سيتي"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13495307302,
+        "lat": 30.203371,
+        "lon": 31.4643642,
+        "timestamp": "2026-01-26T10:07:18Z",
+        "version": 1,
+        "changeset": 177713347,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "fuel"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13495307601,
+        "lat": 30.1936833,
+        "lon": 31.4805316,
+        "timestamp": "2026-01-26T10:07:19Z",
+        "version": 1,
+        "changeset": 177713347,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "اليابنيه"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13495326501,
+        "lat": 30.196497,
+        "lon": 31.4757305,
+        "timestamp": "2026-01-26T10:14:38Z",
+        "version": 1,
+        "changeset": 177713610,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "childcare",
+          "name": "كيدز كاسل"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13495733201,
+        "lat": 30.1968052,
+        "lon": 31.4771099,
+        "timestamp": "2026-01-26T12:42:02Z",
+        "version": 1,
+        "changeset": 177718670,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "احمد الشريف"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13540632002,
+        "lat": 30.1939439,
+        "lon": 31.484062,
+        "timestamp": "2026-02-10T12:11:25Z",
+        "version": 1,
+        "changeset": 178356811,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد النور"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13688898402,
+        "lat": 30.1983311,
+        "lon": 31.464498,
+        "timestamp": "2026-03-29T15:51:51Z",
+        "version": 1,
+        "changeset": 180591237,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "ريفلكت"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13766526701,
+        "lat": 30.187619,
+        "lon": 31.4770761,
+        "timestamp": "2026-04-27T11:38:48Z",
+        "version": 1,
+        "changeset": 181886647,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "كشك"
+        }
+      },
+      {
+        "type": "node",
+        "id": 13850257105,
+        "lat": 30.1956465,
+        "lon": 31.4840709,
+        "timestamp": "2026-05-19T18:04:29Z",
+        "version": 1,
+        "changeset": 182893377,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "ممر عربيه"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14090008801,
+        "lat": 30.2036275,
+        "lon": 31.4821792,
+        "timestamp": "2026-08-12T15:27:22Z",
+        "version": 1,
+        "changeset": 187346796,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "مزرعه الخطاري"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14092292901,
+        "lat": 30.1953339,
+        "lon": 31.4719364,
+        "timestamp": "2026-08-13T14:45:49Z",
+        "version": 1,
+        "changeset": 187395433,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "مستشفي ايوان"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14122278402,
+        "lat": 30.1747673,
+        "lon": 31.47642,
+        "timestamp": "2026-10-25T13:25:34Z",
+        "version": 4,
+        "changeset": 191011073,
+        "user": "Buffalo Burger",
+        "uid": 24408130,
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "addr:postcode": "11828",
+          "addr:street": "محور العبور",
+          "air_conditioning": "yes",
+          "amenity": "fast_food",
+          "branch": "Obour Golf City",
+          "brand": "Buffalo Burger",
+          "contact:facebook": "https://www.facebook.com/BuffaloBurger",
+          "contact:instagram": "https://www.instagram.com/buffalo_burger/",
+          "cuisine": "burger",
+          "delivery": "yes",
+          "description": "طعم البرجر الأمريكي الأصلي بمكونات فاخرة ولمسة مصرية ملهاش حل بنقدملك ألذ برجر، فرايد تشيكن، مشويات، وتشكيلة واسعة ومتنوعة من الساندوتشات اللي تحبها. نورنا في أقرب فرع ليك من بين أكثر من 50 فرعاً في كل أنحاء مصر",
+          "diet:chicken": "yes",
+          "diet:halal": "yes",
+          "diet:meat": "yes",
+          "indoor_seating": "yes",
+          "internet_access:fee": "no",
+          "name": "Buffalo Burger - Obour Golf City",
+          "opening_hours": "Mo-Su 11:00-24:00",
+          "operator": "Buffalo Burger",
+          "outdoor_seating": "yes",
+          "payment:account_cards": "yes",
+          "payment:app": "yes",
+          "payment:apple_pay": "yes",
+          "payment:cards": "yes",
+          "payment:cash": "yes",
+          "payment:credit_cards": "yes",
+          "payment:debit_cards": "yes",
+          "payment:visa": "yes",
+          "payment:visa_debit": "yes",
+          "phone": "19914",
+          "takeaway": "yes",
+          "toilets": "yes",
+          "website": "https://buffaloburger.com/",
+          "website:menu": "https://buffaloburger.com/menu"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14133439601,
+        "lat": 30.1956806,
+        "lon": 31.4650383,
+        "timestamp": "2026-08-29T15:20:39Z",
+        "version": 1,
+        "changeset": 188203054,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "amenity": "school",
+          "name": "مسجد العزيز"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14206181002,
+        "lat": 30.1984111,
+        "lon": 31.4748973,
+        "timestamp": "2026-09-22T11:03:14Z",
+        "version": 1,
+        "changeset": 189393053,
+        "user": "Ahmed Elsayyaf",
+        "uid": 23752948,
+        "tags": {
+          "shop": "bathroom_furnishing"
+        }
+      },
+      {
+        "type": "node",
+        "id": 14420083834,
+        "lat": 30.2163951,
+        "lon": 31.4553876,
+        "timestamp": "2026-11-26T15:06:49Z",
+        "version": 1,
+        "changeset": 192499903,
+        "user": "OneDentalObour",
+        "uid": 24807837,
+        "tags": {
+          "addr:city": "Obour City",
+          "addr:housenumber": "F10",
+          "addr:street": "Medical Destination, 9th District",
+          "amenity": "doctors",
+          "healthcare": "doctor",
+          "healthcare:speciality": "radiology",
+          "name": "One Dental Imaging",
+          "opening_hours": "Sa-Th 12:00-22:00"
+        }
+      },
+      {
+        "type": "way",
+        "id": 155520065,
+        "timestamp": "2023-11-30T12:27:15Z",
+        "version": 4,
+        "changeset": 144623446,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "center": {
+          "lat": 30.1760773,
+          "lon": 31.4741643
+        },
+        "nodes": [
+          1679105866,
+          1679105865,
+          1679105864,
+          1679105863,
+          11385558774,
+          1679105861,
+          11385558773,
+          11385558772,
+          1679105860,
+          1679105858,
+          11385558771,
+          1679105846,
+          1679105920,
+          1679105921,
+          1679105923,
+          1679105890,
+          1679105866
+        ],
+        "tags": {
+          "amenity": "parking",
+          "name": "كارفور العبور",
+          "name:ar": "كارفور العبور",
+          "name:en": "carrefour aloboor"
+        }
+      },
+      {
+        "type": "way",
+        "id": 184789210,
+        "timestamp": "2023-11-30T14:59:24Z",
+        "version": 2,
+        "changeset": 144628409,
+        "user": "salma_z",
+        "uid": 9945354,
+        "center": {
+          "lat": 30.1770988,
+          "lon": 31.4352214
+        },
+        "nodes": [
+          1953072333,
+          1953072331,
+          11385809020,
+          1953072344,
+          11385809021,
+          1953072327,
+          1953072339,
+          1953072341,
+          1953072338,
+          1953072334,
+          1953072326,
+          1953072345,
+          1953072343,
+          11385809022,
+          11385809023,
+          1953072325,
+          1953072346,
+          11385809025,
+          11385809026,
+          11385809027,
+          11385809024,
+          1953072335,
+          1953072333
+        ],
+        "tags": {
+          "amenity": "parking",
+          "parking": "surface"
+        }
+      },
+      {
+        "type": "way",
+        "id": 255365268,
+        "timestamp": "2023-12-03T11:48:57Z",
+        "version": 6,
+        "changeset": 144718504,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "center": {
+          "lat": 30.1731565,
+          "lon": 31.4754873
+        },
+        "nodes": [
+          11385558776,
+          2610576874,
+          2610576878,
+          11385558775,
+          11385558777,
+          2610576879,
+          2610576888,
+          2610576886,
+          11385558778,
+          11385558783,
+          11385558782,
+          11385558781,
+          11385558779,
+          11385558780,
+          610227672,
+          11391705209,
+          11391705208,
+          11385558776
+        ],
+        "tags": {
+          "access": "yes",
+          "amenity": "parking",
+          "capacity": "500",
+          "fee": "yes",
+          "parking": "surface",
+          "wheelchair": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 255365269,
+        "timestamp": "2023-12-05T13:52:26Z",
+        "version": 5,
+        "changeset": 144792761,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "center": {
+          "lat": 30.1742786,
+          "lon": 31.4761416
+        },
+        "nodes": [
+          11391705273,
+          2610576890,
+          2610576892,
+          2610576894,
+          2610576896,
+          2610576898,
+          2610576899,
+          2610576901,
+          2610576903,
+          2610576905,
+          2610576907,
+          2610576909,
+          2610576911,
+          2610576913,
+          2610576915,
+          2610576916,
+          2610576918,
+          2610576920,
+          2610576922,
+          2610576924,
+          2610576926,
+          2610576928,
+          610227679,
+          2610576932,
+          2610576934,
+          2610576935,
+          2610576937,
+          2610576939,
+          11396101965,
+          2610576941,
+          2610576943,
+          11391704994,
+          11391705000,
+          11393428336,
+          2610576945,
+          11396101966,
+          2610576947,
+          2610576949,
+          11391705244,
+          2610576950,
+          11391705243,
+          11391705242,
+          11391705241,
+          11391705240,
+          11391705239,
+          11391705238,
+          11391705237,
+          11391705236,
+          11391705235,
+          11391705234,
+          11391705233,
+          11391705232,
+          11391705231,
+          11391705230,
+          11391705229,
+          11391705228,
+          11391705227,
+          11391705226,
+          11391705225,
+          11391705224,
+          11391705223,
+          11391705222,
+          11391705221,
+          11391705220,
+          2610577026,
+          11391705279,
+          11391705278,
+          11391705277,
+          11391705276,
+          11391705275,
+          11391705273
+        ],
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "addr:housename": "جولف سيتى مول العبور",
+          "addr:street": "محور مبارك",
+          "building": "yes",
+          "name": "جولف سيتى مول العبور",
+          "name:ar": "جولف سيتى مول العبور",
+          "name:en": "Golf City Mall",
+          "shop": "mall",
+          "wheelchair": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 255365851,
+        "timestamp": "2014-01-05T09:14:20Z",
+        "version": 1,
+        "changeset": 19818853,
+        "user": "رامز",
+        "uid": 1790815,
+        "center": {
+          "lat": 30.175271,
+          "lon": 31.4755649
+        },
+        "nodes": [
+          2610590594,
+          2610590596,
+          2610590599,
+          2610590602,
+          2610590605,
+          2610590607,
+          2610590610,
+          2610590613,
+          2610590616,
+          2610590618,
+          2610590620,
+          2610590621,
+          2610590623,
+          2610590625,
+          2610590627,
+          2610590629,
+          2610590630,
+          2610590632,
+          2610590634,
+          2610590636,
+          2610590638,
+          2610590640,
+          2610590642,
+          2610590643,
+          2610590645,
+          2610590648,
+          2610590650,
+          2610590653,
+          2610590656,
+          2610590594
+        ],
+        "tags": {
+          "access": "private",
+          "leisure": "swimming_pool",
+          "name": "WMSA swimming academy"
+        }
+      },
+      {
+        "type": "way",
+        "id": 773688361,
+        "timestamp": "2020-02-21T06:12:48Z",
+        "version": 2,
+        "changeset": 81302698,
+        "user": "MapsAndMarinates",
+        "uid": 8794050,
+        "center": {
+          "lat": 30.2013841,
+          "lon": 31.4552763
+        },
+        "nodes": [
+          7221756502,
+          7221756501,
+          7221756500,
+          7221756499,
+          7221756498,
+          7221756497,
+          7221756496,
+          7221756495,
+          7221756494,
+          7221756493,
+          7221756492,
+          7221756491,
+          7221756490,
+          7221756489,
+          7221756488,
+          7221756487,
+          7221756486,
+          7221756485,
+          7221741384,
+          7221741383,
+          7221741382,
+          7221741381,
+          7221741380,
+          7221741379,
+          7221741378,
+          7232092303,
+          7221741377,
+          7221741376,
+          7221741375,
+          7221741374,
+          7221741373,
+          7221741372,
+          7232092302,
+          7221741371,
+          7221741370,
+          7221741369,
+          7221741368,
+          7221741367,
+          7221741366,
+          7221741365,
+          7221741364,
+          7221741363,
+          7221741362,
+          7221741361,
+          7221741360,
+          7221741359,
+          7221741358,
+          7221756502
+        ],
+        "tags": {
+          "leisure": "sports_centre",
+          "name": "AutoVroom",
+          "sport": "motor;karting"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1116913396,
+        "timestamp": "2022-11-24T15:19:18Z",
+        "version": 1,
+        "changeset": 129331376,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "center": {
+          "lat": 30.1952974,
+          "lon": 31.45988
+        },
+        "nodes": [
+          10214911645,
+          10214911646,
+          10214911647,
+          10214911648,
+          10180531626,
+          10214911649,
+          10214911650,
+          10214911645
+        ],
+        "tags": {
+          "addr:city": "El Obour",
+          "amenity": "fuel",
+          "brand": "Master",
+          "cafe": "yes",
+          "food": "yes",
+          "fuel:octane_92": "yes",
+          "fuel:octane_95": "yes",
+          "name": "Master"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1116916498,
+        "timestamp": "2022-11-24T15:28:16Z",
+        "version": 1,
+        "changeset": 129331855,
+        "user": "TarekAstra",
+        "uid": 16440122,
+        "center": {
+          "lat": 30.1932846,
+          "lon": 31.4617248
+        },
+        "nodes": [
+          10214984317,
+          10214984318,
+          10214984319,
+          7954221317,
+          10214984317
+        ],
+        "tags": {
+          "addr:city": "مدينة العبور",
+          "amenity": "fuel",
+          "brand": "Total",
+          "brand:wikidata": "Q154037",
+          "fuel:octane_92": "yes",
+          "fuel:octane_95": "yes",
+          "name": "Total",
+          "operator": "Total"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1124076638,
+        "timestamp": "2022-12-22T07:23:27Z",
+        "version": 1,
+        "changeset": 130360593,
+        "user": "Aleksandar1994",
+        "uid": 3733993,
+        "center": {
+          "lat": 30.1869226,
+          "lon": 31.4792941
+        },
+        "nodes": [
+          7102175299,
+          10279602657,
+          10279602656,
+          10279602655,
+          10279602654,
+          10279602653,
+          10279602652,
+          10279602651,
+          10279602650,
+          10279602649,
+          10279602648,
+          10279602647,
+          10279602646,
+          10279602645,
+          7102175299
+        ],
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Al Rahman Mosque",
+          "name:ar": "مسجد الرحمن",
+          "name:en": "Al Rahman Mosque",
+          "religion": "muslim"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1228588882,
+        "timestamp": "2023-12-04T09:11:30Z",
+        "version": 1,
+        "changeset": 144746478,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "center": {
+          "lat": 30.1727879,
+          "lon": 31.4765679
+        },
+        "nodes": [
+          11393694907,
+          11393694906,
+          11393694891,
+          11393694905,
+          11393694892,
+          11393694904,
+          11393694903,
+          11393694890,
+          11393694902,
+          11393694898,
+          11393694901,
+          11393694900,
+          11393694899,
+          11393694917,
+          11393694897,
+          11393694916,
+          11393694893,
+          11393694915,
+          11393694894,
+          11393694914,
+          11393694895,
+          11393694913,
+          11393694912,
+          11393694911,
+          11393694910,
+          11393694896,
+          11393694909,
+          11393694908,
+          11393694907
+        ],
+        "tags": {
+          "leisure": "garden"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1228588883,
+        "timestamp": "2023-12-04T09:11:30Z",
+        "version": 1,
+        "changeset": 144746478,
+        "user": "Amany_Ahmed",
+        "uid": 15567201,
+        "center": {
+          "lat": 30.1729872,
+          "lon": 31.4764327
+        },
+        "nodes": [
+          11393694926,
+          11393694921,
+          11393694918,
+          11393694922,
+          11393694923,
+          11393694929,
+          11393694928,
+          11393694924,
+          11393694920,
+          11393694925,
+          11393694919,
+          11393694927,
+          11393694926
+        ],
+        "tags": {
+          "leisure": "garden"
+        }
+      }
+    ]
+  },
+  "site_id": "site_02",
+  "case_version": "v2",
+  "notes": "osm v2 control site",
+  "timestamp": "2026-11-28T10:43:44.509911+00:00"
+}

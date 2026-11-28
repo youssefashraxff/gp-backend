@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "malls_ar_facebook",
+  "params": {
+    "q": "مول العبور الجديدة (site:facebook.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "malls_ar",
+    "variant": "facebook",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 2.181,
+  "raw": {
+    "searchParameters": {
+      "q": "مول العبور الجديدة (site:facebook.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "مباشرة على محور الـ 90. أول مول ترفيهي متكامل في العبور ...",
+        "link": "https://www.facebook.com/m.alashraaf/videos/%D8%A7%D9%85%D8%AA%D9%84%D9%83-%D9%88%D8%AD%D8%AF%D8%AA%D9%83-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A3%D9%88-%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A3%D9%88-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D9%81%D9%8A-%D8%AC%D8%B0%D8%A8-%D8%A8%D9%84%D8%A7%D8%B2%D8%A7-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%AD%D9%88%D8%B1-%D8%A7%D9%84%D9%80-90-%D8%A3/2124331161770700/",
+        "displayedLink": "أكثر من 20 تفاعل  ·  قبل 4 أشهر",
+        "snippet": "امتلك وحدتك التجارية أو الإدارية أو الطبية في جذب بلازا، مباشرة على محور الـ 90. أول مول ترفيهي متكامل في العبور الجديدة. بمقدم يبدأ من 15% ...",
+        "position": 1
+      },
+      {
+        "title": "مول بانوراما العبور الجديده حي الحرية",
+        "link": "https://www.facebook.com/p/%D9%85%D9%88%D9%84-%D8%A8%D8%A7%D9%86%D9%88%D8%B1%D8%A7%D9%85%D8%A7-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D9%87-%D8%AD%D9%8A-%D8%A7%D9%84%D8%AD%D8%B1%D9%8A%D8%A9-61573675856792/",
+        "displayedLink": "أكثر من 7.5 ألف متابع",
+        "snippet": "مول تجاري اداري طبي سكني في مدينة العبور الجديده (ماركت-خضار-عيادات طبيه-معمل تحاليل-تسالي-خضار- مطاعم-كافيه-موبايل-فرن-منظفات-حلاق رجالي-بيوتي سنتر- ...",
+        "position": 2
+      },
+      {
+        "title": "السلام عليكم ايه افضل مول فى العبور من حيث التسوق والخروج",
+        "link": "https://www.facebook.com/groups/2684938655126180/posts/4235103080109722/",
+        "displayedLink": "أكثر من 40 تعليق  ·  قبل سنة واحدة",
+        "snippet": "✨ ليه X PAND MALL فرصة تستحق الاهتمام؟ ✓ مساحة المول 2 فدان ✓ مول ترفيهي خدمي ✓ وجهة متكاملة للتسوق والترفيه والخدمات ✓ فرصة استثمارية ...",
+        "position": 3
+      },
+      {
+        "title": "مول معالم في قلب مدينة العبور الجديدة يقدم واجهات عصرية ...",
+        "link": "https://www.google.com/goto?url=CAESngQBxCJF173oKrUOKaErV5JtWBS_qM1iHdyYVUtc--aEg0fjEMTA45RdUlbPYWhVBZFGvTEd23gK3w4gj_dQioPC-5tOWOWbRRK0my3qAJqbqO4mWXfm16Sy-SE97-67fnCA0uHkylzPC5nchEUCFcBeFIbtfNeU9_fOrqx6Ols7aM1xzd_4KZ-lzydz9V6dph6s7wXCCMqLtrDsXJzNUyU-v8GiWFqJ3U86hHH_prbz5BfKwicuEVUQzcoeAAEI0vYFxSrYMz_IUS9QT279PpZByHBocx-pcuDXDeK4LoxGgcxuP9BKL4YJIKM5do1TS65mFKrNEnAse9fcx78KaD7XylCL4IHgg7hS-f6VsxSSRy-fkX7Xbx8AUluOSaOt1POolvOFgxj-KeUwg7i5EZkNAx1_Zz8jzfn9yyw04XC2fF5RW9CPo7C39dt6HOuzmcdWsuQHC3VY6o9PO8bZXREiFnjBngqTYRV_h2krHGIZs0ECD3pJ_XpFSQXKYipdbvHZZ_VccZR4M__2eQmwKvNedBTjDJnzKdoDmA4siYrK2xxG-6riXvdbrCSeXHjsJyUQCwXDAN7dPSKBi5hkJE1iDwfX37kq9Ptl4JmHKKVjfRdZx9_wZhPx4-O4H2FTZcDT6OqQ6Wbikwp2rUmCky8P-QX21WIh5let5xxLObVQ4JxsQfcdH3bc_SAf-8QdB5A7ecAWr-5EgLTBBVTjCw&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "أكثر من 10 تفاعل  ·  قبل سنتين",
+        "snippet": "الموقع: قطعة أرض مميزة بمدينة العبور القديمة، بجوار جمعية عرابي وبوابة 8، على محور خط 10 (الشريان الجديد للمدينة) أمام الحي الثالث ...",
+        "position": 4
+      },
+      {
+        "title": "في قلب العبور الجديدة، بالقرب من كل حاجة مول Aspire Mall من ...",
+        "link": "https://www.google.com/goto?url=CAESiQMBxCJF15U_1u7ZfNc7fgAaTE7zy-_-nU9OIphPNRv5Esap3mZpCVpBsJXsXx2HMH99jfqcbtyO7QTEOQg1DmBk18miVrzlWgSCoZ3N0syr_53Ai8c7ufTFySh1KUbbsEsOzTtb7fEz8Tp1zLbpakhvGkUZqfA36z38K5b5VT-eRlKkl5uAcBmF_bybbO1aWaiivgmhHanG53rrSgE1dmJ13Uhd_MnTLFHFc8qODZzKnEzk7V535nnU8mAeVztIFsTWxsmsi4mqRudk7cXZhfaFhp1DhS92TRGN-4Tga3F7gyqSNeSRFep8dWbZtX7E44JhYvqlhH_ZuyN6Ez2fUnQOxFlsVjZ07VkB9-0KlZCaMJgIgII8yy16Cu5morkP2p4eJIwWB0bJNJu6cw0QlfECeWNjOVCuhvTMRhxTzjMpaB_Bk4NE6KBC0AER0zFaLu5-T7diWYwZSHCfrT-x7nX7QAI5WT38RoX385zCNvOqiIxEqSp_OQPY_OMsTgZ_uccKsaa3xm20vUo&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "أكثر من 30 تفاعل  ·  قبل 12 شهرًا",
+        "snippet": "الموقع: قطعة أرض مميزة بمدينة العبور القديمة، بجوار جمعية عرابي وبوابة 8، على محور خط 10 (الشريان الجديد للمدينة) أمام الحي الثالث ...",
+        "position": 5
+      },
+      {
+        "title": "مكه مول مدينه العبور",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXw64PKxe31l6rjf4FI8hUVCwZ6U2X2pK3ThTTC3loOkruVVk3A6doHuVpj84p8tlsAso5lyN3UgIJsnP6VoMcnjqa5B39lcO5arffl37uy9aEKJzZzmTzcuRg319V31OkyyqcncHrjg&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "أكثر من 31 ألف متابع",
+        "snippet": "مكه مول مدينه العبور. Join group. About this group. مجموعه تجاريه متنوعه ... العبور الجديدة – حي الفيروز (موقع مميز وقريب من الخدمات). المساحة: [90 ...",
+        "position": 6
+      },
+      {
+        "title": "في ZAD Mall، كل تفصيلة معمولة لسبب. من شكل المبنى ...",
+        "link": "https://www.google.com/goto?url=CAES8QMBxCJF14a-3ILUszoeSYlVatxR0yx_h6JL8FMvS4Ld_R_97yB0W_DF5rrc6xm-1jOXCLE8qINcLiqzblQBnCEsB08OyKHeyPNK7LhAUAq8b26TUg2C02bwnv_DlvQBBevzmZmHlzaye4cOUGnMbSfeYaqkj8JScxwDQ8p7AjturcxcPw307ayzDUheBZSkqPgDBgzCEJPKLvwQCibg9v9K4oMYaKmq1pMNXHcTPNkKON26SV-ECvFMmaVRRmlQPlDYf9wLDpt0Fo1cSXadSjo4NFNLdj09YFMAPBl2QxKRREqkRVxQ4QWP6tUWNIGTLypPHrRSCMLY86tV82sw3KzEy5V2lu9-6kYPKHN2jKq4SpnX6Okh-I9DINGOGbfDBwnRF8ADBdz8bvpmi57X1gqcN26k7bTOCIfMKKedEQW-SKfvgfgy4-SqIg57EdrrjzLz0PRa7MH901BZ2jJgGcn2wHClJe1kPZTCoWYZwFWKlSEFyKwoZ__oEcKINcLE1qhxVRYy4zhmeCXY7o0FPWrLPH06QNgfJ9HUY5iWzDrA3-teJM96s7TT7KgDC4oy72ZSA14f7M5Uf-xp6VL133UFoYfwKaXkU1zHhdZl65hfzN-iMZl4Ycvb6DHE-vIoOB59EbMo_7l82EQQsV6lqKqX5w&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "‫9 تفاعل  ·  قبل شهرين",
+        "snippet": "ZAD بيجمع التجاري والإداري والطبي في مكان واحد، في قلب العبور الجديدة، ليكون وجهة متكاملة تخدم احتياجات المنطقة. ZAD Mall | العبور الجديدة MND × ...",
+        "position": 7
+      },
+      {
+        "title": "🔥 امتلك محلك في زون مول العبور الجديدة بمقدم ...",
+        "link": "https://www.google.com/goto?url=CAESgwEBxCJF1-4oEJ9CiD295F76AnS-ojiHmH3OmjnhZSubAPpIoTys2dpwW66d46T_M-iPuLJESLqkqw2n7SnRFRW7VgdoHHF-93BU9CPeSK2-fjYg3z0R1fbA0Uml-WfgPwErIEqLGGegQbfn_Jki2l9YJEWuKhsYzZrmMpJ4r8LVap-jsw&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "قبل أسبوع واحد",
+        "snippet": "ZONE MALL – حي الحرية موقع استراتيجي على بُعد خطوات من محور التسعين وشارع السبعين، وسط منطقة سكنية بتخدم أكتر من 130,000 نسمة! محل ...",
+        "position": 8
+      },
+      {
+        "title": "🏬 محل للإيجار في سمارت مول – العبور الجديدة",
+        "link": "https://www.google.com/goto?url=CAEShAEBxCJF1zYxBTOoQAGU6Y6Wv2xYHShUGpra3US00gB1X0qoEr4yVmquCSMm7b1Hs7wtwDuEmaOLGE7zdlNuySKDPVuHpscKMkoj14iSee8hyUVvy3v_eNgMoJp0-TPrO9MHaVaez_pYBeNlYM-LrXPRsCfbtxXnabzc9_aD7EYzhlO7gtk&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "قبل أسبوع واحد",
+        "snippet": "العنوان: سمارت مول – منطقة خدمات الحرية – بجوار مول الحرية - في الشارع الفاصل بين الحرية والمجد - المول واخد ناصية في صنية – العبور الجديدة.",
+        "position": 9
+      },
+      {
+        "title": "الرضا مول في مدينة العبور",
+        "link": "https://www.google.com/goto?url=CAESZQHEIkXXf8ddDiqM9_MPHIaUzexpQD7tPSceuDkSqyQjpa_lQuDInLqMzG0VNz0L-X6xvP41Xr9jcPb4jwvM-wmfQYvnmBBavXQYQ1PJJ6JqKQWsC4DRJPkXw_S86uTNLS-2CPa-&gsessionid=IusWOomdJrP4oml5d6ziQoBlx6C26wm6gxUeOlaOiyoVBu2iNLvBzA",
+        "displayedLink": "https://www.facebook.com › Facebook Groups",
+        "snippet": "الجروب ده معمول لعرض خدمات الرضا مول في شارع الشعراوي بجوار بوسطة الشباب - أي حاجة عاوز تعرفها عن المول والخدمات الموجودة فيه هتلاقيها هنا. Cairo, Egypt.",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:24.489355+00:00"
+}

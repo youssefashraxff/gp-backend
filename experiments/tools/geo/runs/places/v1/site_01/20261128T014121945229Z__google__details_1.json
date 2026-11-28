@@ -1,0 +1,36 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "details_1",
+  "params": {
+    "place_id": "ChIJKRVBU2cBWBQR-END7iqjImg"
+  },
+  "meta": {
+    "category": "details",
+    "name": "ماركت أبو علي",
+    "distance_m": 459.8
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.356,
+  "raw": {
+    "id": "ChIJKRVBU2cBWBQR-END7iqjImg",
+    "rating": 4,
+    "userRatingCount": 1,
+    "displayName": {
+      "text": "ماركت أبو علي",
+      "languageCode": "en"
+    },
+    "reviews": [
+      {
+        "rating": 4,
+        "publishTime": "2022-09-30T10:29:02.508581Z"
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 rerun after network failure",
+  "timestamp": "2026-11-28T01:41:21.945161+00:00"
+}
