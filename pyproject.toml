@@ -11,7 +11,8 @@ dependencies = [
   "langgraph>=0.2",
   "langchain-core>=0.3",
   "supabase>=2.5",
-  "pydantic-settings>=2.16.3"
+  "pydantic-settings>=2.16.3",
+  "httpx>=0.27",
 ]
 
 [project.optional-dependencies]
@@ -23,6 +24,9 @@ dev = [
   "pyright>=1.1.380",
   # Experiments only (experiments/tools/web_search); production gets its client in plan A3.
   "tavily-python>=0.7",
+  # Reads OpenStreetMap .osm.pbf files: only for building the OSM cache (app/shared/tools/osm.py)
+  # and the map experiments, never at run time.
+  "osmium>=4.0",
   # Pinned so the CI schema check always produces identical output.
   "datamodel-code-generator==0.87.0",
 ]

@@ -1,0 +1,31 @@
+{
+ "id": "ChIJE0taAwAbWBQR7MFxI35JgEw",
+ "rating": 5,
+ "userRatingCount": 6,
+ "displayName": {
+  "text": "روح الشام",
+  "languageCode": "ar"
+ },
+ "reviews": [
+  {
+   "rating": 5,
+   "publishTime": "2025-12-19T18:07:10.830915878Z"
+  },
+  {
+   "rating": 5,
+   "publishTime": "2026-09-02T11:32:41.044313866Z"
+  },
+  {
+   "rating": 5,
+   "publishTime": "2026-06-19T14:23:08.353069083Z"
+  },
+  {
+   "rating": 5,
+   "publishTime": "2026-10-07T12:35:51.369649260Z"
+  },
+  {
+   "rating": 5,
+   "publishTime": "2026-05-01T23:03:28.677205984Z"
+  }
+ ]
+}

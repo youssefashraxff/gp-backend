@@ -87,7 +87,7 @@ Cut from the bottom up: Could → Should. Never cut a Must.
 | Part | Module |
 |---|---|
 | Graph, agents, prompts | `app/phases/research/` (`interface.py` stays the only entry point) |
-| Tools: Places, OSM, web search, elevation, (later) social | `app/shared/tools/`, since later phases reuse them |
+| Tools: Places, OSM (local copy), web search (Serper), elevation, drive times (Q10); social = web search with social `site:` filters | `app/shared/tools/`, since later phases reuse them |
 | Escalation interrupt helper, scorer client | `app/shared/hitl/` |
 | Model routing and caching | `app/shared/models/` |
 | Waiting for the expert, rerun on edit | `app/orchestrator/` |
@@ -170,8 +170,9 @@ running. Every rerun saves a new version.
 |---|---|---|---|
 | LLM | 60 s | timeout, 429, 5xx (3 attempts, backoff) | the step fails → Temporal retries the activity |
 | Google Places | 10 s | timeout, 429, 5xx | the fact becomes human-only → escalate |
-| OSM (Overpass) | 25 s | timeout, 429, 5xx | escalate, or fall back to Places for roads where possible |
-| Web search | 15 s | timeout, 429, 5xx | escalate |
+| Google Routes, Google Elevation | 10 s | timeout, 429, 5xx | escalate |
+| Web search (Serper) | 15 s | timeout, 429, 5xx | escalate |
+| OSM (local copy, no network) | n/a | n/a | site outside the copy's coverage, or nothing mapped → escalate |
 
 - **Idempotent saves:** a phase result is keyed by (concept, phase, version); the unique
   constraint already exists in `app/shared/db.py`.
@@ -292,7 +293,7 @@ So the spec always says how each agent actually works.
 
 | Fact | Type | Produced by | Source |
 |---|---|---|---|
-| Nearby roads, road types, access points | retrieved | OSM Overpass tool | Overpass query |
+| Nearby roads, road types, access points | retrieved | OSM tool (local copy of Geofabrik's Egypt extract, Q10) | data date + query |
 | Distance to main roads and landmarks | computable | geometry function on OSM data | function name |
 | Sun path / orientation through the year | computable | sun-position function (e.g. `astral`/`pvlib`) | function name |
 | Terrain / elevation | retrieved | Google Elevation API (Q6) | API + query |
@@ -306,7 +307,7 @@ So the spec always says how each agent actually works.
 - **Model:** cheap tier, summary only. OSM and elevation results are cached by rounded
   lat/lng.
 - **Tests:** unit tests for the distance and sun-path functions with known answers; a
-  recorded Overpass response; "empty OSM → escalates".
+  small recorded OSM cache; "empty OSM → escalates".
 
 ### 6.2 Market research · Owner: TBD · Status: draft
 
@@ -431,4 +432,5 @@ So the spec always says how each agent actually works.
 | Q6 | Elevation data source | — | **Decided: Google Elevation API** (same key as Places) |
 | Q7 | Competitor search radius | — | **Decided: dynamic per location** (density-based, section 6.5); start with the ranges in section 6.5 and tune them with Ali |
 | Q8 | Progress rename | — | **Decided: first in Sprint 2.** gp-schemas done; backend and frontend follow with the submodule bump |
+| Q10 | Research tools (A3 experiments, `experiments/tools/*/reports/`) | — | **Decided:** Google Places (New) for businesses (not Foursquare); OpenStreetMap from a local copy of Geofabrik's Egypt extract for roads and land use (the public Overpass servers answered 7 of 80 calls); Google Routes with traffic for drive times (added to A3); Google Elevation (Q6); Serper for web and social search (not Tavily). OSM covers Greater Cairo, the Sokhna coast, New Mansoura and New Sohag; add an area by adding a box and rebuilding |
 | Q9 | Supply-side data for Gap analysis (section 6.3) | (a) Market research collects basic supply info (what already exists in the area); (b) move a light Places count before Gap; (c) leave Gap demand-only and let the Supervisor check gaps against Competitors | **Open:** the Market and Gap owners propose one in their section PRs |
