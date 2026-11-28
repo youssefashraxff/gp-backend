@@ -23,9 +23,9 @@ timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,r
 2026-11-28T00:37:06.876812+00:00,site_01,v1,places,foursquare,sports_r3000,empty,0,0.828,,20261128T003706876955Z__foursquare__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T00:37:08.441376+00:00,site_01,v1,places,google,mall_r3000,ok,1,0.56,,20261128T003708441531Z__google__mall_r3000.json,mall,3000,1,1,1,1,225.0,1,0,2786,,مظلوم فرع بلبيس Mazloum tiles belbeis,,,,
 2026-11-28T00:37:10.308787+00:00,site_01,v1,places,foursquare,mall_r3000,empty,0,0.861,,20261128T003710309051Z__foursquare__mall_r3000.json,mall,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T00:37:11.938190+00:00,site_01,v1,places,google,details_1,ok,1,0.621,,20261128T003711938376Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.0,1520.0
+2026-11-28T00:37:11.938190+00:00,site_01,v1,places,google,details_1,ok,1,0.621,,20261128T003711938376Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.1,1520.1
 2026-11-28T00:37:13.472312+00:00,site_01,v1,places,google,details_2,ok,3,0.529,,20261128T003713472549Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,248.1,991.5
-2026-11-28T00:37:14.829059+00:00,site_01,v1,places,google,details_3,ok,5,0.35,,20261128T003714829107Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.9,1984.7
+2026-11-28T00:37:14.829059+00:00,site_01,v1,places,google,details_3,ok,5,0.35,,20261128T003714829107Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,883.0,1984.7
 2026-11-28T01:40:43.041263+00:00,site_01,v1,places,google,cafe_r1000,empty,0,0.437,,20261128T014043041633Z__google__cafe_r1000.json,cafe,1000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:40:45.182823+00:00,site_01,v1,places,foursquare,cafe_r1000,empty,0,1.136,,20261128T014045182929Z__foursquare__cafe_r1000.json,cafe,1000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:40:46.513919+00:00,site_01,v1,places,google,restaurant_r1000,empty,0,0.326,,20261128T014046513960Z__google__restaurant_r1000.json,restaurant,1000,0,0,0,0,,0,0,,,,,,,
@@ -50,9 +50,9 @@ timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,r
 2026-11-28T01:41:17.593177+00:00,site_01,v1,places,foursquare,sports_r3000,empty,0,0.872,,20261128T014117593443Z__foursquare__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
 2026-11-28T01:41:18.919566+00:00,site_01,v1,places,google,mall_r3000,ok,1,0.323,,20261128T014118919628Z__google__mall_r3000.json,mall,3000,1,1,1,1,225.0,1,0,2786,,مظلوم فرع بلبيس Mazloum tiles belbeis,,,,
 2026-11-28T01:41:20.581719+00:00,site_01,v1,places,foursquare,mall_r3000,empty,0,0.657,,20261128T014120581994Z__foursquare__mall_r3000.json,mall,3000,0,0,0,0,,0,0,,,,,,,
-2026-11-28T01:41:21.945161+00:00,site_01,v1,places,google,details_1,ok,1,0.356,,20261128T014121945229Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.0,1520.0
+2026-11-28T01:41:21.945161+00:00,site_01,v1,places,google,details_1,ok,1,0.356,,20261128T014121945229Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1520.1,1520.1
 2026-11-28T01:41:23.274954+00:00,site_01,v1,places,google,details_2,ok,3,0.324,,20261128T014123275039Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,248.1,991.5
-2026-11-28T01:41:24.684027+00:00,site_01,v1,places,google,details_3,ok,5,0.403,,20261128T014124684118Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.9,1984.7
+2026-11-28T01:41:24.684027+00:00,site_01,v1,places,google,details_3,ok,5,0.403,,20261128T014124684118Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,883.0,1984.7
 2026-11-28T11:09:22.452776+00:00,site_02,v1,places,google,cafe_r1000,ok,20,0.933,,20261128T110922453516Z__google__cafe_r1000.json,cafe,1000,20,20,10,10,15.0,5,0,2,,يانو كافيه | KiNG EGYPT | كافيه Bon777 | ليدام | مصطفى | Rocket Bike Cafe | Colombian coffee | كافيه التكعيبه | سالم سعيد عبد الغفور خالد | Cafe blue view,,,,
 2026-11-28T11:09:24.521940+00:00,site_02,v1,places,foursquare,cafe_r1000,ok,4,1.061,,20261128T110924522327Z__foursquare__cafe_r1000.json,cafe,1000,4,4,0,0,,0,0,265,2431.5,x café | space cafe | قهوة علاء الدين | CoffeeShop Company,,,,
 2026-11-28T11:09:25.896446+00:00,site_02,v1,places,google,restaurant_r1000,ok,20,0.371,,20261128T110925896543Z__google__restaurant_r1000.json,restaurant,1000,20,20,7,7,25.0,6,0,2,,Volt | مطعم روح الجمبري | محمصات دهب | أسماك فليف استارز | مطعم كريب لارچ | ايجيبشيان جولدن كينج | المنطقه الصناعيه | Muhammed | وليد حسين احمد | ركن الأسماك,,,,
@@ -78,7 +78,7 @@ timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,r
 2026-11-28T11:10:00.550771+00:00,site_02,v1,places,google,mall_r3000,ok,20,0.29,,20261128T111000550856Z__google__mall_r3000.json,mall,3000,20,20,17,17,10.0,11,0,2,,N9ne mall | Omran Mall | المجد أويل سيل | الموسسه المتحدة | Velvet textile mall سوق القماش مدينة العبور | فابريكس مول | U Plaza Mall | اكسسوارات حريمي جملة coccinelle | شركة بروتك لتجارة وتوريدات الادوات الكهربائية ( بروتك للتوريدات الكهربائية ) | Cairo Mall El Obour,,,,
 2026-11-28T11:10:02.497341+00:00,site_02,v1,places,foursquare,mall_r3000,ok,4,0.94,,20261128T111002497712Z__foursquare__mall_r3000.json,mall,3000,4,4,0,0,,0,0,827,1746.5,Star House (ستار هاوس) | Town Stars | Haleem Mall | 7th District Mall,,,,
 2026-11-28T11:10:03.747920+00:00,site_02,v1,places,google,details_1,ok,2,0.239,,20261128T111003747976Z__google__details_1.json,details,,,,,,,,,,,,Rocket Bike Cafe,2,605.9,803.4
-2026-11-28T11:10:05.141354+00:00,site_02,v1,places,google,details_2,ok,1,0.388,,20261128T111005141448Z__google__details_2.json,details,,,,,,,,,,,,Colombian coffee,1,391.9,391.9
+2026-11-28T11:10:05.141354+00:00,site_02,v1,places,google,details_2,ok,1,0.388,,20261128T111005141448Z__google__details_2.json,details,,,,,,,,,,,,Colombian coffee,1,392.0,392.0
 2026-11-28T11:10:06.594106+00:00,site_02,v1,places,google,details_3,ok,1,0.447,,20261128T111006594324Z__google__details_3.json,details,,,,,,,,,,,,مطعم كريب لارچ,1,82.6,82.6
-2026-11-28T11:10:07.866713+00:00,site_02,v1,places,google,details_4,ok,2,0.266,,20261128T111007866761Z__google__details_4.json,details,,,,,,,,,,,,المنطقه الصناعيه,2,47.6,228.7
-2026-11-28T11:10:09.273796+00:00,site_02,v1,places,google,details_5,ok,5,0.402,,20261128T111009273849Z__google__details_5.json,details,,,,,,,,,,,,روح الشام,5,51.9,343.7
+2026-11-28T11:10:07.866713+00:00,site_02,v1,places,google,details_4,ok,2,0.266,,20261128T111007866761Z__google__details_4.json,details,,,,,,,,,,,,المنطقه الصناعيه,2,47.6,228.8
+2026-11-28T11:10:09.273796+00:00,site_02,v1,places,google,details_5,ok,5,0.402,,20261128T111009273849Z__google__details_5.json,details,,,,,,,,,,,,روح الشام,5,52.0,343.7

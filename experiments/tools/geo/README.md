@@ -7,7 +7,7 @@ measured afterwards. The results decide which tool each agent uses (plan A3).
 | Tool | Compared | Used by |
 |---|---|---|
 | `places` | Google Places API (New) Nearby + Details vs Foursquare Places | Competitors, Segments |
-| `osm` | Overpass API, on two public servers (`overpass-api.de`, `overpass.kumi.systems`) | Site analysis |
+| `osm` | OpenStreetMap: public Overpass servers (v1, v2) vs a local copy of Geofabrik's Egypt extract (v3) | Site analysis |
 | `routes` | Google Routes (with traffic, 5 departure times) vs OpenRouteService vs OSRM | Site analysis |
 | `elevation` | Google Elevation vs OpenTopoData SRTM 30 m and ASTER 30 m | Site analysis |
 | `social` | Serper with `site:` filters for Facebook, Instagram, X, TikTok | Segments (Could) |
@@ -69,6 +69,25 @@ run; add `<tool>_v2.json` and run with `--cases v2`.
 | `places_v1` | 6 kinds from the M Hub concept (cafe, restaurant, pharmacy, grocery, sports/padel, mall) at 1 km and 3 km; then Place Details for the 5 nearest Google places with reviews |
 | `osm_v1` | areas containing the pin; roads 1 km; major roads 3 km; land use 1 km; buildings 500 m and 1 km; points of interest 1 km and 3 km |
 | `osm_v2` | osm_v1's queries with the descriptive headers, a third server (`overpass.private.coffee`) and 5 s between calls |
+| `osm_v3` | the same questions answered from a local cache of the Egypt extract (box: east Greater Cairo to 10th of Ramadan), built by `osm_data.py` |
+
+### osm v3: local OpenStreetMap
+
+The public Overpass servers answered 7 of 48 calls in v2 (the rest: 502, 504 or no answer in
+90 s). v3 reads the same OpenStreetMap data from a file instead:
+
+```bash
+# once: read the Egypt file (yours, or downloaded and checksum-checked) into a small cache
+python -m experiments.tools.geo.osm_data --cases v3 --source /path/to/egypt-latest.osm.pbf --delete-source
+# then the usual run, now answered locally
+python -m experiments.tools.geo.collect --tool osm --site site_01 --cases v3
+```
+
+`osm_data.py` keeps only what the questions need inside the case file's `box` (roads with
+their shape, land-use / boundary / place outlines, one point per building, points of
+interest) in `data/osm_cache_v3.json.gz`, with the data's date from the file header.
+`data/` is git-ignored. Local answers have Overpass's JSON shape, so scoring is unchanged.
+Distances to roads are measured to the nearest segment, not the nearest vertex.
 | `routes_v1` | 5 landmarks (airport, Obour City, Heliopolis, Madinaty, 10th of Ramadan), both directions, Sunday 08:00, 13:00, 17:30, 22:00 and Friday 13:00 (Cairo time, the next such day) |
 | `elevation_v1` | 7 x 7 grid 100 m apart over the plot, plus 8 points at 1 km and 3 km |
 | `social_v1` | 6 questions (4 Arabic, 2 English), once with all platforms in one `site:` filter and once per platform |

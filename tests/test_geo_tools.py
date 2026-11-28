@@ -394,3 +394,84 @@ def test_social_titles_match_across_redirect_links() -> None:
     ta = social.score_file(a, {}, [])["titles"]
     tb = social.score_file(b, {}, [])["titles"]
     assert ta == tb
+
+
+# --- osm v3: local cache -------------------------------------------------------------
+
+OSM_XML = """<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="test">
+  <node id="1" lat="30.000" lon="31.000" version="1" timestamp="2025-01-01T00:00:00Z"/>
+  <node id="2" lat="30.000" lon="31.010" version="1" timestamp="2025-01-01T00:00:00Z"/>
+  <node id="3" lat="29.995" lon="30.995" version="1"/>
+  <node id="4" lat="29.995" lon="31.005" version="1"/>
+  <node id="5" lat="30.005" lon="31.005" version="1"/>
+  <node id="6" lat="30.005" lon="30.995" version="1"/>
+  <node id="7" lat="30.0010" lon="31.0010" version="1"/>
+  <node id="8" lat="30.0010" lon="31.0012" version="1"/>
+  <node id="9" lat="30.0012" lon="31.0012" version="1"/>
+  <node id="10" lat="30.0002" lon="31.0003" version="1" timestamp="2026-06-01T00:00:00Z">
+    <tag k="amenity" v="cafe"/><tag k="name" v="Bean"/>
+  </node>
+  <node id="11" lat="35.0" lon="35.0" version="1"><tag k="amenity" v="cafe"/></node>
+  <way id="100" version="1" timestamp="2025-01-01T00:00:00Z">
+    <nd ref="1"/><nd ref="2"/><tag k="highway" v="trunk"/><tag k="name" v="Suez Road"/>
+  </way>
+  <way id="101" version="1">
+    <nd ref="3"/><nd ref="4"/><nd ref="5"/><nd ref="6"/><nd ref="3"/>
+    <tag k="landuse" v="residential"/>
+  </way>
+  <way id="102" version="1">
+    <nd ref="7"/><nd ref="8"/><nd ref="9"/><nd ref="7"/><tag k="building" v="yes"/>
+  </way>
+  <way id="103" version="1"><nd ref="3"/><nd ref="4"/><nd ref="5"/><nd ref="6"/><nd ref="3"/></way>
+  <relation id="200" version="1">
+    <member type="way" ref="103" role="outer"/>
+    <tag k="type" v="boundary"/><tag k="boundary" v="administrative"/>
+    <tag k="admin_level" v="8"/><tag k="name" v="Test City"/>
+  </relation>
+</osm>
+"""
+BOX = {"min_lat": 29.9, "max_lat": 30.1, "min_lng": 30.9, "max_lng": 31.1}
+
+
+@pytest.fixture
+def osm_cache(tmp_path: Path) -> dict[str, Any]:
+    pytest.importorskip("osmium")
+    from experiments.tools.geo import osm_data
+
+    src = tmp_path / "test.osm"
+    src.write_text(OSM_XML, encoding="utf-8")
+    cache = osm_data.build_cache(src, BOX)
+    path = tmp_path / "cache.json.gz"
+    osm_data.write_cache(cache, path)
+    return osm_data.load_cache(path)
+
+
+def test_cache_keeps_only_the_box(osm_cache: dict[str, Any]) -> None:
+    counts = osm_cache["meta"]["counts"]
+    assert counts == {"roads": 1, "areas": 2, "buildings": 1, "pois": 1}  # cafe at 35,35 dropped
+
+
+def test_local_queries_answer_like_overpass(osm_cache: dict[str, Any]) -> None:
+    lat, lng = 30.0003, 31.0002
+    roads = osm.local_query(osm_cache, "major_roads", lat, lng, 3000)
+    assert roads[0]["tags"]["name"] == "Suez Road" and roads[0]["geometry"]
+    names = {e["tags"].get("name") for e in osm.local_query(osm_cache, "pin_area", lat, lng, 0)}
+    assert "Test City" in names
+    landuse = osm.local_query(osm_cache, "landuse", lat, lng, 1000)
+    assert [e["tags"]["landuse"] for e in landuse] == ["residential"]
+    assert osm.local_query(osm_cache, "buildings", lat, lng, 500)[0]["tags"]["total"] == "1"
+    assert len(osm.local_query(osm_cache, "pois", lat, lng, 1000)) == 1
+    payload = {
+        "params": {"kind": "major_roads", "radius": 3000, "lat": lat, "lng": lng},
+        "raw": {"elements": roads},
+    }
+    row = osm.score_file(payload)
+    assert row["nearest_major_name"] == "Suez Road" and row["nearest_major_m"] < 40
+
+
+def test_distance_to_line_uses_segments() -> None:
+    # a point 100 m north of the middle of a 2 km east-west road: vertices are 1 km away
+    lat, lng = common.offset_point(30.0, 31.01, 100, 0)
+    d = osm.dist_to_line_m(lat, lng, [[30.0, 31.0], [30.0, 31.02]])
+    assert 95 < d < 105

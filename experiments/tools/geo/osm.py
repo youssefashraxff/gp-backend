@@ -8,7 +8,10 @@ a timeout or a stale copy.
 
 from __future__ import annotations
 
+import math
+import re
 from collections import Counter
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -25,6 +28,8 @@ from experiments.tools.geo.common import (
 
 MAJOR = "motorway|trunk|primary|secondary|tertiary"
 MAJOR_SET = set(MAJOR.split("|")) | {f"{c}_link" for c in MAJOR.split("|")}
+MAJOR_RE = re.compile(rf"^({MAJOR})(_link)?$")
+LOCAL = "local"  # endpoint value meaning: answer from the local cache (osm_data.py)
 
 
 def overpass_query(kind: str, lat: float, lng: float, radius: int) -> str:
@@ -67,7 +72,169 @@ def overpass(endpoint: str) -> Any:
     return fn
 
 
+# ---------------------------------------------------------------------------------------
+# Local answers (osm v3): the same questions, from the cache osm_data.py builds, returned in
+# Overpass's JSON shape so the scoring below works unchanged.
+# ---------------------------------------------------------------------------------------
+
+
+def _xy(lat0: float, lat: float, lng: float) -> tuple[float, float]:
+    """Metres east/north of (lat0, 0): flat-earth projection, fine within a few km."""
+    k = 111_320.0
+    return lng * k * math.cos(math.radians(lat0)), lat * k
+
+
+def dist_to_line_m(lat: float, lng: float, coords: list[list[float]]) -> float:
+    """Shortest distance from a point to a polyline (segments, not just vertices)."""
+    px, py = _xy(lat, lat, lng)
+    best = math.inf
+    pts = [_xy(lat, c[0], c[1]) for c in coords]
+    if len(pts) == 1:
+        return math.hypot(pts[0][0] - px, pts[0][1] - py)
+    for (ax, ay), (bx, by) in zip(pts, pts[1:], strict=False):
+        dx, dy = bx - ax, by - ay
+        seg = dx * dx + dy * dy
+        t = 0.0 if seg == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / seg))
+        best = min(best, math.hypot(ax + t * dx - px, ay + t * dy - py))
+    return best
+
+
+def point_in_ring(lat: float, lng: float, ring: list[list[float]]) -> bool:
+    """Ray casting: is the point inside this closed ring of [lat, lng]?"""
+    inside = False
+    for (a_lat, a_lng), (b_lat, b_lng) in zip(ring, ring[1:] + ring[:1], strict=False):
+        if (a_lat > lat) != (b_lat > lat):
+            cross = a_lng + (lat - a_lat) / (b_lat - a_lat) * (b_lng - a_lng)
+            if lng < cross:
+                inside = not inside
+    return inside
+
+
+def in_area(lat: float, lng: float, area: dict[str, Any]) -> bool:
+    for r in area["rings"]:
+        if point_in_ring(lat, lng, r["outer"]) and not any(
+            point_in_ring(lat, lng, h) for h in r["inner"]
+        ):
+            return True
+    return False
+
+
+def _near_box(lat: float, lng: float, radius: float) -> list[float]:
+    dlat = radius / 111_320.0
+    dlng = radius / (111_320.0 * math.cos(math.radians(lat)))
+    return [lat - dlat, lng - dlng, lat + dlat, lng + dlng]
+
+
+def _bbox_hit(a: list[float], b: list[float]) -> bool:
+    return not (a[2] < b[0] or a[0] > b[2] or a[3] < b[1] or a[1] > b[3])
+
+
+def _road_bbox(road: dict[str, Any]) -> list[float]:
+    if "bbox" not in road:
+        lats = [c[0] for c in road["coords"]]
+        lngs = [c[1] for c in road["coords"]]
+        road["bbox"] = [min(lats), min(lngs), max(lats), max(lngs)]
+    return road["bbox"]
+
+
+def local_query(cache: dict[str, Any], kind: str, lat: float, lng: float, radius: int) -> list:
+    """The elements Overpass would return for this question, from the local cache."""
+    near = _near_box(lat, lng, radius)
+    if kind in ("roads", "major_roads"):
+        out = []
+        for road in cache["roads"]:
+            if kind == "major_roads" and not MAJOR_RE.match(road["tags"].get("highway", "")):
+                continue
+            if (
+                _bbox_hit(_road_bbox(road), near)
+                and dist_to_line_m(lat, lng, road["coords"]) <= radius
+            ):
+                out.append(
+                    {
+                        "type": "way",
+                        "id": road["id"],
+                        "tags": road["tags"],
+                        "timestamp": road["ts"],
+                        "geometry": [{"lat": c[0], "lon": c[1]} for c in road["coords"]],
+                    }
+                )
+        return out
+    if kind == "landuse":
+        out = []
+        for area in cache["areas"]:
+            if "landuse" not in area["tags"] or not _bbox_hit(area["bbox"], near):
+                continue
+            close = in_area(lat, lng, area) or any(
+                dist_to_line_m(lat, lng, r["outer"]) <= radius for r in area["rings"]
+            )
+            if close:
+                b = area["bbox"]
+                out.append(
+                    {
+                        "type": "area",
+                        "id": area["id"],
+                        "tags": area["tags"],
+                        "timestamp": area["ts"],
+                        "center": {"lat": (b[0] + b[2]) / 2, "lon": (b[1] + b[3]) / 2},
+                    }
+                )
+        return out
+    if kind == "pin_area":
+        return [
+            {"type": "area", "id": a["id"], "tags": a["tags"]}
+            for a in cache["areas"]
+            if in_area(lat, lng, a)
+        ]
+    if kind == "buildings":
+        total = sum(
+            1
+            for b in cache["buildings"]
+            if near[0] <= b[0] <= near[2]
+            and near[1] <= b[1] <= near[3]
+            and haversine_m(lat, lng, b[0], b[1]) <= radius
+        )
+        return [{"type": "count", "tags": {"total": str(total)}}]
+    if kind == "pois":
+        return [
+            {
+                "type": "node",
+                "id": poi["id"],
+                "tags": poi["tags"],
+                "lat": poi["lat"],
+                "lon": poi["lng"],
+                "timestamp": poi["ts"],
+            }
+            for poi in cache["pois"]
+            if near[0] <= poi["lat"] <= near[2]
+            and near[1] <= poi["lng"] <= near[3]
+            and haversine_m(lat, lng, poi["lat"], poi["lng"]) <= radius
+        ]
+    raise ValueError(f"Unknown OSM case kind {kind!r}")
+
+
+def local(cache_file: Path) -> Any:
+    def fn(p: dict[str, Any]) -> tuple[Any, int]:
+        from experiments.tools.geo.osm_data import load_cache
+
+        cache = load_cache(cache_file)
+        elements = local_query(cache, p["kind"], p["lat"], p["lng"], p["radius"])
+        raw = {
+            "osm3s": {
+                "timestamp_osm_base": cache["meta"]["osm_data_timestamp"],
+                "source": cache["meta"]["source_file"],
+            },
+            "elements": elements,
+        }
+        if p["kind"] == "buildings":
+            return raw, int(elements[0]["tags"]["total"])
+        return raw, len(elements)
+
+    return fn
+
+
 def build_calls(site: dict[str, Any], cases: dict[str, Any], keys: Keys) -> list[Call]:
+    from experiments.tools.geo.osm_data import cache_path
+
     calls: list[Call] = []
     lat, lng = site["lat"], site["lng"]
     for name, endpoint in cases["endpoints"].items():
@@ -82,7 +249,8 @@ def build_calls(site: dict[str, Any], cases: dict[str, Any], keys: Keys) -> list
                 "query": overpass_query(c["kind"], lat, lng, radius),
             }
             meta = {"kind": c["kind"], "radius": radius}
-            calls.append(Call("osm", name, case, params, overpass(endpoint), meta))
+            fn = local(cache_path(cases["version"])) if endpoint == LOCAL else overpass(endpoint)
+            calls.append(Call("osm", name, case, params, fn, meta))
     return calls
 
 
@@ -93,14 +261,6 @@ def followup_calls(results: list[dict[str, Any]], cases: dict[str, Any], keys: K
 # ---------------------------------------------------------------------------------------
 # Scoring
 # ---------------------------------------------------------------------------------------
-
-
-def nearest_point_m(lat: float, lng: float, geometry: list[dict[str, float]]) -> float | None:
-    """Distance from the pin to the closest vertex of a way (vertices are dense enough on
-    OSM roads for this to be within a few tens of metres)."""
-    if not geometry:
-        return None
-    return min(haversine_m(lat, lng, g["lat"], g["lon"]) for g in geometry)
 
 
 def score_file(payload: dict[str, Any]) -> dict[str, Any]:
@@ -123,7 +283,12 @@ def score_file(payload: dict[str, Any]) -> dict[str, Any]:
             tags = e.get("tags") or {}
             if tags.get("highway") not in MAJOR_SET:
                 continue
-            d = nearest_point_m(p["lat"], p["lng"], e.get("geometry") or [])
+            geom = e.get("geometry") or []
+            d = (
+                dist_to_line_m(p["lat"], p["lng"], [[g["lat"], g["lon"]] for g in geom])
+                if geom
+                else None
+            )
             if d is not None and (best is None or d < best[0]):
                 label = tags.get("name:en") or tags.get("name") or tags.get("ref") or "(unnamed)"
                 best = (d, tags["highway"], label)

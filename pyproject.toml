@@ -23,6 +23,8 @@ dev = [
   "pyright>=1.1.380",
   # Experiments only (experiments/tools/web_search); production gets its client in plan A3.
   "tavily-python>=0.7",
+  # Experiments only (experiments/tools/geo osm v3): reads OpenStreetMap .osm.pbf files.
+  "osmium>=4.0",
   # Pinned so the CI schema check always produces identical output.
   "datamodel-code-generator==0.87.0",
 ]
