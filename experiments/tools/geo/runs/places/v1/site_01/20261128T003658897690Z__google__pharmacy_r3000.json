@@ -1,0 +1,27 @@
+{
+  "tool": "places",
+  "provider": "google",
+  "case": "pharmacy_r3000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 3000,
+    "types": [
+      "pharmacy",
+      "drugstore"
+    ]
+  },
+  "meta": {
+    "category": "pharmacy",
+    "radius": 3000
+  },
+  "status": "empty",
+  "n_items": 0,
+  "error": "",
+  "seconds": 0.237,
+  "raw": {},
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:36:58.897491+00:00"
+}

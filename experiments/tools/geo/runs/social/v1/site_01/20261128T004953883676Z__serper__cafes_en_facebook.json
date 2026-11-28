@@ -1,0 +1,115 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_en_facebook",
+  "params": {
+    "q": "New Obour City cafe (site:facebook.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_en",
+    "variant": "facebook",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 6.255,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City cafe (site:facebook.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "Do Cafe Now Open in Al Obour City: Coffee, Waffles & Crepes",
+        "link": "https://www.facebook.com/61593168855510/videos/do-cafedo-your-day-right-coffee-foryou-obourcity-obour-fyp/2119941048731044/",
+        "displayedLink": "https://www.facebook.com › ... › Do Café › Videos",
+        "snippet": "This promotional video announces the new opening hours for O2 Cafe, stating it now opens at 9:00 AM instead of being closed at noon as previously thought. The ...",
+        "position": 1
+      },
+      {
+        "title": "Neferdidi Now Open at Golf City Mall Obour City",
+        "link": "https://www.facebook.com/GolfCityMall/videos/your-coffee-break-just-got-better-on-the-go-or-taking-a-moment-to-unwind-neferdi/1134761562286609/",
+        "displayedLink": "10+ reactions  ·  1 month ago",
+        "snippet": "The tour showcases the cafe's amenities, including a coffee bar, a seating area with a fireplace, and cozy seating areas. The overall atmosphere ...",
+        "date": "1 month ago",
+        "position": 2
+      },
+      {
+        "title": "360 Cafe at C3 Mall Obour City: Good Vibes and Great ...",
+        "link": "https://www.facebook.com/360cafe.eg/videos/good-vibes-great-coffee-and-your-kind-of-atmosphere-welcome-to-360-caf%C3%A9-were-wai/627120827094287/",
+        "displayedLink": "40+ reactions  ·  12 months ago",
+        "snippet": "Good vibes, great coffee, and your kind of atmosphere. Welcome to 360 Café ☕ We're waiting for you at C3 Mall – Obour City!",
+        "date": "12 months ago",
+        "position": 3
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAESzgEBxCJF19tUU9J4i_HFsp4edzVgZ1MfXVBY9RtgXNUx7v1T-f-FmzoVH5tV53zg5MR1K7dGwuB5OaRO2SrCitTcUiOlsAaG7scVgWtV5Q-G_PG1eA43sBefzCnh1cMW0MeSvaSyOp3GcPjCwfScgbvhrGyC2gfEKYyk6hWN0JVzYSw_rwYZCfP28LCLQSCXdDTMdPW4-55vDEwFIk5n0_1D3el-QFmV8DSIER3Pw2wCVaHLsPD6BMWiXRGmKQGnmdTYcqCDdU0AUlUhrqDFdg&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "2 reactions  ·  1 day ago",
+        "snippet": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo Obour City. Good drinks, sweet bites, and beautiful moments. That's the NOVA experience!",
+        "date": "1 day ago",
+        "position": 4
+      },
+      {
+        "title": "Tondi Cafe Mango Drink Challenge in Obour City, Cairo",
+        "link": "https://www.google.com/goto?url=CAESwQEBxCJF1wpSNwIMk49-ZoskSHsEc5aVuCWuRe9fUb37qUAHnXwkFaO3N9vY37Te9F03GSIWiGkvIvsPs8Yry8H00G6I6mpmL6Ut9rpQiBkTUut5w5whme5Xa9I12SieK1W3PEvK7GHTFEQtMDx8EppNNZTkR4nEwE5OnGQE2jloc8l6AvZnycfa0HjLXbwRDrfbk7Q6JQZxMlCgEz32eo1FJ5unutMTSiIYJVZv7ho-2zYIpuWCBN5ldfLEvGySkkq6&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "5 reactions  ·  1 month ago",
+        "snippet": "Tondi Café, a local cafe located in Obourne City. and a pastries, area, counter, and a breakfast buffet.",
+        "date": "1 month ago",
+        "position": 5
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee Opening Soon in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAESzgEBxCJF13BW8eFPRRGXWLhm7va5bq_cPUSrwRx2TkBCl7v_cIo3gb8xiPxzCoM3NtlbXJgAm4b1vVFXybt-M2SlW6_apFuGl4n42PGp4ZGPsQ9Nk7gUzwthz_liAmGdznBHWjk_YqalGcGX3wKTot3nPNdTr3b4QdAZBDmiPUIYq6sU4ffiYjzohC3uWU7yxgoCoQvMGtlUeXJ0j3zpRs9ZCR2YV-F4903jZVVjIcX6moFS1S7V4ctcSOcQlF8I_jdJuRrUUFoMl49iqE1XWQ&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "10+ reactions  ·  1 week ago",
+        "snippet": "Cafe Nova, located in New Cairo and Obour City. and your favorite coffee waiting for you! Open at 7AM for Coworking & Coffee",
+        "date": "1 week ago",
+        "position": 6
+      },
+      {
+        "title": "Le Doux Dessert & More Opens in Obour City with 50% Off ...",
+        "link": "https://www.google.com/goto?url=CAESywEBxCJF15qaLJTgeEy4-vtByH4Uhn6I0Mmpga6T0YW3dvWjzoChqoTOQM7HSWbUp4UHuUTlK7i0xeKwbT8Kj1Wkb1I3HTb3uWsOIf9yQtw9AeXxIdRahl_eXlvH6blZeBUkgrbEtoLfaS9-vta7IV7kDBju-dFcvvF1XsNWJdclGyB1KwyMlUpykiqkJKc9u3ZCcX8O0W4U02BM1OyNVjMWLuwakasBAIBMH1wQ6kEh--nclPgvLgH8YgiEEoYt4q7UNkA0C8VTOeTY-Q&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "60+ reactions  ·  11 months ago",
+        "snippet": "Obour City just got sweeter with the opening of our newest branch, Le Doux The perfect way to wrap up 2025 and welcome a brand new year.",
+        "date": "11 months ago",
+        "position": 7
+      },
+      {
+        "title": "Nova Cafe Specialty Coffee and Sweet Bites in New Cairo ...",
+        "link": "https://www.google.com/goto?url=CAES1wEBxCJF1w0cUkNjNDf_tfCwIiR7kyItNqAmbYsHIDz3e1lGxbCElfmFQRNUHyms8857g3cNOvLk5nv1ul1fc0liwe-fmDf7P10eUdcTcmXddIxmZB7G73fF9GhrH_A6D1rEg4TXYbzAb1IzKCEd5PD8ytecRP7kEZqxq-V7KHp_4ruU1fviMTwUYwGFbwGAAt-JnBjIDpapDqMweZ2J8EORWfG1_9dboXjWSZlQ7YLK06T4re8AKd3W_Fe4EPTxMOp22M82jq609h86ADrT6lW-HHWX83cf2w&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "2 reactions  ·  1 day ago",
+        "snippet": "Good drinks, sweet bites, and beautiful moments. ☕️ That's the NOVA experience! #CafeNova #MoreThanCoffee #goodvibes #obour #new_cairo.",
+        "date": "1 day ago",
+        "position": 8
+      },
+      {
+        "title": "The Tree Cafe at Avenue City Walk Cairo: Calm Dining & ...",
+        "link": "https://www.google.com/goto?url=CAES0wEBxCJF17PVhU4jzzd0AYew7PAH1QAvv2F9Mnup-6m1OaWHhIj-_ROfHLolsw2WE5r2xKsPgzs8eNEEewalSvmPmKPWU8KcTAw3bs8ncoINpFmE1l-QAwmRQancDRczz5GnFxpbzPG_x4vh_BgYvfutusZ3PHmjTCzgdaVrdsO6B07vfxoOdkLPdT05_5cLP8mK6j6N88e5RXuD706FLQH3aQRWGssNcIsdJ-eNKuvp2vdMeJVA5GkUUeyawgOxP3zR-PcgS10JGbBa3gylyKtr02Sz&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "2 reactions  ·  1 year ago",
+        "snippet": "The Tree Café, a cafe located on Avenue City Walk in Al Obour, Cairo. featuring an outdoor seating area, a bar with various drinks and a live ...",
+        "date": "1 year ago",
+        "position": 9
+      },
+      {
+        "title": "Qahwet Oraby Soft Opening at UNI MALL Obour City",
+        "link": "https://www.google.com/goto?url=CAESjAIBxCJF1zEGj32qR2qJzMFM3okKAhLJPxK1svmM3PxCJBpX9Bn0UYiaqGtuU2tZ-6ffkaFhdji724hpKTk2hdMtOFSj6trctMfOq00DfpbyGUr-OL0i7N4KmfIqFpegWHvXU_hmZs5TwsNDT2qACBkr-FyZx20cF8OV2kK8DNGenFSlDL_pF9ZzRS1aiw7iI3W0lW2j5de0OBydxMo80bv1kAkygWlhxtYYmg9MrbWG9Y0YDFv68B0ZNv175h7GlfZrOGc0o-o4dPFUU0hFv9VEHJk4VjxwCoPHzpfQJjJYEvgHiWfNzQ6qJnD98vOnO8gJhgGukDTyoD8XAxkpZ-VICHtHJa6GS2Rh1kjO&gsessionid=j6u4jT73EjzG4bl1vFq_nqN1gptHxIdoSYDBnsNktvwqGRo4HfAQww",
+        "displayedLink": "9 reactions  ·  4 weeks ago",
+        "snippet": "This video showcases the soft opening of Uni Mall, a new restaurant located in Obour City, Egypt. It features a tour of the establishment's ...",
+        "date": "4 weeks ago",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:49:53.883458+00:00"
+}

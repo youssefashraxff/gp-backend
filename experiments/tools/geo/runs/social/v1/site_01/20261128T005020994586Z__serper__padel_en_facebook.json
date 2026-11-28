@@ -1,0 +1,112 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_en_facebook",
+  "params": {
+    "q": "New Obour City padel (site:facebook.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_en",
+    "variant": "facebook",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.01,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City padel (site:facebook.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "and the padel court is no exception. Whether it's a",
+        "link": "https://www.facebook.com/PalmierDevelopments/videos/an-active-lifestyle-right-where-you-belong-at-vert-every-detail-is-designed-to-s/1672563920415646/",
+        "displayedLink": "7 reactions  ·  7 months ago",
+        "snippet": "the \"padel court,\" a central outdoor space for active lifestyle. call 16831 for more information. located in New Obour City, Egypt.",
+        "date": "7 months ago",
+        "position": 1
+      },
+      {
+        "title": "Fit Punch Padel Event: Next Stop The Final in Obour City",
+        "link": "https://www.facebook.com/FitPunchEgypt/videos/next-stop-the-final-stay-tuned-fitpunch-padelevent-morethanagym/1604080791189538/",
+        "displayedLink": "https://www.facebook.com › ... › Fit Punch › Videos",
+        "snippet": "This promotional video announces the opening of The Court Padel Club, a new sports facility. It showcases the club's blue padel courts through action shots ...",
+        "position": 2
+      },
+      {
+        "title": "Padel Mondo | Cairo",
+        "link": "https://www.facebook.com/PadelMondoEg/",
+        "displayedLink": "5.3K+ followers",
+        "snippet": "Padel Mondo, Cairo. Always open Road 10 , Obour city , 5 min from Carrefour obour, Cairo, Egypt … +20 10 04559911 seifelkhayat@gmail.com",
+        "rating": 5,
+        "ratingCount": 1,
+        "position": 3
+      },
+      {
+        "title": "V-Padel at Hub Mall El Obour - Sports",
+        "link": "https://www.google.com/goto?url=CAESygEBxCJF1-C5YBCn5I0n1SEA5Aljsi6I6HHGSzUEKb8pa5t1I__ud_awhTX0qtkr9-FH83r7i9jgItSgRnSpwDLs71E2iah0XAubVc47Q5aZlaOq17bycNVLn-O41jQb7e5M9neqTW4-D-gsKzy9eYoby-04maliLm2ppakOJJy8bqorUjVCrDT5p-xPo13JU-u8IYnUFTtI50w-FWVtmc-mwPBBqdKOvOAieHfoth8O6eUHC49QrpbixTa6rqwmdxJAhfsEwLaBCxRQ&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "4 reactions  ·  2 years ago",
+        "snippet": "The host, El Shazly, announces a special limited-time offer of 100 EGP per hour for morning court rentals. He highlights the facility's features ...",
+        "date": "2 years ago",
+        "position": 4
+      },
+      {
+        "title": "Padel Mondo Academy in obour city We are glad ...",
+        "link": "https://www.google.com/goto?url=CAESygEBxCJF14nqFBrl8nqqomqz5pr4qPvPsBzBgr_mVVVc1roOVgXnFCzbFXe3CSfvqUuY7oazUGTrMZfySkcVBdwS8uNu6V_9e5j_vT28Vs97N9fWkNhHClqw3cmBH3juQLgr-oc718pGFi-8dpWXXx0aEb3OFWzUJi-ZJBtYmttiDDYl2q2jBZ5VcoA8oCrkhJc4Rbtso3gtE8Fgd04M9q5m4JupKUsImnX56OIQSwEp7uOfwUDpqBUNvu0HvhSzOMfBeGo6yTF6Vus8&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "1 reaction  ·  4 years ago",
+        "snippet": "Padel Mondo Academy in obour city … 8 sessions per month (1 hour each) Available time slots: Mondays & Wednesdays 8 pm - 12 am 8,000 EGP per ...",
+        "date": "4 years ago",
+        "position": 5
+      },
+      {
+        "title": "Do you want to play padel? padel Mondo Academy close to the ...",
+        "link": "https://www.google.com/goto?url=CAESygEBxCJF1_4T-qgJPOq3NM9pf0BjZSJiG3gReNiVvO0n7__n8qRfUFE3063XyxThcauYVdDvDPcUbJZavphFEjNWDuS-1-htQcZJzEZ_WbHpxP6tAPOmY7es7KIHomZzK9pQjJXxNJJjxt9Jj_VdKDEnN_RFPEa8A1D53LV-s-qANODAF10Gz7kO6dmotz3cLpIIYcDre9XcBMBwVsXp6D_GqhPpbpnrAYnEIfYiMyx9EmvbLXjKqeNPn6cUsCUpAlSWjXAMY8nqYtRd&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "https://www.facebook.com › PadelMondoEg › posts",
+        "snippet": "Do you want to play padel? padel Mondo Academy close to the assembly - Rehab - New Cairo - Nasr City - Heliopolis - Obour - Madinaty Book your date and play ...",
+        "position": 6
+      },
+      {
+        "title": "01147399450 📌 El obour city - hub mall",
+        "link": "https://www.google.com/goto?url=CAESyQEBxCJF10Str8whySD2Jqtu1FbbjVGCp_WExGDZdhIRdkdHKeCGL9QswST24AtW0P4thytV1fEJmlrjcfPf7jSYn4CN7sfl5VdfynCPVDbmx4f5_y65z3W295qdVwgKl_PUKINAxl6UVi_O1-aIaWYIzM6ziHEECPy-3BcOWV_BArzpxT6g4DXwti78pZ54SHZNgMSD8hr0SZbm2dBCfv40avrxXsvQNvDaQQMbFtl6xGDC4U-LBgsdEjsc3ofkuqLbWY5_MYy5crk&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "2 years ago",
+        "snippet": "El obour city - hub mall. Experience with Luxury. Location: Splash Park. Call: 08133842922 … bowling, billiards, arcade games, Call ☎️ 4042 0444 ...",
+        "position": 7
+      },
+      {
+        "title": "Level up your game and join SH Padel Academy – Nasr ...",
+        "link": "https://www.google.com/goto?url=CAES1AEBxCJF12L2jPRB8k_MBfpsHUKHdb7HDsTjckydDukQ4R8gVqC-0vGM-EX4iV7iZExTw61pljNupUYy9r2oHOT_z8NsCuI2ja1YCjczmgWg_36WXXUwYbDRoO9OLj1wboTOI3gNFY5i-vOLLZp6gw_4YGJ-oEbNGBTAPOck8ymx3fUiG925xIfQLLk_c476cbFXr2zBFPL2rEaFr8KYnQceNM_h3BvtrZHmJM0sIGKb8kdPamk409zehPi7Qpbgi0jQukxErnAjVG84m_ccqgSXQg7fpA&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "4 reactions  ·  2 months ago",
+        "snippet": "Contact us today to enroll in our academy. for more info contact us : 01006883137 01011085173 Our branches : Nasr city Oro plaza New ...",
+        "date": "2 months ago",
+        "position": 8
+      },
+      {
+        "title": "Punch Gym Tournament Final: 1st Place Cash-Back Prize in ...",
+        "link": "https://www.google.com/goto?url=CAEShgEBxCJF1-JgWhN5-94yM9EFyK0OeEQDVFaTTN6RAy6peVmXC6lqtPksnWry2QdvSTwe19lC_p58nSDJI1ovkJ_FMQZ7nWPTtzr6IGsyi1PnzAr1NUe5yoXcGbZRafKgIs2lQ1bdfWz6VZTTT4Bw-A9psBGSdUpPD-UrtDgvowcQH35Gin5lRw&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "https://www.facebook.com › ... › Fit Punch › Videos",
+        "snippet": "This video captures a highlight from a Padel tournament match held at Padel Plaza. It shows a player scoring a point during a point play, followed by their ...",
+        "position": 9
+      },
+      {
+        "title": "SH Club Padel Courts & Sports Facilities at 6th of October ...",
+        "link": "https://www.google.com/goto?url=CAES1AEBxCJF1zjR0BHXtGJ4qymwP9QhK0h4PWuOSY4zrsxDmjM3_OvYa2CDQO_CmCCnCK7gNWz1yxRW_wpKMp8arr9wVfj5vY_d-Dxyhk0zXjYKaPGeILQre7qERGXr8ssIufGgoJSFBzGoW5TUPq4NYk_w4K2aQLwYS4KTRpdvJm3TERzs9YfC7JLM9_j2Upw9_KD9i8AP324YjLHLH9Tf_ADYTD1wDWpOxfhp4lwMo1Rbz2XsDZmutb8TafHO6ZRJJJm5cYjwQIbEiHSgvTEnu2h_2992sw&gsessionid=QcAC5RFHBOUi5c51oCH3WHOjKmkYG1LS-DsCr2sU8znL7X4yDlhxrQ",
+        "displayedLink": "2 weeks ago",
+        "snippet": "We are delighted to announce our new Padel tournament on Friday, 17th March, which will be held @ Nasr City Sports Club *Soft opening suprise*No ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:20.994332+00:00"
+}

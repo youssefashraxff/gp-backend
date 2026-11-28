@@ -1,0 +1,24 @@
+{
+  "tool": "places",
+  "provider": "foursquare",
+  "case": "restaurant_r1000",
+  "params": {
+    "lat": 30.32376,
+    "lng": 31.5566816,
+    "radius": 1000,
+    "query": "restaurant"
+  },
+  "meta": {
+    "category": "restaurant",
+    "radius": 1000
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "ConnectError: [Errno 8] nodename nor servname provided, or not known",
+  "seconds": 0.02,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:34:52.040864+00:00"
+}

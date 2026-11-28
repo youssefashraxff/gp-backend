@@ -1,0 +1,24 @@
+timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,run_file
+2026-11-28T00:37:16.319837+00:00,site_01,v1,osm,overpass_main,pin_area,error,0,0.485,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003716320428Z__overpass_main__pin_area.json
+2026-11-28T00:37:18.377718+00:00,site_01,v1,osm,overpass_main,roads_r1000,error,0,1.052,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003718377862Z__overpass_main__roads_r1000.json
+2026-11-28T00:37:20.119484+00:00,site_01,v1,osm,overpass_main,major_roads_r3000,error,0,0.736,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003720119621Z__overpass_main__major_roads_r3000.json
+2026-11-28T00:37:22.031159+00:00,site_01,v1,osm,overpass_main,landuse_r1000,error,0,0.906,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003722031277Z__overpass_main__landuse_r1000.json
+2026-11-28T00:37:23.509659+00:00,site_01,v1,osm,overpass_main,buildings_r500,error,0,0.475,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003723509719Z__overpass_main__buildings_r500.json
+2026-11-28T00:37:25.131124+00:00,site_01,v1,osm,overpass_main,buildings_r1000,error,0,0.616,"HTTPStatusError: Client error '406 Not Acceptable' for url 'https://overpass-api.de/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",20261128T003725131224Z__overpass_main__buildings_r1000.json
+2026-11-28T00:37:26.329105+00:00,site_01,v1,osm,overpass_main,pois_r1000,error,0,0.194,ConnectError: [Errno 61] Connection refused,20261128T003726329174Z__overpass_main__pois_r1000.json
+2026-11-28T00:37:27.553436+00:00,site_01,v1,osm,overpass_main,pois_r3000,error,0,0.219,ConnectError: [Errno 61] Connection refused,20261128T003727553553Z__overpass_main__pois_r3000.json
+2026-11-28T00:38:38.935063+00:00,site_01,v1,osm,overpass_kumi,pin_area,error,0,70.377,ReadTimeout: The read operation timed out,20261128T003838935976Z__overpass_kumi__pin_area.json
+2026-11-28T00:39:50.194179+00:00,site_01,v1,osm,overpass_kumi,roads_r1000,error,0,70.251,ReadTimeout: The read operation timed out,20261128T003950194834Z__overpass_kumi__roads_r1000.json
+2026-11-28T00:41:01.407413+00:00,site_01,v1,osm,overpass_kumi,major_roads_r3000,error,0,70.209,ReadTimeout: The read operation timed out,20261128T004101408130Z__overpass_kumi__major_roads_r3000.json
+2026-11-28T00:42:12.602678+00:00,site_01,v1,osm,overpass_kumi,landuse_r1000,error,0,70.19,ReadTimeout: The read operation timed out,20261128T004212603112Z__overpass_kumi__landuse_r1000.json
+2026-11-28T00:43:23.827133+00:00,site_01,v1,osm,overpass_kumi,buildings_r500,error,0,70.221,ReadTimeout: The read operation timed out,20261128T004323827366Z__overpass_kumi__buildings_r500.json
+2026-11-28T00:44:35.037053+00:00,site_01,v1,osm,overpass_kumi,buildings_r1000,error,0,70.203,ReadTimeout: The read operation timed out,20261128T004435037382Z__overpass_kumi__buildings_r1000.json
+2026-11-28T00:45:46.216882+00:00,site_01,v1,osm,overpass_kumi,pois_r1000,error,0,70.173,ReadTimeout: The read operation timed out,20261128T004546217353Z__overpass_kumi__pois_r1000.json
+2026-11-28T00:46:19.085537+00:00,site_01,v1,osm,overpass_kumi,pois_r3000,error,0,31.865,"HTTPStatusError: Server error '504 Gateway Timeout' for url 'https://overpass.kumi.systems/api/interpreter'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504",20261128T004619085829Z__overpass_kumi__pois_r3000.json

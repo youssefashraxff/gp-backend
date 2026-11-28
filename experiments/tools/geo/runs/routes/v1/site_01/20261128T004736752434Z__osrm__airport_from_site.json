@@ -1,0 +1,68 @@
+{
+  "tool": "routes",
+  "provider": "osrm",
+  "case": "airport_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.122794199999998,
+      "lng": 31.402342899999997
+    }
+  },
+  "meta": {
+    "landmark": "airport",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.241,
+  "raw": {
+    "code": "Ok",
+    "routes": [
+      {
+        "legs": [
+          {
+            "steps": [],
+            "weight": 2417.2,
+            "summary": "",
+            "duration": 2417.2,
+            "distance": 43106.1
+          }
+        ],
+        "weight_name": "routability",
+        "weight": 2417.2,
+        "duration": 2417.2,
+        "distance": 43106.1
+      }
+    ],
+    "waypoints": [
+      {
+        "hint": "CFm2if___38CAAAAFwAAACMAAAAkAwAACNLOQOtjPkJiEbRCj-btRAIAAAAXAAAAIwAAACQDAADKHgAA-4nhAXC2zgFKhOEBMLTOAQQAvwkAAAAA",
+        "location": [
+          31.558139,
+          30.324336
+        ],
+        "name": "الطريق الدائري الإقليمي",
+        "distance": 153.9838283
+      },
+      {
+        "hint": "mKAOhf___38NAAAAHwAAAAAAAAAAAAAAm3mrQdCY00EAAAAAAAAAAA0AAAAfAAAAAAAAAAAAAADKHgAAZynfAS6jywFnKd8BKqPLAQAA3wUAAAAA",
+        "location": [
+          31.402343,
+          30.122798
+        ],
+        "name": "",
+        "distance": 0.4434182074
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:36.752385+00:00"
+}

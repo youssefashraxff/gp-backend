@@ -1,0 +1,116 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_en_tiktok",
+  "params": {
+    "q": "New Obour City cafe (site:tiktok.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_en",
+    "variant": "tiktok",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 6.903,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City cafe (site:tiktok.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "Cafe Nova Obour City — New Cairo Cozy Café Guide",
+        "link": "https://www.tiktok.com/@cafe.nova0/video/7637135825553100052",
+        "displayedLink": "3.3K+ views  ·  6 months ago",
+        "snippet": "Cafe Nova sits in Obour City with a New Cairo vibe that draws locals and visitors seeking a relaxed coffee and casual hangout.",
+        "date": "6 months ago",
+        "position": 1
+      },
+      {
+        "title": "Cafe Nova - Your New Favorite Coffee Spot in New Cairo!",
+        "link": "https://www.tiktok.com/@cafe.nova0/video/7709773163026042130",
+        "displayedLink": "1.6K+ views  ·  1 week ago",
+        "snippet": "Nova Obour: Your New Favorite Coffee Spot in New Cairo! NOVA: specialty coffee, a warm setting, Official opening: Friday, August 28",
+        "date": "1 week ago",
+        "position": 2
+      },
+      {
+        "title": "Vertex Coffee at Uni Mall Obour City: A New Spot to Explore",
+        "link": "https://www.tiktok.com/@spot_by_m_/video/7702924438659992833",
+        "displayedLink": "3.8K+ views  ·  3 weeks ago",
+        "snippet": "This spot is conveniently located within the popular Uni Mall, Its location inside Uni Mall means you can easily combine a coffee break with ...",
+        "date": "3 weeks ago",
+        "position": 3
+      },
+      {
+        "title": "Tondi Cafe in Obour City - restaurant",
+        "link": "https://www.google.com/goto?url=CAESdgHEIkXX7nOFUVXUIIjiqNXAYizeP0yIUNC5UrcWf7zJlJ7TgR0PwJ_3HvY7q-unG1t9D5dXa3LALuMbykPchCfLs9DixIQaoldc89FLsTH1i0j87U_b0GcBZ-gVgjbovQylQ97-y9WyYsM2621UD90WBVvgwMo&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "760+ views  ·  6 months ago",
+        "snippet": "“Tondi Cafe is identified as a cafe and restaurant in Obour City.”. Contact us now:01207777090",
+        "date": "6 months ago",
+        "position": 4
+      },
+      {
+        "title": "Café Nova Opens in C3 Mall, Obour City",
+        "link": "https://www.google.com/goto?url=CAESeAHEIkXX8dt2359W1Eii1_i3ECMeJuUufclriozsLWc2lYhmfUcu_qINJkthQ5tl38jpdqMDGMJ1wJxu-FObKXQAYLMXeGs7yd-aEyBgJ5vpfevxcvBFngVSMMEcmvTGLf7XSQm0DM7Lmq78Z5KOIopMXi_M1uYexA&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "73.5K+ views  ·  8 months ago",
+        "snippet": "Café Nova has officially opened its doors in the C3 Mall, located in Obour City, providing a fresh dining experience for locals and visitors ...",
+        "date": "8 months ago",
+        "position": 5
+      },
+      {
+        "title": "Where Will Mocha Café Be Located in Obour?",
+        "link": "https://www.google.com/goto?url=CAESeQHEIkXXP89RXlIRBJ3rqEiimVvMNCfF4s7k1w2mbRwI-OmDR9Nw5oPevWM-Jt72yGDg0XPIHHV5y_CsH0uoMvgazlrZqEuPgCPdWGC7tv6pkMc-IZc7G8yZb-VpK-A2sjq1P9CgqwQtJSuiPlMHv6NcLDTQhPDWG6c&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "1.2K+ views  ·  4 months ago",
+        "snippet": "Mocha Café is gaining attention for its anticipated location in Obour City. Located in the bustling area of Obour, the café is expected to ...",
+        "date": "4 months ago",
+        "position": 6
+      },
+      {
+        "title": "Cafe Nova Obour",
+        "link": "https://www.google.com/goto?url=CAESawHEIkXXsgPVnUXeLGdxoDBcggF1DZLfrQyPu6Iszr4hrTozl5ZMpUX3U-NAO0juhfSHpCH7MAIJOXmlGu5OGuWXigx7xGUVUmWezlVMCMyQ8SNu_811F17Uh73FFM04matb760vJh-0xYwv&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "1.3M posts. Discover videos related to Cafe Nova Obour on TikTok. See more videos about Café La Nova Oujda, La Nova Cafe Oujda, 360 Cafe. Nova ...",
+        "date": "Nov 16, 2026",
+        "position": 7
+      },
+      {
+        "title": "Obour City Uni Mall Coffee — espresso, cappuccino ...",
+        "link": "https://www.google.com/goto?url=CAESegHEIkXXBKIevkERwwzgiUd6r9rNQfZ32iWf8z0wXr38tjS0OKROMDs2Vloweqo9iJGXDTrp-BqPUxDkIQ8cO5VBvxlM_LS1LhfscZCp2NagBdvscsPmaevSjfEBUNGRqs71AV28hllKhOeN-BircxrFeVMVYRXh-IdA&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "24K+ views  ·  1 month ago",
+        "snippet": "Uni Mall beside B.TECH is a convenient mall-side café offering speciality coffee including espresso, cappuccino and Spanish latte.",
+        "date": "1 month ago",
+        "position": 8
+      },
+      {
+        "title": "360 Cafe in Obour",
+        "link": "https://www.google.com/goto?url=CAESbQHEIkXXqgJncB5urhXLQ0go7hn3dgio0wnZlNz9sjdNgmM6C0MLGkT1XZMNmXz1aFeB9Y99dJpSPhSRnoPRGYwBunPFvI5U0lgmyTGO6YwzUwKDmn_th3aIxZ-FOWpJdYwXjm0VzQgNovzDhzM&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "https://www.tiktok.com › Discover",
+        "snippet": "Experience the best of 360 Cafe in Obour! Join us for delightful coffee and cozy vibes. Perfect for coffee lovers! Last updated 2026-11-16.",
+        "date": "Nov 16, 2026",
+        "position": 9
+      },
+      {
+        "title": "Romantic Dinner Spot in El Obour City",
+        "link": "https://www.google.com/goto?url=CAESdwHEIkXXxJI0QOCeRTOmOzQJZNHEmb3nOLGbKJpvZmmkLDHJGZCtxYcKvJO7HzFkIEN-sIdrJzS2wk_7hT_L9S6hXnIHF3we6ENOKLElH-qvJukZBCdZEeOCNtYQl2nMi8QxEzpn2T5aGmli9p39kWvtU1Pc9X5_&gsessionid=ox3Y0D8GZ09HTOaLw6edhlBNk-3aP1S4fblj4Axtz9GLqDJHPlysjQ",
+        "displayedLink": "7.1K+ views  ·  3 weeks ago",
+        "snippet": "126 Likes, TikTok video from Skas (@skasvenue): “A romantic dinner spot in El Obour City that makes you fall in love with the moment.”.",
+        "date": "3 weeks ago",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:11.990892+00:00"
+}

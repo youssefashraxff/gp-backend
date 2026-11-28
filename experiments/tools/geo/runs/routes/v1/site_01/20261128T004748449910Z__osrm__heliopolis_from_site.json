@@ -1,0 +1,68 @@
+{
+  "tool": "routes",
+  "provider": "osrm",
+  "case": "heliopolis_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.0909557,
+      "lng": 31.324386800000003
+    }
+  },
+  "meta": {
+    "landmark": "heliopolis",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "ok",
+  "n_items": 1,
+  "error": "",
+  "seconds": 0.258,
+  "raw": {
+    "code": "Ok",
+    "routes": [
+      {
+        "legs": [
+          {
+            "steps": [],
+            "weight": 2383.7,
+            "summary": "",
+            "duration": 2383.7,
+            "distance": 43695.6
+          }
+        ],
+        "weight_name": "routability",
+        "weight": 2383.7,
+        "duration": 2383.7,
+        "distance": 43695.6
+      }
+    ],
+    "waypoints": [
+      {
+        "hint": "CFm2if___38CAAAAFwAAACMAAAAkAwAACNLOQOtjPkJiEbRCj-btRAIAAAAXAAAAIwAAACQDAADKHgAA-4nhAXC2zgFKhOEBMLTOAQQAvwkAAAAA",
+        "location": [
+          31.558139,
+          30.324336
+        ],
+        "name": "الطريق الدائري الإقليمي",
+        "distance": 153.9838283
+      },
+      {
+        "hint": "8yATgP___38AAAAAAwAAABgAAABBAAAA9MUsP0r9fEAR-hFCznjFQgAAAAADAAAAGAAAAEEAAADKHgAA4_jdAbwmywHj-N0BzCbLARAArwUAAAAA",
+        "location": [
+          31.324387,
+          30.09094
+        ],
+        "name": "شارع الثوره",
+        "distance": 1.773659319
+      }
+    ]
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:48.449865+00:00"
+}

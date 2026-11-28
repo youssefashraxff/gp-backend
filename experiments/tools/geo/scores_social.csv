@@ -1,0 +1,31 @@
+timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,run_file,query_id,variant,lang,n_results,n_mentions_place,n_dated,n_last_12_months,by_platform
+2026-11-28T00:48:12.009355+00:00,site_01,v1,social,serper,cafes_ar_all,ok,10,4.01,,20261128T004812009988Z__serper__cafes_ar_all.json,cafes_ar,all,ar,10,10,0,0,facebook=3; other=7
+2026-11-28T00:48:16.787393+00:00,site_01,v1,social,serper,cafes_ar_facebook,ok,10,3.772,,20261128T004816787624Z__serper__cafes_ar_facebook.json,cafes_ar,facebook,ar,10,10,0,0,other=10
+2026-11-28T00:48:21.724099+00:00,site_01,v1,social,serper,cafes_ar_instagram,ok,10,3.931,,20261128T004821724307Z__serper__cafes_ar_instagram.json,cafes_ar,instagram,ar,10,10,0,0,other=10
+2026-11-28T00:48:25.792055+00:00,site_01,v1,social,serper,cafes_ar_x,ok,10,3.061,,20261128T004825792363Z__serper__cafes_ar_x.json,cafes_ar,x,ar,10,1,0,0,other=7; x=3
+2026-11-28T00:48:29.146909+00:00,site_01,v1,social,serper,cafes_ar_tiktok,ok,10,2.348,,20261128T004829147127Z__serper__cafes_ar_tiktok.json,cafes_ar,tiktok,ar,10,10,0,0,other=7; tiktok=3
+2026-11-28T00:48:32.064897+00:00,site_01,v1,social,serper,padel_ar_all,ok,10,1.912,,20261128T004832065139Z__serper__padel_ar_all.json,padel_ar,all,ar,10,10,0,0,facebook=1; other=9
+2026-11-28T00:48:36.750621+00:00,site_01,v1,social,serper,padel_ar_facebook,ok,10,3.679,,20261128T004836750937Z__serper__padel_ar_facebook.json,padel_ar,facebook,ar,10,9,0,0,facebook=2; other=8
+2026-11-28T00:48:40.622126+00:00,site_01,v1,social,serper,padel_ar_instagram,ok,10,2.864,,20261128T004840622404Z__serper__padel_ar_instagram.json,padel_ar,instagram,ar,10,7,0,0,instagram=3; other=7
+2026-11-28T00:48:44.530341+00:00,site_01,v1,social,serper,padel_ar_x,ok,10,2.903,,20261128T004844530616Z__serper__padel_ar_x.json,padel_ar,x,ar,10,6,0,0,other=7; x=3
+2026-11-28T00:48:47.739994+00:00,site_01,v1,social,serper,padel_ar_tiktok,ok,10,2.204,,20261128T004847740189Z__serper__padel_ar_tiktok.json,padel_ar,tiktok,ar,10,10,0,0,other=7; tiktok=3
+2026-11-28T00:48:52.660017+00:00,site_01,v1,social,serper,residents_ar_all,ok,10,3.913,,20261128T004852660297Z__serper__residents_ar_all.json,residents_ar,all,ar,10,10,0,0,facebook=3; other=7
+2026-11-28T00:48:57.428343+00:00,site_01,v1,social,serper,residents_ar_facebook,ok,10,3.762,,20261128T004857428574Z__serper__residents_ar_facebook.json,residents_ar,facebook,ar,10,10,0,0,facebook=3; other=7
+2026-11-28T00:49:04.348708+00:00,site_01,v1,social,serper,residents_ar_instagram,ok,10,5.917,,20261128T004904348900Z__serper__residents_ar_instagram.json,residents_ar,instagram,ar,10,9,0,0,instagram=3; other=7
+2026-11-28T00:49:10.752350+00:00,site_01,v1,social,serper,residents_ar_x,ok,10,5.401,,20261128T004910752585Z__serper__residents_ar_x.json,residents_ar,x,ar,10,3,0,0,other=7; x=3
+2026-11-28T00:49:14.971544+00:00,site_01,v1,social,serper,residents_ar_tiktok,ok,10,3.213,,20261128T004914971816Z__serper__residents_ar_tiktok.json,residents_ar,tiktok,ar,10,10,0,0,other=7; tiktok=3
+2026-11-28T00:49:21.301423+00:00,site_01,v1,social,serper,malls_ar_all,ok,10,5.325,,20261128T004921301639Z__serper__malls_ar_all.json,malls_ar,all,ar,10,9,0,0,facebook=2; other=8
+2026-11-28T00:49:24.489355+00:00,site_01,v1,social,serper,malls_ar_facebook,ok,10,2.181,,20261128T004924489573Z__serper__malls_ar_facebook.json,malls_ar,facebook,ar,10,10,0,0,facebook=3; other=7
+2026-11-28T00:49:28.152276+00:00,site_01,v1,social,serper,malls_ar_instagram,ok,10,2.656,,20261128T004928152494Z__serper__malls_ar_instagram.json,malls_ar,instagram,ar,10,9,0,0,instagram=3; other=7
+2026-11-28T00:49:33.438041+00:00,site_01,v1,social,serper,malls_ar_x,ok,10,4.279,,20261128T004933438311Z__serper__malls_ar_x.json,malls_ar,x,ar,10,7,0,0,other=7; x=3
+2026-11-28T00:49:41.217196+00:00,site_01,v1,social,serper,malls_ar_tiktok,ok,10,6.772,,20261128T004941217418Z__serper__malls_ar_tiktok.json,malls_ar,tiktok,ar,10,10,0,0,other=8; tiktok=2
+2026-11-28T00:49:46.622241+00:00,site_01,v1,social,serper,cafes_en_all,ok,10,4.399,,20261128T004946622472Z__serper__cafes_en_all.json,cafes_en,all,en,10,10,9,9,facebook=1; instagram=1; other=7; tiktok=1
+2026-11-28T00:49:53.883458+00:00,site_01,v1,social,serper,cafes_en_facebook,ok,10,6.255,,20261128T004953883676Z__serper__cafes_en_facebook.json,cafes_en,facebook,en,10,10,9,9,facebook=3; other=7
+2026-11-28T00:49:57.486390+00:00,site_01,v1,social,serper,cafes_en_instagram,ok,10,2.596,,20261128T004957486651Z__serper__cafes_en_instagram.json,cafes_en,instagram,en,10,7,9,9,instagram=3; other=7
+2026-11-28T00:50:04.081557+00:00,site_01,v1,social,serper,cafes_en_x,ok,7,5.591,,20261128T005004081801Z__serper__cafes_en_x.json,cafes_en,x,en,7,1,4,3,x=7
+2026-11-28T00:50:11.990892+00:00,site_01,v1,social,serper,cafes_en_tiktok,ok,10,6.903,,20261128T005011991146Z__serper__cafes_en_tiktok.json,cafes_en,tiktok,en,10,10,10,10,other=7; tiktok=3
+2026-11-28T00:50:16.977373+00:00,site_01,v1,social,serper,padel_en_all,ok,10,3.98,,20261128T005016977696Z__serper__padel_en_all.json,padel_en,all,en,10,5,7,4,facebook=1; instagram=2; other=7
+2026-11-28T00:50:20.994332+00:00,site_01,v1,social,serper,padel_en_facebook,ok,10,3.01,,20261128T005020994586Z__serper__padel_en_facebook.json,padel_en,facebook,en,10,7,4,2,facebook=3; other=7
+2026-11-28T00:50:25.931723+00:00,site_01,v1,social,serper,padel_en_instagram,ok,10,3.935,,20261128T005025932000Z__serper__padel_en_instagram.json,padel_en,instagram,en,10,9,6,3,instagram=3; other=7
+2026-11-28T00:50:29.003430+00:00,site_01,v1,social,serper,padel_en_x,empty,0,2.067,,20261128T005029003749Z__serper__padel_en_x.json,padel_en,x,en,0,0,0,0,
+2026-11-28T00:50:33.702100+00:00,site_01,v1,social,serper,padel_en_tiktok,ok,10,3.692,,20261128T005033702398Z__serper__padel_en_tiktok.json,padel_en,tiktok,en,10,6,1,1,other=7; tiktok=3

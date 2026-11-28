@@ -1,0 +1,28 @@
+timestamp,site_id,case_version,tool,provider,case,status,n_items,seconds,error,run_file,category,radius_m,n_places,n_within_radius,n_with_rating,n_with_reviews,median_reviews,n_with_hours,n_closed,nearest_m,median_refreshed_days,names,place_name,n_reviews_returned,newest_review_days,oldest_review_days
+2026-11-28T00:34:07.839225+00:00,site_01,v1,places,google,cafe_r1000,error,0,47.689,ConnectTimeout: _ssl.c:993: The handshake operation timed out,20261128T003407842965Z__google__cafe_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:49.969278+00:00,site_01,v1,places,foursquare,cafe_r1000,error,0,41.117,ConnectTimeout: timed out,20261128T003449971519Z__foursquare__cafe_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:51.014492+00:00,site_01,v1,places,google,restaurant_r1000,error,0,0.032,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003451014577Z__google__restaurant_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:52.040864+00:00,site_01,v1,places,foursquare,restaurant_r1000,error,0,0.02,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003452040938Z__foursquare__restaurant_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:53.055090+00:00,site_01,v1,places,google,pharmacy_r1000,error,0,0.009,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003453055141Z__google__pharmacy_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:54.067498+00:00,site_01,v1,places,foursquare,pharmacy_r1000,error,0,0.007,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003454067536Z__foursquare__pharmacy_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:55.079672+00:00,site_01,v1,places,google,grocery_r1000,error,0,0.009,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003455079729Z__google__grocery_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:56.098522+00:00,site_01,v1,places,foursquare,grocery_r1000,error,0,0.013,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003456098685Z__foursquare__grocery_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:57.129052+00:00,site_01,v1,places,google,sports_r1000,error,0,0.024,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003457129136Z__google__sports_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:34:58.173243+00:00,site_01,v1,places,foursquare,sports_r1000,error,0,0.038,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003458173287Z__foursquare__sports_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:35:44.591871+00:00,site_01,v1,places,google,mall_r1000,error,0,45.412,ConnectTimeout: _ssl.c:993: The handshake operation timed out,20261128T003544594024Z__google__mall_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:36:15.629457+00:00,site_01,v1,places,foursquare,mall_r1000,error,0,30.026,"ConnectError: [Errno 8] nodename nor servname provided, or not known",20261128T003615629939Z__foursquare__mall_r1000.json,,,,,,,,,,,,,,,,
+2026-11-28T00:36:52.069459+00:00,site_01,v1,places,google,cafe_r3000,ok,1,35.432,,20261128T003652069639Z__google__cafe_r3000.json,cafe,3000,1,1,1,1,3.0,0,0,2763,,شعراوي الطريق الدائري الاقليمي,,,,
+2026-11-28T00:36:54.404107+00:00,site_01,v1,places,foursquare,cafe_r3000,empty,0,1.328,,20261128T003654404315Z__foursquare__cafe_r3000.json,cafe,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:36:55.859143+00:00,site_01,v1,places,google,restaurant_r3000,empty,0,0.45,,20261128T003655859282Z__google__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:36:57.659396+00:00,site_01,v1,places,foursquare,restaurant_r3000,empty,0,0.794,,20261128T003657659535Z__foursquare__restaurant_r3000.json,restaurant,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:36:58.897491+00:00,site_01,v1,places,google,pharmacy_r3000,empty,0,0.237,,20261128T003658897690Z__google__pharmacy_r3000.json,pharmacy,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:37:00.808290+00:00,site_01,v1,places,foursquare,pharmacy_r3000,ok,1,0.905,,20261128T003700808534Z__foursquare__pharmacy_r3000.json,pharmacy,3000,1,1,0,0,,0,0,2872,3691.0,مستشفى الغندور,,,,
+2026-11-28T00:37:02.169638+00:00,site_01,v1,places,google,grocery_r3000,ok,2,0.355,,20261128T003702169694Z__google__grocery_r3000.json,grocery,3000,2,2,1,1,1.0,2,0,460,,ماركت أبو علي | ماركت الشهبندر,,,,
+2026-11-28T00:37:03.622189+00:00,site_01,v1,places,foursquare,grocery_r3000,empty,0,0.447,,20261128T003703622370Z__foursquare__grocery_r3000.json,grocery,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:37:05.047208+00:00,site_01,v1,places,google,sports_r3000,empty,0,0.423,,20261128T003705047254Z__google__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:37:06.876812+00:00,site_01,v1,places,foursquare,sports_r3000,empty,0,0.828,,20261128T003706876955Z__foursquare__sports_r3000.json,sports,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:37:08.441376+00:00,site_01,v1,places,google,mall_r3000,ok,1,0.56,,20261128T003708441531Z__google__mall_r3000.json,mall,3000,1,1,1,1,225.0,1,0,2786,,مظلوم فرع بلبيس Mazloum tiles belbeis,,,,
+2026-11-28T00:37:10.308787+00:00,site_01,v1,places,foursquare,mall_r3000,empty,0,0.861,,20261128T003710309051Z__foursquare__mall_r3000.json,mall,3000,0,0,0,0,,0,0,,,,,,,
+2026-11-28T00:37:11.938190+00:00,site_01,v1,places,google,details_1,ok,1,0.621,,20261128T003711938376Z__google__details_1.json,details,,,,,,,,,,,,ماركت أبو علي,1,1519.6,1519.6
+2026-11-28T00:37:13.472312+00:00,site_01,v1,places,google,details_2,ok,3,0.529,,20261128T003713472549Z__google__details_2.json,details,,,,,,,,,,,,شعراوي الطريق الدائري الاقليمي,3,247.6,991.1
+2026-11-28T00:37:14.829059+00:00,site_01,v1,places,google,details_3,ok,5,0.35,,20261128T003714829107Z__google__details_3.json,details,,,,,,,,,,,,مظلوم فرع بلبيس Mazloum tiles belbeis,5,882.5,1984.2

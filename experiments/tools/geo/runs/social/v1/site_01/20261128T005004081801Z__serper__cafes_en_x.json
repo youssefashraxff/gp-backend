@@ -1,0 +1,89 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "cafes_en_x",
+  "params": {
+    "q": "New Obour City cafe (site:x.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "cafes_en",
+    "variant": "x",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 7,
+  "error": "",
+  "seconds": 5.591,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City cafe (site:x.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "City Cafe (@ngcitycafe) / X",
+        "link": "https://x.com/ngcitycafe",
+        "displayedLink": "https://x.com › ngcitycafe",
+        "snippet": "A small town cafe, operated by a big city couple. Located on Hale Avenue in Newman Grove. Serving homemade pies, hand patted burgers, and freshly cut Curly Q's.",
+        "position": 1
+      },
+      {
+        "title": "First Squawk on X: \"BOE'S GREENE: NEED TO HIKE TO GET ON TOP ...",
+        "link": "https://x.com/FirstSquawk/status/2125212418305560836",
+        "displayedLink": "https://x.com › FirstSquawk › status",
+        "snippet": "BOE'S GREENE: NEED TO HIKE TO GET ON TOP OF RISK. 24 Nov 2026 12:58:19.",
+        "position": 2
+      },
+      {
+        "title": "Bleu Blanc Rouge ! on X: \"J’ai tellement de la peine et de ...",
+        "link": "https://x.com/LBleuBlancRouge/status/2111560577659371836",
+        "displayedLink": "https://x.com › LBleuBlancRouge › status",
+        "snippet": "Chahuté, violenté, mis au sol, il s’est relevé et est resté digne face à ces sauvages. La vidéo que j’ai posté de lui cumule plus de 7 millions de vues et a été partagé bien au-delà de nos frontières. Rendez-le encore plus célèbre ! 🫵🏻 #17Octobre.",
+        "date": "Oct 17, 2026",
+        "position": 3
+      },
+      {
+        "title": "Kenneth Walker came in this morning and had \"tight groin ...",
+        "link": "https://x.com/SamMcDowell11/status/2121319694351110387",
+        "displayedLink": "https://x.com › SamMcDowell11 › status",
+        "snippet": "Kenneth Walker came in this morning and had \"tight groin,\" per Andy Reid, so he sat out practice today. Reid: \"We'll see how he feels through this afternoon, with rehab, and through tomorrow.\"",
+        "position": 4
+      },
+      {
+        "title": "Toledo EasyStreet (@EasyStreetCafe) / Posts / X",
+        "link": "https://x.com/EasyStreetCafe",
+        "displayedLink": "https://x.com › EasyStreetCafe",
+        "snippet": "Toledo EasyStreet (@EasyStreetCafe) - Posts - EasyStreet Cafe and Bar Located in historic Downtown Toledo. 822 Washington St | X (formerly Twitter)",
+        "date": "Aug 31, 2009",
+        "position": 5
+      },
+      {
+        "title": "Avi Melamed אבי מלמד افي ميلاميد on X: \"An elite Egyptian ...",
+        "link": "https://x.com/avimelamed/status/2056308763246612840",
+        "displayedLink": "https://x.com › avimelamed › status",
+        "snippet": "An elite Egyptian army unit staged a public drill in Obour City near Cairo, chanting: “Israel is a scarecrow” and “Israel will be trampled under our boots.” tinyurl.com/yerym44j #Israel and #Egypt maintain a peace treaty.",
+        "date": "May 18, 2026",
+        "position": 6
+      },
+      {
+        "title": "𝕋𝕙𝕖 𝔸𝕣𝕔𝕙𝕚𝕧𝕚𝕤𝕥 on X: \"Jensen Huang on the smartest per...",
+        "link": "https://x.com/TheArchivistLC/status/2124685679187939650",
+        "displayedLink": "https://x.com › TheArchivistLC › status",
+        "snippet": "Jensen Huang on the smartest person he’s ever met.",
+        "date": "5 days ago",
+        "position": 7
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:04.081557+00:00"
+}

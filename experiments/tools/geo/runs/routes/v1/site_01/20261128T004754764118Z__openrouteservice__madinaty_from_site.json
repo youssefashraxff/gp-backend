@@ -1,0 +1,29 @@
+{
+  "tool": "routes",
+  "provider": "openrouteservice",
+  "case": "madinaty_from_site",
+  "params": {
+    "origin": {
+      "lat": 30.32376,
+      "lng": 31.5566816
+    },
+    "destination": {
+      "lat": 30.095758500000002,
+      "lng": 31.634766300000003
+    }
+  },
+  "meta": {
+    "landmark": "madinaty",
+    "direction": "from_site",
+    "slot": "no_traffic"
+  },
+  "status": "error",
+  "n_items": 0,
+  "error": "HTTPStatusError: Client error '410 Gone' for url 'https://api.openrouteservice.org/v2/directions/driving-car'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410",
+  "seconds": 0.908,
+  "raw": null,
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:47:54.763991+00:00"
+}

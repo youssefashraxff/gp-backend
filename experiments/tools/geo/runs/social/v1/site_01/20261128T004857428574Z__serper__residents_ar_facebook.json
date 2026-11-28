@@ -1,0 +1,106 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "residents_ar_facebook",
+  "params": {
+    "q": "جروب سكان العبور الجديدة (site:facebook.com)",
+    "hl": "ar",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "residents_ar",
+    "variant": "facebook",
+    "lang": "ar"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.762,
+  "raw": {
+    "searchParameters": {
+      "q": "جروب سكان العبور الجديدة (site:facebook.com)",
+      "gl": "eg",
+      "hl": "ar",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "جروب سكان العبور",
+        "link": "https://www.facebook.com/groups/1478494675548620/",
+        "displayedLink": "أكثر من 113.7 ألف متابع",
+        "snippet": "معايا شقه في العبور الجديده جنب جهاز مدينه العبور الجديده و فيلات الحي التامن بمقدم 500 الف و الباقي علي 6 سنين مساحه 110 متر #العبور_الجديده للتفاصيل: ...",
+        "position": 1
+      },
+      {
+        "title": "جروب أهالي العبور الجديدة",
+        "link": "https://www.facebook.com/groups/371137734469439/",
+        "displayedLink": "أكثر من 43 ألف متابع",
+        "snippet": "الموقع: العبور الجديدة – الحي 12 – المجاورة 4. ✨ مميزات القطعة: ✓ ناصية بحري صريح. ✓ بجانب جنينة خاصة. ✓ خطوتين من الطريق الرئيسي. ✓ دقائق من الطريق ...",
+        "position": 2
+      },
+      {
+        "title": "مجموعه جروب العبور الجديده حي المجد",
+        "link": "https://www.facebook.com/groups/343593826238999/",
+        "displayedLink": "أكثر من 72.6 ألف متابع",
+        "snippet": "الفرصة دي تستحق الاهتمام! للتواصل ومعرفه مزيد من التفاصيل والمعاينه واتساب / wsend.co/201055496949 هاتفيا / 01055496949 تابع قناتنا على الواتساب لمزيد من ...",
+        "position": 3
+      },
+      {
+        "title": "الجروب الرسمي لخدمات مدينة العبور والمدن الجديدة",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXMNrv-ytfhjCYAaWRWMHNReZ5PWvR5991JscxbVJZKrjiLCGzJRkyfEe2N7mRndH0aHkNfTCwI-GEFsXPPudbEyzqtDj6yj6QMZFSiwRzhL1U8iV3oWad7W41duP9xVkg6k9kLB8UHg&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 129.4 ألف متابع",
+        "snippet": "الجروب الرسمي لخدمات مدينة العبور والمدن الجديدة الساده أعضاء الجروب الحالين والجدد هذا جروب لخدمات المشتركين حيث يتيح لكل المشتركين إضافة اعلانات وإضافة ...",
+        "position": 4
+      },
+      {
+        "title": "جروب سكان الحى الثانى بمدينة العبور",
+        "link": "https://www.google.com/goto?url=CAESbQHEIkXXvCOyVDTQl-L7YSXcCgg_ios1zwzEOrm1VY7GUxdR-MrxLWwmYN5pRf7wOxpLFoK4cNh0bIYTeoFN6TOMKHjrRS78ZVVOq6J_23Ff3Gd24Vg_60pDm9Z941SyyzdzthVEQ3iSlWG5pQc&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 11.1 ألف متابع",
+        "snippet": "الموقع: الحي الثاني – عمارات مصر للطيران (المساكن) ✨ تفاصيل الشقة: ✓ المساحة: 100 متر ✓ 3 غرف نوم ✓ مطبخ كبير ✓ حمام ✓ دور أرضي مرتفع ✓ مؤمّنة بحديد ...",
+        "position": 5
+      },
+      {
+        "title": "أخبار العبور الجديدة _ جروب VIP",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXMLQiH6qHZ5qyKRD9dgKBzCTk7j4Sr0EOqY87XKoDuVb6EIXpRRkmnYUwg3CUqRJtZRdDCvg9KPK7M13MlQ03TCS2Hm2PnyQRoUR_KJ4YQd_O7YLPQEVuy2AQOQSchKtxDvuAd4dejg&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 118.5 ألف متابع",
+        "snippet": "الجروب اخباري.. لكل اهل العبور....العبور الجديدة باعتبار المدينتين كل متكامل..... ادارة م.احمد فؤاد البدري *يحلل الاخبار ..ويناقش اهم المشكلات...",
+        "position": 6
+      },
+      {
+        "title": "سكان الحي السادس مدينة العبورObour 6th District",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXSP5zMQeQyOYm7MxI9_qS4RqFwwrz3ih01d29RdZPMiECwlQvomjzZk6L7foprBuqtxeP163SW0_kPPDmuD1LlsUrOgmgGlT5AVQ_bIXFeiO8PHUBdFnOaApRtVCsA_YjeKGZzFFAYg&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 14.2 ألف متابع",
+        "snippet": "فرصة مميزة لامتلاك شقتك في بيت الوطن – العبور الجديدة شقة للبيع بمساحة 175 متر ✨ 3 غرف نوم ✨ 2 حمام ✨ ريسيبشن كبير ✨ مطبخ موقع مميز في بيت الوطن ...",
+        "position": 7
+      },
+      {
+        "title": "خدمات العبور الجديدة الرسمي",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXX6pmgND7N2UwXXNqihGhORkyQ25_dkaZ7P4MpU6mtuJVleb3opIyeReOct3PgmUdRqzNezZU7Q5VsP7coK619rGYFQPuH0Uu2ccBl0CXJ8R7qiRSdR-0kniCMiU8JmA&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 63.8 ألف متابع",
+        "snippet": "هدف الجروب الأساسي هو : * استفادة جميع أعضاء المجموعة من الخدمات المعروضة. * مناقشة أي أمر يفيد جميع الأعضاء و حل المشكلات. * عرض أي خدمة يقدمها الأعضاء.",
+        "position": 8
+      },
+      {
+        "title": "سكان العبور الجديدة(حى الحرية-حى الكرامة- حى المجد وباقى ...",
+        "link": "https://www.google.com/goto?url=CAESbQHEIkXX9Jfhc1Ca5LpA19Z9buUweH_DnmCmUP9nIN-2fuHMKVheYT6F7JqvvIwSqmHD6EJdtJficfVdRJ2FWVfxdUMKdXOKmxPjrlMQdWWbTgT8GTdAul-h6ylb9ovgJqA3AP1DWfeJn3cJ840&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 61.2 ألف متابع",
+        "snippet": "010 93137646 #اثاثي أثاثي لديكورات البيت مكتب بالمكتبه ٢ درج بالمجره معدن ٢ دلفه عل مفصلات ٣ رف خشب فروميكا مقاس 120 عرض مقاس 60 عمق مقاس القطعه المكتبه عمق ...",
+        "position": 9
+      },
+      {
+        "title": "أهالي الحي الثاني ومدينه العبور",
+        "link": "https://www.google.com/goto?url=CAESbAHEIkXXVNtU-WV8nlH946q57AAH8U4vAeuULbCL_a6jvoz5sMipW6Mx4-ZfjwMphEDRbZSrnloBnG3okF29s2b3YV1RI7mWnzyW-Uxnnam4ZN2V0bWmIlqUUeumGnvk3O051949UQatN100Mw&gsessionid=jdoGyUESOppOaISoeZm-6aTo6cQQynSPSzWzDxCbDmHKEEX6Q8QTjQ",
+        "displayedLink": "أكثر من 49.3 ألف متابع",
+        "snippet": "السلام عليكم نرحب بالأعضاء الجدد ونرجو دعمكم بنشر المجموعه ودعوة الأصدقاء (من سكان العبور) الغرض من المجموعة هو خدمة أهالي الحي الثاني خاصه والعبور عامه في ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:48:57.428343+00:00"
+}

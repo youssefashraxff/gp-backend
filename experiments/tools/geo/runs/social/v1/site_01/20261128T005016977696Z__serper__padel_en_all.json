@@ -1,0 +1,113 @@
+{
+  "tool": "social",
+  "provider": "serper",
+  "case": "padel_en_all",
+  "params": {
+    "q": "New Obour City padel (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+    "hl": "en",
+    "num": 10
+  },
+  "meta": {
+    "query_id": "padel_en",
+    "variant": "all",
+    "lang": "en"
+  },
+  "status": "ok",
+  "n_items": 10,
+  "error": "",
+  "seconds": 3.98,
+  "raw": {
+    "searchParameters": {
+      "q": "New Obour City padel (site:facebook.com OR site:instagram.com OR site:x.com OR site:tiktok.com)",
+      "gl": "eg",
+      "hl": "en",
+      "type": "search",
+      "num": 10,
+      "engine": "google"
+    },
+    "organic": [
+      {
+        "title": "This is Padel Mondo Obour City, Start Now Come To Train ...",
+        "link": "https://www.instagram.com/reel/C9MYyYKtyPw/",
+        "displayedLink": "10+ likes  ·  2 years ago",
+        "snippet": "This is Padel Mondo Obour City, Start Now Come To Train To shine ✨ #padelMondo #trainToShine - @padel_mondo on July 9, 2024.",
+        "date": "2 years ago",
+        "position": 1
+      },
+      {
+        "title": "Here is Padel Mondo academy Obour City 🎾#traintoshine ...",
+        "link": "https://www.instagram.com/reel/DMlxKDrCIdm/",
+        "displayedLink": "10+ likes  ·  1 year ago",
+        "snippet": "Train. Play. Maintain your fitness. Take care of your health. Keep developing your own game. Because coaching demands energy, movement, ...",
+        "date": "1 year ago",
+        "position": 2
+      },
+      {
+        "title": "and the padel court is no exception. Whether it's a",
+        "link": "https://www.facebook.com/PalmierDevelopments/videos/an-active-lifestyle-right-where-you-belong-at-vert-every-detail-is-designed-to-s/1672563920415646/",
+        "displayedLink": "7 reactions  ·  7 months ago",
+        "snippet": "It highlights the property's amenities, focusing on the \"padel court,\" a central outdoor space for active lifestyle. The post emphasizes the ...",
+        "date": "7 months ago",
+        "position": 3
+      },
+      {
+        "title": "Padel Mondo Academy in obour city We are glad to ...",
+        "link": "https://www.google.com/goto?url=CAESYwHEIkXXWBnPOyVdhFjz1uVrxw11U0HkPZ7YeIGtI_RGYVRrB2_MqazIaIxRXLi59vJt45R-BjMOAhy-AlBGQqpYi93fne19D8-HShm4OI_Q0P8bCp9p9-JTU2QWyhwrrrnDEA&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "10+ likes  ·  4 years ago",
+        "snippet": "Padel Mondo Academy in obour city. We are glad to announce upgrading the Academy and make 3 packages *First package (Padel Only)* _1800 EGP_",
+        "date": "4 years ago",
+        "position": 4
+      },
+      {
+        "title": "Fit Punch Padel Event: Next Stop The Final in Obour City",
+        "link": "https://www.google.com/goto?url=CAESugEBxCJF13ZnLZ6mXA9s3JiQP-vdtTaEewwqL4OmnGPorGqZcZB-iP6JyCpqJ00OBeyme8f7AJu1Z8dZUOWivkehd1Kx_MgoiCZ8KCfPsK84IbC_UDapNTOW3f_lYfdHi0wK2IiDI1zRnRWNLNfETMZXJVcvMg36duVMXdkop-i1eNUuoeHz9EPzEk-rZtUjyYq84mW_TW4bWrBI4F1c0xKAgRwYM3XBaiFab0F15unMVAypJZ2L42zEI8o&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "https://www.facebook.com › ... › Fit Punch › Videos",
+        "snippet": "This promotional video announces the opening of The Court Padel Club, a new sports facility. It showcases the club's blue padel courts through action shots ...",
+        "position": 5
+      },
+      {
+        "title": "Padel Mondo - Facebook",
+        "link": "https://www.google.com/goto?url=CAESyQEBxCJF16aZRtGCNBy2cY3BVMFVCEpfJBZGcAi0iz_vVwqAbCyyRXgUGM3H9DmjsZzJVamy3vnohPReZoUv7I81KeRVFkRPTamfZG-IuTXEnKeSEy7jULn44KxRN9T4Hi6ycIFeEhe_3nLbFmArk-85kU05UHmuwSZq8H2GGGrb_xQByXgFZPQZX2Mk3MK_uAXzAOHqfZDlGfclIGJGOHKJs2-wx_Xpb9cTfDcS2z_7dTK4_PkCiIx4cMNMmZ_kIB85rXS_7_6zIIc&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "1 reaction  ·  4 years ago",
+        "snippet": "- 2 panoramic padel courts. - Padbol court. - Football court (6 a-side game). - Caffeteria and a waiting area. - Sound system. - Changing rooms ...",
+        "date": "4 years ago",
+        "position": 6
+      },
+      {
+        "title": "Padel Mondo (@padel_mondo) • Instagram photos and ...",
+        "link": "https://www.google.com/goto?url=CAESYQHEIkXX1ptvBvARxdcya-ljvk8pUz6IZujFZliAeA0rVZVGSUQH2HClbe-OBs8GBeK_-SZzGPshS-nHyV01Nmec0iuWq0-rIfjyb-OdkFnxqaXYgMhORLLIadvma8yLBuw&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "4.7K+ followers",
+        "snippet": "The ultimate and super experience for what the real and genuine padel is about Road 10, Orabi, Obour City, Cairo, Egypt For booking: Follow. Message ...",
+        "position": 7
+      },
+      {
+        "title": "Level up your game and join SH Padel Academy – Nasr ...",
+        "link": "https://www.google.com/goto?url=CAES0wEBxCJF124PLN7N97Vra-5BL6YwEYxlzb6Q4z7WuBhz-fHSLEt-VZyhYNIH-fNIUl6BbGsB_1o-F34w38Wg3bB1vJwraEMPzkVpRzupvvTtfkjzl85fI8sOu2M4Wri8m_Of6kStwIHDskQPLh-cK8GmYuzIbD9DeDvdrhlo0ef0nRWgDDkYMeHdBwuQSnR8pXH2XFMNfdab0f4yStCCVi5Gkrl_7Yn-SdleFK3Vc3YaSXHDhuRNIB_9p9GxgRx5T0L2d3JWk8w9vykt_EE6HV-sy8b6&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "4 reactions  ·  2 months ago",
+        "snippet": "Contact us today to enroll in our academy. for more info contact us : 01006883137 01011085173 Our branches : Nasr city Oro plaza New ...",
+        "date": "2 months ago",
+        "position": 8
+      },
+      {
+        "title": "O West Sports Club Opens in 6th of October City with Pools ...",
+        "link": "https://www.google.com/goto?url=CAES1gEBxCJF1_AJ-QBZqx3usZFwvfT_fU_U7M9f98dsysQ1hVdFVzNI2wCinD7ZhcVjwLMe9efZnIkWyMlRrW5es7F8Eql_qFfYkmdEEPj7jVIEBVPZtqKEfXbv6nSvVD958UdYeZe4BwpHDTW8fyGf1i58-jHPw7PuaGM8h83m-TdzC9C-vwuGfFfES5oANlCVY-6eBf2oSMTfnLNCjCqzNpzmg8vW_yOfDpsi7fqzN-OH9Xlu-2KWv_SBA2GmsI8cC7uXTr-ZntzQrjdptIhaq9zxra6_TzNu&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "2 reactions  ·  1 month ago",
+        "snippet": "From swimming and squash to padel, basketball and football, the club adds a new dimension to everyday living in West Cairo. A place to move, ...",
+        "date": "1 month ago",
+        "position": 9
+      },
+      {
+        "title": "SH Club Padel Courts & Sports Facilities at 6th of October ...",
+        "link": "https://www.google.com/goto?url=CAES0wEBxCJF15mGihFgKVjoBZhOo6PNapHd9sB0xEQRBqL5BKLX-8WRBaC2-iQu9iiiZL5BjUrpkT1IPhf0fB1w7j5yqfKrkJfPKVFcernp9B8KQbp1iNkCJsqk7ONcuq06MBinN872ilfVUMOpv61o6lHO221hZ1y4tmiujW4ju2LWw-ZgJYNeKL69_Ql1vPWys7TUeXqmNRpQPrCTvL-Yqb4RPSzp4AcIfNud7_9TBzE1VVMIsFh3vItPw6a0hdlOHyKRyoHYFHvtqIhIMoAW-05K9jvL&gsessionid=lr7Mu4xzquAVOawLCs9qM_t7o_mSvBPDsVBHAfB2NLc3z91hqEftrA",
+        "displayedLink": "2 weeks ago",
+        "snippet": "New venue in Abu Dhabi. Prime location. All kinds of programmes available Kids, adults , hit with the pros , club nights , ladies mornings , ...",
+        "position": 10
+      }
+    ],
+    "credits": 1
+  },
+  "site_id": "site_01",
+  "case_version": "v1",
+  "notes": "v1 baseline",
+  "timestamp": "2026-11-28T00:50:16.977373+00:00"
+}
